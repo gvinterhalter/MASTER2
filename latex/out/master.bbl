@@ -1,0 +1,104 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{AKfrekvencija}{misc}{}
+  \field{sortinit}{A}
+  \field{howpublished}{\url{http://www.tiem.utk.edu/~gross/bioed/webmodules/aminoacid.htm}}
+  \field{note}{Pristupljeno: 13.13.2017}
+  \field{title}{Amino acid frequency}
+\endentry
+
+\entry{CAFA}{misc}{}
+  \field{sortinit}{C}
+  \field{howpublished}{\url{http://biofunctionprediction.org/cafa/}}
+  \field{note}{Pristupljeno: 13.12.2017}
+  \field{title}{CAFA}
+\endentry
+
+\entry{nonRedundant}{misc}{}
+  \field{sortinit}{H}
+  \field{howpublished}{\url{http://www.uniprot.org/help/redundancy}}
+  \field{note}{Pristupljeno: 13.12.2017}
+  \field{title}{How redundant are the UniProt databases?}
+\endentry
+
+\entry{Xie2007}{article}{}
+  \name{author}{7}{}{%
+    {{}%
+     {Xie}{X.}%
+     {Hongbo}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Vucetic}{V.}%
+     {Slobodan}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Iakoucheva}{I.}%
+     {Lilia~M.}{L.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Oldfield}{O.}%
+     {Christopher~J.}{C.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Dunker}{D.}%
+     {A.~Keith}{A.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Uversky}{U.}%
+     {Vladimir~N.}{V.~N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Obradovic}{O.}%
+     {Zoran}{Z.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {American Chemical Society ({ACS})}%
+  }
+  \strng{namehash}{XH+1}
+  \strng{fullhash}{XHVSILMOCJDAKUVNOZ1}
+  \field{labelyear}{2007}
+  \field{sortinit}{X}
+  \verb{doi}
+  \verb 10.1021/pr060392u
+  \endverb
+  \field{number}{5}
+  \field{pages}{1882\bibrangedash 1898}
+  \field{title}{Functional Anthology of Intrinsic Disorder. 1. Biological
+  Processes and Functions of Proteins with Long Disordered Regions}
+  \verb{url}
+  \verb https://www.ncbi.nlm.nih.gov/pubmed/17391014
+  \endverb
+  \field{volume}{6}
+  \field{journaltitle}{Journal of Proteome Research}
+  \field{year}{2007}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

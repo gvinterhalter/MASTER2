@@ -1,0 +1,2299 @@
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:18406
+   startNode: GO:0015223 (global id space)
+   endNode: GO:0051183 (global id space)
+   type: consider
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:18613
+   startNode: GO:0015339 (global id space)
+   endNode: GO:0015563 (global id space)
+   type: consider
+ refering to missing node GO:0015563
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:18616
+   startNode: GO:0015340 (global id space)
+   endNode: GO:0015563 (global id space)
+   type: consider
+ refering to missing node GO:0015563
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:18621
+   startNode: GO:0015342 (global id space)
+   endNode: GO:0015563 (global id space)
+   type: consider
+ refering to missing node GO:0015563
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:18651
+   startNode: GO:0015356 (global id space)
+   endNode: GO:0015563 (global id space)
+   type: consider
+ refering to missing node GO:0015563
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:18784
+   startNode: GO:0015429 (global id space)
+   endNode: GO:0015246 (global id space)
+   type: consider
+ refering to missing node GO:0015246
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:20665
+   startNode: GO:0016563 (global id space)
+   endNode: GO:0001071 (global id space)
+   type: consider
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:20668
+   startNode: GO:0016564 (global id space)
+   endNode: GO:0001071 (global id space)
+   type: consider
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:21124
+   startNode: GO:0016986 (global id space)
+   endNode: GO:0001071 (global id space)
+   type: consider
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:25867
+   startNode: GO:0022815 (global id space)
+   endNode: GO:0022891 (global id space)
+   type: replaced_by
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/go_relations.csv:27003
+   startNode: GO:0030528 (global id space)
+   endNode: GO:0001071 (global id space)
+   type: consider
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:11563
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P29274 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:11638
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q60613 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:11716
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P30543 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:15410
+   properties: [empty,  ]
+   startNode: GO:0071992 (global id space)
+   endNode: Q9C8G9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0071992
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:15431
+   properties: [empty,  ]
+   startNode: GO:0005325 (global id space)
+   endNode: Q94FB9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0005325
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:18098
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9NP78 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:18124
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9QYJ4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:18620
+   properties: [empty,  ]
+   startNode: GO:0005325 (global id space)
+   endNode: P33897 (global id space)
+   type: anotate_to
+ refering to missing node GO:0005325
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:18658
+   properties: [empty,  ]
+   startNode: GO:0005325 (global id space)
+   endNode: P48410 (global id space)
+   type: anotate_to
+ refering to missing node GO:0005325
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:47396
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q99222 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:51329
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q6QNK2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:51912
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q86SQ4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:83350
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9Y6B7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:83371
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9WV76 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:83385
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9UPM8 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:83435
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: O00189 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:83459
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9JKC7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:83494
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9Y587 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:101399
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q47377 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:101418
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P76474 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:133994
+   properties: [empty,  ]
+   startNode: GO:0045118 (global id space)
+   endNode: P50080 (global id space)
+   type: anotate_to
+ refering to missing node GO:0045118
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:160573
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P53858 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:167815
+   properties: [empty,  ]
+   startNode: GO:0036079 (global id space)
+   endNode: P29518 (global id space)
+   type: anotate_to
+ refering to missing node GO:0036079
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:169091
+   properties: [empty,  ]
+   startNode: GO:0015235 (global id space)
+   endNode: P06129 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015235
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:169119
+   properties: [empty,  ]
+   startNode: GO:0015235 (global id space)
+   endNode: P06609 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015235
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:169134
+   properties: [empty,  ]
+   startNode: GO:0015235 (global id space)
+   endNode: P06611 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015235
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:181400
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q24298 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:306575
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: Q59NP1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:306578
+   properties: [empty,  ]
+   startNode: GO:0006827 (global id space)
+   endNode: Q59NP1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006827
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:306654
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: P49573 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:306807
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: P38865 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:306876
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: Q06686 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:308270
+   properties: [empty,  ]
+   startNode: GO:0015235 (global id space)
+   endNode: O70244 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015235
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:308724
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q17390 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:330648
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9HU16 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:346709
+   properties: [empty,  ]
+   startNode: GO:1901677 (global id space)
+   endNode: Q06143 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901677
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:347025
+   properties: [empty,  ]
+   startNode: GO:1901677 (global id space)
+   endNode: Q9UBX3 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901677
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:347059
+   properties: [empty,  ]
+   startNode: GO:1901677 (global id space)
+   endNode: Q9QZD8 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901677
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:348682
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q9VLK4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:350369
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P31007 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:363782
+   properties: [empty,  ]
+   startNode: GO:0001071 (global id space)
+   endNode: P0AEF4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:369101
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P21728 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:369188
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q61616 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:369301
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P18901 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:370203
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P21918 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:370248
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q8BLD9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:370299
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P25115 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:378471
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q8NCM8 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:378564
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9JJ79 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:400398
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P93735 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:400428
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q94K66 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:206486
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: O60359 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:206511
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q8VHX0 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:213653
+   properties: [empty,  ]
+   startNode: GO:0010163 (global id space)
+   endNode: O04034 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010163
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:215738
+   properties: [empty,  ]
+   startNode: GO:0015235 (global id space)
+   endNode: Q9NPF0 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015235
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:219517
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P39827 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:219591
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: G1UB61 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:224066
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: O61847 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:274614
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: O15431 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:274640
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: Q8K211 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:274684
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: Q9JK41 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:275458
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P48376 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:290157
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P15337 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:291073
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P34998 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:291126
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P35347 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:291189
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P35353 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:425376
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P0ABU7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:443592
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: P40039 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:443606
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: Q12119 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:443619
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: C8V329 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:443620
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: C8V329 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:443634
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: P17064 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:446150
+   properties: [empty,  ]
+   startNode: GO:0006827 (global id space)
+   endNode: P38993 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006827
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:446201
+   properties: [empty,  ]
+   startNode: GO:0000040 (global id space)
+   endNode: P40988 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000040
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:451854
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: O44827 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:454688
+   properties: [empty,  ]
+   startNode: GO:0015639 (global id space)
+   endNode: Q09919 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015639
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:454690
+   properties: [empty,  ]
+   startNode: GO:0006827 (global id space)
+   endNode: Q09919 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006827
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:470814
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P18537 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:472983
+   properties: [empty,  ]
+   startNode: GO:0015639 (global id space)
+   endNode: P38310 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015639
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:472986
+   properties: [empty,  ]
+   startNode: GO:0006827 (global id space)
+   endNode: P38310 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006827
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:473373
+   properties: [empty,  ]
+   startNode: GO:0015639 (global id space)
+   endNode: P40088 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015639
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:473376
+   properties: [empty,  ]
+   startNode: GO:0006827 (global id space)
+   endNode: P40088 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006827
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:489282
+   properties: [empty,  ]
+   startNode: GO:0001071 (global id space)
+   endNode: P23771 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:506979
+   properties: [empty,  ]
+   startNode: GO:1990821 (global id space)
+   endNode: P78831 (global id space)
+   type: anotate_to
+ refering to missing node GO:1990821
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:518002
+   properties: [empty,  ]
+   startNode: GO:0015784 (global id space)
+   endNode: P40107 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015784
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:518021
+   properties: [empty,  ]
+   startNode: GO:0015784 (global id space)
+   endNode: Q4WTQ6 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015784
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:518039
+   properties: [empty,  ]
+   startNode: GO:0015784 (global id space)
+   endNode: Q5A477 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015784
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:523140
+   properties: [empty,  ]
+   startNode: GO:0015784 (global id space)
+   endNode: Q941R4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015784
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:523157
+   properties: [empty,  ]
+   startNode: GO:0015784 (global id space)
+   endNode: Q84L09 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015784
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:527321
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q99527 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:527442
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: F7EQ49 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:527618
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q8BMP4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:527740
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: O08878 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:574377
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P52926 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:574460
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P52927 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:577665
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P35680 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:577722
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P27889 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:577790
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P23899 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:579036
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P61980 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:592245
+   properties: [empty,  ]
+   startNode: GO:0015785 (global id space)
+   endNode: Q12520 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015785
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:595806
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: O24646 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:705490
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: O17583 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:709992
+   properties: [empty,  ]
+   startNode: GO:0015235 (global id space)
+   endNode: Q9NUN5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015235
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712293
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: Q9M9L8 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712313
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: Q9M9L7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712334
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: Q59HJ6 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712355
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: Q7KUT2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712383
+   properties: [empty,  ]
+   startNode: GO:0070362 (global id space)
+   endNode: P36776 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070362
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712384
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: P36776 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712432
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: Q8CGK3 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712472
+   properties: [empty,  ]
+   startNode: GO:0070362 (global id space)
+   endNode: Q924S5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070362
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712473
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: Q924S5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712504
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: Q09769 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:712522
+   properties: [empty,  ]
+   startNode: GO:0070361 (global id space)
+   endNode: P36775 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:732203
+   properties: [empty,  ]
+   startNode: GO:0006827 (global id space)
+   endNode: Q5AFK0 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006827
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:732239
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P35192 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:732264
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P75830 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:733107
+   properties: [empty,  ]
+   startNode: GO:1901549 (global id space)
+   endNode: P50537 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901549
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:758622
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q5BGR2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:773964
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q09510 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:774796
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q7X6Y7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:777283
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P9WGF1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:778156
+   properties: [empty,  ]
+   startNode: GO:0006827 (global id space)
+   endNode: Q59WF4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006827
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783584
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: Q949R9 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783598
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: Q7KSC4 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783614
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: Q9Y5U8 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783631
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: P63030 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783645
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: O74847 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783658
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: P53157 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783671
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: Q8L7H8 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783686
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: O95563 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783700
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: Q9D023 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783714
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: Q09896 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783725
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: P38857 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783738
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: Q8LD38 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783755
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: P53311 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783770
+   properties: [empty,  ]
+   startNode: GO:1902361 (global id space)
+   endNode: O49636 (global id space)
+   type: anotate_to
+ refering to missing node GO:1902361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:783870
+   properties: [empty,  ]
+   startNode: GO:0015320 (global id space)
+   endNode: Q00325 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015320
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:789209
+   properties: [empty,  ]
+   startNode: GO:1990614 (global id space)
+   endNode: Q9HD23 (global id space)
+   type: anotate_to
+ refering to missing node GO:1990614
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:789229
+   properties: [empty,  ]
+   startNode: GO:1990614 (global id space)
+   endNode: Q5NCE8 (global id space)
+   type: anotate_to
+ refering to missing node GO:1990614
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:789246
+   properties: [empty,  ]
+   startNode: GO:1990614 (global id space)
+   endNode: P87149 (global id space)
+   type: anotate_to
+ refering to missing node GO:1990614
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:790027
+   properties: [empty,  ]
+   startNode: GO:0022833 (global id space)
+   endNode: P9WJN5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022833
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:795552
+   properties: [empty,  ]
+   startNode: GO:0000997 (global id space)
+   endNode: Q9US51 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000997
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:795572
+   properties: [empty,  ]
+   startNode: GO:0000997 (global id space)
+   endNode: P14908 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000997
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:921933
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P34288 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:922001
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q29W19 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:922074
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P18509 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:922132
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: O70176 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:922171
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P41535 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:922218
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P13589 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:922260
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P16613 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:929565
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q17353 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:939948
+   properties: [empty,  ]
+   startNode: GO:0071992 (global id space)
+   endNode: Q9S7Z3 (global id space)
+   type: anotate_to
+ refering to missing node GO:0071992
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:944735
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q9W4Y2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:944761
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: O96690 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:952219
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P37095 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:959048
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P69434 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:969418
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q96243 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:969433
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: O48639 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:969452
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q96303 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:969468
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q8GYF4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:971773
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: P40035 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:989694
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q2V4B9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:804107
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q9FKL2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:842321
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P19838 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:842402
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P25799 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:842476
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q63369 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:846462
+   properties: [empty,  ]
+   startNode: GO:0010163 (global id space)
+   endNode: Q9LKW9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010163
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:848159
+   properties: [empty,  ]
+   startNode: GO:0080138 (global id space)
+   endNode: Q9SV84 (global id space)
+   type: anotate_to
+ refering to missing node GO:0080138
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:850106
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: O95096 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:850147
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P42586 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:870299
+   properties: [empty,  ]
+   startNode: GO:0015639 (global id space)
+   endNode: P49281 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015639
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:870382
+   properties: [empty,  ]
+   startNode: GO:0015639 (global id space)
+   endNode: P49282 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015639
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:870464
+   properties: [empty,  ]
+   startNode: GO:0015639 (global id space)
+   endNode: O54902 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015639
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:891730
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q940M4 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:891753
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q9VCZ3 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:891775
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q4LBB9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:891794
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: Q4LBB6 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:894978
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: O81208 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:899564
+   properties: [empty,  ]
+   startNode: GO:0015198 (global id space)
+   endNode: P40897 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015198
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:899584
+   properties: [empty,  ]
+   startNode: GO:0015198 (global id space)
+   endNode: O04514 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015198
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:899599
+   properties: [empty,  ]
+   startNode: GO:0015198 (global id space)
+   endNode: Q06593 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015198
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:899647
+   properties: [empty,  ]
+   startNode: GO:0015198 (global id space)
+   endNode: Q9FJD1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015198
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:615534
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: O42410 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:627236
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q9VDY1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:634493
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q13568 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:634525
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P56477 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:634554
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: O14896 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:634585
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P97431 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:635492
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: Q38856 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:635584
+   properties: [empty,  ]
+   startNode: GO:0042927 (global id space)
+   endNode: P9WQJ9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0042927
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:635611
+   properties: [empty,  ]
+   startNode: GO:0042927 (global id space)
+   endNode: P9WQJ7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0042927
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:654523
+   properties: [empty,  ]
+   startNode: GO:0010163 (global id space)
+   endNode: P92960 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010163
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:656276
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q8WQ99 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:676704
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q60793 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:681409
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q19266 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:690006
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P08111 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:693227
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q7KRY7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1101571
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9W358 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1133458
+   properties: [empty,  ]
+   startNode: GO:0000997 (global id space)
+   endNode: O00411 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000997
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1133477
+   properties: [empty,  ]
+   startNode: GO:0000997 (global id space)
+   endNode: Q8BKF1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000997
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1133494
+   properties: [empty,  ]
+   startNode: GO:0000997 (global id space)
+   endNode: O13993 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000997
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1133495
+   properties: [empty,  ]
+   startNode: GO:0001044 (global id space)
+   endNode: O13993 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001044
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1133511
+   properties: [empty,  ]
+   startNode: GO:0000997 (global id space)
+   endNode: P13433 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000997
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1151020
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q01196 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1151077
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q03347 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1151138
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q63046 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1157304
+   properties: [empty,  ]
+   startNode: GO:0015198 (global id space)
+   endNode: Q16348 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015198
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1157692
+   properties: [empty,  ]
+   startNode: GO:0015403 (global id space)
+   endNode: O60779 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015403
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1157712
+   properties: [empty,  ]
+   startNode: GO:0015403 (global id space)
+   endNode: Q9BZV2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015403
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1157727
+   properties: [empty,  ]
+   startNode: GO:0015403 (global id space)
+   endNode: Q99PL8 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015403
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1160454
+   properties: [empty,  ]
+   startNode: GO:0015659 (global id space)
+   endNode: Q9BXS9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015659
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1160522
+   properties: [empty,  ]
+   startNode: GO:0015659 (global id space)
+   endNode: Q8CIW6 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015659
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1161551
+   properties: [empty,  ]
+   startNode: GO:0015785 (global id space)
+   endNode: P78381 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015785
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1161583
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: O77592 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1161598
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: Q9Y2D2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1161765
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: Q9W429 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1161786
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: Q969S0 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1161808
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: Q8CIA5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1163313
+   properties: [empty,  ]
+   startNode: GO:0022892 (global id space)
+   endNode: Q8IVJ1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022892
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1163337
+   properties: [empty,  ]
+   startNode: GO:0022892 (global id space)
+   endNode: Q8BJA2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022892
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1179191
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q14160 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1179262
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q80U72 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1190102
+   properties: [empty,  ]
+   startNode: GO:1905361 (global id space)
+   endNode: Q13530 (global id space)
+   type: anotate_to
+ refering to missing node GO:1905361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1190155
+   properties: [empty,  ]
+   startNode: GO:1905361 (global id space)
+   endNode: Q86VE9 (global id space)
+   type: anotate_to
+ refering to missing node GO:1905361
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1007576
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9VFS5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1034484
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9XF91 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1047600
+   properties: [empty,  ]
+   startNode: GO:0080055 (global id space)
+   endNode: Q9LFX9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0080055
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1047729
+   properties: [empty,  ]
+   startNode: GO:0080055 (global id space)
+   endNode: Q8RX77 (global id space)
+   type: anotate_to
+ refering to missing node GO:0080055
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1047853
+   properties: [empty,  ]
+   startNode: GO:0080055 (global id space)
+   endNode: Q8LPL2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0080055
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1048030
+   properties: [empty,  ]
+   startNode: GO:0080055 (global id space)
+   endNode: Q9M817 (global id space)
+   type: anotate_to
+ refering to missing node GO:0080055
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1049606
+   properties: [empty,  ]
+   startNode: GO:1901677 (global id space)
+   endNode: Q9SB52 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901677
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1049634
+   properties: [empty,  ]
+   startNode: GO:1901677 (global id space)
+   endNode: Q9SJY5 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901677
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1049662
+   properties: [empty,  ]
+   startNode: GO:1901677 (global id space)
+   endNode: Q9FY68 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901677
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1052690
+   properties: [empty,  ]
+   startNode: GO:0005325 (global id space)
+   endNode: P41909 (global id space)
+   type: anotate_to
+ refering to missing node GO:0005325
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1052711
+   properties: [empty,  ]
+   startNode: GO:0005325 (global id space)
+   endNode: P34230 (global id space)
+   type: anotate_to
+ refering to missing node GO:0005325
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1072465
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P11416 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1074419
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P31473 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1095619
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9VCX1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1216874
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q9W7E7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1223968
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: P08044 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1228883
+   properties: [empty,  ]
+   startNode: GO:0015198 (global id space)
+   endNode: Q9QZX8 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015198
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1234873
+   properties: [empty,  ]
+   startNode: GO:0001071 (global id space)
+   endNode: Q06945 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1234935
+   properties: [empty,  ]
+   startNode: GO:0001071 (global id space)
+   endNode: Q06831 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001071
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1239840
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P91870 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1239856
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P91349 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1240160
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q01608 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1248990
+   properties: [empty,  ]
+   startNode: GO:0010861 (global id space)
+   endNode: Q80VJ2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010861
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1249021
+   properties: [empty,  ]
+   startNode: GO:0010861 (global id space)
+   endNode: Q6QGW5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010861
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1251269
+   properties: [empty,  ]
+   startNode: GO:0015785 (global id space)
+   endNode: Q93890 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015785
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1251270
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: Q93890 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1262649
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9M7I9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1266186
+   properties: [empty,  ]
+   startNode: GO:0008646 (global id space)
+   endNode: Q9LT15 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008646
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1267013
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: Q4QR83 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1271773
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P9WG01 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1271802
+   properties: [empty,  ]
+   startNode: GO:0090484 (global id space)
+   endNode: P69937 (global id space)
+   type: anotate_to
+ refering to missing node GO:0090484
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1271803
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P69937 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1276074
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9Z2I7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1286683
+   properties: [empty,  ]
+   startNode: GO:0016876 (global id space)
+   endNode: P0A8M3 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016876
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1307480
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P28347 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1307512
+   properties: [empty,  ]
+   startNode: GO:0001159 (global id space)
+   endNode: P30051 (global id space)
+   type: anotate_to
+ refering to missing node GO:0001159
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1313623
+   properties: [empty,  ]
+   startNode: GO:0070363 (global id space)
+   endNode: Q00059 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070363
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1313661
+   properties: [empty,  ]
+   startNode: GO:0070363 (global id space)
+   endNode: P40630 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070363
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1313693
+   properties: [empty,  ]
+   startNode: GO:0070363 (global id space)
+   endNode: Q91ZW1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0070363
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1325903
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: Q9SHU7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1348673
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: Q9FR53 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1351544
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P53099 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1351546
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: P53099 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1361278
+   properties: [empty,  ]
+   startNode: GO:0015388 (global id space)
+   endNode: P47946 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015388
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1361373
+   properties: [empty,  ]
+   startNode: GO:0015388 (global id space)
+   endNode: P23849 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015388
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1364179
+   properties: [empty,  ]
+   startNode: GO:0022833 (global id space)
+   endNode: Q9VJJ7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022833
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1399375
+   properties: [empty,  ]
+   startNode: GO:0015785 (global id space)
+   endNode: Q95YI5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015785
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1399378
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: Q95YI5 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1406842
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P11574 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1406871
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P15313 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1406944
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P62814 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1406967
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P62815 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1406987
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: Q8W4E2 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407025
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: Q59PT0 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407046
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: Q76NU1 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407070
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P31409 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407754
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: O82629 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407767
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: O95670 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407792
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: Q9SZH0 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407835
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P91303 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407847
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: Q54Z13 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407856
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: Q9XZH6 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1407871
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: O74174 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1413754
+   properties: [empty,  ]
+   startNode: GO:1901603 (global id space)
+   endNode: O13880 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901603
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1415381
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P81401 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1415398
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P63289 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1415442
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P01282 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1415483
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P32648 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1415517
+   properties: [empty,  ]
+   startNode: GO:0010579 (global id space)
+   endNode: P01283 (global id space)
+   type: anotate_to
+ refering to missing node GO:0010579
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1415672
+   properties: [empty,  ]
+   startNode: GO:0000975 (global id space)
+   endNode: F5HF68 (global id space)
+   type: anotate_to
+ refering to missing node GO:0000975
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1420507
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q7JXV9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1421258
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: Q9VU87 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1424216
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: P02774 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1424238
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: P21614 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1424261
+   properties: [empty,  ]
+   startNode: GO:0051183 (global id space)
+   endNode: P04276 (global id space)
+   type: anotate_to
+ refering to missing node GO:0051183
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1434251
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: O00755 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1434325
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: P24383 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1449672
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q09852 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1451327
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P38142 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1454195
+   properties: [empty,  ]
+   startNode: GO:0022892 (global id space)
+   endNode: P0AFR7 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022892
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1454206
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P77716 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1454626
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9Y7Q9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1457061
+   properties: [empty,  ]
+   startNode: GO:0015788 (global id space)
+   endNode: P40004 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015788
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1460666
+   properties: [empty,  ]
+   startNode: GO:0008105 (global id space)
+   endNode: O94674 (global id space)
+   type: anotate_to
+ refering to missing node GO:0008105
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1462213
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: Q9P6J9 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1463558
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: P37675 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1463688
+   properties: [empty,  ]
+   startNode: GO:1901368 (global id space)
+   endNode: Q9UTD6 (global id space)
+   type: anotate_to
+ refering to missing node GO:1901368
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1466378
+   properties: [empty,  ]
+   startNode: GO:0022891 (global id space)
+   endNode: O31712 (global id space)
+   type: anotate_to
+ refering to missing node GO:0022891
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1468447
+   properties: [empty,  ]
+   startNode: GO:0016820 (global id space)
+   endNode: P93303 (global id space)
+   type: anotate_to
+ refering to missing node GO:0016820
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1486605
+   properties: [empty,  ]
+   startNode: GO:0044749 (global id space)
+   endNode: P39832 (global id space)
+   type: anotate_to
+ refering to missing node GO:0044749
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1487903
+   properties: [empty,  ]
+   startNode: GO:0044749 (global id space)
+   endNode: O94639 (global id space)
+   type: anotate_to
+ refering to missing node GO:0044749
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1487917
+   properties: [empty,  ]
+   startNode: GO:0006830 (global id space)
+   endNode: P32804 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006830
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1487930
+   properties: [empty,  ]
+   startNode: GO:0006831 (global id space)
+   endNode: Q12436 (global id space)
+   type: anotate_to
+ refering to missing node GO:0006831
+InputRelationship:
+   source: /home/goksi/Desktop/Projects/master/data/neo4j/seq_relations.csv:1488243
+   properties: [empty,  ]
+   startNode: GO:0015088 (global id space)
+   endNode: P0A8H3 (global id space)
+   type: anotate_to
+ refering to missing node GO:0015088

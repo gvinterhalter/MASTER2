@@ -1,0 +1,19 @@
+Oxidoreductase
+Transferase 
+Lyase
+Hydrolase 
+Isomerase
+Glycosidase
+Glycosyltransferase
+Acyltransferase
+Methyltransferase
+Kinase
+Ligase
+Decarboxylase
+Monooxygenase
+Metalloprotease
+Aminopeptidase
+Dioxygenase
+Aminoacyl-tRNA synthetase
+Protease
+Aminotransferase

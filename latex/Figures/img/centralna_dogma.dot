@@ -1,0 +1,16 @@
+digraph digraphname {
+  dnk [label="DNK"];
+  rnk [label="RNK"];
+  protein [label="Protein"];
+
+  /* dnk -> dnk [label="replikacija" fontcolor=red color=red]; */
+  /* dnk -> rnk [label="transkripcija"fontcolor=red color=red ]; */
+  dnk -> dnk [label="replikacija"];
+  dnk -> rnk [label="transkripcija"];
+  rnk -> dnk [style=dotted label="reverzna\ntranskripcija"]
+  rnk -> rnk [style=dotted]
+  rnk -> protein [label="translacija"];
+  /* rnk -> protein [label="translacija" fontcolor=red color=red]; */
+  dnk -> protein [style=dotted]
+
+}

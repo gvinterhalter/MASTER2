@@ -1,0 +1,19 @@
+GMP biosynthesis
+Amino-acid biosynthesis
+Transport
+Electron transport
+Lipid A biosynthesis
+Aromatic hydrocarbons catabolism
+Glycolysis
+Purine biosynthesis
+Pyrimidine biosynthesis
+Carbohydrate metabolism
+Branched-chain amino acid biosynthesis
+Lipopolysaccharide biosynthesis
+Sugar transport
+Antibiotic resistance
+Tricarboxylic acid cycle
+Arginine biosynthesis
+Ion transport
+Rhamnose metabolism
+Peptidoglycan synthesis
