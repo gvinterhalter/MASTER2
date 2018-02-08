@@ -11,13 +11,11 @@ class Term:
         else:
             setattr(self, name, value)
 
-    def __init__(self):
-        pass
-
-    def __init__(self, manual_id, **d):
-        if d: # procitali smo dict iz mongo db-a ili slicno
-            d.__delitem__('_id')
-            self.__dict__ = d
+    def __init__(self, manual_id, d):
+        if d: # imamo dict sa vrednostima
+            if '_id' in d: # ako importujemo iz mongo db-a
+                del d['_id']
+            self.__dict__.update(d)
             return
 
         self.id = manual_id
@@ -48,8 +46,10 @@ class Term:
         return (self.namespace == "biological_process" and "BP" or
                 self.namespace == "molecular_function" and "MF" or "CC")
 
-
     def __repr__(self):
+        return str(self.__dict__)
+
+    def __str__(self):
         s = self
         return f"""\
 Term(
