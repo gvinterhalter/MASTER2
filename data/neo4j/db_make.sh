@@ -10,11 +10,11 @@ echo \
 
 neo4j-admin import \
      --database        $name          \
-     --nodes           go_term.csv    \
-     --nodes           keyw.csv       \
+     --nodes           term.csv    \
+     --nodes           kw.csv       \
      --nodes           seq.csv       \
-     --relationships   go_relations.csv    \
-     --relationships   keyw_rel.csv   \
+     --relationships   term_relations.csv    \
+     --relationships   kw_relations.csv   \
      --relationships   seq_relations.csv
 
 neo4j start 
