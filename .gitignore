@@ -5,6 +5,12 @@
 .ipynb_checkpoints/
 data/IN/
 data/predictions/
+data/neo4j/
+latex/out/
+
+# vim
+*.swp
+*.swo
 
 
 # Byte-compiled / optimized / DLL files

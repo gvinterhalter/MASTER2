@@ -3,6 +3,11 @@
 
 # In[2]:
 
+import re
+def unescape_str(s):
+    return re.sub(unescape_str.regex, lambda m: m.group(1), s)
+unescape_str.regex = re.compile(r'\\(.)')
+
 from lark import Lark
 from lark import Transformer
 import re
@@ -28,7 +33,7 @@ class OBOTransformer(Transformer):
 
     name = lambda self, items: ('name', items[0].value)
     namespace = lambda self, items: ('namespace', items[0].value)
-    definition = lambda self, items: ('definition', items[0].value[1:-1], items[1])
+    definition = lambda self, items: ('definition', unescape_str(items[0].value[1:-1]), items[1])
     alt_id = simple_value("alt_id")
     xref = simple_value("xref")
     replaced_by = simple_value("replaced_by")
@@ -49,7 +54,7 @@ class OBOTransformer(Transformer):
     equivalent_to = simple_value("equivalent_to")
     disjoint_from = simple_value("disjoint_from")
     relationship = lambda self, items: ('relationship', items[0].value, items[1])
-    synonym = lambda self, items: ('synonym', items[0].value[1:-1], items[1].value, items[2])
+    synonym = lambda self, items: ('synonym', unescape_str(items[0].value[1:-1]), items[1].value, items[2])
 
     intersection_of = lambda self, items: ("intersection_of", items[0])    #TODO
 
@@ -172,7 +177,7 @@ parser = Lark(apply_meta_rules(r"""
 
 
 
-# with open("data/go_1.obo", "r") as obo_file:
+# with open("../data/go_1.obo", "r") as obo_file:
 #     terms = parser.parse(obo_file.read())
 #     pass
 #

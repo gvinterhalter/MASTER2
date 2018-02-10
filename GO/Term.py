@@ -11,7 +11,7 @@ class Term:
         else:
             setattr(self, name, value)
 
-    def __init__(self, manual_id, d):
+    def __init__(self, manual_id, d=None):
         if d: # imamo dict sa vrednostima
             if '_id' in d: # ako importujemo iz mongo db-a
                 del d['_id']
