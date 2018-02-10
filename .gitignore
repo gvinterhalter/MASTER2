@@ -1,4 +1,7 @@
 
+#latex
+latex/out/
+*.aux
 
 #ignore dirs
 .idea/
@@ -6,7 +9,6 @@
 data/IN/
 data/predictions/
 data/neo4j/
-latex/out/
 
 # vim
 *.swp
