@@ -45,6 +45,7 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{amsmath}
 % dužine
 
+
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 \addbibresource{ref.bib} % The filename of the bibliography
@@ -57,9 +58,12 @@ headsepline, % Uncomment to get a line under the header
 
 \geometry{
 	paper=a4paper, % Change to letterpaper for US letter
-	inner=2.5cm, % Inner margin
-	outer=3.8cm, % Outer margin
-	bindingoffset=.5cm, % Binding offset
+	inner=3.15cm, % Inner margin
+	outer=3.15cm, % Outer margin
+	bindingoffset=0cm, % Binding offset
+	% inner=2.5cm, % Inner margin
+	% outer=3.8cm, % Outer margin
+	% bindingoffset=.5cm, % Binding offset
 	top=1.5cm, % Top margin
 	bottom=1.5cm, % Bottom margin
 	%showframe, % Uncomment to show how the type block is set on the page
@@ -280,14 +284,10 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 
 \include{Chapters/Uvod}
 \include{Chapters/Podaci_i_Metode}
-\include{Chapters/Implementacija}
-\include{Chapters/Rezultati}
-\include{Chapters/Diskusija}
-% \include{Chapters/Chapter1}
-% \include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4} 
-%\include{Chapters/Chapter5} 
+\include{Chapters/Priprema_podataka}
+% \include{Chapters/Implementacija}
+% \include{Chapters/Rezultati}
+% \include{Chapters/Diskusija}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
