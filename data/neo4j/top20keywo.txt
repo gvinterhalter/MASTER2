@@ -1,2 +1,0 @@
-"Ribonucleoprotein", "Ribosomal protein", "Developmental protein", "Hormone", "Growth factor", "Cytokine", "Neuropeptide", "Activator", "Gap protein", "Repressor", "Chromatin regulator", "Pyrogen", "Vasoactive", "Amphibian defense peptide", "GTPase activation", "Endorphin", "Opioid peptide", "Protein phosphatase inhibitor", "Cyclin"
-
