@@ -1,9 +1,11 @@
 
 #latex
 latex/out/
+
+# autogenerisani ref se dobija od bib/* a sci.bib od ref.bib
+latex/*ref.bib*
+latex/*sci.bib*
 *.aux
-latex/ref.bib #autogenerisano iz bib direktorijuma
-latex/sci.bib #autogenerisano od ref.bib
 
 #ignore dirs
 .idea/
@@ -123,3 +125,4 @@ ENV/
 .mypy_cache/
 
 plots/unifikacija_slogova2-eps-converted-to\.pdf
+
