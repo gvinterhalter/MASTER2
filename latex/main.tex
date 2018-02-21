@@ -45,6 +45,13 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{amsmath}
 % dužine
 
+\usepackage{listings}                                                           
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+                                                                                
 
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
@@ -285,9 +292,10 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 \include{Chapters/Uvod}
 \include{Chapters/Podaci_i_Metode}
 \include{Chapters/Priprema_podataka}
-% \include{Chapters/Implementacija}
-% \include{Chapters/Rezultati}
-% \include{Chapters/Diskusija}
+\include{Chapters/Implementacija}
+\include{Chapters/Rezultati}
+\include{Chapters/Diskusija}
+
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
