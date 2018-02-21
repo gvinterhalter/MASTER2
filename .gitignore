@@ -2,6 +2,8 @@
 #latex
 latex/out/
 *.aux
+latex/ref.bib #autogenerisano iz bib direktorijuma
+latex/sci.bib #autogenerisano od ref.bib
 
 #ignore dirs
 .idea/
