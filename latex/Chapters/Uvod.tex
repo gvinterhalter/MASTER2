@@ -168,38 +168,27 @@ informacija \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 %   documentation
 
 
-Distribucije Svis-Prot baze dostupne su u nekoliko tekstualnih
-formata\footnote{ravna datoteka \en{flat file}, XML, RDF/XML} od kojih
-ravni tekstualni format zbog standardizacije prati format EMBL baze.
-Unos u bazu se zove \keyword{slog} \en{record} i sadrži sve informacije vezane
-za jedan protein. Jedan slog ilustrovaćemo uprošćenim primerom:
+Distribucije Svis-Prot baze dostupne su u nekoliko tekstualnih formata: ravna
+datoteka \en{flat file}, XML, RDF/XML.  Ravni tekstualni format zbog
+standardizacije prati format EMBL baze.  Unos u bazu se zove \keyword{slog}
+\en{record} i sadrži sve informacije vezane za jedan protein. Jedan slog
+ilustrovaćemo uprošćenim primerom u formatu ravne datoteke:
 
 \lstset{ 
-  % backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
   basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
-  % breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-  % breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
   commentstyle=\color{mygreen},    % comment style
   deletekeywords={...},            % if you want to delete keywords from the given language
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  % frame=single,                    % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  extendedchars=true,              % does not work with UTF-8
   keywordstyle=\color{blue},       % keyword style
-  language=Octave,                 % the language of the code
-  morekeywords={*,...},            % if you want to add more keywords to the set
-  % numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-  % numbersep=5pt,                   % how far the line-numbers are from the code
-  % numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  % language=Octave,                 % the language of the code
+  morekeywords={ID, AC, PE, KW, GO, SQ}, % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; 
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\color{mygray}, % the style that is used for the line-numbers
   % rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-  % showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
   showstringspaces=false,          % underline spaces within strings only
-  % showtabs=false,                  % show tabs within strings adding particular underscores
-  % stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
-  % stringstyle=\color{mymauve},     % string literal style
-  % tabsize=2,                     % sets default tabsize to 2 spaces
-  % title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
 \begin{lstlisting}
@@ -277,18 +266,20 @@ Bitne osobine u kontekstu naše analize:
 
   \item Za razliku od TrEML, GO mapiranje za Svis-Prot sekvence određuje se ručno.
 
-  \item \keyword{Ključnh reči} \en{keywords} (KW) opisuje hijearhisku strukturu
-    kontrolisanog vokabulara. Postoji 10 kategorija ključnih reči od kojih je
-    za naše istraživanje bitna "Molekulska funkcija".  Za razliku od GO termina
-    ključne reči prligaođene su opisivanju sadržaja Svis-Prot baze.
+  \item \keyword{Ključne reči} \en{keywords} (KW) opisuju hijearhisku strukturu
+    kontrolisanog vokabulara namenjenog opisivanju funkcije proteina. Postoji
+    10 kategorija ključnih reči od kojih je za naše istraživanje bitna
+    "Molekulska funkcija".  Za razliku od GO termina ključne reči prligaođene
+    su opisivanju sadržaja isključivo Svis-Prot proteina.
 
   \item Sekvenca (SQ) u slogu poznata je kao \keyword{kanonska} \en{canonical}
-    sekvenca. Ova sekvenca je odabrana kao predstavnik produkta(protein) gena
-    jedne vrste organizma.  Pod FT linijom čuvaju se različite osobine sekvence
-    uključujući i razlike u odnosu na izoforme \footnote{Izoformi nastali
-      usled: \en{ alterntive promoter usage, alternative splicing, alternative
-    initiation and ribosomal frameshifiting} } sekvence.  U našoj analizi pod
-    proteinom podrazumevamo kanonsku sekvencu.
+    sekvenca. Kanonska sekvenca predstavlja produkta(protein) gena jedne vrste
+    organizma.  Pod FT linijom čuvaju se različite osobine sekvence uključujući
+    i razlike u odnosu na izoforme\footnote{Izoformi su alternativni oblici
+      sekvence nastali usled: \en{ alterntive promoter usage, alternative
+    splicing, alternative initiation and ribosomal frameshifiting} } sekvence.
+    U našoj analizi pod proteinom podrazumevamo kanonsku sekvencu i
+    zanemarujemo alternativne oblike.
 
   \item Svis-Prot je \keyword{mimialno redundantna} u smislu da su svi proteini
     kodirani jednim genom u jednoj vrsti predstavljeni jednim slogom. Svi
@@ -315,5 +306,117 @@ Baza proteinskog neuređenja \en{Database of protein Disorder (DisProt)}
 
 \subsection{D2P2 i MobiDB}
 
-\section{Molekulska funkcija i njeno opisivanje}
+Baze podataka
+
+
+\section{Ontologije Gena}
+
+
+\keyword{Ontologija Gena} \en{Gene Ontology} ili skraćeno \keyword{GO}, 
+predstavlja izračunato znanje o funkciji gena odnosno genskog
+produkta (protein, nekodirajuća RNK ili makromolekulski kompleks)
+\parencite{GO2016}.
+GO baza sačinjena je iz dve komponente:
+\begin{enumerate}
+  \item Ontologije gena.
+  \item GO anotacije tj. antoacije genskog produkta GO terminom. U našoj
+    analizi anotacije su preuzete iz Svis-Prot baze.
+\end{enumerate}
+
+Ontologija gena definiše univerzum termina, takozvanih \keyword{GO termina}
+\en{GO terms} i njihove međusobne relacije. GO termini predstavljaju biološke
+termine(koncepte) koji opisuju funkciju. Ontologija gena sagledava funkciju
+genskog produkta iz tri aspekta koji se u terminologiji ontologija nazivaju
+imenski prostori \en{namespace}:
+\begin{itemize}
+  \item \keyword{Molekulska funkcija (MF)} je biohemiska aktivnost (uključujući
+    specifično vezivanje za ligande ili strukture) genskog produkta.
+  \item \keyword{Ćeliske komponente  (CC)} se odnosi na mesto u ćeliji gde je
+    genski produkt aktivan.
+  \item \keyword{Biološki procesi (BP)} se odnosi na proces kome genski produkt
+    doprinosi.
+\end{itemize}
+
+Inspirisani sličnošću prva tri sekvencisana eukariotska organizma, GO projekat
+nastao je sa ciljem da  unifikuje biologiju pod jedan univerzum termina za opis
+genskih proizvoda svih vrsta organizama\parencite{GO2000}. Ovaj cilj je najveća
+razlika u odnosu na kontrolisani vokabular Svis-Prot ključnih reči koji je
+prilagođen za opis samo proteina sadržanih u Svis-Prot bazi.
+
+Suštinu ontologije čine relacije između termina i pravila dedukcije koja se nad
+njima mogu primenjivati. Osnovnu strukturu ontologije čini direktni aciklički
+graf \en{DAG} obrazovan roditeljskom vezom(relacijom) \keyword{is\_a}. Prateći
+ovu relaciju termini jednog imenskog prostora recimo MF neće nikad preći u
+druga dva CC i BP.  Ontologija stoga ima tri korena čvora MF, CC i BP
+\parencite{go_struktura}. Primer strukture prikazan je na
+slici \ref{fig:kinase}.  Pored \keyword{is\_a} postoje dodatne relacije od kojih
+su najčešće \footnote{Postoji još relacija ali ih zbog obima nećemo navoditi}:
+
+\begin{itemize}
+  \item \keyword{part\_of}  - je deo  (ne znači da je uvek deo vezanog termina)
+  \item \keyword{has\_part} - ima deo (deo uvek postoji)
+  \item \keyword{regulates} - pozitivna ili negativna regulacija
+  \item \keyword{positvely\_regulates} - pozitivna regulacija  
+    (\keyword{is\_a} termin koji reguliše)
+  \item \keyword{negatively\_regulates} - negativna regulacija 
+    (\keyword{is\_a} termin koji reguliše)
+\end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\linewidth]{img/kinase.png}
+  \caption{Struktura ontologije}
+  \label{fig:kinase}
+\end{figure}
+
+Svaka veza(relacija) ima strogo definisana pravila kompozicije koja omogućavaju
+automatsko rezonovanje. Recimo relacija \keyword{is\_a} ima svojstvo
+tranzitivnosti\parencite{is_a}:
+\begin{verbatim}
+  A is_a    B  /\  B is_A C   =>    A is_a    C           
+  A part_of B  /\  B is_A C   =>    A part_of C
+\end{verbatim}
+
+Siže pravila rezonovanja prikazano je na slici \ref{fig:relations}. Ontologije su
+dostupne u nekoliko formata. U našem radu korišćen je ravni \file{.obo} format.
+Pored njega treba naglasiti postojanje \file{RDF/XML} i \file{OWL} verzija.
+Ove verzije namenjene su automatskom rezonovanju unutar specijalizovanih
+softvere\footnote{Mi smo koristili Neo4j grafovsku bazu što naš postupak
+rezonovanja čini eksplicitnim} i upitnih jezika (protégé, SPARQL, ...).
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1.0\linewidth]{relations.png}
+  \caption{Pravila rezonovanja (isprekidane relacije su rezultat)}
+  \label{fig:relations}
+\end{figure}
+
+GO termin može biti zastareo u kom slučaju se relacijom \keyword{replaced\_by}
+pokazuje na noviji termin. Relacija \keyword{consider} ukazuju na
+postojanje mogućih ekvivalentnih termina. Pored glavnog univerzuma postoje i
+podskupovi \footnote{Uglavnom ovi podskupovi predstavljaju model organizme}
+termina (GO slim) prikazani u donjem desnom delu slike \ref{fig:kinase}.
+
+
+\subsection{molekulska funkcija}
+to say something \parencite{go_mf}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

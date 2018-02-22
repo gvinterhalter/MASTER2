@@ -11,6 +11,7 @@ latex/*sci.bib*
 .idea/
 .ipynb_checkpoints/
 data/IN/
+pappers/
 data/predictions/
 data/tmp/
 db/neo4j/*.csv
