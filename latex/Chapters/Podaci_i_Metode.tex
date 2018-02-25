@@ -11,11 +11,10 @@ Za metode koje prezentujemo potrebne su tri vrste informacija:
 \begin{enumerate}
   \item Što više različitih proteina.
   \item Pouzdana anotacija funkcija.
-  \item Informacije o funkcijama, prvenstveno međurelacije.
+  \item Informacije o funkcijama, prvenstveno međurelacije.\\
+    (Međurelacije između funkcija su bitne  ako je potrebno grupisati ih)
 \end{enumerate}
 
-Međurelacije između funkcija su bitne samo ako je potrebno grupisati ih,
-ili ako je potrebno mapiranje na neku drugu nomenkulaturu funkcija.
 
 \subsection{Podaci iz originalnog rada}
 
@@ -34,7 +33,7 @@ unos u bazi predstavlja produkt jednog gena iz jedne vrstu organizma
 \parencite{nonRedundant}. Zbog toga se unosi u bazu tretiraju kao proteini a ne
 pojedinačne proteinske sekvence\footnote{Informacije o izomerima kao i
 istorijii promena entiteta takođe se čuvaju}.  Međutim za analizu funkcija
-Svis-Prot \keyword{jeste statistički redundantna} jer sadrže jako mnogo
+Svis-Prot \keyword{jeste statistički redundantna} jer sadrže veoma mnogo
 \keyword{homologih} proteina (prvenstveno ortologa).  Originalni autori
 \parencite{Xie2007} su izvršili klasterovanje Svis-Prot proteina u
 \keyword{proteinske familije} dobivši 27.217 familija. Svaki protein onda ima
@@ -52,7 +51,7 @@ verovatno ima pridruženih svega 7 familija proteina. Kako familija sadrži
 proteine pod pretpostavkom istog evolutivnog porekla njihova funkcija bi
 trebalo da je slična pa se onda postavlja pitanje da li je 7 familija dovoljno
 da bi se razmatrala data ključna reč. Ovo je primarno kritika za ključne reči
-jer one obično predstavljaju jako opšte pojmove.
+jer one obično predstavljaju opšte pojmove.
 
 Sa druge strane za usko specijalizovane pojmove bila bi dovoljna jedna familija
 proteina jer bi ona predstavljala sve razne homologe (TODO Burkhard Rost,
@@ -82,7 +81,7 @@ CAFA3 Podaci se sastoje od dve datoteke:
     proteina njih 66.063 ima dužinu veću ili jednaku od 40 aminokiselina.
   \item \file{uniprot\_sprot\_exp.txt} pridružuje funkcije označene kao
     \keyword{GO termini} \en{Gene Ontology terms}. Postoje termini iz sve tri
-    ontologije: 16.117 ćeliskih komponenti, 5.966 molekulskih funkcija i 16.117
+    ontologije: 16.117 ćelijskih komponenti, 5.966 molekulskih funkcija i 16.117
     bioloških procesa. Jednom proteinu može biti pridruženo više GO termina i
     obrnuto.
 \end{enumerate}
@@ -143,7 +142,7 @@ Nažalost kao i 2006. ni danas ovakve informacije nisu dostupne.
 
 \textbf{Realnost.} 
 \begin{itemize}
-  \item Broj eksperimentalno određenih neuređenih regiona je jako mali.
+  \item Broj eksperimentalno određenih neuređenih regiona je veoma mali.
     \keyword{Disprot baza} eksperimentalno utvrđenih neuređenih regiona ima
     svega 803 proteina sa opisanih 2167 neuređenih regiona. Još gore pouzdanost
     ovih regiona je diskutabilna jer različite eksperimentalne tehnike koje su
@@ -208,10 +207,10 @@ skupova.
 
 VSL2b kao ulaz prima proteinsku sekvencu minimalne dužine 9 AK kodiranih jednim
 karakterom. Podržava azbuku od samo 20 standardnih AK.  Izlaz je niz
-ocena(verovatnoća) za svaku aminokiselinu da li pripada neuređenom regionu to
+ocena (verovatnoća) za svaku aminokiselinu da li pripada neuređenom regionu to
 jest da je taj rezidual
 \footnote{ Rezidual je čest naziv koji se koristi za aminokiseline i nukleinske
-  kiseline na nekoj poziciji sekvence.  Naziv potiče od hemiskih tehnika
+  kiseline na nekoj poziciji sekvence.  Naziv potiče od hemijskih tehnika
   prečišćavanja čiji su rezultati reziduali (ostaci).
 } neuređen. Reziduale sa vrednošću iznad 0.5 smatramo neuređenim a suprotno
 uređenim. Za potrebe analize autori \parencite{Xie2007} uvode sledeću definiciju.
@@ -370,7 +369,7 @@ devijacija.  Dodatno p-vrednost može da se aproksimira kao $1/2(1-erf(Z_j/2))$
 $erf(x)=\dfrac{2}{\sqrt{\pi}} \int_{0}^{x}  e^{-t^2} dt$ }
 ako raspodela liči na normalnu. Ovo je nekad korisno jer sa 1000 realizacija
 $Y_j$ nema dovoljnu preciznost za p vrednost manju od $1/1000=0.001$. Međutim u
-ovom radu to nije korišćeno jer su sva sortiranja(kao i u originalnom radu)
+ovom radu to nije korišćeno jer su sva sortiranja (kao i u originalnom radu)
 izvršena po Z-skor oceni.
 
 
