@@ -18,8 +18,8 @@ Za metode koje prezentujemo potrebne su tri vrste informacija:
 
 \subsection{Podaci iz originalnog rada}
 
-U originalnom radu \parencite{Xie2007} korišćena je  baza ručno proverenih
-proteinskih sekvenci \keyword{Svis-Prot} \en{Swiss-Prot}, verzija 48 iz 2005.
+U originalnom radu \parencite{Xie2007} korišćena je  baza 
+\keyword{Svis-Prot}\ref{svis-prot} \en{Swiss-Prot}, verzija 48 iz 2005.
 Verzija 48 ima 201.560 proteina od kojih 196.326 imaju dužinu preko 40
 aminokiselina (što je potrebno zbog definicije ref \ref{pdis_def}). Funkcije
 pridružene proteinima izražene su \keyword{kontrolisanim vokabularom}
@@ -28,50 +28,57 @@ pridružene proteinima izražene su \keyword{kontrolisanim vokabularom}
 statističke značajnost posmatrane su one ključne reči kojima je bilo anotirano
 barem 20 proteina, tj. 710 ključnih reči.
 
-Proteinske sekvence u Svis-Prot bazi ''nisu redundantne'' u smislu da jedan
-unos u bazi predstavlja produkt jednog gena iz jedne vrstu organizma
-\parencite{nonRedundant}. Zbog toga se unosi u bazu tretiraju kao proteini a ne
-pojedinačne proteinske sekvence\footnote{Informacije o izomerima kao i
-istorijii promena entiteta takođe se čuvaju}.  Međutim za analizu funkcija
-Svis-Prot \keyword{jeste statistički redundantna} jer sadrže veoma mnogo
-\keyword{homologih} proteina (prvenstveno ortologa).  Originalni autori
-\parencite{Xie2007} su izvršili klasterovanje Svis-Prot proteina u
-\keyword{proteinske familije} dobivši 27.217 familija. Svaki protein onda ima
-težinu kojom doprinosi daljoj analizi. Težina svakog proteina je inverzno
-proporcionalna veličini klastera kome pripada tako da je zbir težina svih
-proteina jednog klastera jednak jedan.  U našem radu nismo imali potrebe za
-klasterovanjem pa nećemo dalje opisivati posledice ovog pristupa na analizu.
+Kao što smo pomenulli\ref{svis-prot} kanonske sekvence(proteini) u Svis-Prot
+bazi ''nisu redundantne'' u smislu da jedan unos u bazi predstavlja produkt
+jednog gena iz jedne vrstu organizma. Međutim za analizu funkcija
+Svis-Prot \keyword{jeste statistički redundantna}\parencite{proveriti} jer
+sadrže veliku količinu \keyword{homologih} proteina (prvenstveno ortologa).
+Originalni autori \parencite{Xie2007} su izvršili klasterovanje Svis-Prot
+proteina u \keyword{proteinske familije} dobivši 27.217 familija. Svaki protein
+onda ima težinu kojom doprinosi daljoj analizi. Težina svakog proteina je onda
+u kontekstu klastera inverzno proporcionalna veličini klastera kome pripada
+tako da je zbir težina svih proteina jednog klastera jednak jedan. 
 
-\textbf{komentar:} \\
-Ono što autori nisu elaborirali jeste da početni uslov od minimum 20 proteina
-po ključnoj reči možda nije dovoljan. Ako pretpostavimo zarad ilustracije
-normalnu raspodelu veličina klastera proteina, očekivali bi da klaster najčešće
-sadrži 7 proteina. Dakle iako je 50 proteina pridruženo nekoj funkciji ona
-verovatno ima pridruženih svega 7 familija proteina. Kako familija sadrži
-proteine pod pretpostavkom istog evolutivnog porekla njihova funkcija bi
-trebalo da je slična pa se onda postavlja pitanje da li je 7 familija dovoljno
-da bi se razmatrala data ključna reč. Ovo je primarno kritika za ključne reči
-jer one obično predstavljaju opšte pojmove.
-
-Sa druge strane za usko specijalizovane pojmove bila bi dovoljna jedna familija
-proteina jer bi ona predstavljala sve razne homologe (TODO Burkhard Rost,
-Termofili)
+% \textbf{komentar:} \\
+% Ono što autori nisu elaborirali jeste da početni uslov od minimum 20 proteina
+% po ključnoj reči možda nije dovoljan. Ako pretpostavimo zarad ilustracije
+% normalnu raspodelu veličina klastera proteina, očekivali bi da klaster najčešće
+% sadrži 7 proteina. Dakle iako je 50 proteina pridruženo nekoj funkciji ona
+% verovatno ima pridruženih svega 7 familija proteina. Kako familija sadrži
+% proteine pod pretpostavkom istog evolutivnog porekla njihova funkcija bi
+% trebalo da je slična pa se onda postavlja pitanje da li je 7 familija dovoljno
+% da bi se razmatrala data ključna reč. Ovo je primarno kritika za ključne reči
+% jer one obično predstavljaju opšte pojmove.
+%
+% Sa druge strane za usko specijalizovane pojmove bila bi dovoljna jedna familija
+% proteina jer bi ona predstavljala sve razne homologe (TODO Burkhard Rost,
+% Termofili)
 
 \subsection{Naši podaci}
 
-U ovom radu korišćen je skup proteina preuzet sa \keyword{CAFA3} takmičenja.
-Ovaj skup je namenjen da bude trening skup za predikciju funkcija proteina
-\parencite{CAFA}.  CAFA3 trening skup je pažljivo odabran podskup Svis-Prot
-proteina i smatra se da \keyword{nije statistički redundantan} \parencite{??}.
-Iz tog razloga nije potrebno vršiti klasterovanje i analiza je jednostavnija te
-u metodama predstavljamo samo uprošćen oblik formula.  .  Svis-Prot proteini su
-kodirani jednim karakterom koristeći \keyword{IUPAC} kodove.  U podacima
-postoje sekvence sa nestandardnim aminokiselinam 'U' i 'O' ili višeznačnim
-oznakama 'B', 'J', 'X' i 'Z'.  Ovakve sekvence nisu podržane u našoj analizi i
-za nas predstavljaju nevalidne proteinske sekvence. Pod \keyword{validnom
-proteinskom sekvencom} smatraćemo sekvencu koja je validan ulaz za prediktor u
-našoj analizi, tj. sačinjena je od azbuke od 20 standardnih aminokiselina i ima
-najmanju dužinu 9\footnote{ Dužina 9 je minimum za VSL2b prediktor koji
+U našem radu korišćen je skup proteina preuzet sa \keyword{CAFA3} takmičenja.
+Ovaj skup je namenjen da bude trening skup za predikciju funkcija proteina \parencite{CAFA}. 
+
+CAFA3 trening skup je pažljivo odabran podskup Svis-Prot baze (iz 2016.) koji
+uključuje sve proteine iz model organizama: \en{Human, Mouse, Rat, S.
+cerevisiae, S. pombe, E. coli, A. thaliana, Dictyostelium discoideum,
+Zebrafish, \& Bacillus cereus. } sa izuzetokm sekvenci \en{Drosophila and
+Candida} koje su preuzete iz svojih respektivnih genomskih baza (Lična
+komunikacija sa Iddo Friedberg, PhD iz CAFA tima)
+
+Iako ovaj pristup potencijalno proizvodi skup koji je \keyword{statisički
+redundantan} u našoj analizi smo pretpostavili da to nije slučaj jer je čin
+klasterovanja je veoma računarski zahtevan a nismo ubeđeni da je neophodan za
+ovaj konkretan skup. Iz tog razloga u daljoj analizi predstavljamo uprošćenu
+verziju formula koja ne uračunva težinu pojedinačnog proteina.
+
+.Svis-Prot proteini su kodirani jednim karakterom koristeći \keyword{IUPAC}
+kodove.  U podacima postoje sekvence sa nestandardnim aminokiselinam 'U' i 'O'
+ili višeznačnim oznakama 'B', 'J', 'X' i 'Z'.  Ovakve sekvence nisu podržane od
+strane izabranog prediktora i za nas predstavljaju nevalidne proteinske sekvence. Pod
+\keyword{validnom proteinskom sekvencom} smatraćemo sekvencu koja je validan
+ulaz za prediktor, tj. sačinjena je od azbuke od 20 standardnih aminokiselina i
+ima najmanju dužinu 9\footnote{ Dužina 9 je minimum za VSL2b prediktor koji
 koristimo}.
 
 CAFA3 Podaci se sastoje od dve datoteke:
@@ -79,11 +86,10 @@ CAFA3 Podaci se sastoje od dve datoteke:
   \item \file{uniprot\_sprot\_exp.fasta}  sadrži 66.841 protein od kojih 66.599
     za našu analizu predstavljaju validnu proteinsku sekvencu . Od preostalih
     proteina njih 66.063 ima dužinu veću ili jednaku od 40 aminokiselina.
-  \item \file{uniprot\_sprot\_exp.txt} pridružuje funkcije označene kao
-    \keyword{GO termini} \en{Gene Ontology terms}. Postoje termini iz sve tri
-    ontologije: 16.117 ćelijskih komponenti, 5.966 molekulskih funkcija i 16.117
-    bioloških procesa. Jednom proteinu može biti pridruženo više GO termina i
-    obrnuto.
+  \item \file{uniprot\_sprot\_exp.txt} pridružuje funkcije u obliku 
+    \keyword{GO termini}. Zastupljeni su termini iz sva tri imenska prostora:
+    16.117 ćelijskih komponenti, 5.966 molekulskih funkcija i 16.117 bioloških
+    procesa. Jednom proteinu može biti pridruženo više GO termina i obrnuto.
 \end{enumerate}
 
 Naša analiza primarno je orijentisna na korišćenje GO termina za opis funkcije
@@ -102,29 +108,25 @@ ključnih reči i GO termina. Postoje dva dostupna mapiranja:
     više GO termina.
   \item \url{ttp://geneontology.org/external2go/uniprotkb_kw2go} sadrži samo
     mapiranja i generiše ih \keyword{GOA projekat} \parencite{Barrell2009}.
-    Ipak ova mapiranja nismo koristili jer ... \keyword{TODO}
+    Ipak ova mapiranja nisu korišćena jer ... \keyword{TODO}
 \end{itemize}
 
-Pošto je originalni rad \parencite{Xie2007} iz 2007. godine postoji razlike u
+Pošto je originalni rad\parencite{Xie2007} iz 2007. godine postoji razlike u
 vokabularu ključnih reči, razlike u samim sekvencama proteina, broj proteina i
 razume se anotacije ključnih reči na proteine.  Iz tog razloga bilo je potrebno
 prvo ponoviti analizu sa vokabularom ključnih reči da bi se procenilo koliko
-ove razlike utiču na originalne rezultate. Moramo istaći da nismo bili u
-mogućnosti da proverimo ove inforamcije originalnim metodama i da priznamo da
-neke razlike mogu da postoje zbog korišćenja CAFA3 statistički ne redundantnih
-proteina. Međutim svako poklapanje sa originalnim rezultatima takođe potvrđuje
-validnost izbora CAFA3 proteina kao dobrog statističkog uzorka.
+ove razlike utiču na originalne rezultate rada\parencite{Xie2007}.
 
-Odlučili smo da CAFA3 podatke ne posmatramo kao crnu kutiju već da ih povežemo
-sa Svis-Prot proteinima prvenstveno zbog pridruživanja ključnih reči.  kako
-razlike između najnovije verzije Svis-Prot baze i CAFA3 podatak postoje bilo je
-neophodno izvršiti ''korektno'' spajanje i analizu razlika. U ovom koraku
-izgubili smo ?? proteina. Ovaj korak biće detaljno opisan u implementiciji.
+Iz tog razloga CAFA3 podatke ne možemo da posmatramo kao crnu kutiju već je
+bilo neophodno povezati ih sa Svis-Prot proteinima prvenstveno zbog
+pridruživanja ključnih reči.  kako razlike između najnovije verzije Svis-Prot
+baze i CAFA3 podatak postoje bilo je neophodno izvršiti ''korektno'' spajanje i
+analizu razlika.  Informacija o pridruženim ključnim rečima takođe su nam bile
+značajne za proveru validnosti mapiranja na GO termine i testiranje
+potencijalnih drugih metoda mapiranja.  Naša je očekivanje da iste funkcije
+podrazumevaju anotaciju na iste proteine.  Ovi koraci detaljno su opisani u
+delu o pripremi podataka\ref{Priprema_podataka}.
 
-Informacija o pridruženim ključnim rečima takođe su nam bile značajne za
-proveru validnosti mapiranja na GO termine i testiranje potencijalnih drugih
-metoda mapiranja. Naša je očekivanje da iste funkcije podrazumevaju
-anotaciju na iste proteine.
 
 
 \section {Metod}
@@ -138,106 +140,76 @@ Pretpostavimo da za proizvoljnu molekulsku funkciju znamo sve različite
 proteine koji je obavljaju.  Da bi dali korektan odgovor  moramo da znamo kako
 neuređenost pojedinačnog proteina utiče na ponašanje protein.  Zatim moramo da
 znamo da li i kako to ponašanje (tip neurđenosti) utiče na datu funkciju.
-Nažalost kao i 2006. ni danas ovakve informacije nisu dostupne.
+Ova vrsta znanja nije bila dostupna 2006. a ni danas situacija nije mnogo bolja.
 
 \textbf{Realnost.} 
 \begin{itemize}
   \item Broj eksperimentalno određenih neuređenih regiona je veoma mali.
     \keyword{Disprot baza} eksperimentalno utvrđenih neuređenih regiona ima
-    svega 803 proteina sa opisanih 2167 neuređenih regiona. Još gore pouzdanost
-    ovih regiona je diskutabilna jer različite eksperimentalne tehnike koje su
-    korišćene imaju različitu pouzdanost. Najveću pouzdanost nose regioni koji
-    su eksperimentlano utvrđeni sa što većim brojem pouzdanih eksperimentalnih
-    tehnika \parencite{disprot}. 
-  \item Prediktori su trenirani na malom podskupu proteina (Disprot, PDB, ...).
-    Čak i konsenzus nekoliko različitih prediktora ne daje dovoljno pouzdane
+    svega 803 proteina sa opisanih 2167 neuređenih regiona\parencite{disprot7}.
+    Još gore pouzdanost ovih regiona je diskutabilna jer različite
+    eksperimentalne tehnike koje su korišćene imaju različitu pouzdanost.
+    Najveću pouzdanost nose regioni koji su eksperimentlano utvrđeni sa što
+    većim brojem eksperimentalnih tehnika\footnote{Nisu ni sve eksperimentalne
+    tehnike podjednako pouzdane} \parencite{disprot7}. 
+  \item Prediktori su trenirani na malom podskupu proteina iz Disprot i PDB  baze.
+    Čak i konsenzus nekoliko različitih prediktora ne daje dovoljno pouzdane.
     rezultate o lokciji neuređenog regiona\parencite{Mitic}.
-  \item Koliko nam je poznato trenutno nema prediktora koji predviđaju tip
-    neuređenosti. Takođe Opisivanje tipa neuređenosti predstavlja poduhvat.
-    \begin{itemize}
-      \item Prof. Vladimir Uverski predlaže nekoliko imena za opis različitih
-        ponašanja neuređenih proteina \en{Folldon, Unfolldon, ...}
-        \parencite{Uversky2017}.
-      \item Prof. Peter Tompa je zaslužan za kreiranje 3 ontologije neuređenih
-        regiona za bazu Disprot koji precizno modeluje tipove
-        neuređenosti\parencite{disprot}.  .  Međutim koliko nam je poznato
-        prediktori koji predviđaju termine ove ontologije još nisu napravljeni
-    \end{itemize}
+  \item 
+    Pozitivna strana je najnoviji napredak, razvoj prediktora koji direktno
+    pokušavaju da predvide funkciju koju IDPr obavlja\parencite{meng_c20017}.
+  % \item Koliko nam je poznato trenutno nema prediktora koji predviđaju tip
+  %   neuređenosti. Takođe Opisivanje tipa neuređenosti predstavlja poduhvat.
+  %   \begin{itemize}
+  %     \item Prof. Vladimir Uverski predlaže nekoliko imena za opis različitih
+  %       ponašanja neuređenih proteina \en{Folldon, Unfolldon, ...}
+  %       \parencite{Uversky2017}.
+  %     \item Prof. Peter Tompa je zaslužan za kreiranje 3 ontologije neuređenih
+  %       regiona za bazu Disprot koji precizno modeluje tipove
+  %       neuređenosti\parencite{disprot}.  .  Međutim koliko nam je poznato
+  %       prediktori koji predviđaju termine ove ontologije još nisu napravljeni
+  %   \end{itemize}
 
 \end{itemize}
 
-Jedina alternativa jeste da se predpostavi da veći udeo neuređenih u odnosu na
+Jednostavna alternativa je da se pretpostavi da veći udeo neuređenih u odnosu na
 uređene proteine podrazumeva da funkcija zavisi više od neuređenosti.  Dakle
-izjednačićemo uzročnost \en{causation} i \keyword{korelaciju}. Ali prvo
+izjednačavamo uzročnost \en{causation} i \keyword{korelaciju}. Ali prvo
 potrebno je definisati kada protein smatramo neuređenim.  Definicija mora da
 ima biološkog smisla, da bude prilagođena analizi ali pored toga ograničena je
 sposobnostima i preciznošću prediktora koji se korist.  Više o tome u nastavku.
-
 
 \subsection{Predikcija neuređenosti proteina}
 
 Autori \parencite{Xie2007} koristili su \keyword{PONDR VL3E} prediktor koji
 postiže tačnost od $~87\%$ pri unakrsnoj validaciji nad uravnoteženim test
-skupom.  Zbog ekonomičnosti i dostupnosti mi smo koristili noviji prediktor
-\keyword{PONDR VSL2b}.
-
-Oba prediktora pripadaju \keyword{PONDR} \en{(Predictor Of Naturally Disordered
-Regions)} familiji prediktora. Ovi prediktori zasnivaju se na eksperimentalno
-pokazanim karakteristikama neurđenih regiona. Preciznije određene aminokiseline
-verovatnije su da se jave u neuređenom regionu. Neuređeni regioni imaju manje
-aromatičnih i hidrofobnih AK, veći ukupni naboj, veći indeks fleksibilnosti i
-manju kompleksnost sekvence. Ove osobine izražene kao atributi koriste se za
-treniranje neuronske mreže sa propagacijom unapred \en{ feed forward neural
-networks } koja koristi prozor veličine između 9 i 21 aminokiseline.
-Finalni prediktor predstavlja kombinaciju nekoliko neuronskih mreža gde je
-svaka od njih trenirana nad različitim podacima specijalizujući se da predviđa
-samo regione određene veličine ili položaja. PONDR familija ima nekoliko
-prediktora koji  se razlikuju u načinu treniranja što se postiže kombinacijom
-različitih trening skupova.  Oznaka ''VSL2b'' kodira tipove proteinskih trening
-skupova.
-\begin{itemize}
-  \item V - Opisuje eksperimentalnu tehniku kojom je neurđenost utvrđena na
-    trening skupu \en{X-ray, NMR, circular dichroism}
-  \item S - Prediktor je treniran na skupu proteina sa \keyword{kratkim}
-      neruređenim
-    regionim ($<30$ AK)
-  \item L - Prediktor je treniran na skupu proteina sa \keyword{dugim}
-    neuređenim regionima ($>30$ AK)
-\end{itemize}
-
-VSL2b kao ulaz prima proteinsku sekvencu minimalne dužine 9 AK kodiranih jednim
-karakterom. Podržava azbuku od samo 20 standardnih AK.  Izlaz je niz
-ocena (verovatnoća) za svaku aminokiselinu da li pripada neuređenom regionu to
-jest da je taj rezidual
-\footnote{ Rezidual je čest naziv koji se koristi za aminokiseline i nukleinske
-  kiseline na nekoj poziciji sekvence.  Naziv potiče od hemijskih tehnika
-  prečišćavanja čiji su rezultati reziduali (ostaci).
-} neuređen. Reziduale sa vrednošću iznad 0.5 smatramo neuređenim a suprotno
-uređenim. Za potrebe analize autori \parencite{Xie2007} uvode sledeću definiciju.
+skupom.  Zbog ekonomičnosti i dostupnosti u našem radu korišćen je noviji
+prediktor druge generacije \keyword{PONDR VSL2b}.
+Relevantne karakteristike VSL2b detaljno su opisane u \ref{VSL2b}.
+Za potrebe analize autori \parencite{Xie2007} uvode sledeću definiciju.
 
 \newtheorem{mydef}{Definicija}
 \begin{mydef}
 \label{pdis_def}
-Protein je \keyword{verovatno/putativno neuređen} \en {putatively disordered}
+Protein je \keyword{putativno neuređen}(najverovatno neuređen) \en {putatively disordered}
 ako sadrži bar jedan region veći ili jednak od 40 uzastopnih aminokiselina
 takvih da imaju \textit{predviđenu neuređenost} iznad 0.5. 
 \end{mydef}
 
 Onda definišemo operator $d$ takav da za svaku proteinsku sekvencu $s_i$ važi:
 
-
 \[   
   d(s_i) = 
     \begin{cases}
-      1 & \text{ako je} \quad s_i \quad \keyword{verovatno neuređena}\\
+      1 & \text{ako je} \quad s_i \quad \keyword{putativno neuređena}\\
       0 & \text{suprotno}
     \end{cases}
 \]
 
 Uslov ''$\ge40$'' u originalnom radu delom je posledica ograničenja VL3
-prediktora koji je treniran na \keyword{dugim} sekvencama. Mi nismo u obavezi
-da sledimo ovo pravilo ali to radimo radimo radi upoređivanja rezultata.
-
+prediktora koji je treniran na \keyword{dugim} sekvencama\footnote{L označava
+duge regione, >= 30 AK}. Mi nismo u obavezi da sledimo ovo pravilo ali to
+radimo radimo radi upoređivanja rezultata.
 
 \subsection{Zavisnost dužine proteina i predikcije dugačkog neuređenog regiona}
 
@@ -339,7 +311,7 @@ na slici
 \subsection{Ocenjivanje zavisnosti funkcije od neuređenosti}
 
 Neka je $S_j$ skup proteina koji imaj pridruženu funkciju $j$. Tada se procenat
-verovatno neuređenih proteina u oznaci $F_j$ može izračunati kao: $$F_j =
+putativno neuređenih proteina u oznaci $F_j$ može izračunati kao: $$F_j =
 \dfrac{\sum_{s_i \in S_j} d(s_i)} {\Vert S_j \Vert} $$
 
 Nultu hiptezu koja predviđa da je rezultat $F_j$ posledica samo slučajnosti, to

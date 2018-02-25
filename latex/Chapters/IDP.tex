@@ -253,6 +253,7 @@ TODO, samo osnovne formule za prciznost i druge mere...
 
 
 \subsection{PONDR familija prediktora i VSL2b}
+\label{VSL2b}
 
 PONDR familija \en{Predictors of Natural Disordered Regions} je grupa
 prediktora druge generacije zasnovanih na neuronskim mrežama, kraće NN .
@@ -272,22 +273,26 @@ Oznaka ''VSL2b'' kodira tipove i poreklo atributa proteinskih trening skupova.
     neuređenim regionima ($>30$ AK)
 \end{itemize}
 
-VSL2b je evaluiran kao ukupno najbolji prediktor tokom CASP7
-takmičenja\parencite{bohe2009},  2008 god. Međutim po današnjim merilima
-\parencite{meng2017} VSL2b ipak se smatra zastarelim. 
-Ali, kako je VSL2b nezavistan paket koji se lako može pokrenuti na kućnom računaru
-i projektovan je da bude brz (visoko propustan) naše istraživanje temelji se
-na njemu.
+Tokom CASP7 takimčenja 2008. VSL2b je evaluiran kao prediktor sa ukupnim najtačnijim predviđanjima\parencite{bohe2009}.
+.Međutim po današnjim merilima \parencite{meng2017} VSL2b ipak se smatra
+zastarelim.  Ali, kako je VSL2b nezavistan paket koji se lako može pokrenuti na
+kućnom računaru i projektovan je da bude brz (visoko propustan) naše
+istraživanje temelji se na njemu.
 
-ovo vreovatno kasnije\\
+VSL2b kao ulaz prima proteinsku sekvencu\footnote{
 Ulaz VSL2b može biti i evolutivni profil što poboljšava rezultat,  međutim zbog
 dodatnog koraka PSI-BLAST pretrage ovaju pristup nije korišćen.
 (posledice ???)
-
-
-
-
-
+}
+minimalne dužine 9 AK kodiranih jednim
+karakterom. Podržava azbuku od samo 20 standardnih AK.  Izlaz je niz
+ocena (verovatnoća) za svaku aminokiselinu da li pripada neuređenom regionu to
+jest da je taj rezidual
+\footnote{ Rezidual je čest naziv koji se koristi za aminokiseline i nukleinske
+  kiseline na nekoj poziciji sekvence.  Naziv potiče od hemijskih tehnika
+  prečišćavanja čiji su rezultati reziduali (ostaci).
+} neuređen. Reziduale sa vrednostima iznad 0.5 smatra se neuređenim a suprotno
+uređenim.
 
 
 
