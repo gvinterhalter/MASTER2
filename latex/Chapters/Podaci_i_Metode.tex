@@ -35,9 +35,9 @@ Svis-Prot \keyword{jeste statistički redundantna}\parencite{proveriti} jer
 sadrže veliku količinu \keyword{homologih} proteina (prvenstveno ortologa).
 Originalni autori \parencite{Xie2007} su izvršili klasterovanje Svis-Prot
 proteina u \keyword{proteinske familije} dobivši 27.217 familija. Svaki protein
-onda ima težinu kojom doprinosi daljoj analizi. Težina svakog proteina je onda
-u kontekstu klastera inverzno proporcionalna veličini klastera kome pripada
-tako da je zbir težina svih proteina jednog klastera jednak jedan. 
+onda ima težinu kojom doprinosi daljoj analizi. Težina svakog proteina u preseku
+klastera sa datom funkcijom jeo onda inverzno proporcionalna veličini preseka
+tako da je zbir težina svih proteina jednaka veličini preseka.
 
 % \textbf{komentar:} \\
 % Ono što autori nisu elaborirali jeste da početni uslov od minimum 20 proteina
@@ -140,7 +140,7 @@ Pretpostavimo da za proizvoljnu molekulsku funkciju znamo sve različite
 proteine koji je obavljaju.  Da bi dali korektan odgovor  moramo da znamo kako
 neuređenost pojedinačnog proteina utiče na ponašanje protein.  Zatim moramo da
 znamo da li i kako to ponašanje (tip neurđenosti) utiče na datu funkciju.
-Ova vrsta znanja nije bila dostupna 2006. a ni danas situacija nije mnogo bolja.
+Ova vrsta znanja nije bila dostupna 2006. osim za jako mali skup proteina.
 
 \textbf{Realnost.} 
 \begin{itemize}
@@ -149,12 +149,12 @@ Ova vrsta znanja nije bila dostupna 2006. a ni danas situacija nije mnogo bolja.
     svega 803 proteina sa opisanih 2167 neuređenih regiona\parencite{disprot7}.
     Još gore pouzdanost ovih regiona je diskutabilna jer različite
     eksperimentalne tehnike koje su korišćene imaju različitu pouzdanost.
-    Najveću pouzdanost nose regioni koji su eksperimentlano utvrđeni sa što
+    Najveću pouzdanost nose regioni koji su eksperimentlano utvrđeni sa 
     većim brojem eksperimentalnih tehnika\footnote{Nisu ni sve eksperimentalne
     tehnike podjednako pouzdane} \parencite{disprot7}. 
   \item Prediktori su trenirani na malom podskupu proteina iz Disprot i PDB  baze.
-    Čak i konsenzus nekoliko različitih prediktora ne daje dovoljno pouzdane.
-    rezultate o lokciji neuređenog regiona\parencite{Mitic}.
+    Čak i konsenzus nekoliko različitih prediktora ne daje dovoljno pouzdane
+    rezultate o lokaciji neuređenog regiona\parencite{Mitic}.
   \item 
     Pozitivna strana je najnoviji napredak, razvoj prediktora koji direktno
     pokušavaju da predvide funkciju koju IDPr obavlja\parencite{meng_c20017}.
