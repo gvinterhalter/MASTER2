@@ -7,33 +7,32 @@
 
 
 
-\section{Ontologije gena i ključne reči}
 
 
 
 \section{Objedinjavanje CAFA3 i novije Svis-Prot verzije}
 
-iz CAFA3 trening skupa izdvojeni su svi validni proteini ( dužine barem 9, i
+Iz CAFA3 trening skupa izdvojeni su svi validni proteini ( dužine barem 9, i
 azbukom od 20 standardnih aminokiselina). Ni u jednom trenutko ne izbacujemo
-proteine manje od 40 aminokiseline jer to deo analize funkcije i nismo želeli
+proteine manje od 40 aminokiseline jer je to deo analize funkcije i nismo želeli
 da ograničimo skup mogućih predikcija neuređenosti.
 
 Informacije o Svis-Prot bazi dobijene su iz verzije 2017\_12, iz datoteke
 \url{ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2017_12/knowledgebase/uniprot_sprot-only2017_12.tar.gz}.
-Pomenuta verzija ima 556.196 proteina. Zbog novijeg datuma baze postoje razlike
+Pomenuta verzija ima 556 196 proteina. Zbog novijeg datuma baze postoje razlike
 u broju, sekvencama i  anotacijama proteina u odnosu na CAFA3 verzije proteina.
 
-Od 66.599 validnih CAFA3 proteina 66.530 ima nepromenjen \keyword{primarni
+Od 66 599 validnih CAFA3 proteina 66 530 ima nepromenjen \keyword{primarni
   identifikator} \en{accession number\footnote{Pod brojem se zapravo
   podrazumeva alfanumerička oznaka.}}.  69 novih unosa(slogova\footnote{ Slog
   \en{Record} u terminima baze podataka predstavlja zapis jednog elementa u
 ovom slučaju reprezentacije proteina i njegovih karakteristika.  identifkovan
 je primarnim identifikatorm.  }) u Svis-Prot bazu dobijena su revizijom CAFA3
-proteina koji nam nedostaju.  Ove je posledica dva moguća mehanizma:
+proteina koji nam nedostaju.  Ovo je posledica dva moguća mehanizma:
 
 \begin{enumerate}
   \item Unifikacija postojećih proteina u jedan novi slog. Rezultat ovog
-    preslikavanja prikazan je na slici \ref{fig:unifikacija_slogova}. Analizom
+    preslikavanja prikazan je na Slici \ref{fig:unifikacija_slogova}. Analizom
     ovih promena uspešno su rekonstruisana  svega 4 nova sloga. Kako je 4
     suviše mali broj zbog jednostavnosti zanemarili smo sve slogove dobijene
     unifikacijom.
@@ -57,13 +56,38 @@ proteina koji nam nedostaju.  Ove je posledica dva moguća mehanizma:
 Validini CAFA3 proteini anotirani su sa  5957 različitih GO termina Molekulske
 Funkcije (MF) od kojih je 50 zamenjeno novijim terminom i izbačeno iz najnovije
 \file{go.obo} datoteke. U Svis-Prot bazi nismo bili u mogućnosti da proverimo
-za MF ali ukupno je zamenjeno 319 GO termina.
+za M,F ali ukupno je zamenjeno 319 GO termina.
 CAFA3 sadrži 67 MF GO termina koji se ne javljaju u Swis-Prot anotacijama.
-Swis-Prot sadrži 888 MF GO termian koji se ne javljaju u CAFA3 anotacijama.
-Pošto Svis-Prot treba da sadrži novije(tačnije informacije) CAFA3 anotacije
-su zanemarene.
+Swis-Prot sadrži 888 MF GO termina koji se ne javljaju u CAFA3 anotacijama.
+Pošto Svis-Prot treba da sadrži svežije (tačnije) anotacije CAFA3 verzija
+anotacija je zanemarena u koristi najnovijih Svis-Prot anotacija.
 
 Pored anotacija Svis-Prot sadrži 194 proteina čija se sekvenca razlikuje u
 odnosu na CAFA3 verziju proteina. Odlučeno je da ipak koristimo CAFA3 sekvence.
 
 
+\section{Ontologije gena i ključne reči}
+
+\begin{figure}[th]
+\hspace*{-2.2cm} 
+\includegraphics[scale=1]{Figures/plots/kw_dis2go.pdf}
+\decoRule
+\caption {
+  Mapiranje 20 najznačajnijh neuređenih molekulskih funkcija (KW) \parencite{Xie2007} 
+  na GO termine.
+}
+\label{fig:KWtop20dis}
+\end{figure}
+
+
+\begin{figure}[th]
+\centering
+\hspace*{-2.2cm} 
+\includegraphics[scale=0.9]{Figures/plots/Neuropeptide2go.pdf}
+\decoRule
+\caption {
+  Slika prikazuje da direktno mapiranje sa ključne reči na GO istog imenskog prostora (kategorije) nije uvek direktno.
+  Takođe ovako postignuta mapiranja dele mali broj zajedničkih proteina.
+}
+\label{fig:KWtop20dis}
+\end{figure}

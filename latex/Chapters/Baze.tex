@@ -13,37 +13,37 @@ sekvenci. Da bi se razumeo uticaj NGS tehnologije razmotrimo sledeći tok
 događaja.  Od sveže sekvencionisanih nepoznatih genoma predviđaju se
 potencijalni geni, od gena potencijalne proteinske sekvence.  Dobijene
 proteinske sekvence mogu se dalje klasterovati u familije, automatski
-anotirati, predviđati im se struktura, osobine itd.  Zatim moguće je vršiti
+anotirati, predviđati im se struktura, osobine itd.  Zatim, moguće je vršiti
 analize za generisanje novih bioloških znanja. Povezanost između funkcije i
 neuređenosti proteina je jedan primer biološkog znanja. Dakle generisanje novih
 informacija u jednoj oblasti (u ovom slučaju genomici) propagira se u druge
-oblasti bioinformatike. Ovo je samo jedan primer ali ilustruje 2 bitne stvari.
+oblasti bioinformatike. Ovo je samo jedan primer ali ilustruje dve bitne stvari:
 \begin{enumerate}
   \item Informacije eksponencijalno rastu uvodeći čitavu oblast
     \keyword{omike}\footnote{termin objedinjuje gen\textbf{omiku}, proteomiku,
     transkriptomiku, glikomiku...} \en{omics}  u teritoriju \en{Big
-  Data}\parencite{Chen2017}. (U našem radu pažljivo su odabrani podaci malog
+  Data} \parencite{Chen2017}. (U našem radu pažljivo su odabrani podaci malog
   obima kako bi se izbegao ovaj scenario i sve analize su urađene na klasičnom
   kućnom računaru.)
   % \item U bioinformatici podaci su veoma povezani. 
-  \item Biološki podaci su veoma povezani.
+  \item Velika povezanost između bioloških podataka.
 \end{enumerate}
 
 Povezanost podataka preslikava se na baze. Većina baza je usko specijalizovana
 za jedan tip informacije ili jedan organizam, ali zato sadrži reference ka
-drugim (spoljnim) bazama, naučnim radovima ili  manje formalnim ali
+drugim (spoljnim) bazama, naučnim radovima ili  manje formalnim, ali
 informativnim resursima (veb strane, vikipedija, itd...). Specijalne baze kao
 što je UniProtKB, pored primarnog sadržaja održavaju i veliki broj referenci
 (dbxref) pokušavajući da međusobno povežu sve dostupne informacije. Konkrentno
 UniprotKB (feb. 2018) održava reference ka čak 164 različite
-baze\footnote{\url{www.uniprot.org/docs/dbxref}}.  Dakle bioinformatika kao
+baze\footnote{\url{www.uniprot.org/docs/dbxref}}.  Dakle, bioinformatika kao
 disciplina podrazumeva da će analize biti vršena kombinacijom informacija
 nekoliko različitih baza.  Zbog raznovrsnosti i svrhe prikupljenih informacija
 postoji veliki broj kategorija\footnote{Baze ne pripadaju ekskluzivno samo
 jednoj kategoriji}(vrsta) baza.  Na adresi
 \url{www.proteininformationresource.org/staff/chenc/MiMB/dbSummary2015.html}
 kategorizovane su i prikazane kvalitenije proteinski orijentisane baza
-(prikazana lista nipošto nije konačna)\parencite{Chen2017}. Za naše
+(prikazana lista nipošto nije konačna) \parencite{Chen2017}. Za naše
 istraživanje bile su potrebne naredne tri kategorije:
 
 \begin{itemize}
@@ -63,15 +63,15 @@ istraživanje bile su potrebne naredne tri kategorije:
 \label{svis-prot}
 
 \keyword{UniProt} skraćeno od \en{Universal Protein Resource} je konzorcijum
-nastao 2002 god. izmedju tri organizacije: Evropski Bioinformatički
+nastao 2002. izmedju tri organizacije: Evropski Bioinformatički
 Institut (EBI), Švajcarski institut za Bioinformatiku (SIB) i Resurs
 Proteinskih Informacija (PIR).  ''Misija UniProt-a je da naučnoj zajednici
 obezbedi sveobuhvatan, visokokvalitetan i slobodno dostupan resurs proteinskih
 sekvenci i funkcionalnih informacija.''\footnote{\url{www.uniprot.org}} 
 
 
-Uniprot obuhvata nekoliko baza i podbaza sa striktno definisanim tokom
-informacija \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
+UniProt obuhvata nekoliko baza i podbaza sa striktno definisanim tokom
+informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 \keyword{UniprotKB} \en{UniProt Knowledge Base} sačinjena od 2 podbaze.
 
 \begin{figure}[h!]
@@ -83,19 +83,19 @@ informacija \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 
 \begin{enumerate}
   \item \keyword{Svis-Prot} \en{Swiss-Prot} sadrži visoko kvalitetne anotacije
-    \keyword{ne redundantnih}\ref{red} proteinskih sekvenci.
-    Informacije o sekvenci su dobijene iz postojeće literature a kompjuterski
+    \keyword{ne redundantnih} (stavka\ref{red}) proteinskih sekvenci.
+    Informacije o sekvenci su dobijene iz postojeće literature, a kompjuterski
     predviđene anotacije su ručno proverene. Svis-Prot kao baza postoji preko
     30 godina.
 
   \item TrEMBL \en{Translated EMBL} je nadskup Svis-Prot sekvenci čije su
-    sekvence dobijene prevođenjem EMBL nukleinskih sekvenci ali još nisu stigle
+    sekvence dobijene prevođenjem EMBL nukleinskih sekvenci, ali još nisu stigle
     da budu ručno  proverene. Ove sekvence su redundantne i njihova obimnost
     posledica je masovne primene NGS tehnologija. U februaru 2018. god TrEMBLE
-    sadržao je 107,627,435 sekvenci što je oko 200 puta više u poređenju sa
-    556,568 ručno proverenih Svis-Prot sekvenci. Sve nove sekvence prvo ulaze u
+    sadržao je 107 627 435 sekvenci što je oko 200 puta više u poređenju sa
+    556 568 ručno proverenih Svis-Prot sekvenci. Sve nove sekvence prvo ulaze u
     sastav TrEMBL da bi ručnom proverom napredovale u Svis-Prot što je donekle
-    prikazano grafikom \ref{fig:uniprot_overview}.
+    prikazano na Slici \ref{fig:uniprot_overview}.
 \end{enumerate}
 
 
@@ -104,7 +104,7 @@ informacija \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 
 Distribucije Svis-Prot baze dostupne su u nekoliko tekstualnih formata: ravna
 datoteka \en{flat file}, XML, RDF/XML.  Ravni tekstualni format zbog
-standardizacije prati format EMBL\parencite{embl} baze
+standardizacije prati format EMBL \parencite{embl} baze
 \parencite{svisprot2003}.  Unos u bazu se zove \keyword{slog} \en{record} i
 sadrži sve informacije vezane za jedan protein. Jedan slog ilustrovaćemo
 uprošćenim primerom\ref{txt:slog} u formatu ravne datoteke na kome ilustrujemo
@@ -199,31 +199,31 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
 
 \begin{enumerate}
   \item Ime sloga \keyword{ID} \en{entery name} je mnemonički zapis koji kodira
-    taksonomske informacije o genu i proteinu. ID je podložan promenama tokom vremena
+    taksonomske informacije o genu i proteinu. ID je podložan promenama 
     i ne može se koristiti kao identifikator \parencite{www_svisprot}.
   \item Identifikacioni broj predstavlja \keyword{AC} \en{accession number}.
     Prvi u listi identifikatora naziva se \keyword{primarni} i služi da
     jednoznačno odredi slog. Ostatak identifikatora su tzv. \keyword{sekundarani AC} i
-    nastaju iz dva moguća razloga: \parencite{svisprot2003, www_svisprot}
+    nastaju iz dva moguća razloga \parencite{svisprot2003, www_svisprot}:
     \begin{itemize}
       \item Unifikacija postojećih proteina u jedan novi slog. 
       \item Specijalizacija jednog proteina u više različitih.
     \end{itemize}
     U oba slučaja stari (primarni) AC se zadržava kao sekundarni AC u novom slogu.
 
-  \item Za razliku od TrEML, GO mapiranje za Svis-Prot sekvence određuju se ručno\parencite{www_svisprot}.
+  \item Za razliku od TrEML, GO mapiranje za Svis-Prot sekvence određuju se ručno \parencite{www_svisprot}.
 
   \item \keyword{Ključne reči} \en{keywords} označene \keyword{KW} opisuju
     hijearhisku strukturu kontrolisanog vokabulara namenjenog opisivanju
     funkcije proteina. Postoji 10 kategorija ključnih reči od kojih je za naše
-    istraživanje bitna "Molekulska funkcija"\parencite{svisprot2003}.  Za razliku od GO termina ključne
-    reči prligaođene su opisivanju sadržaja isključivo Svis-Prot proteina\parencite{www_svisprot}.
+    istraživanje bitna "Molekulska funkcija" \parencite{svisprot2003}.  Za razliku od GO termina ključne
+    reči prligaođene su opisivanju sadržaja isključivo Svis-Prot proteina \parencite{www_svisprot}.
 
   \item Sekvenca \keyword{SQ} u slogu poznata je kao \keyword{kanonska}
     \en{canonical} sekvenca. Kanonska sekvenca predstavlja konsenzus sekvencu
     produkta (protein) gena jedne vrste organizma.  \keyword{FT}
     linije čuvaju različite osobine kanonske sekvence uključujući i razlike u
-    odnosu na izoforme\footnote{Izoformi su alternativni oblici sekvence
+    odnosu na izoforme\footnote{Izoforme su alternativni oblici sekvence
       nastali usled: \en{ alterntive promoter usage, alternative splicing,
     alternative initiation and ribosomal frameshifiting} } sekvence.  U našoj
     analizi korišćena je isključivo kanonska sekvenca. Detaljan opis pravila za
@@ -232,11 +232,11 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
   \item
     \label{red}
     Svis-Prot je \keyword{minimalno redundantna} u smislu da svi proteini
-    kodirani jednim genom, jedne vrste su predstavljeni jednim slogom. Svi
-    izoformi su grupisani pod jedan slog i jednu kanonsku sekvencu\parencite{nonRedundant}.
+    kodirani jednim genom, jedne vrste su predstavljeni jednim slogom. Sve
+    izoforme su grupisane pod jedan slog i jednu kanonsku sekvencu \parencite{nonRedundant}.
 
   \item Postojnost proteina \keyword{PE} \en{Protein existance} opisuje stepen
-    sigurnosti da protein postoji. \ref{fig:PE}
+    sigurnosti da protein postoji \ref{fig:PE}.
 
   \clearpage
 
@@ -245,7 +245,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     Swis-Prot takđe vrši predikcije neuređenih regiona:  koristeći DISOPRED2
     and CLADIST prediktor \parencite{meng_c2017}\\ Međutim ove informacije
     postale su irelevantne pojavom baza MobiDB i D2P2 koje razmatramo u
-    sekcijama ispod.
+    narednim sekcijama.
 
   \item Zanimljiva zapažanja globalne statistike:
     \begin{itemize}
@@ -272,10 +272,10 @@ Baza proteinskog neuređenja \en{Database of protein Disorder (DisProt)}
 
 \section{D2P2 i MobiDB}
 
-Baze prdviđenog neuređenja proteinskih sekvenci
+Baze predviđenog neuređenja proteinskih sekvenci
 
 
-\section{Ontologije Gena}
+\section{Ontologije gena}
 
 
 \keyword{Ontologija Gena} \en{Gene Ontology} ili skraćeno \keyword{GO}, 
@@ -285,7 +285,7 @@ produkta (protein, nekodirajuća RNK ili makromolekulski kompleks)
 GO baza sačinjena je iz dve komponente:
 \begin{enumerate}
   \item \keyword{Ontologije gena}.
-  \item \keyword{GO anotacije} tj. antoacije genskog produkta \keyword{GO terminom}. U našoj
+  \item \keyword{GO anotacije} tj. anotacije genskog produkta \keyword{GO terminom}. U našoj
     analizi anotacije su preuzete iz Svis-Prot baze\footnote{Ali Svis-Prot koristi anotacije iz ontologije gena}.
 \end{enumerate}
 
@@ -299,13 +299,13 @@ imenski prostori \en{namespace}:
     specifično vezivanje za ligande ili strukture) genskog produkta.
   \item \keyword{Ćelijske komponente  (CC)} se odnosi na mesto u ćeliji gde je
     genski produkt aktivan.
-  \item \keyword{Biološki procesi (BP)} se odnosi na proces kome genski produkt
+  \item \keyword{Biološki procesi (BP)} se odnose na procese kome genski produkt
     doprinosi.
 \end{itemize}
 
-Inspirisani sličnošću prva tri sekvencisana eukariotska organizma, GO projekat
+Inspirisani sličnošću prva tri sekvencirana eukariotska organizma, GO projekat
 nastao je sa ciljem da  unifikuje biologiju pod jedan univerzum termina za opis
-genskih proizvoda svih vrsta organizama\parencite{GO2000}. Ovaj ideal je najveća
+genskih proizvoda svih vrsta organizama \parencite{GO2000}. Ovaj ideal je najveća
 razlika u odnosu na kontrolisani vokabular Svis-Prot ključnih reči koji je
 prilagođen za opis samo proteina sadržanih u Svis-Prot bazi.
 
@@ -315,7 +315,7 @@ graf \en{DAG} obrazovan roditeljskom vezom (relacijom) \keyword{is\_a}. Prateći
 ovu relaciju termini jednog imenskog prostora recimo MF neće nikad preći u
 druga dva CC i BP.  Ontologija stoga ima tri korena čvora MF, CC i BP
 \parencite{go_struktura}. Primer strukture prikazan je na
-slici \ref{fig:kinase}.  Pored \keyword{is\_a} postoje dodatne relacije od kojih
+Slici \ref{fig:kinase}.  Pored \keyword{is\_a} postoje dodatne relacije od kojih
 su najčešće \footnote{Vremenom se ontologija proširuje novim tipovima relacije
 koje su van okvira ovog rada.}:
 
@@ -338,18 +338,18 @@ koje su van okvira ovog rada.}:
 
 Svaka veza (relacija) ima strogo definisana pravila kompozicije koja omogućavaju
 automatsko rezonovanje. Recimo relacija \keyword{is\_a} ima svojstvo
-tranzitivnosti\parencite{is_a}:
+tranzitivnosti \parencite{is_a}:
 \begin{verbatim}
   A is_a    B  /\  B is_A C   =>    A is_a    C           
   A part_of B  /\  B is_A C   =>    A part_of C
 \end{verbatim}
 
-Siže pravila rezonovanja prikazano je na slici \ref{fig:relations}.
+Siže pravila rezonovanja prikazano je na Slici \ref{fig:relations}.
 
 Ontologije su dostupne u nekoliko formata. U našem radu korišćen je ravni
 \file{.obo} format.  Pored njega treba naglasiti postojanje \file{RDF/XML} i
 \file{OWL} verzija.  Ove verzije namenjene su automatskom rezonovanju unutar
-specijalizovanih softvere i upitnih jezika \footnote{U našem radu korišćena je
+specijalizovanih softvera i upitnih jezika \footnote{U našem radu korišćena je
 Neo4j grafovska bazu što naš postupak rezonovanja čini eksplicitnim} (protégé,
 SPARQL, ...).
 
@@ -364,10 +364,10 @@ GO termin može biti zastareo u kom slučaju se relacijom \keyword{replaced\_by}
 pokazuje na noviji termin. Relacija \keyword{consider} ukazuju na
 postojanje mogućih ekvivalentnih termina. Pored glavnog univerzuma postoje i
 podskupovi \footnote{Uglavnom ovi podskupovi predstavljaju model organizme}
-termina (GO slim) prikazani u donjem desnom delu slike \ref{fig:kinase}.
+termina (GO slim) prikazani u donjem desnom delu Slike \ref{fig:kinase}.
 
 
-\subsection{molekulska funkcija}
+\subsection{Molekulska funkcija}
 TODO, treba proučiti \parencite{go_mf} možda nešto saznam o kvalitetu anotacija
 u Svis-Prot bazi.
 
