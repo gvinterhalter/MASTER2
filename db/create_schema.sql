@@ -65,6 +65,9 @@ CREATE TABLE IF NOT EXISTS valid_proteins
   dis40         BOOLEAN,
   dis40_random  BOOLEAN,
   dis40_uniform BOOLEAN,
+  dis_smart     BOOLEAN,
+  dis_smart_random BOOLEAN,
+
   PRIMARY KEY (ac)
 );
 
