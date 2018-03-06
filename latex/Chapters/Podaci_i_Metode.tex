@@ -25,18 +25,18 @@ aminokiselina (što je potrebno zbog Definicije \ref{pdis_def} u nastavku). Funk
 pridružene proteinima izražene su \keyword{kontrolisanim vokabularom}
 \en{controlled vocabulary} koga čine takozvane UniProtKB \keyword{ključne reči}
 \en{keywords}. U verziji 48, UniProtKB sadrži 874 ključnih reči.  Zbog
-statističke značajnost posmatrane su one ključne reči kojima je bilo anotirano
+statističke značajnosti posmatrane su one ključne reči kojima je bilo anotirano
 barem 20 proteina, tj. 710 ključnih reči.
 
-Kao što smo pomenulli u Poglavlju \ref{svis-prot} kanonske sekvence(proteini) u Svis-Prot
-bazi ''nisu redundantne'' u smislu da jedan unos u bazi predstavlja produkt
+Kao što je pomenuto u Poglavlju \ref{svis-prot} kanonske sekvence(proteini) u Svis-Prot
+bazi nisu redundantne u smislu da jedan unos u bazi predstavlja produkt
 jednog gena iz jedne vrste organizma. Međutim za analizu funkcija
 Svis-Prot \keyword{jeste statistički redundantna} \parencite{proveriti} jer
 sadrže veliku količinu \keyword{homologih} proteina (prvenstveno ortologa).
 Autori rada \parencite{Xie2007} su izvršili klasterovanje Svis-Prot
 proteina u \keyword{proteinske familije} dobivši 27 217 familija. Pri klasterovanju svaki protein
 ima težinu kojom doprinosi daljoj analizi. Težina svakog proteina u preseku
-klastera sa datom funkcijom je inverzno proporcionalna veličini preseka
+klastera sa datom funkcijom je obrnuto proporcionalna veličini preseka
 tako da je zbir težina svih proteina jednaka veličini preseka.
 
 % \textbf{komentar:} \\
@@ -56,7 +56,7 @@ tako da je zbir težina svih proteina jednaka veličini preseka.
 
 \subsection{Naši podaci}
 
-U našem radu korišćen je skup proteina preuzet sa \keyword{CAFA3} takmičenja.
+U ovom radu korišćen je skup proteina preuzet sa \keyword{CAFA3} takmičenja.
 Ovaj skup je namenjen da bude trening skup za predikciju funkcija proteina \parencite{CAFA}. 
 
 CAFA3 trening skup je pažljivo odabran podskup Svis-Prot baze (iz 2016.) koji
@@ -95,7 +95,7 @@ CAFA3 Podaci se sastoje od dve datoteke:
 Naša analiza primarno je orijentisna na korišćenje GO termina za opis funkcije
 i razlikuje se od originalnog pristupa.  Analiza sa GO terminima (grupisanje po
 funkciji) zahteva prvenstveno poznavanje \textit{IS\_A} roditeljske veze između
-termina. Takođe tokom istraživanja bile su nam potebne i ostale informacije o
+termina. Takođe, tokom istraživanja bile su nam potrebne i ostale informacije o
 terminima. Pomenute informacije dobili smo iz
 \url{http://purl.obolibrary.org/obo/go.obo} dokumenta verzije 2017-12-01.
 
@@ -104,24 +104,24 @@ ključnih reči i GO termina. Postoje dva dostupna mapiranja:
 \begin{itemize}
   \item \url{www.uniprot.org/docs/keywlist.txt} verzija 20.12.2017 sadrži
     detaljan opis 1188 ključnih reči od kojih 195 pripada kategoriji
-    \keyword{Molekulsih funkcija}.  Od 195 samo 145 ima mapiranje na jedan ili
+    \keyword{Molekulskih funkcija}.  Od 195 samo 145 ima mapiranje na jedan ili
     više GO termina.
   \item \url{ttp://geneontology.org/external2go/uniprotkb_kw2go} sadrži samo
     mapiranja i generiše ih \keyword{GOA projekat} \parencite{Barrell2009}.
     Ipak ova mapiranja nisu korišćena jer ... \keyword{TODO}
 \end{itemize}
 
-Pošto je originalni rad \parencite{Xie2007} iz 2007. godine postoji razlike u
+Pošto je originalni rad \parencite{Xie2007} iz 2007. godine, postoje razlike u
 vokabularu ključnih reči, razlike u samim sekvencama proteina, broj proteina i
-razume se anotacije ključnih reči na proteine.  Iz tog razloga bilo je potrebno
+anotacije ključnih reči na proteine.  Iz tog razloga, bilo je potrebno
 prvo ponoviti analizu sa vokabularom ključnih reči da bi se procenilo koliko
 ove razlike utiču na originalne rezultate ovog rada \parencite{Xie2007}.
 
-Iz tog razloga CAFA3 podatke ne možemo da posmatramo kao crnu kutiju već je
+Zato, CAFA3 podatke ne možemo da posmatramo kao crnu kutiju već je
 bilo neophodno povezati ih sa Svis-Prot proteinima prvenstveno zbog
 pridruživanja ključnih reči. Kako postoje razlike između najnovije verzije Svis-Prot
 baze i CAFA3 podataka bilo je neophodno izvršiti ''korektno'' spajanje i
-analizu razlika.  Informacija o pridruženim ključnim rečima takođe su nam bile
+analizu razlika.  Informacije o pridruženim ključnim rečima takođe su nam bile
 značajne za proveru validnosti mapiranja na GO termine i testiranje
 potencijalnih drugih metoda mapiranja. Naša očekivanja su da iste funkcije
 podrazumevaju anotaciju na iste proteine.  Ovi koraci detaljno su opisani u
@@ -139,19 +139,18 @@ neuređenosti.
 Pretpostavimo da za proizvoljnu molekulsku funkciju znamo sve strukturno različite
 proteine koji je obavljaju.  Da bi dali korektan odgovor  moramo da znamo kako
 neuređenost pojedinačnog proteina utiče na ponašanje protein.  Zatim moramo da
-znamo da li i kako to ponašanje (tip neurđenosti) utiče na datu funkciju.
+znamo da li i kako to ponašanje (tip neuređenosti) utiče na datu funkciju.
 % Ova vrsta znanja nije bila dostupna 2007. osim za jako mali skup proteina.
 
 \textbf{Realnost.} 
 \begin{itemize}
   \item Broj eksperimentalno određenih neuređenih regiona je veoma mali.
-    \keyword{Disprot baza} eksperimentalno utvrđenih neuređenih regiona ima
+    Baza eksperimentalno utvrđenih neuređenih regiona \keyword{Disprot} (poglavlje \ref{}) ima
     svega 803 proteina sa opisanih 2167 neuređenih regiona \parencite{disprot7}.
-    Još gore pouzdanost ovih regiona je diskutabilna jer različite
+    Nažalost pouzdanost ovih regiona je diskutabilna jer različite
     eksperimentalne tehnike koje su korišćene imaju različitu pouzdanost.
     Najveću pouzdanost nose regioni koji su eksperimentlano utvrđeni sa 
-    većim brojem eksperimentalnih tehnika\footnote{Nisu ni sve eksperimentalne
-    tehnike podjednako pouzdane} \parencite{disprot7}. 
+    većim brojem eksperimentalnih tehnika.
   \item Prediktori su trenirani na malom podskupu proteina iz Disprot i PDB  baze.
     Čak i konsenzus nekoliko različitih prediktora ne daje dovoljno pouzdane
     rezultate o lokaciji neuređenog regiona \parencite{Mitic}.
@@ -159,7 +158,7 @@ znamo da li i kako to ponašanje (tip neurđenosti) utiče na datu funkciju.
     Pozitivna strana je najnoviji napredak, razvoj prediktora koji direktno
     pokušavaju da predvide funkciju koju IDPr obavlja \parencite{meng_c20017}.
   % \item Koliko nam je poznato trenutno nema prediktora koji predviđaju tip
-  %   neuređenosti. Takođe Opisivanje tipa neuređenosti predstavlja poduhvat.
+  %   neuređenosti. Takođe, Opisivanje tipa neuređenosti predstavlja poduhvat.
   %   \begin{itemize}
   %     \item Prof. Vladimir Uverski predlaže nekoliko imena za opis različitih
   %       ponašanja neuređenih proteina \en{Folldon, Unfolldon, ...}
@@ -172,18 +171,20 @@ znamo da li i kako to ponašanje (tip neurđenosti) utiče na datu funkciju.
 
 \end{itemize}
 
-Jednostavna alternativa je da se pretpostavi da veći udeo neuređenih u odnosu na
-uređene proteine podrazumeva da funkcija zavisi više od neuređenosti.  Dakle
-izjednačavamo uzročnost \en{causation} i \keyword{korelaciju}. Međutim prvo je
-potrebno definisati kada protein smatramo neuređenim.  Definicija mora da
-ima biološkog smisla, da bude prilagođena analizi, ali pored takođe ograničena je
-sposobnostima i preciznošću prediktora koji se korist.  Više o tome u nastavku.
+Jednostavna alternativa je da se pretpostavi da veći udeo neuređenih u odnosu
+na uređene proteine podrazumeva da funkcija zavisi više od neuređenosti.  Dakle
+izjednačavamo uzročnost \en{causation} i \keyword{korelaciju} između funkcije i
+neuređenosti. Međutim prvo je potrebno definisati kada protein smatramo
+neuređenim.  Definicija mora da ima biološkog smisla, da bude prilagođena
+analizi, ali pored takođe ograničena je sposobnostima i preciznošću prediktora
+koji se korist.  Više o tome u sledećem podpoglavlju \ref{naredno}.
 
 \subsection{Predikcija neuređenosti proteina}
+\label{naredno}
 
 Autori \parencite{Xie2007} koristili su \keyword{PONDR VL3E} prediktor koji
 postiže tačnost od $~87\%$ pri unakrsnoj validaciji nad uravnoteženim test
-skupom.  Zbog ekonomičnosti i dostupnosti u našem radu korišćen je noviji
+skupom.  Zbog ekonomičnosti i dostupnosti u ovom radu korišćen je noviji
 prediktor druge generacije \keyword{PONDR VSL2b}.
 Relevantne karakteristike VSL2b detaljno su opisane u \ref{VSL2b}.
 Za potrebe analize autori \parencite{Xie2007} uvode sledeću definiciju:
@@ -191,7 +192,7 @@ Za potrebe analize autori \parencite{Xie2007} uvode sledeću definiciju:
 \newtheorem{mydef}{Definicija}
 \begin{mydef}
 \label{pdis_def}
-Protein je \keyword{putativno neuređen}(najverovatno neuređen) \en {putatively disordered}
+Protein je \keyword{putativno neuređen}(najverovatnije neuređen) \en {putatively disordered}
 ako sadrži bar jedan region veći ili jednak od 40 uzastopnih aminokiselina
 takvih da imaju \textit{predviđenu neuređenost} iznad 0.5. 
 \end{mydef}
@@ -206,6 +207,7 @@ Onda definišemo operator $d$ takav da za svaku proteinsku sekvencu $s_i$ važi:
     \end{cases}
 \]
 
+U nastavku pod neuređenošću podrazumevaće se \keyword{putativna neuređenost}.
 Uslov ''$\ge40$'' u originalnom radu delom je posledica ograničenja VL3
 prediktora koji je treniran na \keyword{dugim} sekvencama\footnote{L označava
 duge regione, $\ge$ 30 AK}. Mi nismo u obavezi da sledimo ovo pravilo, ali ga sledimo
@@ -214,24 +216,25 @@ radi upoređivanja rezultata.
 \subsection{Zavisnost dužine proteina i predikcije dugačkog neuređenog regiona}
 
 Verovatnoća da po gornjoj definiciji protein bude klasifikovan kao verovatno
-neuređen raste sa porastom njegove dužine. Ovo je ozbiljan problem koji utiče
+neuređen raste sa porastom njegove dužine. Ova činjenica  utiče
 na statističku značajnost rezultata. Autori \parencite{Xie2007} 
 predlažu narednu formulu da se ta verovatnoća proceni:
 
-Neka je $S_L$ skup proteina sa dužinama između $[L-l, L+l]$ gde je $l
-= 0.1*L$. Dobijamo sledeće formule:
+Neka je $S_L$ skup proteina sa dužinama iz intervala $[L-l, L+l]$ gde je $l
+= 0.1 \cdot L$. Na primer, skup $S_{100}$ sadrži proteine iz invervala $[90, 100]$ a $S_{500}$ iz intervala $[450, 550]$).
+Dobijamo sledeće formule:
 
-$$ S_L = \{s_i \mid \quad | L -  \Vert s_i \Vert | <= l \quad   \}$$
-$$ P_L = \dfrac{ \sum_{s_i \in S_L} d(s_i)} {\Vert S_L \Vert}$$
+$$ S_L = \{s_i : \quad | L -  | s_i | | \le l \quad \}, \quad   |s_i| \text{ je dužina sekvence}  $$
+$$ P_L = \dfrac{ \sum_{s_i \in S_L} d(s_i)} {| S_L |}, \quad   |S_L| \text{ je kardinalnost skupa}$$
 
-Ponašanje $P_L$ predstavljeno je na Slici \ref{fig:PL1}. Glatkoća rezulatata
-kontroliše se veličinom $l$ koja predstavlja prozor uprosečavanja. Kako prozor
-uglačavanja raste sa porastom dužine proteina $(l = 0.1*L)$
-tako da prozor uprosečavanja raste sa porastom dužine proteina te $P_L$
-postaje glađe sa veličinom proteina. Konstantni prozor uprosečavanja bi bila
-tehnika još poznata kao \en{rolling average} ili \en{boxcar filter} i
-predstavljala bi prostu vrstu konvolucije. \keyword{Trenutno ne znamo zašto se
-autor odlučio da veličina prozora raste sa dužinom proteina???}.
+Grafik funkcije $P_L$ u zavisnosti od promenljive $L$ predstavljeno je na Slici
+\ref{fig:PL1}.  Glatkoća rezulatata kontroliše se veličinom $l$ koja
+predstavlja prozor uprosečavanja. Kako prozor uprosečavanja raste sa porastom
+dužine proteina $(l = 0.1 \cdot L)$ tako $P_L$ postaje glađa sa veličinom
+promenljive $L$.  Konstantni prozor uprosečavanja je tehnika još poznata
+kao \en{rolling average} ili \en{boxcar filter} i predstavlja prostu vrstu
+konvolucije.  \keyword{Trenutno ne znamo zašto se autor odlučio da veličina
+prozora raste sa dužinom proteina???}.
 
 
 \begin{figure}[th]
@@ -246,7 +249,7 @@ autor odlučio da veličina prozora raste sa dužinom proteina???}.
 \end{figure}
 
 
-Pored gore prikazanog 'originalnog' metoda predstavljamo još jedan pristup
+Pored gore prikazanog originalnog metoda biće predstavljen još jedan pristup
 \keyword{Slučajno generisani} \en{random generated} proteini za procenu $P_L$.
 Razmotrićemo dva modela. Prvi je naivni model \keyword{uniformne verovatnoće}
 koji podrazumeva da se svaka aminokiselina javlja sa istom verovatnoćom odnosno
@@ -262,21 +265,21 @@ procenu $P_L$.
 \centering
 \includegraphics[]{plots/AK_ucestalost}
 \decoRule
-\caption{Slučajni i uniformni modeli za procenu $P_L$}
+\caption{Slučajni i uniformni modeli za procenu $P_L$
+\\ \footnotesize(Sivo obojene AK ne pripadaju ni jednoj grupaciji)}
 \label{fig:AK_ucestalost}
 \end{figure}
 
 
 
-Poređenje ova dva pristupa sa originalnim $P_L$ prikazano je na Slici
-\ref{fig:PL2}.  Originalni $P_L$ ostaje prikazan kao puna linija. Jasno se vidi
-da slučajni model prikazan isprekidanom linijom predstavlja vizuelno dobru
-aproksimaciju dok uniformni model verovatnoća prikazan tačkicama znatno odstupa
-i dosta sporije raste (naizgled skoro linearno). Kako VSL2b predkitor
-prepoznaje neuređene regione na osnovu učestalosti aminokiselina ovo ponašanje
-nije čudno jer je manja verovatnoća pojave aminokiselina koje promovišu
-neuređenost. Zbog suviše velikog odstupanja uniformni model nije korišćen u
-daljoj analizi.
+Poređenje predloženih pristupa sa originalnim $P_L$ prikazano je na Slici
+\ref{fig:PL2}. Jasno se vidi
+da slučajni model predstavlja vizuelno dobru aproksimaciju dok uniformni model
+znatno odstupa i dosta sporije raste (naizgled skoro linearno). Kako VSL2b
+prediktor prepoznaje neuređene regione na osnovu učestalosti aminokiselina, ovo
+ponašanje nije čudno jer je manja verovatnoća pojave aminokiselina koje
+promovišu neuređenost. Zbog suviše velikog odstupanja uniformni model nije
+korišćen u daljoj analizi.
 
 
 \begin{figure}[th]
@@ -310,24 +313,27 @@ na Slici \ref{fig:aminoacid} \parencite{AKfrekvencija}.
 
 \subsection{Ocenjivanje zavisnosti funkcije od neuređenosti}
 
-Neka je $S_j$ skup proteina koji imaj pridruženu funkciju $j$. Tada se procenat
-putativno neuređenih proteina u oznaci $F_j$ može izračunati kao: $$F_j =
-\dfrac{\sum_{s_i \in S_j} d(s_i)} {\Vert S_j \Vert} $$
+Neka je $S_j$ skup proteina koji imaju pridruženu funkciju $j$. Tada se procenat
+neuređenih proteina u oznaci $F_j$ može izračunati kao:
+$$F_j = \dfrac{\sum_{s_i \in S_j} d(s_i)} {\Vert S_j \Vert} $$
 
 Nultu hiptezu koja predviđa da je rezultat $F_j$ posledica samo slučajnosti, to
-jest zavisi samo od $P_L$ opisana je preko slučajne veličine $Y_j$
-gde je $X_L$ Bernulijeva slučajna veličina sa verovatnoćom $P(X_L = 0) = P_L$
-odnosno $P(X_L = 1) = 1-P_L$
+jest zavisi samo od $P_L$ opisana je preko slučajne veličine $Y_j$ gde je $X_L$
+Bernulijeva slučajna veličina sa verovatnoćom $P(X_L = 0) = P_L$ odnosno $P(X_L
+= 1) = 1-P_L$
 
 $$ Y_j = \dfrac {\sum_{s_i \in S_j} {X_{|s_j|}}}{\Vert S_j \Vert}$$
 
-Ako $F_j$ izlazi iz intervala poverenja raspodele $Y_j$ onda funkcija $j$
-sadrži značajno mnogo predviđenih neuređenih ili uređenih proteina. Preciznije
-ako je \textit{p-value} $<0.05$ funkcija $j$ je povezana sa neuređenim
+Ako $F_j$ izlazi iz intervala poverenja raspodele $Y_j$ onda, funkcija $j$
+sadrži značajno mnogo predviđenih neuređenih ili uređenih proteina. Preciznije,
+ako je p-vrednost \en{p-value} $<0.05$ funkcija $j$ je povezana sa neuređenim
 proteinima a ako je \textit{p-value} $>0.95$ funkcija $j$ je povezana sa
-uređenim proteinima. Suprotno ne može ništa da se tvrdi za funkciju $j$.
+uređenim proteinima. Suprotno ne može ništa da se tvrdi za funkciju $j$.  U
+nastavku teksta pod (ne)uređenom funkcijom, ključnom reči  ili GO terminom
+podrazumevaće se da je za dati oblik funkcije izračunata p-vrdnost statistički
+značajna ($<0.5$ ili $>0.95$).
 
-$Y_j$ je teško izračunati analitički te mora da se pribegne empiriskom
+$Y_j$ je teško izračunati analitički te mora da se pribegne empirijskom
 računanju p-vrednosti. Empiriska p-vrednost određena je tako što je za 1000
 realizacija $Y_j$ izračunato očekivanje da je realizacija $Y_j$ veća od $F_j$.
 \begin{verbatim}
@@ -336,7 +342,7 @@ realizacija $Y_j$ izračunato očekivanje da je realizacija $Y_j$ veća od $F_j$
 U radu \parencite{Xie2007} autori tvrde se da za veće skupove $S_j$ raspodela
 $Y_j$ ponaša kao normalna pa se ocena Z-skor može dobiti kao
 $Z_j=(F_j-\mu_j)/\delta_j$ gde je $\mu_j$ očekivanje a $\delta_j$ standardna
-devijacija.  Dodatno p-vrednost može da se aproksimira kao $1/2(1-erf(Z_j/2))$
+devijacija.  Dodatno, p-vrednost može da se aproksimira kao $1/2(1-erf(Z_j/2))$
 \footnote{$erf()$ je gausova funkcija greške,
 $erf(x)=\dfrac{2}{\sqrt{\pi}} \int_{0}^{x}  e^{-t^2} dt$ }
 ako raspodela liči na normalnu. Ovo je nekad korisno jer sa 1000 realizacija
