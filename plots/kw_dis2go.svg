@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="189.77637mm"
-   height="176.67467mm"
-   viewBox="0 0 672.43595 626.01261"
+   width="191.1716mm"
+   height="171.4868mm"
+   viewBox="0 0 677.37969 607.63041"
    id="svg77861"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -530,20 +530,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="148.76389"
-     inkscape:cy="281.06048"
+     inkscape:cx="248.56624"
+     inkscape:cy="310.48038"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1916"
-     inkscape:window-height="1041"
+     inkscape:window-width="1596"
+     inkscape:window-height="861"
      inkscape:window-x="0"
      inkscape:window-y="37"
      inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     fit-margin-left="0" />
+     fit-margin-top="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1"
+     fit-margin-left="1" />
   <metadata
      id="metadata77866">
     <rdf:RDF>
@@ -560,7 +560,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-24.652623,-171.99219)">
+     transform="translate(-21.109316,-220.0538)">
     <path
        style="opacity:0.19899998;fill:#1268ea;fill-opacity:1;fill-rule:nonzero;stroke:#0041b2;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 221.07547,653.22938 101.1632,0.12256 c 15.10985,0.0183 26.76904,15.14018 26.76904,30.80968 l 0,78.79184 c 0,15.6695 -12.16426,28.2843 -27.27412,28.2843 l -104.5508,0 c -15.10986,0 -27.27411,-12.6148 -27.27411,-28.2843 l 0,-78.79184 c 0,-15.6695 16.05693,-30.95054 31.16679,-30.93224 z"
@@ -3243,18 +3243,18 @@
     </g>
     <path
        style="fill:#333333;fill-rule:evenodd;stroke:#606060;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
-       d="M 542.23567,257.39937 435,387.36221"
+       d="M 558.39812,239.21662 435,387.36221"
        id="path93456"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       style="opacity:0.44200003;fill:#e1f5eb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter93444)"
+       style="opacity:0.63800001;fill:#e1f5eb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter93444)"
        d="m 176.28862,303.04433 c 45.69401,39.20624 109.22846,16.55426 86.22073,-44.21433 -32.84402,-32.50023 -113.51834,4.90293 -86.22073,44.21433 z"
        id="rect92417-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <rect
-       style="opacity:0.64099995;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter81253)"
+       style="opacity:0.75099996;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter81253)"
        id="rect80595"
        width="138.57144"
        height="91.428574"
@@ -3338,28 +3338,28 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="591.46362"
-       y="230.60187"
+       x="621.26312"
+       y="237.67294"
        id="text93486"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan93488"
-         x="591.46362"
-         y="230.60187"
+         x="621.26312"
+         y="237.67294"
          style="font-size:10px;text-align:center;text-anchor:middle">povezanost sa biološkim</tspan><tspan
          sodipodi:role="line"
-         x="593.05542"
-         y="243.10187"
+         x="622.85492"
+         y="250.17294"
          id="tspan93490"
          style="font-size:10px;text-align:center;text-anchor:middle"> procesima na nivou </tspan><tspan
          sodipodi:role="line"
-         x="591.46362"
-         y="255.60187"
+         x="621.26312"
+         y="262.67294"
          style="font-size:10px;text-align:center;text-anchor:middle"
          id="tspan98727"> ključnih reči postoji</tspan></text>
     <path
        style="fill:#333333;fill-rule:evenodd;stroke:#525252;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2Lend-8)"
-       d="m 528.93609,227.84536 -68.89447,3.27557"
+       d="m 557.22036,235.4215 -97.17874,-4.30057"
        id="path93456-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -3476,37 +3476,6 @@
          style="font-size:11.25px">je deo</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#c652f5;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="102.32639"
-       y="189.98779"
-       id="text98713"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan98715"
-         x="102.32639"
-         y="189.98779"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#c652f5;fill-opacity:1"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000"
-   id="tspan99183">Mapiranja za</tspan> 20 najznačajnijih <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000"
-   id="tspan99187">(Xie2007) </tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="45.45686"
-       y="211.91528"
-       id="text98717"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan98719"
-         x="45.45686"
-         y="211.91528"> KW molekulskih funkcija povezanih sa neuređenošću </tspan><tspan
-         sodipodi:role="line"
-         x="45.45686"
-         y="240.04028"
-         id="tspan98721" /></text>
-    <text
-       xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="653.0929"
        y="327.06531"
@@ -3554,18 +3523,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="49.82143"
-       y="769.86224"
+       x="53.750004"
+       y="800.93365"
        id="text99099"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan99101"
-         x="49.82143"
-         y="769.86224"
+         x="53.750004"
+         y="800.93365"
          style="font-size:10px">ne može se doći do</tspan><tspan
          sodipodi:role="line"
-         x="49.82143"
-         y="782.36224"
+         x="53.750004"
+         y="813.43365"
          style="font-size:10px"
          id="tspan99103"> molekulske funkcije</tspan></text>
     <text
@@ -3579,7 +3548,7 @@
          id="tspan99191"
          x="269.14865"
          y="715.57654"
-         style="font-size:12.5px">Ćeliske </tspan><tspan
+         style="font-size:12.5px">Ćelijske </tspan><tspan
          sodipodi:role="line"
          x="267.15891"
          y="731.20154"
@@ -3607,7 +3576,7 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#7e7e7e;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 446.98678,377.262 c 19.98946,2.55098 55.56383,-0.45105 64.72425,-18.81608 15.35181,-25.88605 9.72689,-63.26751 30.92901,-85.82502 9.57867,-9.39178 16.17102,-11.86735 37.07931,-11.86735 23.52326,-1.25192 42.38919,4.86964 68.21291,-2.0498 11.30552,-2.40253 9.08643,-21.35755 9.08643,-33.03315 -0.60652,-12.86827 -27.11316,-7.01302 -40.33483,-8.62296 -41.10207,0 -80.79078,1.25728 -121.16899,-0.89575 -32.6658,-0.0665 -73.62332,-11.83046 -102.43993,22.70044 -49.05679,60.35348 -16.13147,127.26166 53.91184,138.40967 z"
+       d="m 446.98678,377.262 c 21.02268,0 55.56383,-0.45105 64.72425,-18.81608 15.35181,-25.88605 -1.38479,-58.21675 19.81733,-80.77426 9.57867,-9.39178 17.70838,-12.37242 41.625,-12.37242 0,0 91.64619,-0.0295 106.59871,-0.0295 14.72322,0 9.08643,-17.82202 9.08643,-31.51792 0,-12.9457 -10.32038,-9.12804 -63.06327,-9.12804 -41.10207,0 -135.77654,0.61948 -182.78829,0.61948 -37.1734,0 -65.56936,6.70106 -65.56936,54.52026 0,75.19271 14.6682,97.49848 69.5692,97.49848 z"
        id="path99826"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccc" />
@@ -3616,43 +3585,43 @@
        id="rect112131"
        width="343.24048"
        height="37.249241"
-       x="353.16296"
-       y="756.20654"
+       x="351.02011"
+       y="786.20654"
        ry="2.7864115" />
     <rect
        style="opacity:1;fill:#6dce9e;fill-opacity:1;fill-rule:nonzero;stroke:#60b58b;stroke-width:1.31932843;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect111956"
        width="104.89712"
        height="26.626053"
-       x="361.46539"
-       y="762.42371"
+       x="359.32254"
+       y="792.42371"
        ry="7.7382231" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.94927216px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="365.1131"
-       y="782.21753"
+       x="362.97025"
+       y="812.21753"
        id="text111966"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan111968"
-         x="365.1131"
-         y="782.21753">MF</tspan></text>
+         x="362.97025"
+         y="812.21753">MF</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.94927216px;line-height:89.99999762%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="428.52042"
-       y="773.9845"
+       x="426.37756"
+       y="803.9845"
        id="text112020"
        sodipodi:linespacing="89.999998%"><tspan
          sodipodi:role="line"
          id="tspan112022"
-         x="430.28461"
-         y="773.9845"
+         x="428.14175"
+         y="803.9845"
          style="font-size:11.0829277px;line-height:89.99999762%;text-align:center;text-anchor:middle">molekulska </tspan><tspan
          sodipodi:role="line"
-         x="428.52042"
-         y="783.95911"
+         x="426.37756"
+         y="813.95911"
          id="tspan112024"
          style="font-size:11.0829277px;line-height:89.99999762%;text-align:center;text-anchor:middle">funkcija</tspan></text>
     <rect
@@ -3660,35 +3629,35 @@
        id="rect111956-6"
        width="104.89712"
        height="26.626053"
-       x="471.94208"
-       y="761.80695"
+       x="469.79922"
+       y="791.80695"
        ry="7.7382231" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.94927216px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="475.58975"
-       y="781.60077"
+       x="473.4469"
+       y="811.60077"
        id="text111966-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan111968-2"
-         x="475.58975"
-         y="781.60077">BP</tspan></text>
+         x="473.4469"
+         y="811.60077">BP</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.94927216px;line-height:89.99999762%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="538.99701"
-       y="773.36774"
+       x="536.85413"
+       y="803.36774"
        id="text112020-1"
        sodipodi:linespacing="89.999998%"><tspan
          sodipodi:role="line"
-         x="538.99701"
-         y="773.36774"
+         x="536.85413"
+         y="803.36774"
          id="tspan112024-0"
          style="font-size:11.0829277px;line-height:89.99999762%;text-align:center;text-anchor:middle">biološki</tspan><tspan
          sodipodi:role="line"
-         x="538.99701"
-         y="783.34235"
+         x="536.85413"
+         y="813.34235"
          style="font-size:11.0829277px;line-height:89.99999762%;text-align:center;text-anchor:middle"
          id="tspan112095">procesi</tspan></text>
     <rect
@@ -3696,13 +3665,13 @@
        id="rect111956-1"
        width="104.89712"
        height="26.626053"
-       x="582.82556"
-       y="762.64825"
+       x="580.68268"
+       y="792.64825"
        ry="7.7382231" />
     <g
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text111966-28"
-       transform="matrix(0.88663425,0,0,0.88663425,-150.989,386.02791)">
+       transform="matrix(0.88663425,0,0,0.88663425,-153.13186,416.02791)">
       <path
          d="m 846.24585,431.96072 0,2.34009 q -1.12061,-1.0437 -2.39502,-1.56006 -1.26343,-0.51635 -2.69165,-0.51635 -2.8125,0 -4.30664,1.72485 -1.49414,1.71387 -1.49414,4.96582 0,3.24097 1.49414,4.96582 1.49414,1.71387 4.30664,1.71387 1.42822,0 2.69165,-0.51636 1.27441,-0.51636 2.39502,-1.56006 l 0,2.31812 q -1.16455,0.79101 -2.47192,1.18652 -1.29639,0.39551 -2.74659,0.39551 -3.72436,0 -5.8667,-2.27417 -2.14233,-2.28516 -2.14233,-6.22925 0,-3.95508 2.14233,-6.22925 2.14234,-2.28515 5.8667,-2.28515 1.47217,0 2.76856,0.3955 1.30737,0.38452 2.44995,1.16455 z"
          id="path112073"
@@ -3715,18 +3684,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.94927216px;line-height:89.99999762%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="649.88062"
-       y="774.20898"
+       x="647.73773"
+       y="804.20898"
        id="text112020-2"
        sodipodi:linespacing="89.999998%"><tspan
          sodipodi:role="line"
-         x="649.88062"
-         y="774.20898"
+         x="647.73773"
+         y="804.20898"
          id="tspan112024-3"
-         style="font-size:11.0829277px;line-height:89.99999762%;text-align:center;text-anchor:middle">ćeliske</tspan><tspan
+         style="font-size:11.0829277px;line-height:89.99999762%;text-align:center;text-anchor:middle">ćelijske</tspan><tspan
          sodipodi:role="line"
-         x="649.88062"
-         y="784.18359"
+         x="647.73773"
+         y="814.18359"
          style="font-size:11.0829277px;line-height:89.99999762%;text-align:center;text-anchor:middle"
          id="tspan112099">komponente</tspan></text>
     <text

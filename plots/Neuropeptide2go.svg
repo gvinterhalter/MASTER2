@@ -119,7 +119,6 @@
        vertical_pattern="false"
        fuse_tolerance="0" />
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient28025"
        osb:paint="gradient">
       <stop
@@ -294,13 +293,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="449.94552"
-     inkscape:cy="552.86456"
+     inkscape:cx="266.24713"
+     inkscape:cy="581.80987"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1916"
-     inkscape:window-height="1041"
+     inkscape:window-width="1596"
+     inkscape:window-height="861"
      inkscape:window-x="0"
      inkscape:window-y="37"
      inkscape:window-maximized="0" />
@@ -23304,7 +23303,7 @@
        sodipodi:open="true"
        d="m 130.06014,386.93042 a 71.373909,9.8200569 0 0 1 -70.494889,9.81931 71.373909,9.8200569 0 0 1 -72.231275,-9.57745 71.373909,9.8200569 0 0 1 68.715739,-10.05521 71.373909,9.8200569 0 0 1 73.923835,9.32977" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445);opacity:0.9"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445);opacity:0.95"
        id="rect28023"
        width="215.16249"
        height="53.538082"
@@ -23313,7 +23312,7 @@
        transform="matrix(1.0986083,0,0,1.1661557,-58.863409,-35.402271)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:1;"
        x="389.44659"
        y="130.02115"
        id="text25700"
@@ -23322,11 +23321,11 @@
          id="tspan25702"
          x="389.44659"
          y="130.02115"
-         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1">ključna reč iz kategorije</tspan><tspan
+         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1;">ključna reč iz kategorije</tspan><tspan
          sodipodi:role="line"
          x="389.44659"
          y="151.89615"
-         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1"
+         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1;"
          id="tspan25704"> &quot;molekulske funkcije&quot;</tspan></text>
     <text
        xml:space="preserve"
@@ -23347,7 +23346,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <rect
-       style="opacity:0.9;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3)"
+       style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3)"
        id="rect28023-8"
        width="215.16249"
        height="53.538082"
@@ -23374,7 +23373,7 @@
          style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#ff0101;fill-opacity:1;stroke:none;stroke-opacity:1"
          id="tspan29143">(biološki proces)</tspan></text>
     <rect
-       style="opacity:0.9;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0)"
+       style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0)"
        id="rect28023-8-1"
        width="215.16249"
        height="53.538082"
@@ -23411,7 +23410,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <rect
-       style="opacity:0.9;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0-8)"
+       style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0-8)"
        id="rect28023-8-1-4"
        width="215.16249"
        height="53.538082"
@@ -23437,7 +23436,7 @@
          id="tspan47119"
          style="font-size:22.5px">je deo</tspan></text>
     <rect
-       style="opacity:0.9;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0-4)"
+       style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0-4)"
        id="rect28023-8-1-3"
        width="215.16249"
        height="53.538082"
@@ -23575,7 +23574,7 @@
          x="690.7489"
          y="115.37457"
          id="tspan112024-3"
-         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">ćeliske</tspan><tspan
+         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">ćelijske</tspan><tspan
          sodipodi:role="line"
          x="690.7489"
          y="126.62457"
