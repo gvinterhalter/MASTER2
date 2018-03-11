@@ -1,0 +1,12 @@
+digraph G {
+    rankdir=LR;
+    node [ shape=none]
+    
+    DNK;
+    RNK;
+    Protein;
+    
+    DNK -> DNK [label="Replikacija\n(udvajanje)"]
+    DNK -> RNK [label="Transkripcija\n(prepisivanje)"];
+    RNK -> Protein [label="Translacija\n(prevođenje)"];
+}
