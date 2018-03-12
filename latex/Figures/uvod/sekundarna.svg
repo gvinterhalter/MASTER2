@@ -60,9 +60,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="571.9039"
-     inkscape:cy="141.59046"
+     inkscape:zoom="1.4"
+     inkscape:cx="1023.0204"
+     inkscape:cy="265.61321"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -83,7 +83,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -125,41 +125,41 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-114.81113"
-       y="445.44852"
+       x="-131.95398"
+       y="438.30566"
        id="text13189-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan13191-5"
-         x="-114.81113"
-         y="445.44852"
-         style="font-size:15px">α spirala </tspan></text>
+         x="-131.95398"
+         y="438.30566"
+         style="font-size:20px">α spirala </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-414.81119"
-       y="445.44852"
+       x="-446.23975"
+       y="437.59137"
        id="text13189-3"
        sodipodi:linespacing="125%"
        inkscape:transform-center-x="265"
        inkscape:transform-center-y="-5"><tspan
          sodipodi:role="line"
          id="tspan13191-6"
-         x="-414.81119"
-         y="445.44852"
-         style="font-size:15px">antiparalelna β ploča </tspan></text>
+         x="-446.23975"
+         y="437.59137"
+         style="font-size:20px">antiparalelna β ploča </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-645"
-       y="445.93365"
+       x="-668.57141"
+       y="437.36221"
        id="text13189"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan13191"
-         x="-645"
-         y="445.93365"
-         style="font-size:15px">paralelna β ploča </tspan></text>
+         x="-668.57141"
+         y="437.36221"
+         style="font-size:20px">paralelna β ploča </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6a3588;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -183,6 +183,102 @@
          id="tspan13191-2"
          x="441.37137"
          y="440.42563"
-         style="font-size:22.5px;fill:#2d6099;fill-opacity:1">β ploča </tspan></text>
+         style="font-size:22.5px;fill:#2d6099;fill-opacity:1">β trake </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="253.07141"
+       y="387.82538"
+       id="text4152"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4154"
+         x="253.07141"
+         y="387.82538">zavijutak</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="270.21429"
+       y="89.968239"
+       id="text4156"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4158"
+         x="270.21429"
+         y="89.968239">petlja</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 477.35716,397.82538 -120.00004,-29.28571 8.57147,-24.28571"
+       id="path4160"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 268.07145,85.682527 175.2143,114.25396"
+       id="path4162"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 336.64287,84.25396 185.71429,20.71428"
+       id="path4166"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-679.78571"
+       y="94.968246"
+       id="text4206"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4208"
+         x="-679.78571"
+         y="94.968246">a)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="11.35982"
+       y="97.735756"
+       id="text4206-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4208-6"
+         x="11.35982"
+         y="97.735756">b)</tspan></text>
+    <rect
+       style="opacity:0.53200001;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.24492556;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.73477669, 0.24492556;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4228"
+       width="2.3979316"
+       height="380.2551"
+       x="-4.1989484"
+       y="72.697853" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:91%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="245.21429"
+       y="292.82538"
+       id="text8623"
+       sodipodi:linespacing="91%"><tspan
+         sodipodi:role="line"
+         id="tspan8625"
+         x="245.21429"
+         y="292.82538">struktura</tspan><tspan
+         sodipodi:role="line"
+         x="245.21429"
+         y="311.57538"
+         id="tspan8631">ukosnica</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 402.35713,316.39681 -83.5714,-15.71428 52.85714,44.28571"
+       id="path8627"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 318.07145,300.68253 22.1429,-28.57144"
+       id="path8629"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

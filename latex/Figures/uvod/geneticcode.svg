@@ -18,7 +18,7 @@
    xml:space="preserve"
    style="overflow:visible"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="geneticcode22.svg"><sodipodi:namedview
+   sodipodi:docname="geneticcode.svg"><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
@@ -27,15 +27,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1916"
-     inkscape:window-height="1041"
+     inkscape:window-width="1596"
+     inkscape:window-height="861"
      id="namedview932"
      showgrid="false"
      inkscape:zoom="1.4052817"
      inkscape:cx="405.35233"
-     inkscape:cy="501.24258"
+     inkscape:cy="472.77854"
      inkscape:window-x="0"
-     inkscape:window-y="37"
+     inkscape:window-y="1117"
      inkscape:window-maximized="0"
      inkscape:current-layer="Layer_1"
      fit-margin-top="0"
@@ -44,7 +44,7 @@
      fit-margin-bottom="0" /><metadata
      id="metadata1855"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
      id="defs1853"><marker
        inkscape:stockid="DotM"
        orient="auto"
@@ -374,7 +374,7 @@
 <text
        transform="translate(203.3594,649.1978)"
        id="text77"
-       style="font-size:9.61929989px;font-family:CenturyGothic">Aspargin</text>
+       style="font-size:9.61929989px;font-family:CenturyGothic">Asparagin</text>
 <text
        id="text79"
        style="font-size:16.03199959px;font-family:CenturyGothic-Bold"

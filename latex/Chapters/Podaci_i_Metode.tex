@@ -3,6 +3,21 @@
 
 \label{Podaci i metode} % For referencing 
 
+Cilj rada je ispitivanje veze između molekulske funkcije proteina i njegove
+(ne)uređenosti tj. da li molekulska funkcija zavisi više od uređenosti ili
+neuređenosti. Istraživanje je motivisano radom \textit{"Functional anthology of
+intrinsic disorder. 1. Biological processes and functions of proteins with long
+disordered regions"} \parencite{Xie2007}. Navedeni rad je prvi u seriji od 
+tri rada i bavi se prvenstveno biološkim procesima i molekulskim funkcijama.
+U nastavku teksta pod terminima \keyword{originalni} rad, autori, podaci, metode i slično 
+podrazumevaćemo navedeni rad njegve autore, metode, podatke itd.
+
+Najveća razlika u našim pristupima je što su originalni rezultati izraženi u
+terminma \keyword{ključnih reči} dok su naši rezultati izraženi u \keyword{GO
+terminima}. Oba pristupa proizvode listu funkcija koje više obuhvataju
+(ne)uređene proteine, ali GO termini zbog granularnosti se prirodnije
+predstavljaju grafovski i sadrže mnogo više informacija. Konačni rezultat
+ovog istraživanja predstavlja poređenje ova dva pristupa.
 
 
 \section {Podaci}
@@ -19,7 +34,7 @@ Za metode koje prezentujemo potrebne su tri vrste informacija:
 \subsection{Podaci iz originalnog rada}
 
 U originalnom radu \parencite{Xie2007} korišćena je  baza podataka 
-\keyword{Svis-Prot} Poglavlje \ref{svis-prot}, verzija 48 iz 2005.
+\keyword{\swissprot} Poglavlje \ref{svis-prot}, verzija 48 iz 2005.
 Verzija 48 ima 201 560 proteina od kojih 196 326 imaju dužinu preko 40
 aminokiselina (što je potrebno zbog Definicije \ref{pdis_def} u nastavku). Funkcije
 pridružene proteinima izražene su \keyword{kontrolisanim vokabularom}
@@ -28,12 +43,12 @@ pridružene proteinima izražene su \keyword{kontrolisanim vokabularom}
 statističke značajnosti posmatrane su one ključne reči kojima je bilo anotirano
 barem 20 proteina, tj. 710 ključnih reči.
 
-Kao što je pomenuto u Poglavlju \ref{svis-prot} kanonske sekvence(proteini) u Svis-Prot
+Kao što je pomenuto u Poglavlju \ref{svis-prot} kanonske sekvence(proteini) u \swissprot
 bazi podataka nisu redundantne u smislu da jedan unos u bazi podataka predstavlja produkt
 jednog gena iz jedne vrste organizma. Međutim za analizu funkcija
-Svis-Prot \keyword{jeste statistički redundantna} \parencite{proveriti} jer
+\swissprot \keyword{jeste statistički redundantna} \parencite{proveriti} jer
 sadrže veliku količinu \keyword{homologih} proteina (prvenstveno ortologa).
-Autori rada \parencite{Xie2007} su izvršili klasterovanje Svis-Prot
+Autori rada \parencite{Xie2007} su izvršili klasterovanje \swissprot
 proteina u \keyword{proteinske familije} dobivši 27 217 familija. Pri klasterovanju svaki protein
 ima težinu kojom doprinosi daljoj analizi. Težina svakog proteina u preseku
 klastera sa datom funkcijom je obrnuto proporcionalna veličini preseka
@@ -56,30 +71,33 @@ tako da je zbir težina svih proteina jednaka veličini preseka.
 
 \subsection{Naši podaci}
 
-U ovom radu korišćen je skup proteina preuzet sa \keyword{CAFA3} takmičenja.
-Ovaj skup je namenjen da bude trening skup za predikciju funkcija proteina \parencite{CAFA}. 
+Ugledom na CASP takimčenja, CAFA \en{Critical Assessment of Functional Annotation}
+takmičenje pokrenuto je zarad objektivnog ocenjivanja prediktora funkcije i
+usmerivanja budućeg razvoja prediktora funkcije \parencite{CAFA}.
+U ovom radu korišćen je trening skup proteina preuzet sa \keyword{CAFA3} takmičenja
+korišćen za treniranje prediktora funkcije.
 
-CAFA3 trening skup je pažljivo odabran podskup Svis-Prot baze (iz 2016.) koji
+CAFA3 trening skup u nastavku samo CAFA3 skup je podskup \swissprot baze (iz 2016.) koji
 uključuje sve proteine iz model organizama: \en{Human, Mouse, Rat, S.
 cerevisiae, S. pombe, E. coli, A. thaliana, Dictyostelium discoideum,
 Zebrafish, \& Bacillus cereus. } sa izuzetokm sekvenci \en{Drosophila and
-Candida} koje su preuzete iz svojih respektivnih genomskih baza podataka (Lična
-komunikacija sa Iddo Friedberg, PhD iz CAFA tima)
+Candida} koje su preuzete iz svojih respektivnih genomskih baza podataka.
+Informacije o sadržaju CAFA3 trening skupa izneo je \textit{Iddo Friedberg PhD} iz CAFA3 tima.
+Naša analiza izvršena je pod pretpostavkom da je CAFA3 skup statistički redundantan
+(iako nemamo čvrst dokaz). Ova pretpostavka uporošćava metode analize.
+% Iako ovaj pristup potencijalno proizvodi skup koji je \keyword{statisički
+% redundantan} u našoj analizi smo pretpostavili da to nije slučaj jer je čin
+% klasterovanja veoma računarski zahtevan, a nismo ubeđeni da je neophodan za
+% ovaj konkretan skup. Iz tog razloga u daljoj analizi predstavljamo uprošćenu
+% verziju formule koja ne uračunva težinu pojedinačnog proteina.
 
-Iako ovaj pristup potencijalno proizvodi skup koji je \keyword{statisički
-redundantan} u našoj analizi smo pretpostavili da to nije slučaj jer je čin
-klasterovanja veoma računarski zahtevan, a nismo ubeđeni da je neophodan za
-ovaj konkretan skup. Iz tog razloga u daljoj analizi predstavljamo uprošćenu
-verziju formule koja ne uračunva težinu pojedinačnog proteina.
-
-Svis-Prot proteini su kodirani jednim karakterom koristeći \keyword{IUPAC}
-kodove.  U podacima postoje sekvence sa nestandardnim aminokiselinam 'U' i 'O'
-ili višeznačnim oznakama 'B', 'J', 'X' i 'Z'.  Ovakve sekvence nisu podržane od
-strane izabranog prediktora i za nas predstavljaju nevalidne proteinske sekvence. Pod
+\swissprot proteini su kodirani jednim karakterom koristeći \keyword{IUPAC}
+kodove.  U podacima javljaju se sekvence sa  21. i 22. aminokiselinom ('U' i 'O')
+kao i  višeznačne oznake: 'B', 'J', 'X' i 'Z'.  Ovakve sekvence nisu podržane od
+strane VSL2b prediktora i za nas predstavljaju nevalidne proteinske sekvence. Pod
 \keyword{validnom proteinskom sekvencom} smatraćemo sekvencu koja je validan
-ulaz za prediktor, tj. sačinjena je od  zbuke od 20 standardnih aminokiselina i
-ima najmanju dužinu 9\footnote{ Dužina 9 je minimum za VSL2b prediktor koji
-koristimo}.
+ulaz za VSL2b, tj. čini je azbuka od 20 standardnih aminokiselina i
+ima minimalnu dužinu 9 AK.
 
 CAFA3 Podaci se sastoje od dve datoteke:
 \begin{enumerate}
@@ -96,19 +114,20 @@ Naša analiza primarno je orijentisna na korišćenje GO termina za opis funkcij
 i razlikuje se od originalnog pristupa.  Analiza sa GO terminima (grupisanje po
 funkciji) zahteva prvenstveno poznavanje \textit{IS\_A} roditeljske veze između
 termina. Takođe, tokom istraživanja bile su nam potrebne i ostale informacije o
-terminima. Pomenute informacije dobili smo iz
-\url{http://purl.obolibrary.org/obo/go.obo} dokumenta verzije 2017-12-01.
+terminima. Pomenute informacije dobili smo iz datoteke \cite{go_obo}
+verzije 01.12.2017.
 
 Radi poređenja dobijenih rezultata potrebno je poznavanje relacije između
 ključnih reči i GO termina. Postoje dva dostupna mapiranja:
 \begin{itemize}
-  \item \url{www.uniprot.org/docs/keywlist.txt} verzija 20.12.2017 sadrži
+  \item \cite{keywlist_txt} verzija 20.12.2017 sadrži
     detaljan opis 1188 ključnih reči od kojih 195 pripada kategoriji
     \keyword{Molekulskih funkcija}.  Od 195 samo 145 ima mapiranje na jedan ili
     više GO termina.
-  \item \url{ttp://geneontology.org/external2go/uniprotkb_kw2go} sadrži samo
+  \item \cite{uniprotkb_kw2go} sadrži samo
     mapiranja i generiše ih \keyword{GOA projekat} \parencite{Barrell2009}.
-    Ipak ova mapiranja nisu korišćena jer ... \keyword{TODO}
+    Ipak ova mapiranja nisu korišćena jer su u našoj analizi proizvodila
+    redundantna i nepoželjna mapiranja.
 \end{itemize}
 
 Pošto je originalni rad \parencite{Xie2007} iz 2007. godine, postoje razlike u
@@ -118,8 +137,8 @@ prvo ponoviti analizu sa vokabularom ključnih reči da bi se procenilo koliko
 ove razlike utiču na originalne rezultate ovog rada \parencite{Xie2007}.
 
 Zato, CAFA3 podatke ne možemo da posmatramo kao crnu kutiju već je
-bilo neophodno povezati ih sa Svis-Prot proteinima prvenstveno zbog
-pridruživanja ključnih reči. Kako postoje razlike između najnovije verzije Svis-Prot
+bilo neophodno povezati ih sa \swissprot proteinima prvenstveno zbog
+pridruživanja ključnih reči. Kako postoje razlike između najnovije verzije \swissprot
 baze i CAFA3 podataka bilo je neophodno izvršiti ''korektno'' spajanje i
 analizu razlika.  Informacije o pridruženim ključnim rečima takođe su nam bile
 značajne za proveru validnosti mapiranja na GO termine i testiranje
@@ -131,9 +150,6 @@ Poglavnju \ref{Priprema_podataka}.
 
 \section {Metod}
 
-Cilj rada je ispitivanje veze između molekulske funkcije proteina i njegove
-(ne)uređenosti tj. da li molekulska funkcija zavisi više od uređenosti ili
-neuređenosti.
 
 \textbf{Idealan slučaj.} 
 Pretpostavimo da za proizvoljnu molekulsku funkciju znamo sve strukturno različite
@@ -172,9 +188,9 @@ znamo da li i kako to ponašanje (tip neuređenosti) utiče na datu funkciju.
 \end{itemize}
 
 Jednostavna alternativa je da se pretpostavi da veći udeo neuređenih u odnosu
-na uređene proteine podrazumeva da funkcija zavisi više od neuređenosti.  Dakle
-izjednačavamo uzročnost \en{causation} i \keyword{korelaciju} između funkcije i
-neuređenosti. Međutim prvo je potrebno definisati kada protein smatramo
+na uređene proteine podrazumeva da funkcija zavisi više od neuređenosti. 
+% Dakle izjednačavamo uzročnost \en{causation} i \keyword{korelaciju} između funkcije i neuređenosti.
+Međutim prvo je potrebno definisati kada protein smatramo
 neuređenim.  Definicija mora da ima biološkog smisla, da bude prilagođena
 analizi, ali pored takođe ograničena je sposobnostima i preciznošću prediktora
 koji se korist.  Više o tome u sledećem podpoglavlju \ref{naredno}.
@@ -210,8 +226,8 @@ Onda definišemo operator $d$ takav da za svaku proteinsku sekvencu $s_i$ važi:
 U nastavku pod neuređenošću podrazumevaće se \keyword{putativna neuređenost}.
 Uslov ''$\ge40$'' u originalnom radu delom je posledica ograničenja VL3
 prediktora koji je treniran na \keyword{dugim} sekvencama\footnote{L označava
-duge regione, $\ge$ 30 AK}. Mi nismo u obavezi da sledimo ovo pravilo, ali ga sledimo
-radi upoređivanja rezultata.
+duge regione, $\ge$ 30 AK}.
+% Mi nismo u obavezi da sledimo ovo pravilo, ali ga sledimo radi upoređivanja rezultata.
 
 \subsection{Zavisnost dužine proteina i predikcije dugačkog neuređenog regiona}
 
@@ -233,17 +249,21 @@ predstavlja prozor uprosečavanja. Kako prozor uprosečavanja raste sa porastom
 dužine proteina $(l = 0.1 \cdot L)$ tako $P_L$ postaje glađa sa veličinom
 promenljive $L$.  Konstantni prozor uprosečavanja je tehnika još poznata
 kao \en{rolling average} ili \en{boxcar filter} i predstavlja prostu vrstu
-konvolucije.  \keyword{Trenutno ne znamo zašto se autor odlučio da veličina
-prozora raste sa dužinom proteina???}.
+konvolucije.  Nije nam poznato  zašto su originalni autori odlučili da veličina
+prozora raste sa dužinom proteina. Koliko nam je poznato u pitanju je heruistika.
 
 
 \begin{figure}[th]
 \centering
 \includegraphics[]{plots/PL_F}
-\decoRule
+% \decoRule
 \caption {
- Punom linijom predstavljena je $P_L$ sa prozorom uprosečavanja $l = 0.1L$,
- a krstići predstavljaju sirove vrednosti $l = 0$ 
+  Zavisnot neuređenosti i dužine CAFA3 proteina \\ minimalne dužine 40 AK
+  \\ \footnotesize
+  (Punom linijom predstavljena je $P_L$ sa prozorom uprosečavanja $l = 0.1L$, a
+  krstići predstavljaju sirove vrednosti $l = 0$. Transparentnost krstrića
+  služi da ilustruje brojnost proteina date dužine. Ako je krstić transparentan
+  znači da sadrži manje od 100 proteina.)
 }
 \label{fig:PL1}
 \end{figure}
@@ -264,13 +284,16 @@ procenu $P_L$.
 \begin{figure}[th]
 \centering
 \includegraphics[]{plots/AK_ucestalost}
-\decoRule
-\caption{Slučajni i uniformni modeli za procenu $P_L$
-\\ \footnotesize(Sivo obojene AK ne pripadaju ni jednoj grupaciji)}
+% \decoRule
+\caption{
+  Učestalost aminokiselina u CAFA3 podacima
+  \\ \footnotesize
+  (Učestalost prikazuje uniformni model, dok boja AK obeležava afinitet prema
+  uređenosti ili neuređenosti. Aminokiseline su poređane u rastućem poretku
+  od najlakše do najteže. 
+}
 \label{fig:AK_ucestalost}
 \end{figure}
-
-
 
 Poređenje predloženih pristupa sa originalnim $P_L$ prikazano je na Slici
 \ref{fig:PL2}. Jasno se vidi
@@ -286,8 +309,8 @@ korišćen u daljoj analizi.
 \centering
 % \includegraphics[scale=0.65]{Figures/PL2}
 \includegraphics[]{plots/PL_F_cmp}
-\decoRule
-\caption{Različiti pristupi za procenu $P_L$}
+% \decoRule
+\caption{Upoređivanje različith modela za procenu $P_L$}
 \label{fig:PL2}
 \end{figure}
 
@@ -303,7 +326,7 @@ na Slici \ref{fig:aminoacid} \parencite{AKfrekvencija}.
 \begin{figure}[th]
 \centering
 \includegraphics[scale=0.7]{aminoacid}
-\decoRule
+% \decoRule
 \caption{Očekivana i realna učestalost  aminokiselina kod sisara\\ \footnotesize
 (Preuzeto sa: \url{www.tiem.utk.edu/~gross/bioed/webmodules/aminoacid.htm})}
 \label{fig:aminoacid}
@@ -311,6 +334,7 @@ na Slici \ref{fig:aminoacid} \parencite{AKfrekvencija}.
 
 
 
+\clearpage
 \subsection{Ocenjivanje zavisnosti funkcije od neuređenosti}
 
 Neka je $S_j$ skup proteina koji imaju pridruženu funkciju $j$. Tada se procenat

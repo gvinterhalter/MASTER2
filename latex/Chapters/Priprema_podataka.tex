@@ -3,25 +3,24 @@
 
 \label{Priprema_podataka} % For referencing 
 
-\section{Objedinjavanje CAFA3 i novije Svis-Prot verzije}
+\section{Objedinjavanje CAFA3 i novije \swissprot verzije}
 
 Iz CAFA3 trening skupa izdvojeni su svi validni proteini ( dužine barem 9, i
 azbukom od 20 standardnih aminokiselina). U ovom koraku ne izbacujemo proteine
 kraće od 40 AK.
 
-Informacije o Svis-Prot bazi podataka dobijene su iz verzije 2017\_12, iz datoteke
-\file{uniprot\_sprot-only2017\_12.tar.gz} preuzete sa
-\url{ftp://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2017_12/knowledgebase}.
-Pomenuta verzija sadrži 556 196 proteina. 
+Informacije o \swissprot bazi podataka dobijene su iz verzije 2017\_12, iz datoteke
+\file{uniprot\_sprot-only2017\_12.tar.gz} \cite{sprot}.
+Navedena verzija sadrži 556 196 proteina. 
 
 Od 66 599 validnih CAFA3 proteina 66 530 ima nepromenjen \keyword{primarni
-identifikator}. Međutim  69 slogova u Svis-Prot sadrže nedostjuće CAFA3 identifikatore kao sekundarne.
+identifikator}. Međutim  69 slogova u \swissprot bazi sadrže nedostjuće CAFA3 identifikatore kao sekundarne.
 Kao što je navedeno u potpoglavlju \ref{svis-prot} Ovo je posledica dva moguća mehanizma:
 
 \begin{enumerate}
   \item Unifikacija nekoliko CAFA3 proteina pod novi slog.
     Rezultat unifikacije prikazan je na Slici \ref{fig:unifikacija_slogova}. Analizom
-    ovih promena uspešno su rekonstruisana svega četri nova Svis-Prot sloga
+    ovih promena uspešno su rekonstruisana svega četri nova \swissprot sloga
     koja odgovaraju nedostajućim CAFA3 proteinima. Kako je četri
     suviše mali broj, zbog jednostavnosti nismo ih ubrajali u dalju analizu
     te koristimo samo 66 530 originalnih CAFA3 proteina.
@@ -30,7 +29,7 @@ Kao što je navedeno u potpoglavlju \ref{svis-prot} Ovo je posledica dva moguća
   \centering
   \includegraphics[scale=2]{plots/unifikacija_slogova2.eps}
   \decoRule
-  \caption{Unifikacija starih(elipse) na nove slogove u Svis-Prot bazi podataka}
+  \caption{Unifikacija starih(elipse) na nove slogove u \swissprot bazi podataka}
   \label{fig:unifikacija_slogova}
   \end{figure}
 
@@ -41,25 +40,25 @@ Kao što je navedeno u potpoglavlju \ref{svis-prot} Ovo je posledica dva moguća
 
 Validini CAFA3 proteini anotirani su sa  5 957 različitih GO termina Molekulske
 Funkcije (MF) od kojih je 50 zastarelo i izbačeno iz \file{go.obo} datoteke.  U
-Svis-Prot bazi podataka nismo bili u mogućnosti da proverimo za MF, ali ukupno
+\swissprot bazi podataka nismo bili u mogućnosti da proverimo za MF, ali ukupno
 je izbačeno 319 GO termina.
 CAFA3 sadrži 67 MF koje se ne javljaju u Swis-Prot anotacijama.
 Swis-Prot sadrži 888 MF koje se ne javljaju u CAFA3 anotacijama.
-Pošto Svis-Prot treba da sadrži svežije (tačnije) informacije, CAFA3 verzija
-anotacija je zanemarena u korist novijih Svis-Prot anotacija. Ove informacije
+Pošto \swissprot treba da sadrži svežije (tačnije) informacije, CAFA3 verzija
+anotacija je zanemarena u korist novijih \swissprot anotacija. Ove informacije
 sumirane su  Tabelom \ref{tab:godiff}
 
-Dodatno, Svis-Prot sadrži 194 proteina čija se sekvenca razlikuje u
+Dodatno, \swissprot sadrži 194 proteina čija se sekvenca razlikuje u
 odnosu na CAFA3 verziju proteina. Odlučili smo da zadržimo originalne CAFA3
 sekvence.
 
 \begin{table}[htpb]
   \centering
-  \caption{Razlike u GO terminima između CAFA3 i Svis-Prot}
+  \caption{Razlike u GO terminima između CAFA3 i \swissprot}
   \label{tab:godiff}
 \begin{tabular}{|r|c|c|}
   \hline
-                  & CAFA3 & Svis-Prot       \\
+                  & CAFA3 & \swissprot       \\
   \hline
   MF termini      & 5 957 &    proveriti    \\
   fali u obo.go   & 60 MF & 319 MF, CC i BP \\
