@@ -53,9 +53,17 @@ headsepline, % Uncomment to get a line under the header
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
                                                                                 
 
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage[
+  backend=bibtex
+  , natbib=true
+  , citestyle=numeric
+  , bibstyle=numeric
+  , sorting=none
+]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 \addbibresource{ref.bib} % The filename of the bibliography
+
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
@@ -228,12 +236,12 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 %	ABBREVIATIONS
 %----------------------------------------------------------------------------------------
 
-\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
-
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
-\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
-
-\end{abbreviations}
+% \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+%
+% \textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+% \textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+%
+% \end{abbreviations}
 
 %----------------------------------------------------------------------------------------
 %	PHYSICAL CONSTANTS/OTHER DEFINITIONS
@@ -293,6 +301,9 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 \newcommand{\swissprot}{\textit{Swiss-Prot} }
 \newcommand{\trembl}{\textit{TrEMBL} }
 
+\newcommand{\kw}[1]{\textbf{\textit{KW: #1}}}
+\newcommand{\mf}[1]{\textbf{\textit{MF: #1}}}
+
 
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
@@ -302,7 +313,9 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 \include{Chapters/Baze}
 \include{Chapters/Podaci_i_Metode}
 \include{Chapters/Priprema_podataka}
+
 % \include{Chapters/Implementacija}
+
 \include{Chapters/Rezultati}
 % \include{Chapters/Diskusija}
 
