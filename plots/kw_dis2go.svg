@@ -529,9 +529,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="248.56624"
-     inkscape:cy="310.48038"
+     inkscape:zoom="5.6"
+     inkscape:cx="78.185021"
+     inkscape:cy="218.47479"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -552,7 +552,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -569,10 +569,10 @@
        sodipodi:nodetypes="sssssssss" />
     <path
        style="opacity:0.19899998;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 66.52846,586.97712 c -15.669359,-0.0633 -28.285156,12.61567 -28.285156,28.28515 l 0,8.58594 c 0,5.69214 5.243385,10.97663 8.114397,15.4043 l -7.111328,0 c -7.531078,0 -13.59375,6.06267 -13.59375,13.59375 l 0,4.12695 c 0,7.53108 6.062672,13.5957 13.59375,13.5957 l 140.563337,0 c 7.53108,0 14.6039,-8.59 14.6039,-16.12108 l 0,-4.12695 c 0,-0.24095 -0.0229,-0.47511 -0.0352,-0.71289 l 50.07896,0.71429 c 15.66789,0.22347 27.27305,-10.09029 27.27305,-25.75978 l 0,-8.58594 c 0,-15.66948 -12.61385,-28.22189 -28.2832,-28.28515 z"
+       d="m 66.52846,586.97712 c -22.428815,4.88148 -28.285156,18.74898 -28.285156,28.83537 0,10.15643 5.243385,19.01235 8.114397,23.44002 l -7.111328,0 c -7.531078,0 -13.59375,6.06267 -13.59375,13.59375 l 0,4.12695 c 0,7.53108 6.062672,13.5957 13.59375,13.5957 l 140.563337,0 c 7.53108,0 14.6039,-8.59 14.6039,-16.12108 l 0,-4.12695 c 0,-0.24095 -0.0229,-0.47511 -0.0352,-0.71289 l 50.07896,0.71429 c 15.66789,0.22347 27.27305,-10.09029 27.27305,-25.75978 l 0,-8.58594 c 0,-15.66948 -12.61385,-28.22189 -28.2832,-28.28515 z"
        id="rect92394"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ssscssssssscsssss" />
+       sodipodi:nodetypes="cccssssssscssssc" />
     <path
        style="opacity:0.19899998;fill:#6dce9e;fill-opacity:1;fill-rule:nonzero;stroke:#00a351;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 66.164062,237.16992 c -15.10985,0 -27.273437,12.6137 -27.273437,28.2832 l 0,290.41993 c 0,15.6695 12.163587,28.2832 27.273437,28.2832 l 156.069498,0 c 0,0 31.81917,-2.17122 31.81917,-35.35509 l 0,-77.78163 c 0,-15.6695 12.16555,-28.28516 27.27539,-28.28515 l 52.5273,0 c 38.69781,0 37.88091,-26.7679 37.88091,-26.7679 l 0,-15.15322 c 0,-16.13734 -22.80659,-20.06805 -23.23438,-37.3746 l 0,-104.55128 c 0,0 0.13106,-21.71746 -30.80897,-21.71746 z"
