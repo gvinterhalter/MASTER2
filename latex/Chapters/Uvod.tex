@@ -25,8 +25,10 @@ najznačajnija tipa bioloških polimera i njihovi monomeri prikazani su u Tabeli
   \centering
   \caption{Najznačajniji biološki polimeri}
   \label{tab:polimeri}
-  \begin{tabular}{ll}
+  \begin{tabular}{|l|l|}
+    \hline
     \keyword{Polimer}            & \keyword{Monomer} \\
+    \hline
     Ugljeni hidrati              & Monosaharid (šećeri) \\
     Nukleinska kiselina (DNK)    & Nukleotid \\
     Protein                      & Aminokiselina \\
@@ -49,7 +51,7 @@ objašnjava protok informacija kroz generacije i ćeliju.
 
 
 Dezoksiribonukleinska kiselina, kraće \keyword{DNK} se procesom replikacije
-(tokom deobe ćelije) udvaja u dve kopije. Za života ćelije regioni DNK
+(tokom deobe ćelije) udvaja u dve kopije. Za života ćelije, regioni DNK
 molekula tzv. \keyword{geni} bivaju transkribovani (prepisani) u oblik
 ribonukleinske kiseline, kraće \keyword{RNK}. Glasnička RNK, kraće \keyword{mRNK}
 dobijena transkripcijom tzv. \keyword{kodirajućeg gena} sadrži kodirane informacije
@@ -57,7 +59,7 @@ za sintezu proteina i biva transportovana do molekulskih mašina ribozoma.
 Ribozom dekodira poruku mRNK odnosno translira (prevodi) mRNK  u protein.
 Pomenuti kod prikazan centralnim delom Slike \ref{fig:kod} zove se
 \keyword{genetički kod} i opisuje mapiranje uzastopnih trojki baza nukleinske
-kiseline tzv. \keyword{kodona} u aminokiseline ili stop oznaku. Na primer
+kiseline tzv. \keyword{kodona} u aminokiseline ili stop oznaku. Na primer,
 trojka baza: Guanin-Adenin-Uracil (GAU) ili Guanin-Adenin-Citozin (GAC) prevode
 su u Asparginsku kiselinu.
 
@@ -73,7 +75,7 @@ su u Asparginsku kiselinu.
 
 \clearpage
 
-Genetički kod smatra se univerzalnim za sva živa bića (poznat kao kanonski). Ipak sitne razlike u
+Genetički kod smatra se univerzalnim za sva živa bića (poznat kao kanonski). Ipak, sitne razlike u
 tumačenju nekih kodona javljaju se kod malog broja vrsta, obično nekih
 bakterija, mitohondrije, arhea ali i viših biljaka.
 
@@ -91,7 +93,7 @@ U bioinformatici gene i genske produkte najjednostavnije predstavljamo
 sekvencama njihovih respektivnih monomera.
 
 
-Centralnu dogmu predložio je Francis Krik 1958. godine. Ipak vremenom 
+Centralnu dogmu predložio je Frensis Krik 1958. godine. Ipak, vremenom 
 razni specijalni slučajevi toka informacija su otkriveni, prvenstveno kod
 virusa i bakterija. U ovom radu nećemo ih razmatrati.
 
@@ -106,12 +108,12 @@ brže divergira od oblika koji kodira. Razlikujemo dva tipa homologa:
   \item
     Dve sekvence su \keyword{ortologe} (orto - pravi) ako predstavljaju istu
     sekvencu (isti gen, protein) u različitim vrstama nastalu specijalizacijom.
-    Na primer geni mioglobina kod čoveka i kod pacova su ortolozi. Ortolozi
+    Na primer, geni mioglobina kod čoveka i kod pacova su ortolozi. Ortolozi
     uvek obavljaju istu funkciju u ćeliji.
 
   \item Dve sekvence su \keyword{paraloge} ako su nastale duplikacijom
     originalne sekvence. U slučaju duplikacije, jedna sekvenca je slobodna
-    da se promeni i služi različitoj funkciji. Na primer ljudski
+    da se promeni i služi različitoj funkciji. Na primer, ljudski
     alfa globin i beta globin su paralozi.
 \end{itemize}
 
@@ -122,7 +124,7 @@ PSI-BLAST (ili noviji, senzitivniji DELTA-BLAST).  PSI-BLAST \en{
 position-specific iterated BLAST, $\psi$-BLAST } prvo gradi PSSM matricu
 originalne sekvence (od bliskih, sličnih sekvenci) koju dalje koristi u pretrazi
 udaljenih proteinskih sekvenci. PSSM \en{Position-Specific Scoring Matrix} je
-$20 \times n$ matrica koja predstavlja verovatnoću pojavljivanja aminokiselina
+$20 \times n$ matrica koja sadrži verovatnoću pojavljivanja aminokiselina
 za svaku od $n$ pozicija sekvence. PSSM se generiše iz poravnanja nekoliko
 sličnih sekvenci. Rezultat pretrage može se agregirati u novu PSSM koja
 predstavlja evolutivni profil i opisuje familiju proteina. 
@@ -137,7 +139,7 @@ suve mase organizma.  Strukturno, protein je linearan polimer sačinjen od lanca
 \subsection{Aminokiseline}
 Aminokiseline koje translacijom mRNK ulaze u sastav proteina poznate su kao
 \keyword{proteinogene}\footnote{U prirodi se javljaju stotine različitih AK, ali
-one ne ulaze u sastav proteina}.  Ukupno su poznate 22 proteinogene
+one ne ulaze u sastav proteina}.  Do danas, otkrivene su 22 proteinogene
 aminokiseline od kojih je 20 kodirano kanonskim genetičkim kodom tzv.
 \keyword{standardne} AK, dok se 21. AK (selenocistein) i 22. AK (pirolizin)
 prevode specijalnim tumačenjem STOP kodona i to samo kod nekih organizama\footnote{
@@ -150,19 +152,22 @@ Centralni alfa ugljenikov atom ($C_{\alpha}$) povezan je \keyword{amino grupom} 
 \keyword{karboksilnom grupom} ($-COOH$), atomom vodonika i tzv. \keyword{R grupom}.
 Vrsta aminokiseline određena je R grupom još poznatom kao \keyword{bočni niz} ili \keyword{bočni ostatak} \en{residue}.
 
-Reakcijom kondenzacije prikazane na Slici \ref{fig:AK}b dve aminokiseline
-grade kovalentnu tzv. peptidnu vezu rezultujući peptidom (dipeptid na slici).
-Dakle, peptid je polimer aminokiselina koje su međusobno povezane peptidnim
-vezama.  Peptid duži od 10 AK (Slika \ref{fig:AK}c ) se smatra polipeptidom (skraćeno pp).
-Neki autori pod terminom protein podrazumevaju samo polipeptide duže od 50 AK,
-ali mi nećemo slediti taj primer.
-Ponavljajući elementi $N-C_\alpha-C$ $(-N-C_\alpha-C)^*$ $-N-C_\alpha-C$ čine
-tzv. \keyword{pp lanac} ili \keyword{kičmu peptida} sa koje štrče bočni nizovi.
-Polipeptidi se zapisuju u smeru u kome su sintetisani pa zato  početak (levi kraj)
-nazivamo N-terminus (zbog amino grupe), a desni kraj C-terminus (zbog karboksilne grupe).
+Reakcijom kondenzacije prikazane na Slici \ref{fig:AK}b dve aminokiseline grade
+kovalentnu tzv. peptidnu vezu rezultujući peptidom (dipeptid na slici).  Dakle,
+peptid je polimer aminokiselina koje su međusobno povezane peptidnim vezama.
+Peptid duži od 10 AK (Slika \ref{fig:AK}c ) se smatra polipeptidom (skraćeno
+pp). Pod proteinom se podrazumeva polipeptid velike dužine. Različiti izvori
+navode različite granice, na primer: 20-30 AK, 50 AK ili 100 AK, ali zapravo ne
+postoji jasna granica između polipeptida i proteina
+\parencite{protein_slajdovi}. Ponavljajući elementi $N-C_\alpha-C$
+$(-N-C_\alpha-C)^*$ $-N-C_\alpha-C$ čine tzv.  \keyword{pp lanac} ili
+\keyword{kičmu peptida} sa koje štrče bočni nizovi.  Polipeptidi se zapisuju u
+smeru u kome su sintetisani pa zato  početak (levi kraj) nazivamo N-terminus
+(zbog amino grupe), a desni kraj C-terminus (zbog
+karboksilne grupe).
 
 
-Prema fizičkim i hemijskim osobinama bočnog niza aminokiseline se mogu
+Prema fizičkim i hemijskim osobinama bočnog niza, aminokiseline se mogu
 klasifikovati na nekoliko načina prikazanih Slikama \ref{fig:kod} i
 \ref{fig:AK_vene} od čega izdvajamo sledeću klasifikaciju:
 \begin{itemize}
@@ -173,7 +178,7 @@ klasifikovati na nekoliko načina prikazanih Slikama \ref{fig:kod} i
     je kontakt sa vodom mimimalan.
     
   \item Nenaelektrisane polarne AK -
-    su rastvorljive u vodi (vole vodu). Uglavnom se nalaze na spoljnim
+    rastvorljive u vodi (vole vodu). Uglavnom se nalaze na spoljnim
     delovima proteina, često na hemijski aktivnim delovima.
 
   \item Naelektrisane polarne AK -
@@ -184,8 +189,8 @@ klasifikovati na nekoliko načina prikazanih Slikama \ref{fig:kod} i
 \end{itemize}
 
 Za vreme života proteina (nakon translacije) aminokiseline koje ga čine mogu
-biti modifikovane od strane raznih enzima na primer pravljenjem kovalentnih
-veza sa novim funkcionalnim grupama.  Ovaj proces poznat je kao
+biti modifikovane od strane raznih enzima, na primer pravljenjem kovalentnih
+veza sa novim funkcionalnim grupama. Ovaj proces poznat je kao
 \keyword{posttranslaciona modifikacija}, kraće \keyword{PTM}.  Na Slici
 \ref{fig:kod} prikazane su najčešće PTM i gde se javljaju.
 
@@ -227,21 +232,35 @@ dva različita oblika koja su prikazana na Slici \ref{fig:sekundarna}:
   \item \keyword{$\alpha$-spirala} - je spiralna struktura u kojoj R grupe štrče spolja
   \item \keyword{$\beta$-traka}  - predstavlja spoj dva ili više (anti)paralelnih delova polipeptidnog lanca.
 \end{itemize}
+
+\begin{figure}[th]
+\centering
+\hspace*{-2.0cm} 
+\includegraphics[scale=0.53]{uvod/sekundarna.pdf}
+\caption {
+  Alfa spirala i $\beta$-traka.\\ \footnotesize Levi deo slike preuzet je sa \parencite{sekundarna_ref}.\\
+  Desni deo slike preuzet je sa veb strane \textit{bioninja.com}
+}
+\label{fig:sekundarna}
+\end{figure}
+
 Delovi pp lanca  koji povezuju navedene strukture (Slika \ref{fig:sekundarna}b ) često nemaju uređenje i po dužini ih delimo na kraći zaokretaj i duže
 petlje \en{short turn, long loop}. Specijalno zavijutak \en{$\beta$-hairpin} je
 kratak zaokret lanca kod antiparalelne $\beta$-traka.
 Formiranje sekundarne strukture naziva se \keyword{lokalno savijanje}.
 
-Usled delenja elektrona,  peptidna veza ponaša se slično dvostrukoj kovalentnoj
+Usled deljenja elektrona,  peptidna veza ponaša se slično dvostrukoj kovalentnoj
 vezi rezultujući onemogućavanjem rotacije ograničavanjem mogućih konformacija pp lanca.
 Posledica ovog ponašanja omogućava kreiranje pravilnih sekundarnih struktura
 dodatnim ograničavanjem vrednosti tzv.  dihedralnih uglova $\psi$ i $\phi$ prikazanih
 na Slici \ref{fig:uglovi}a.  Dijagram svih vrednosti $\psi$ i $\phi$ uglova
-jednog polipeptida otkriva klasterovanje vrednosti prikazano tzv. Ramačandrovim
+jednog polipeptida otkriva klasterovanje vrednosti prikazano tzv. Ramačandranovim
 dijagramom Slika \ref{fig:uglovi}b.
 
-Pored gore navedenih, strukture: disulfidni most\footnote{Neki autori
-disulfidni most zbog kovalentne veze smatraju elementom primarne strukture},
+Pored gore navedenih: disulfidni most\footnote{
+  Disulfidni most se formira izvan ćelije, nakon što je protein  već savijen, i
+  služi stabilizaciji 3D strukture.
+},
 zink prsti i ukosnica takođe se smatraju elementima sekundarne strukture.
 Postoje i drugi oblici spirala i traka, ali ih nećemo navoditi.
 
@@ -250,8 +269,8 @@ Postoje i drugi oblici spirala i traka, ali ih nećemo navoditi.
 
 \keyword{Tercijarna struktura} predstavlja prostorni oblik koji protein zauzima
 indukovan interakcijama bočnih nizova aminokiselina. Ovaj korak poznat je kao
-\keyword{savijanje} \en{folding}.  Pod poznavanjem tercijarne strukture misli
-se na poznavanje prostornih koordinata svih atoma polipeptida. Primer dijagrama
+\keyword{savijanje} \en{folding}.  Pod poznavanjem tercijarne strukture 
+podrazumeva se poznavanje prostornih koordinata svih atoma polipeptida. Primer dijagrama
 tercijarne strukture dat je Slikom \ref{fig:sekundarna}b.
 Najveći uticaj na formiranje sekundarne strukture ima polarnost aminokiselina.
 Tercijarna struktura proteina obično je podeljena u jedan ili više
@@ -262,28 +281,16 @@ su obično sačinjeni od nekoliko elemenata sekundarne strukture.
 iz nekoliko savijenih polipeptida. Na primer, hemoglobin je proteinski kompleks.
 
 Savijanje proteina u funkcionalan oblik (oblik koji indukuje biološku funkciju)
-odnosno njegova tercijarna ili Kvaternerna struktura direktno zavise od
+odnosno njegova tercijarna ili kvaternerna struktura direktno zavise od
 primarne strukture tj. sekvence. Dovoljna je zamena jedne aminokiseline u sekvenci
 pa da protein izgubi sekundarnu, a time i tercijarnu strukturu gubeći mogućnost
 izvršavanja biološke funkcije. Familija proteina obično je okarakterisana
 sličnošću domena, pa još kažemo da su domeni \keyword{konzervirani} ili očuvani.
 Konzervirani elementi sekundarne strukture domena predstavljaju
-\keyword{strukturne motife}, kraće \keyword{motif} i okarakterisani su velikom
+\keyword{strukturni motivi}, kraće \keyword{motiv} i okarakterisani su velikom
 sličnošću primarne strukture. Promena okruženja (ph, temperature) dovodi do promene
 tercijarne strukture ili potpunog gubitka strukture (denaturacija).
 
-\begin{figure}[th]
-\centering
-\hspace*{-2.0cm} 
-\includegraphics[scale=0.53]{uvod/sekundarna.pdf}
-\caption {
-  Alfa spirala i $\beta$-traka.\\ \footnotesize Levi deo slike preuzet je iz rada
-  \textit{Proteins: fundamental chemical properties. Cozzone, A. J.
-  Encyclopedia of Life Sciences (Nature Publishing Group, London, 2001)}.
-  Desni deo slike preuzet je sa veb strane bioninja.com
-}
-\label{fig:sekundarna}
-\end{figure}
 
 \begin{figure}[th]
 \centering
@@ -293,7 +300,7 @@ tercijarne strukture ili potpunog gubitka strukture (denaturacija).
   a) Prikazuje, $\psi$, $\phi$ i $\omega$ uglove. Ugao $\omega$ je fiksan
   zbog specifičnosti peptidne veze omogućavajući rotiacije samo oko
   $\psi$ i $\phi$ uglova.
-  b) Ramačandrov dijagram, prikazuje najčešću raspodelu vrednosti uglova
+  b) Ramačandranov dijagram, prikazuje najčešću raspodelu vrednosti uglova
   i sekundarne strukture koje oni obrazuju.
 }
 \label{fig:uglovi}
@@ -319,20 +326,21 @@ izvršavaju dovoljno brzo ili ne vrše.
 \keyword{Katalizator} je molekul koji ubrzava hemijsku reakciju bez da sam bude
 promenjen. \keyword{Enzim} je katalizator biološkog porekla, a najčešće je protein.
 Molekul koji biva \keyword{katalizovan} odnosno promenjen u interakciji sa
-enizmom zovemo \keyword{substrat}. Mesto enzima koje interreaguje sa
-substratom naziva se \keyword{aktivni region}.  Skoro svaka reakcija u živom
+enizmom zovemo \keyword{supstrat}. Mesto enzima koje interreaguje sa
+supstratom naziva se \keyword{aktivni region}.  Skoro svaka reakcija u živom
 organizmu ubrzana je enzimskom katalizom. Ime enzima obično se završava na '-za'
 Karakteristika enzima je da katalizuje reakciju specifičnog molekula.
 
 \subsection{Funkcija proteina}
 
-Udžbenici iz biologije često nabrajaju uloge koje protein ima: formiranje
+% Udžbenici iz biologije često nabrajaju uloge koje protein ima
+Primeri uloga koje protein može da ima uključuju: formiranje
 strukture, zaštitna uloga (tzv. antigeni), transport, katalizacija hemijskih
 reakcija (enzimi), regulacija procesa u ćeliji itd.  Postoji nekoliko sistema
 (nomenkulatura) za razdvajanje proteina po funkciji.  Na primer, specijalno za
 enzime postoji numerička klasifikacija po hemijskoj reakciji koju katalizuju.
 Pomenuta klasifikacija klasteruje enzime u hijearhiju podskupova. Ovaj pristup
-ne radi dobro u opštem slučaju jer skupovi i podskupovi nisu adekvatni za
+nije adekvatan u opštem slučaju jer skupovi i podskupovi nisu adekvatni za
 reprezentaciju ponašanja svih proteina.
 
 \keyword{Ontologija} predstavlja podobniju strukturu koja je oblika acikličkog
@@ -342,7 +350,7 @@ filozofije.  Gore navedena klasifikacija enzima može se predstaviti kao
 specijalan slučaj ontologije tj. stablo sa jednim tipom roditeljske veze
 (\textit{is\_a} veza).
 
-Protein može biti sagledan iz nekoliko uglova. Na pirmer: kom procesu pripada,
+Protein može biti sagledan iz nekoliko uglova, na pirmer: kom procesu pripada,
 gde se taj proces odvija u ćeliji i koja je molekulska funkcija koju obavlja
 tokom izvršavanja pomenutog procesa. Sve tri stavke daju uvid u funkciju
 proteina i mogu biti predstavljene ontologijama. U ovom radu od interesa je

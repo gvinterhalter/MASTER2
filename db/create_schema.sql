@@ -1,3 +1,23 @@
+-- drop table if EXISTS swissprot;
+
+create table swissprot
+(
+  id TEXT NOT NULL,
+  name TEXT NOT NULL,
+  accessions TEXT [] NOT NULL,
+  organism TEXT NOT NULL,
+  pe TEXT NOT NULL,
+  kw TEXT [] NOT NULL,
+  go TEXT [][] NOT NULL,
+  gomf TEXT [] NOT NULL,
+  seq_length INT NOT NULL,
+  seq TEXT NOT NULL,
+
+  primary key (id)
+);
+
+
+
 -- gene ontology
 
 

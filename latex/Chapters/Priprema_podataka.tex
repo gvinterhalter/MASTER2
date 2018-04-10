@@ -14,7 +14,7 @@ Informacije o \swissprot bazi podataka dobijene su iz verzije 2017\_12, iz datot
 Navedena verzija sadrži 556 196 proteina. 
 
 Od 66 599 validnih CAFA3 proteina 66 530 ima nepromenjen \keyword{primarni
-identifikator}. Međutim  69 slogova u \swissprot bazi sadrže nedostajuće CAFA3
+identifikator}. Međutim, 69 slogova u \swissprot bazi sadrže nedostajuće CAFA3
 identifikatore kao sekundarne kao što je navedeno u Potpoglavlju
 \ref{svis-prot}. Ovo je posledica dva moguća mehanizma:
 
@@ -71,28 +71,31 @@ sekvence.
 
 \section{Grupisanje proteina po GO terminima}
 
-Ako za GO termin A važi \textit{is\_a} B i želimo da diskutujemo o funkciji B
-onda i svi proteini funkcije A trebaju biti pridruženi funkciji B. Primetili
-smo da anotacije ključnih reči ovo već podrazumevaju dok za GO to nije slučaj.
-Tek nakon što je ovo grupisanje odrađeno validno je odbaciti termine koji
+Ako je GO termin A potomak GO termina B tj. važi A \textit{is\_a} B i  želimo da diskutujemo o funkciji B,
+onda i svi proteini koji imaju funkciju A (i time pripadaju skupu S\_A) treba da budu sadrzani i u skupu S\_B.
+Primetili smo da anotacije ključnih reči ovo već podrazumevaju dok za GO to nije slučaj.
+Tek nakon ovakvog grupisanja validno je odbaciti termine koji
 anotiraju manje od 20 proteina.  Za predloženo grupisanje koristili smo
 algoritam topološkog sortiranja.  Ovom metodom dobijeno je 1781\footnote{Bez
-ovog grupisanja imali bi samo 1146 MF termina} MF termin sa minimum 20
+ovog grupisanja imali bi samo 1146 MF termina  koji zadovoljavaju limit od min. 20 proteina} MF termin (od ukupno 11 135 validnih MF termina) sa minimum 20
 pridruženih proteina. Ovo uključuje i koreni\footnote{koreni termin ili
 koreni čvor ontologije tj.  termin molekulska funkcija} termin . U ovom
 koraku uračunati su samo proteini minimalne dužine 40 AK.
 
-\section{Ontologije gena i ključne reči}
+% \section{Ontologije gena i ključne reči}
+\section{Mapiranje između GO termina i \swissprot ključnih reči}
 
 U nastavku razmatramo samo ključne reči kategorije MF
 i načine na koje ih možemo povezati sa ekvivalentnim MF terminima.
 Direktno mapiranje sa \keyword{ključnih reči} na GO
 termine nije uvek moguće.  Neke ključne reči (\textit{Represor, Cyclin, Activator,
 Superantigen, Tumorantigen...}) nemaju odgovarajući GO termin. Od 226 ključnih
-reči svega 175 ima odgovarajući GO termin. Od preostalih 175 ključnih reči
+reči svega 175 ima odgovarajući GO termin, od kojih 175 ključnih reči
 postoji 105 mapiranja na MF termin, 59 na BP
 i 11 na CC.  Dakle, za 70 MF ključnih reči ne postoji direktno mapiranje na MF
-termine.  Slika \ref{fig:KWtop20dis} prikazuje moguća direktna mapiranja
+termine.
+
+Slika \ref{fig:KWtop20dis} prikazuje moguća direktna mapiranja
 (dobijena iz \file{keywords.txt}) za 20 neuređenih MF ključnih reči pronađenih
 u radu \parencite{Xie2007}.  U našoj verziji \file{keywords.txt} Antigen je
 izbačen i zamenjen specijalizovanijom podelom. Tri ključne reči nemaju
@@ -101,6 +104,17 @@ svega šest na molekulske funkcije. Statistički značajne ključne reči su
 ljubičaste dok radi kompletnosti navodimo neke njihove specijalizacije i
 generalizacije koje su obojene sivo. GO termini su predstavljeni manjim
 kružićima. 
+
+\begin{figure}[th]
+\hspace*{-2.2cm} 
+\includegraphics[scale=1]{Figures/plots/kw_dis2go.pdf}
+\decoRule
+\caption {
+  Mapiranje 20 najznačajnijih neuređenih MF ključnih reči \parencite{Xie2007} 
+  na GO termine.
+}
+\label{fig:KWtop20dis}
+\end{figure}
 
 Za neke BP termine moguće je doći do molekulske funkcije praćenjem veza \keyword{je
 deo} ili \keyword{sadrži}. Međutim od 8 bioloških procesa prikazanih na Slici
@@ -111,7 +125,7 @@ MATCH p=(:Keyword {name:"Neuropeptide"})--(:GOTerm)<-[*0..]-(:GOTerm)<--(:Protei
 RETURN p
 \end{verbatim}
 pronašli smo mapiranje na MF \textit{neuropeptide receptor activity}
-predstavljeno Slikom \ref{fig:neuropeptide}.  Nažalost uočava se da MF termini
+predstavljeno Slikom \ref{fig:neuropeptide}.  Nažalost, uočava se da MF termini
 i ključna reč Neuropeptid sadrže svega 5 zajedničkih proteina. Ovo je očekivano
 s obzirom da pronađeni MF termin predstavlja proteine koji se vezuju za
 neuropeptide.
@@ -154,16 +168,6 @@ Ključne reči često imaju karakter '-' koju GO termini izbegavaju. Zamena blan
 oznakom je neophodna za pretraživanje imena, ali ne i za sinonime koji često
 sadrže '-' karakter. 
 
-\begin{figure}[th]
-\hspace*{-2.2cm} 
-\includegraphics[scale=1]{Figures/plots/kw_dis2go.pdf}
-\decoRule
-\caption {
-  Mapiranje 20 najznačajnijih neuređenih MF ključnih reči \parencite{Xie2007} 
-  na GO termine.
-}
-\label{fig:KWtop20dis}
-\end{figure}
 
 \begin{figure}[th]
 \centering
@@ -172,7 +176,7 @@ sadrže '-' karakter.
 \decoRule
 \caption {
   Mapiranje ključne reči \keyword{Neuropeptid} na MF termine preko veze ''je deo''.
-  Ovako postignuto mapiranje rezultuje mali brojem zajedničkih proteina.
+  Ovako postignuto mapiranje rezultuje malim brojem zajedničkih proteina.
 }
 \label{fig:neuropeptide}
 \end{figure}

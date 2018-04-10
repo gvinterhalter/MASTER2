@@ -17,7 +17,7 @@ analize za oktrivanje novih bioloških znanja. Povezanost između funkcije i
 neuređenosti proteina je jedan primer biološkog znanja. 
 Ovaj primer ilustruje dve bitne stvari:
 \begin{enumerate}
-  \item Eksponencijalni rast podataka uvodi bioinformatiku u oblast Big Data,
+  \item Eksponencijalni rast podataka uvodi bioinformatiku u oblast \textit{Big Data},
     posebno njene discipline poznate pod nazivom omike (na primer, genomike, proteomika itd.)
   % \item Informacije eksponencijalno rastu uvodeći čitavu oblast
   %   \keyword{omike}\footnote{termin objedinjuje gen\textbf{omiku}, proteomiku,
@@ -26,7 +26,7 @@ Ovaj primer ilustruje dve bitne stvari:
   % (U našem radu pažljivo su odabrani podaci malog
   % obima kako bi se izbegao ovaj scenario i sve analize su urađene na klasičnom
   % kućnom računaru.)
-  \item Velika povezanost između bioloških podataka.
+  \item Veliku povezanost između bioloških podataka.
 \end{enumerate}
 
 Povezanost podataka preslikava se na baze podataka. Većina baza je usko specijalizovana
@@ -92,21 +92,21 @@ imenski prostori \en{namespace}:
 \end{itemize}
 
 Inspirisani sličnošću prva tri sekvencirana eukariotska organizma, GO projekat
-nastao je sa ciljem da  objedini biologiju pod jedan univerzum termina za opis
+nastao je sa ciljem da  objedini biologiju pod jedan skup termina za opis
 genskih proizvoda svih vrsta organizama \parencite{GO2000}.
 
 \subsection{GO termin}
 
-GO termin može biti zastareo i tada se relacijom \keyword{replaced\_by}
-pokazuje na noviji termin. Relacija \keyword{consider} ukazuju na
-postojanje mogućih ekvivalentnih termina. Pored glavnog univerzuma termina postoje i
-podskupovi\footnote{Uglavnom ovi podskupovi predstavljaju model organizme}
-termina tzv. \textit{GO slim}. U donjem desnom delu Slike
-\ref{fig:kinase} prikazani su \textit{GO slim} podskupovi.
+Skup GO termina se stalno menja. GO termin može biti zastareo i tada se
+relacijom \keyword{replaced\_by} pokazuje na noviji termin. Relacija
+\keyword{consider} ukazuju na postojanje mogućih ekvivalentnih termina. Pored
+glavnog skup termina postoje i podskupovi\footnote{Uglavnom ovi podskupovi
+predstavljaju model organizme} termina tzv. \textit{GO slim}. U donjem desnom
+delu Slike \ref{fig:kinase} prikazani su \textit{GO slim} podskupovi.
 
 GO termini takođe sadrže informacije kao sto su definicija, komentar, autor, datum
 nastanka, sinonimi itd. Pored ovih informacija takođe postoje reference ka
-drugim veb stranam i bazama podataka često vezanih uz definiciju.  Uz GO termin
+drugim veb stranama i bazama podataka često vezanih uz definiciju.  Uz GO termin
 obično se navode sinonimi koji odgovaraju imenu termina, ali se razlikuju po
 opsegu:
 \begin{itemize}
@@ -120,8 +120,8 @@ opsegu:
 
 Suštinu ontologije čine relacije između termina i pravila dedukcije koja se nad
 njima mogu primenjivati. Osnovnu strukturu ontologije čini usmereni aciklički
-graf \en{DAG} obrazovan roditeljskom vezom (relacijom) \keyword{is\_a}. Prateći
-ovu relaciju termini jednog imenskog prostora na primer MF neće nikad preći u
+graf \en{Directed Acyclic Graph, DAG} obrazovan roditeljskom vezom (relacijom) \keyword{is\_a}. Prateći
+ovu relaciju, termini jednog imenskog prostora, na primer MF, neće nikad preći u
 druga dva CC i BP. Razlikujemo tri ontologija sa korenim čvorovima:  MF, CC i BP
 \parencite{go_struktura}. Primer strukture (acikličkog usmerenog grafa) prikazan je na
 Slici \ref{fig:kinase}.  Pored relacije \keyword{is\_a} postoje dodatne relacije od kojih
@@ -166,7 +166,7 @@ tranzitivnosti \parencite{is_a} prikazano Slikom \ref{fig:is_a}:
 
 Siže pravila rezonovanja prikazan je na Slici \ref{fig:relations}.
 
-Jedan od najčešće korišćenih formata je  ravni \file{.obo} formata, a pored njega
+Jedan od najčešće korišćenih formata je  ravni \file{.obo} format, a pored njega
 su u upotrebi \file{RDF/XML} i \file{OWL} formati.  Poslednja dva formata
 namenjena su automatskom rezonovanju unutar specijalizovanih softvera i upitnih
 jezika (protégé, SPARQL, ...).
@@ -182,7 +182,7 @@ jezika (protégé, SPARQL, ...).
 \subsection{Molekulska funkcija}
 \label{MF}
 
-Funkcija genskog produkta je posao koji obavlja ili "osobinu" koju ima.
+Funkcija genskog produkta predstavlja posao koji on obavlja (ili osobinu koju on ima).
 Razmotrimo narednu analogiju \parencite{go_mf}.  U kompaniji radnik (genski produkt) ima titulu
 (ime genskog produkta) i vrši poslove odnosno obavlja funkcije (molekulska
 funkcija) zarad izvršavanja nekog cilja tj. zadatka (biološki proces). Na
@@ -190,8 +190,9 @@ primer, funkcije vozača bile bi: upravljanje volanom, stiskanje kvačila,
 utovarivanje prtljaga itd, ali ne bi bilo korektno reći da je funkcija vozača
 "vozačka funkcija", jer se zavisno od firme ili prevoznog sredstva menja skup
 radnji koje vozač obavlja.  Vozač koji prevozi putnika na bicklu neće
-utovarivati prtljag niti stiskati kvačilo.  Najbitnije karakteristike
-molekulske funkcije su:\parencite{go_mf}
+utovarivati prtljag niti stiskati kvačilo.
+
+Najbitnije karakteristike molekulske funkcije su:\parencite{go_mf}
 \begin{itemize}
   \item MF nije specifična za jedan genski produkt već važi za sve organizme. Dakle, ne treba mešati MF sa imenom genskog produktom.
   \item MF nije biološki proces jer se BP sastoji od nekoliko MF.
@@ -242,10 +243,11 @@ informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 
 \begin{enumerate}
   \item \keyword{\swissprot}  sadrži visoko kvalitetne anotacije
-    \keyword{neredundantnih} ( objašnjeno u produžetku stavka\ref{red}) proteinskih sekvenci.
-    Informacije o sekvenci su dobijene iz postojeće literature, a kompjuterski
-    predviđene anotacije su ručno proverene. \swissprot kao baza postoji preko
-    30 godina.
+    \keyword{neredundantnih} ( objašnjeno u nastavku liste, stavka\ref{red}) proteinskih sekvenci.
+    Informacije o sekvenci su dobijene iz postojeće literature, a automatski
+    predviđene anotacije su ručno proverene i verifikovani od strane biokuratora
+    (stručnjaci koji se brinu da podaci koji postanu deo SwissProt-a budu kvalitetni).
+    \swissprot kao baza postoji preko 30 godina.
 
   \item \trembl \en{Translated EMBL} je nadskup \swissprot sekvenci 
     dobijen prevođenjem EMBL i drugih nukleinskih sekvenci. Automatskom
@@ -265,11 +267,11 @@ informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 
 Distribucije \swissprot baze dostupne su u nekoliko tekstualnih formata: ravna
 datoteka \en{flat file}, XML, RDF/XML.  Ravni tekstualni format zbog
-standardizacije prati EMBL-Bank\parencite{embl} ravni format
-\parencite{svisprot2003}. Unos u bazu se zove \keyword{slog} \en{record} i
-sadrži sve informacije vezane za jedan protein.  Jedan slog predstavljen u
-formatu ravne datoteke ilustrovan je uporšćenim prikazom  na Slici \ref{fig:slog}.
-Ključne osobine slogova i \swissprot baze podataka su:
+standardizacije prati EMBL-Bank ravni format \parencite{svisprot2003}.
+Unos u bazu se zove \keyword{slog} \en{record} i sadrži sve informacije vezane
+za jedan protein.  Jedan slog predstavljen u formatu ravne datoteke ilustrovan
+je uprošćenim prikazom  na Slici \ref{fig:slog}.  Ključne osobine slogova i
+\swissprot baze podataka su:
 
 \lstset{ 
   basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
@@ -398,22 +400,22 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     izoforme su grupisane pod jedan slog i jednu kanonsku sekvencu \parencite{nonRedundant}.
 
   \item Postojnost proteina \keyword{PE} \en{Protein existance} opisuje stepen
-    sigurnosti da protein postoji \ref{fig:PE}. Moguće vrednosti u rastućem poretku su:
+    sigurnosti da protein postoji (Slika \ref{fig:PE}). Moguće vrednosti za pouzdanost, u opadajućem poretku su:
     pronađeno na nivou proteina, pronađeno na nivou RNK, zaključeno iz homologije, predviđen i nesiguran. 
 
   \clearpage
 
 
   \item
-    \swissprot takđe vrši predikcije neuređenih regiona:  koristeći \textit{DISOPRED2}
-    and \textit{CLADIST} prediktor \parencite{Meng_c2017}\\ Međutim ove informacije
-    postale su irelevantne pojavom baza neuređenja \\ \textit{MobiDB} i \textit{D2P2}.
+    \swissprot takđe vrši predikcije neuređenih regiona koristeći \textit{DISOPRED2}
+    i \textit{CLADIST} prediktore. \parencite{Meng_c2017}. Međutim, ove informacije
+    postale su irelevantne pojavom baza neuređenja \\ \textit{MobiDB}\parencite{Piovesan2017} i \textit{D2P2}\parencite{Oates2012}.
 
   \item Zanimljiva zapažanja globalne statistike:
     \begin{itemize}
       \item Najzastupljenije sekvence su kraće od 500 aminokiselina.
-      \item Postojnost oko $70\%$ proteina potvrđeno je homologijom.
-      \item Zastupljeno je preko 1000 različitih organizama međutim
+      \item Postojnost oko $70\%$ proteina potvrđeno je homologijom (Slika \ref{fig:PE}).
+      \item Zastupljeno je preko 1000 različitih organizama, međutim
         većina \swissprot sekvenci pripada malom broju model organizama.
       \item Većina proteina ima dužinu između 100 i 500 AK.
     \end{itemize}
@@ -426,8 +428,8 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
   \centering
   \hspace*{-1cm} 
   \includegraphics[]{plots/PE.pdf}
-  \label{fig:PE}
   \caption{Histogram nivoa pouzdanosti \swissprot proteina}
+  \label{fig:PE}
 \end{figure}
 
 % \section{
