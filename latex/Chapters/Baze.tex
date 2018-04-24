@@ -243,11 +243,12 @@ informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 
 \begin{enumerate}
   \item \keyword{\swissprot}  sadrži visoko kvalitetne anotacije
-    \keyword{neredundantnih} ( objašnjeno u nastavku liste, stavka\ref{red}) proteinskih sekvenci.
-    Informacije o sekvenci su dobijene iz postojeće literature, a automatski
-    predviđene anotacije su ručno proverene i verifikovani od strane biokuratora
-    (stručnjaci koji se brinu da podaci koji postanu deo SwissProt-a budu kvalitetni).
-    \swissprot kao baza postoji preko 30 godina.
+    \keyword{neredundantnih} (termin je definisan u nastavku liste,
+    stavka\ref{red}) proteinskih sekvenci.  Informacije o sekvenci su dobijene
+    iz postojeće literature, a automatski predviđene anotacije su ručno
+    proverene i verifikovani od strane biokuratora (stručnjaci koji se brinu da
+    podaci koji postanu deo SwissProt-a budu kvalitetni).  \swissprot kao baza
+    postoji preko 30 godina.
 
   \item \trembl \en{Translated EMBL} je nadskup \swissprot sekvenci 
     dobijen prevođenjem EMBL i drugih nukleinskih sekvenci. Automatskom
@@ -400,8 +401,8 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     izoforme su grupisane pod jedan slog i jednu kanonsku sekvencu \parencite{nonRedundant}.
 
   \item Postojnost proteina \keyword{PE} \en{Protein existance} opisuje stepen
-    sigurnosti da protein postoji (Slika \ref{fig:PE}). Moguće vrednosti za pouzdanost, u opadajućem poretku su:
-    pronađeno na nivou proteina, pronađeno na nivou RNK, zaključeno iz homologije, predviđen i nesiguran. 
+    sigurnosti da protein postoji (Slika \ref{fig:PE}). Moguće vrednosti za pouzdanost su (u opadajućem poretku):
+    potvrđeno na nivou proteina, potvrđeno na nivou RNK, zaključeno iz homologije, predviđen i nesiguran. 
 
   \clearpage
 
@@ -411,13 +412,12 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     i \textit{CLADIST} prediktore. \parencite{Meng_c2017}. Međutim, ove informacije
     postale su irelevantne pojavom baza neuređenja \\ \textit{MobiDB}\parencite{Piovesan2017} i \textit{D2P2}\parencite{Oates2012}.
 
-  \item Zanimljiva zapažanja globalne statistike:
+  \item Zanimljiva zapažanja iz globalne statistike o \swissprot bazi:
     \begin{itemize}
-      \item Najzastupljenije sekvence su kraće od 500 aminokiselina.
+      \item Većina proteina ima dužinu između 100 i 500 AK.
       \item Postojnost oko $70\%$ proteina potvrđeno je homologijom (Slika \ref{fig:PE}).
       \item Zastupljeno je preko 1000 različitih organizama, međutim
-        većina \swissprot sekvenci pripada malom broju model organizama.
-      \item Većina proteina ima dužinu između 100 i 500 AK.
+        većina \swissprot sekvenci pripada malom broju organizama.
     \end{itemize}
       
 
@@ -428,7 +428,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
   \centering
   \hspace*{-1cm} 
   \includegraphics[]{plots/PE.pdf}
-  \caption{Histogram nivoa pouzdanosti \swissprot proteina}
+  \caption{Histogram nivoa pouzdanosti postojanja \swissprot proteina}
   \label{fig:PE}
 \end{figure}
 

@@ -15,7 +15,7 @@ originalni rezultati izraženi u terminima \keyword{ključnih reči} dok su ovde
 rezultati izraženi u \keyword{GO terminima}. Oba pristupa proizvode listu
 funkcija koje više obuhvataju (ne)uređene proteine, ali GO termini zbog
 granularnosti se prirodnije predstavljaju grafovski i sadrže mnogo više
-informacija. Konačni rezultat ovog istraživanja predstavlja poređenje ova dva
+funkcija. Jedan od rezultata ovog istraživanja predstavlja poređenje ova dva
 pristupa.
 
 
@@ -33,7 +33,7 @@ Za metode koje prezentujemo potrebne su tri vrste informacija:
 \subsection{Podaci iz originalnog rada}
 
 U originalnom radu \parencite{Xie2007} korišćena je  baza podataka 
-\keyword{\swissprot} Poglavlje \ref{svis-prot}, verzija 48 iz 2005.
+\keyword{\swissprot} (Poglavlje \ref{svis-prot}), verzija 48 iz 2005.
 Verzija 48 ima 201 560 proteina od kojih 196 326 imaju dužinu preko 40
 aminokiselina (što je potrebno zbog Definicije \ref{pdis_def} u nastavku). Funkcije
 pridružene proteinima izražene su \keyword{kontrolisanim vokabularom}
@@ -45,13 +45,14 @@ barem 20 proteina, tj. 710 ključnih reči.
 Kao što je pomenuto u Poglavlju \ref{svis-prot}, kanonske sekvence (proteini) u \swissprot
 bazi podataka nisu redundantne u smislu da jedan unos u bazi podataka predstavlja produkt
 jednog gena iz jedne vrste organizma. Međutim, za analizu funkcija
-\swissprot \keyword{jeste statistički redundantna} \parencite{proveriti} jer
+\swissprot \keyword{jeste statistički redundantna} \parencite{Xie2007} jer
 sadrže veliku količinu \keyword{homologih} proteina (prvenstveno ortologa).
-Originalni autori izvršili su klasterovanje \swissprot
-proteina u \keyword{proteinske familije} dobivši 27 217 familija. Pri klasterovanju svaki protein
-ima težinu kojom doprinosi daljoj analizi. Težina svakog proteina u preseku
-klastera sa datom funkcijom je obrnuto proporcionalna veličini preseka
-tako da je zbir težina svih proteina jednaka veličini preseka.
+Zbog statističke redundantnosti originalni autori su izvršili klasterovanje \swissprot
+proteina u \keyword{proteinske familije} dobivši 27 217 familija. Posledica
+klasterovanja je da svaki protein dobiva težinu kojom doprinosi daljoj analizi.
+Težina svakog proteina u preseku klastera sa datom funkcijom je obrnuto
+proporcionalna veličini preseka tako da je zbir težina svih proteina jednaka
+veličini preseka.
 
 % \textbf{komentar:} \\
 % Ono što autori nisu elaborirali jeste da početni uslov od minimum 20 proteina
@@ -74,19 +75,53 @@ Ugledom na \keyword{CASP} takmičenja, \keyword{CAFA} \en{Critical Assessment of
 Functional Annotation} takmičenje pokrenuto je zarad objektivnog ocenjivanja
 prediktora funkcije proteina i usmeravanja budućeg razvoja ove oblasti
 \parencite{CAFA}.  U ovom radu korišćen je trening skup proteina preuzet sa
-\keyword{CAFA3}. Trening skupovi su podaci na osnovu kojih prediktor uči, pa
-shodno tome ovaj skup treba da predstavlja dobar uzorak proteina i njihovih
-funkcija.
+\keyword{CAFA3} takmičenja, održanog 2017. Trening skupovi su podaci na osnovu
+kojih prediktor uči, pa shodno tome ovaj skup treba da predstavlja dobar uzorak
+proteina odnosno njihovih funkcija.
 
 CAFA3 trening skup (u nastavku samo CAFA3 skup ili CAFA3 podaci) je podskup \swissprot baze (iz 2016.) koji
-uključuje sve proteine iz model organizama: \textit{Human, Mouse, Rat, S.
+uključuje proteine iz model organizama: \textit{Human, Mouse, Rat, S.
 cerevisiae, S. pombe, E. coli, A. thaliana, Dictyostelium discoideum,
 Zebrafish, Bacillus cereus} sa izuzetokm sekvenci \textit{Drosophila} i \textit{Candida}
-koje su preuzete iz svojih genomskih baza podataka, respektivno (Imail komunikacija sa \textit{Iddo Friedberg PhD}, CAFA3 tim).
-Analiza u daljem istraživanju izvršena je pod pretpostavkom da CAFA3 skup nije statistički redundantan.
-Ova pretpostavka uporošćava metode analize.
+koje su preuzete iz svojih genomskih baza podataka, respektivno (Imail
+komunikacija sa \textit{Iddo Friedberg PhD}, CAFA3 tim).
+Slika \ref{fig:sp_vs_cafa3} pruža detaljan taksonomski uvid o poreklu CAFA3 proteina.
+Na primer, \swissprot baza sadrži oko 20 000 ljudskih (\textit{Homo})
+proteinskih sekvenci dok CAFA3 podskup sadrži malo manje od 15 000.  Vrste
+koje doprinose sa manje od 100 proteina nisu prikazane radi kompaktnosti.
 
-TODO
+\begin{figure}[th]
+\centering
+\hspace*{-3.0cm} 
+\includegraphics[]{plots/sp_vs_cafa3}
+% \decoRule
+\caption{Taksonomsko poreklo CAFA3 proteina. \\ \footnotesize 
+}
+\label{fig:sp_vs_cafa3}
+\end{figure}
+
+Za razliku od proteina u \swissprot bazi čije je postojanje pretežno utvrđeno
+iz homologije, $74\%$ proteina iz CAFA3 podskupa identifikovani su na nivou
+nivou proteina što je najveći stupanj sigurnosti da proteini zaista postoji. Na
+Slici \ref{fig:cafa3_pe} ilustrovana je razlika u odnosu na pouzdanost
+postojanja proteina. 
+
+
+
+\begin{figure}[th]
+\centering
+\hspace*{-2.5cm} 
+\includegraphics[]{plots/cafa3_pe}
+% \decoRule
+\caption{Razlika izmedju pouzdanosti postojanja proteina iz \swissprot baze i njenog CAFA3 podskupa. }
+\label{fig:cafa3_pe}
+\end{figure}
+
+
+
+Dalja analiza  izvršena je pod pretpostavkom da CAFA3 skup nije statistički redundantan.
+Ova pretpostavka uporošćava računske metode analize.
+
 
 % Iako ovaj pristup potencijalno proizvodi skup koji je \keyword{statisički
 % redundantan} u našoj analizi smo pretpostavili da to nije slučaj jer je čin
@@ -107,73 +142,73 @@ CAFA3 Podaci se sastoje od dve datoteke:
   \item \file{uniprot\_sprot\_exp.fasta}  sadrži 66 841 protein od kojih 66 599
     za našu analizu predstavljaju validnu proteinsku sekvencu. Od preostalih
     proteina 66 063 ima dužinu veću ili jednaku od 40 aminokiselina.
-  \item \file{uniprot\_sprot\_exp.txt} pridružuje funkcije u obliku 
+  \item \file{uniprot\_sprot\_exp.txt} proteinima pridružuje funkcije u obliku 
     \keyword{GO termina}. Zastupljeni su termini iz sva tri imenska prostora:
     16 117 ćelijskih komponenti, 5 966 molekulskih funkcija i 16 117 bioloških
     procesa. Jednom proteinu može biti pridruženo više GO termina i obrnuto.
 \end{enumerate}
 
-Naša analiza primarno je orijentisna na korišćenje GO termina za opis funkcije
-i razlikuje se od originalnog pristupa.  Analiza sa GO terminima (grupisanje po
-funkciji) zahteva prvenstveno poznavanje \textit{IS\_A} roditeljske veze između
+Naša analiza primarno je orijentisna ka korišćenju GO termina za opis funkcije
+što je razlikuje od originalnog pristupa korišćenja ključnih reči.  Analiza GO
+termina zahteva poznavanje prvenstveno \textit{IS\_A} roditeljske veze između
 termina. Takođe, tokom istraživanja bile su nam potrebne i ostale informacije o
-terminima. Pomenute informacije dobili smo iz datoteke \cite{go_obo}
-verzije 01.12.2017.
+terminima. Pomenute informacije dobili smo iz datoteke \cite{go_obo} verzije
+01.12.2017.
 
-Radi poređenja dobijenih rezultata potrebno je poznavanje relacije između
-ključnih reči i GO termina. Postoje dva dostupna mapiranja:
+Odnos tj. mapiranje između ključnih reči i GO termina dostupno je sa dva izvora:
 \begin{itemize}
   \item \file{keywlist.txt}\cite{keywlist_txt} verzija 20.12.2017 sadrži
-    detaljan opis 1188 ključnih reči od kojih 195 pripada kategoriji
-    \keyword{Molekulskih funkcija}.  Od 195 samo 145 ima mapiranje na jedan ili
-    više GO termina.
-  \item \file{uniprotkb\_kw2go}\cite{uniprotkb_kw2go} sadrži samo
-    mapiranja i generiše ih \keyword{GOA projekat}\parencite{Barrell2009}.
-    Ipak ova mapiranja nisu korišćena jer su u našoj analizi proizvodila
-    redundantna i nepoželjna mapiranja.
+    informacije o 1188 ključnih reči od kojih 195 pripada kategoriji
+    \keyword{Molekulskih funkcija}. Više o mapiranju biće
+    izloženo u Potpoglavlju \ref{kw2go_mapiranje}.
+  \item \file{uniprotkb\_kw2go}\cite{uniprotkb_kw2go} sadrži samo mapiranja a
+    generiše ih \keyword{GOA projekat} \parencite{Barrell2009}. 
 \end{itemize}
 
-Pošto je originalni rad iz 2007. godine, postoje razlike u
-vokabularu ključnih reči, razlike u samim sekvencama proteina, broj proteina i
-anotacije ključnih reči na proteine.  Iz tog razloga, bilo je potrebno
-prvo ponoviti analizu sa vokabularom ključnih reči da bi se procenilo koliko
-ove razlike utiču na originalne rezultate.
+U ovom radu korišćena je isključivo \file{keywlist.txt} datoteka. Iako je
+datoteka \file{uniprot\_kw2go} sadržala veći broj mapiranja, unosila je
+nepoželjnu višeznačnost.
 
-Zbog toga, CAFA3 podatke ne možemo da posmatramo kao crnu kutiju već je
-bilo neophodno povezati ih sa \swissprot proteinima prvenstveno zbog
-pridruživanja ključnih reči. Kako postoje razlike između najnovije verzije \swissprot
-baze i CAFA3 podataka bilo je neophodno izvršiti ''korektno'' spajanje i
-analizu razlika.  Informacije o pridruženim ključnim rečima takođe su nam bile
-značajne za proveru validnosti mapiranja na GO termine i testiranje
-potencijalnih drugih metoda mapiranja. Naša očekivanja su da iste funkcije
-podrazumevaju anotaciju na iste proteine.  Ovi koraci detaljno su opisani u
-Poglavnju \ref{Priprema_podataka}.
+Pošto je originalni rad iz 2007. godine, postoje razlike u broju proteina,
+antoacijama ključnih reči, broju ključnih reči ali i sadržaju proteinskih
+sekvenci.  Radi procene uticaja navedenih razlika na rezulat, odlučeno je da se
+analiza prvo ponovi originalnim pristupom, koristeći vokabular ključnih reči.
+Iz tog razloga, CAFA3 podaci nisu mogli da se posmatraju kao crne kutije, već
+je bilo neophodno mapirati ih nazad na \swissprot proteine čije anotacije ka
+ključnim rečima su poznate. Ovaj korak objedinjavanja baza podataka opisan je u
+Potpoglavlju \ref{objedinjavanje}. Dobijene anotacije ključnim rečima takođe su
+iskorišćene za proveru validnosti mapiranja ključnih reči na GO termine.
+Mapiranja su detaljno opisana u Potpoglavlju \ref{kw2go_mapiranje}
 
 
 
 \section {Metod}
 
 
-\textbf{Idealan slučaj.} 
-Pretpostavimo da za proizvoljnu molekulsku funkciju znamo sve strukturno različite
+Pod \keyword{idealnim slučajem},
+pretpostavimo da za proizvoljnu molekulsku funkciju znamo sve strukturno različite
 proteine koji je obavljaju.  Da bi dali korektan odgovor  moramo da znamo kako
 neuređenost pojedinačnog proteina utiče na
 na njegovo ponašanje, i kako to ponašanje (tip neuređenosti) utiče na datu funkciju.
 % Ova vrsta znanja nije bila dostupna 2007. osim za jako mali skup proteina.
 
-\textbf{Ograničenost} današnjih podataka i razvijenih metoda:
+Nažalost, \textbf{ograničenost} današnjih podataka i razvijenih metoda su brojna:
 \begin{itemize}
-  \item Broj eksperimentalno određenih neuređenih regiona je veoma mali.
-    Baza eksperimentalno utvrđenih neuređenih regiona \keyword{Disprot} ima
-    svega 803 proteina sa opisanih 2167 neuređenih regiona \parencite{Piovesan2016}.
-    Nažalost, kvalitet navedenih informacija je diskutabilna jer različite
-    eksperimentalne tehnike koje su korišćene imaju različitu pouzdanost.
-    Najveću pouzdanost nose regioni koji su eksperimentalno utvrđeni sa 
-    većim brojem laboratorijskih tehnika.
-  \item Prediktori su trenirani na malom podskupu proteina iz Disprot i PDB  baze.
-    Čak i konsenzus nekoliko različitih prediktora ne daje dovoljno pouzdane
-    rezultate o lokaciji neuređenog regiona (prof. Nenad Mitić, usmena komunikacija
-    2017.).
+  \item
+    Baza eksperimentalno utvrđenih neuređenih regiona
+    \textit{\keyword{DisProt}} ima svega 803 proteina sa opisanih 2167
+    neuređenih regiona \parencite{Piovesan2016}.  Još gore, kvalitet navedenih
+    informacija je diskutabilna zbog razlika u pouzdanosti među
+    eksperimentalnim tehnikama koje su korišćene.  Najveću pouzdanost nose
+    regioni koji su eksperimentalno okarakterisani sa što većim brojem
+    eksperimentalnih tehnika.
+
+  \item
+    Prediktori se terniraju na malom podskupu proteina iz \textit{DisProt}
+    i PDB  baze. Čak i konsenzus nekoliko različitih prediktora ne daje
+    dovoljno pouzdane rezultate o lokaciji neuređenog regiona (prof. Nenad
+    Mitić, usmena komunikacija 2017.).
+
   \item 
     Pozitivna strana je najnoviji napredak, razvoj prediktora koji direktno
     pokušavaju da predvide funkciju koju IDPr obavlja \parencite{Meng_c2017}.
@@ -194,10 +229,10 @@ na njegovo ponašanje, i kako to ponašanje (tip neuređenosti) utiče na datu f
 Jednostavna alternativa je da se pretpostavi da veći udeo neuređenih u odnosu
 na uređene proteine podrazumeva da funkcija zavisi više od neuređenosti. 
 % Dakle izjednačavamo uzročnost \en{causation} i \keyword{korelaciju} između funkcije i neuređenosti.
-Međutim, prvo je potrebno precizirati kada protein smatramo
-neuređenim.  Definicija mora da ima biološkog smisla, da bude prilagođena
-analizi, ali pored takođe je ograničena sposobnostima i preciznošću prediktora
-koji se korist.  Više o tome u narednom Potpoglavlju \ref{naredno}.
+% Međutim, prvo je potrebno precizirati kada protein smatramo neuređenim.
+% Definicija mora da ima biološkog smisla, da bude prilagođena
+% analizi, ali pored takođe je ograničena sposobnostima i preciznošću prediktora
+% koji se korist.  Više o tome u narednom Potpoglavlju \ref{naredno}.
 
 \subsection{Predikcija neuređenosti proteina}
 \label{naredno}
@@ -206,7 +241,7 @@ Originalni autori koristili su \keyword{PONDR VL3E} prediktor koji
 postiže tačnost od $~87\%$ pri unakrsnoj validaciji nad uravnoteženim test
 skupom.  Zbog ekonomičnosti i dostupnosti u ovom radu korišćen je noviji
 prediktor druge generacije \keyword{PONDR VSL2b}.
-Relevantne karakteristike VSL2b detaljno su opisane u \ref{VSL2b}.
+Relevantne karakteristike VSL2b prediktora detaljno su opisane u \ref{VSL2b}.
 Za potrebe analize originalni autori  uvode sledeću definiciju:
 
 \newtheorem{mydef}{Definicija}
@@ -214,7 +249,7 @@ Za potrebe analize originalni autori  uvode sledeću definiciju:
 \label{pdis_def}
 Protein je \keyword{putativno neuređen} (najverovatnije neuređen, u daljem tekstu neuređen) \en {putatively disordered}
 ako sadrži bar jedan region veći ili jednak od 40 uzastopnih aminokiselina
-takvih da imaju \textit{predviđenu neuređenost} iznad 0.5. 
+takvih da im je predviđenu neuređenost iznad 0.5. 
 \end{mydef}
 
 Onda definišemo operator $d$ takav da za svaku proteinsku sekvencu $s_i$ važi:
@@ -228,20 +263,20 @@ Onda definišemo operator $d$ takav da za svaku proteinsku sekvencu $s_i$ važi:
 \]
 
 Uslov ''$\ge40$'' u originalnom radu delom je posledica ograničenja VL3
-prediktora koji je treniran na \keyword{dugim} sekvencama\footnote{L označava
-duge regione, $\ge$ 30 AK}.
+prediktora koji je treniran nad skupom sekvenci sa dugim neuređenim regionima
+\footnote{L označava duge regione, $\ge$ 30 AK}.
 % Mi nismo u obavezi da sledimo ovo pravilo, ali ga sledimo radi upoređivanja rezultata.
 
 \subsection{Zavisnost dužine proteina i predikcije dugačkog neuređenog regiona}
 
-Verovatnoća da po gornjoj definiciji protein bude klasifikovan kao verovatno
-neuređen raste sa porastom njegove dužine. Ova činjenica  utiče
-na statističku značajnost rezultata. Autori \parencite{Xie2007} 
-predlažu narednu formulu da se ta verovatnoća proceni:
+Verovatnoća da po gornjoj definiciji protein bude klasifikovan kao neuređen
+raste sa porastom njegove dužine. Ovo ponašanje  utiče na statističku
+značajnost rezultata.  Originalni autori predlažu narednu formulu za procenu
+pomenute verovatnoće.
 
-Neka je $S_L$ skup proteina sa dužinama iz intervala $[L-l, L+l]$ gde je $l
-= 0.1 \cdot L$\footnote{Na primer, skup $S_{100}$ sadrži proteine iz intervala $[90, 110]$, a $S_{500}$ iz intervala $[450, 550]$}.
-Dobijamo sledeće formule:
+Neka je $S_L$ skup proteina sa dužinama iz intervala $[L-l, L+l]$\footnote{Na
+primer, skup $S_{100}$ sadrži proteine iz intervala $[90, 110]$, a $S_{500}$ iz
+intervala $[450, 550]$} gde je $l = 0.1 \cdot L$. Dobijamo sledeće formule:
 
 $$ S_L = \{s_i : \quad | L -  | s_i | | \le l \quad \}, \quad   |s_i| \text{ je dužina sekvence}  $$
 $$ P_L = \dfrac{ \sum_{s_i \in S_L} d(s_i)} {| S_L |}, \quad   |S_L| \text{ je kardinalnost skupa}$$
@@ -250,9 +285,9 @@ Grafik funkcije $P_L$ u zavisnosti od promenljive $L$ predstavljen je na Slici
 \ref{fig:PL1}.  Glatkoća rezulatata kontroliše se veličinom $l$ koja
 predstavlja prozor uprosečavanja. Kako prozor uprosečavanja raste sa porastom
 dužine proteina $(l = 0.1 \cdot L)$ tako $P_L$ postaje glađa sa veličinom
-promenljive $L$.  Konstantni prozor uprosečavanja je tehnika još poznata
-kao \en{rolling average} ili \en{boxcar filter} i predstavlja prostu vrstu
-konvolucije. 
+promenljive $L$. Ovo je suprotno konstantnom prozoru uprosečavanja  koji je
+tehnika još poznata kao \textit{rolling average} ili \textit{boxcar filter} i
+predstavlja prostu vrstu konvolucije. 
 
 
 \begin{figure}[th]
@@ -264,24 +299,30 @@ konvolucije.
   \\ \footnotesize
   ($P_L$ sa prozorom uprosečavanja podrazumeva $l = 0.1L$, dok
   krstići predstavljaju diskretne vrednosti L za $l = 0$. Transparentnost krstrića
-  ilustruje brojnost proteina date dužine. Ako je krstić transparentan
+  ilustruje brojnost proteina dužine $L$. Ako je krstić transparentan
   znači da sadrži manje od 100 proteina.)
 }
 \label{fig:PL1}
 \end{figure}
 
 
-Pored gore prikazanog originalnog metoda biće predstavljen još jedan pristup
-procenjivanju veličine $P_L$ na osnovu slučajno generisanih proteina.
+Pored gore prikazanog originalnog metoda predložićemo još jedan pristup
+procenjivanju veličine $P_L$.
 % \keyword{Slučajno generisani} \en{random generated} proteini za procenu $P_L$.
-Razmotrićemo dva modela. Prvi je naivni model \keyword{uniformne verovatnoće}
-koji podrazumeva da se svaka aminokiselina javlja sa istom verovatnoćom odnosno
-$1/20$. U statistici ovo je još poznato kao model jednakih verovatnoća \en{equiprobable model}.  Drugi
-model koji ćemo zvati 'slučajni' ili 'random' model predstavlja slučajnu
-promenljivu čija verovatnoća zavisi od učestalosti aminokiselina iz CAFA3 skupa
-i prikazana je na Slici \ref{fig:AK_ucestalost}.  Koristeći ova dva modela za
-svaki protein generisan je slučajan protein iste dužine koji se koristi za
-procenu $P_L$.
+Razmotrićemo dva modela zasnovana na slučajno generisanim proteinima. Prvi,
+naivni model \keyword{uniformne verovatnoće} podrazumeva da se svaka
+aminokiselina javlja sa istom verovatnoćom, odnosno $p=1/20$. U statistici prvi
+model je još poznato kao model jednakih verovatnoća \en{equiprobable model
+(EPM)}.  Drugi model koji ćemo zvati slučajni ili \textit{random} model RM)  predstavlja
+slučajnu promenljivu čija verovatnoća zavisi od učestalosti aminokiselina iz
+CAFA3 skupa i prikazana je na Slici \ref{fig:AK_ucestalost}.
+% Koristeći ova dva modela za svaki protein generisan je slučajan protein iste
+% dužine koji se koristi za procenu $P_L$.
+Na osnovu predstavljenih modela definisana su dva nova skupa sekvenci (EPMS i
+RMS) iste kardinalnosti kao polazni CAFA3 skup, u kojima su sekvence bile istih
+dužina kao u polaznom skupu. U EPMS, sekvence su generisane na osnovu uniformne
+raspodele nukleotida, dok su u RMS sekvence definisane na osnovu učestalosti
+aminokiselina iz CAFA3 skupa.
 
 
 \begin{figure}[th]
@@ -298,14 +339,14 @@ procenu $P_L$.
 \label{fig:AK_ucestalost}
 \end{figure}
 
-Poređenje predloženih pristupa sa originalnim $P_L$ prikazano je na Slici
-\ref{fig:PL2}. Jasno se vidi
-da slučajni model predstavlja vizuelno dobru aproksimaciju dok uniformni model
-znatno odstupa i dosta sporije raste (naizgled skoro linearno). Kako VSL2b
-prediktor prepoznaje neuređene regione na osnovu učestalosti aminokiselina, ovo
-ponašanje nije čudno jer je manja verovatnoća pojave aminokiselina koje
-promovišu neuređenost. Zbog suviše velikog odstupanja uniformni model nije
-korišćen u daljoj analizi.
+Poređenje predloženih modela sa originalnim $P_L$ prikazano je na Slici
+\ref{fig:PL2}. Jasno se vidi da slučajni model predstavlja vizuelno dobru
+aproksimaciju dok uniformni model znatno odstupa rastući sporije (naizgled
+skoro linearno).
+% Kako VSL2b prediktor prepoznaje neuređene regione na osnovu učestalosti
+% aminokiselina, ovo ponašanje nije čudno jer je manja verovatnoća pojave
+% aminokiselina koje promovišu neuređenost.
+Zbog znatnog vizuelnog odstupanja uniformni model nije korišćen u daljoj analizi.
 
 
 \begin{figure}[th]
@@ -313,27 +354,27 @@ korišćen u daljoj analizi.
 % \includegraphics[scale=0.65]{Figures/PL2}
 \includegraphics[]{plots/PL_F_cmp}
 % \decoRule
-\caption{Upoređivanje modela za procenu $P_L$ nad CAFA3 podacima}
+\caption{Upoređivanje $P_L$, $P_L random$ i $P_L uniform$ modela nad CAFA3 podacima}
 \label{fig:PL2}
 \end{figure}
 
 
 Jedno od objašnjenja zašto je uniformni model naivan i toliko odstupa od
 prvobitnog metoda proizilazi iz činjenice da aminokiseline imaju inherentno
-različite verovatnoće pojavljivanja. Naime, aminokiseline ne mogu  imati istu
-verovatnoću pojavljivanja jer se  broj njihovih kodona razlikuje. Neke aminokiseline
-su kodirane sa samo jednim, a druge i sa 6 kodona. Očekivano je da broj kodona
-povećava učestalost aminokiseline i ta korelacija uz izuzetke arginina se vidi
-na Slici \ref{fig:aminoacid} \parencite{AKfrekvencija}.
+različitu učestalost u živom svetu. Naime, aminokiseline ne mogu  imati istu
+verovatnoću pojavljivanja jer se  broj njihovih kodona razlikuje. Neke
+aminokiseline su kodirane sa samo jednim, a druge i sa 6 kodona. Očekivano je
+da veći broj kodona povećava učestalost aminokiseline i ta korelacija uz
+izuzetke arginina predstavljena je Slikom \ref{fig:aminoacid}
+\parencite{AKfrekvencija}.
 
 \begin{figure}[th]
 \centering
 \includegraphics[scale=0.7]{aminoacid}
 % \decoRule
-\caption{Očekivana i realna učestalost  aminokiselina kod sisara\\ \footnotesize
-Očekivana učestalost procenjuje se iz učestalosti nukleinskih kiselina(A, C, G, T) i broja kodona koji kodiraju pojedinačnu AK.
-Realna učestalost dobijena je iz proteinskih sekvenci organizama.
-(Preuzeto sa: \url{www.tiem.utk.edu/~gross/bioed/webmodules/aminoacid.htm})}
+\caption{Očekivana i izmerena (kod kičmenjaka) učestalost aminokiselina (Preuzeto sa \cite{AA_freq_link}).  \footnotesize
+  Očekivana učestalost kodona izračunata je kao proizvod učestalosti nukleinskih baza ($A:0.303, C:0.217, G:0.261, U:0.2$) koje ga čine.
+  Očekivana učestalost aminokiseline je zbir očekivanih učestalosti njenih kodona. }
 \label{fig:aminoacid}
 \end{figure}
 
@@ -362,28 +403,28 @@ slučajnu promenljivu $X_L$ umesto  $d(s_i)$, odnosno:
 
 $$ Y_j = \dfrac {\sum_{s_i \in S_j} {X_{|s_j|}}}{|S_j|}$$
 
-Ako $F_j$ izlazi iz intervala poverenja raspodele $Y_j$ onda, funkcija $j$
+Ako $F_j$ izlazi iz intervala poverenja raspodele $Y_j$ onda funkcija $j$
 sadrži značajno mnogo predviđenih (ne)uređenih proteina. Preciznije,
-ako je p-vrednost \en{p-value} $<0.05$ funkcija $j$ je povezana sa neuređenim
-proteinima a, ako je \textit{p-value} $>0.95$ funkcija $j$ je povezana sa
-uređenim proteinima.
-U suprotnom ne možemo okarakterisati funkciju $j$ u odnosu na neuređenost.
-Suprotno ne može ništa da se tvrdi za funkciju $j$.  
+ako je p-vrednost \en{p-value} $<0.05$ onda je funkcija $j$ povezana sa neuređenim
+proteinima, a ako je \textit{p-value} $>0.95$ onda je funkcija $j$ povezana sa
+uređenim proteinima.  Suprotno, povezanost funkcije $j$ sa (ne)uređenošću nije
+statistički značajna.  
 Kada se kaže da je funkcija, ključna reč ili GO termin (ne)uređen
 podrazumevaće se da je odgvorajauća p-vrednost manja od $0.5$ ili veća
 od $0.95$.
 
-Zbog $X_L$ je teško analitički proceniti $Y_j$ pa se se pribegava empirijskom
-računanju p-vrednosti. Empirijska p-vrednost određena je tako što je za 1000
-realizacija $Y_j$ izračunato očekivanje da je realizacija $Y_j$ veća od $F_j$.
+Zbog matematičkog oblika $X_L$ teško je analitički proceniti $Y_j$ pa se se
+pribegava empirijskom računanju p-vrednosti. Empirijska p-vrednost određena je
+tako što je za 1000 realizacija $Y_j$ izračunato očekivanje da je realizacija
+$Y_j$ veća od $F_j$.
 
 Preciznije, vektor\footnote{zamenili smo skup $S_j$ za vektor $S_j$. Ovo je
 implementacioni detalj} $S_j$ sadrži $k$ proteina $S_j=\{s_1, s_2, ...
 ,s_{k}\}$.  Protein $s_i$ ima dužinu $L_i$ za koju je izračunata verovatnoća
 $P_{L_i}$.  Tada generatorom Bernulijevih slučajnih brojeva, za svaki protein
-$p_i$ na osnovu $P_{L_i}$ generišemo realizaciju $X_L$. Dobijen je vektor od
-$k$ vrednosti nula ili jedan. Učestalost jedinica u dobijenom vektoru
-predstavlja prvu realizacija $Y_j$.  Postupak se ponavlja hiljadu puta i broji
+$p_i$ na osnovu $P_{L_i}$ generišemo realizaciju $X_L$. Rezultat je vektor od
+$k$ vrednosti nula ili jedan. Učestalost jedinica u rezultujućem vektoru
+predstavlja prvu realizacija $Y_j$.  Postupak se ponavlja 1000 puta i broji
 se koliko puta je realizacija $Y_j$ bila veća od $F_j$. Dobijeni zbir deli se
 sa 1000 i rezulatat je empirijska p-vrednost.
 

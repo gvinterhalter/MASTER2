@@ -1,0 +1,65 @@
+kw_name,n_kw,score,n_go,go_name
+Dermonecrotic toxin,148,0.96,142,phospholipase D activity
+Ribosomal protein,49054,0.91,48096,structural constituent of ribosome
+Complement system impairing toxin,160,0.81,142,phospholipase D activity
+Hemagglutinin,397,0.75,299,host cell surface receptor binding
+Mutator protein,255,0.75,288,damaged DNA binding
+Antifreeze protein,10,0.7,7,ice binding
+Light-harvesting polypeptide,90,0.68,61,bacteriochlorophyll binding
+Cyclin,197,0.61,124,cyclin-dependent protein serine/threonine kinase regulator activity
+Defensin,55,0.55,32,CCR6 chemokine receptor binding
+Ribonucleoprotein,50698,0.54,28317,rRNA binding
+Neurotoxin,2734,0.53,4145,toxin activity
+Photoprotein,40,0.48,19,alkanal monooxygenase (FMN-linked) activity
+Endorphin,48,0.45,32,opioid peptide activity
+Mobility protein,7,0.43,3,DNA topoisomerase type I activity
+Protein synthesis inhibitor,150,0.43,67,rRNA N-glycosylase activity
+Neuropeptide,561,0.42,267,neuropeptide hormone activity
+Signal transduction inhibitor,157,0.38,158,GTPase activator activity
+Mitogen,282,0.37,284,growth factor activity
+Repressor,8177,0.33,7798,DNA binding
+Chaperone,11245,0.31,7412,ATP binding
+Myosin,372,0.31,275,motor activity
+Viral nucleoprotein,727,0.31,486,structural molecule activity
+Pair-rule protein,24,0.29,16,RNA polymerase II sequence-specific DNA binding transcription factor binding
+Prion,91,0.28,217,copper ion binding
+Milk protein,96,0.27,83,transporter activity
+Motor protein,919,0.27,251,microtubule motor activity
+Pyrogen,43,0.27,41,interleukin-1 receptor binding
+Activator,7081,0.26,7798,DNA binding
+Bence-Jones protein,8,0.26,26,antigen binding
+Serine protease homolog,57,0.26,21,hemoglobin binding
+Thyroid hormone,28,0.25,32,thyroid hormone binding
+Antiviral protein,40,0.23,25,ribonuclease III activity
+Ligand-gated ion channel,460,0.23,111,acetylcholine-gated cation-selective channel activity
+Actin capping,168,0.22,367,actin binding
+Presynaptic neurotoxin,307,0.22,251,"phospholipase A2 activity (consuming 1,2-dipalmitoylphosphatidylcholine)"
+Retinal protein,267,0.22,64,G-protein coupled photoreceptor activity
+Fungicide,157,0.21,76,chitin binding
+Receptor,6753,0.21,1565,G-protein coupled receptor activity
+Neurotransmitter,34,0.2,32,opioid peptide activity
+Antimicrobial,939,0.19,192,lysozyme activity
+Suppressor of RNA silencing,230,0.19,91,ATP-dependent helicase activity
+Blood coagulation cascade inhibiting toxin,105,0.19,268,phospholipase A2 activity
+Cell adhesion impairing toxin,207,0.19,180,metalloendopeptidase activity
+Taste-modifying protein,7,0.18,19,nutrient reservoir activity
+Segmentation polarity protein,60,0.17,28,morphogen activity
+Vasoactive,243,0.17,489,hormone activity
+Platelet aggregation inhibiting toxin,309,0.17,268,phospholipase A2 activity
+Muscle protein,667,0.16,896,calcium ion binding
+Vasoconstrictor,39,0.16,11,neurohypophyseal hormone activity
+Myotoxin,121,0.16,268,phospholipase A2 activity
+Hemostasis impairing toxin,865,0.16,4145,toxin activity
+Blood coagulation cascade activating toxin,113,0.16,29,peptidase activator activity
+Integrin,103,0.14,60,cell adhesion molecule binding
+Hypotensive agent,165,0.13,29,metalloendopeptidase inhibitor activity
+Hemorrhagic toxin,65,0.13,180,metalloendopeptidase activity
+Fibrinogenolytic toxin,100,0.13,180,metalloendopeptidase activity
+Voltage-gated calcium channel impairing toxin,221,0.13,48,calcium channel inhibitor activity
+Chromatin regulator,1939,0.12,861,chromatin binding
+Developmental protein,6285,0.12,2464,sequence-specific DNA binding
+Postsynaptic neurotoxin,554,0.12,4145,toxin activity
+Viral movement protein,153,0.11,93,cysteine-type endopeptidase activity
+Voltage-gated potassium channel impairing toxin,426,0.11,146,serine-type endopeptidase inhibitor activity
+Bacteriocin,64,0.1,406,receptor binding
+Pathogenesis-related protein,41,0.1,4,"glucan endo-1,3-beta-D-glucosidase activity"

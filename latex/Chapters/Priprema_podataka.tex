@@ -3,10 +3,11 @@
 
 \label{Priprema_podataka} % For referencing 
 
-\section{Objedinjavanje CAFA3 i novije \swissprot verzije}
+\section{Objedinjavanje CAFA3 i novijih \swissprot proteina}
+\label{objedinjavanje}
 
 Iz CAFA3 trening skupa izdvojeni su svi validni proteini ( dužine barem 9 i
-azbukom od 20 standardnih aminokiselina). U ovom koraku ne izbacujemo proteine
+azbuke od 20 standardnih aminokiselina). U ovom koraku ne izbacujemo proteine
 kraće od 40 AK.
 
 Informacije o \swissprot bazi podataka dobijene su iz verzije 2017\_12, iz datoteke
@@ -14,9 +15,9 @@ Informacije o \swissprot bazi podataka dobijene su iz verzije 2017\_12, iz datot
 Navedena verzija sadrži 556 196 proteina. 
 
 Od 66 599 validnih CAFA3 proteina 66 530 ima nepromenjen \keyword{primarni
-identifikator}. Međutim, 69 slogova u \swissprot bazi sadrže nedostajuće CAFA3
-identifikatore kao sekundarne kao što je navedeno u Potpoglavlju
-\ref{svis-prot}. Ovo je posledica dva moguća mehanizma:
+identifikator}, ali 69 slogova u \swissprot bazi sadrže nedostajuće CAFA3
+identifikatore kao sekundarne. Kao što je navedeno u Potpoglavlju
+\ref{svis-prot} ovo je posledica dva moguća mehanizma:
 
 \begin{enumerate}
   \item Unifikacija nekoliko CAFA3 proteina pod novi slog.
@@ -24,7 +25,7 @@ identifikatore kao sekundarne kao što je navedeno u Potpoglavlju
     ovih promena uspešno su rekonstruisana svega četri nova \swissprot sloga
     koja odgovaraju nedostajućim CAFA3 proteinima. Kako je četri
     suviše mali broj, zbog jednostavnosti nismo ih ubrajali u dalju analizu
-    te koristimo samo 66 530 originalnih CAFA3 proteina.
+    te koristimo samo 66 530 slogova čiji primarni identifikatori su nepromenjeni.
 
   \begin{figure}[th]
   \centering
@@ -50,16 +51,12 @@ Pošto \swissprot treba da sadrži svežije (tačnije) informacije, CAFA3 verzij
 anotacija je zanemarena u korist novijih \swissprot anotacija. Ove informacije
 sumirane su  Tabelom \ref{tab:godiff}
 
-Dodatno, \swissprot sadrži 194 proteina čije se sekvence razlikuje u
-odnosu na CAFA3 verziju proteina. Odlučili smo da zadržimo originalne CAFA3
-sekvence.
-
 \begin{table}[htpb]
 \begin{tabular}{|r|c|c|}
   \hline
                   & CAFA3 & \swissprot       \\
   \hline
-  MF termini      & 5 957 &    -    \\
+  MF termini      & 5 957 &    7 471    \\
   fali u obo.go   & 60 MF & 319 MF, CC i BP \\
   MF, samo u   & 67    & 888             \\
   \hline
@@ -69,7 +66,12 @@ sekvence.
   \label{tab:godiff}
 \end{table}
 
+Dodatno, \swissprot sadrži 194 proteina čije se sekvence razlikuje u
+odnosu na CAFA3 verziju proteina. Odlučili smo da zadržimo originalne CAFA3
+sekvence.
+
 \section{Grupisanje proteina po GO terminima}
+\label{grupisanje}
 
 Ako je GO termin A potomak GO termina B tj. važi A \textit{is\_a} B i  želimo da diskutujemo o funkciji B,
 onda i svi proteini koji imaju funkciju A (i time pripadaju skupu S\_A) treba da budu sadrzani i u skupu S\_B.
@@ -84,99 +86,310 @@ koraku uračunati su samo proteini minimalne dužine 40 AK.
 
 % \section{Ontologije gena i ključne reči}
 \section{Mapiranje između GO termina i \swissprot ključnih reči}
+\label{kw2go_mapiranje}
 
-U nastavku razmatramo samo ključne reči kategorije MF
-i načine na koje ih možemo povezati sa ekvivalentnim MF terminima.
-Direktno mapiranje sa \keyword{ključnih reči} na GO
-termine nije uvek moguće.  Neke ključne reči (\textit{Represor, Cyclin, Activator,
-Superantigen, Tumorantigen...}) nemaju odgovarajući GO termin. Od 226 ključnih
-reči svega 175 ima odgovarajući GO termin, od kojih 175 ključnih reči
-postoji 105 mapiranja na MF termin, 59 na BP
-i 11 na CC.  Dakle, za 70 MF ključnih reči ne postoji direktno mapiranje na MF
-termine.
+Kako je ovo istraživanje ograničeno na molekulske funkcije u daljem tekstu biće
+razmatrana mapiranja isključivo između ključnih reči kategorije MF koje zovemo
+\keyword{MF ključne reči} i GO termina imenskog prostora MF koje zovemo
+\keyword{MF termini}. Pokazaćemo da ovo nije trivijalan zadatak i da u opštem
+slučaju zbog razlika u nomenkulatri mapiranje nepostoji ili nije ekvivalentno
+originalnoj funkciji.
 
-Slika \ref{fig:KWtop20dis} prikazuje moguća direktna mapiranja
-(dobijena iz \file{keywords.txt}) za 20 neuređenih MF ključnih reči pronađenih
-u radu \parencite{Xie2007}.  U našoj verziji \file{keywords.txt} Antigen je
-izbačen i zamenjen specijalizovanijom podelom. Tri ključne reči nemaju
-mapiranje, dve se mapiraju na ćelijske komponente, osam na biološke procese i
-svega šest na molekulske funkcije. Statistički značajne ključne reči su
-ljubičaste dok radi kompletnosti navodimo neke njihove specijalizacije i
-generalizacije koje su obojene sivo. GO termini su predstavljeni manjim
-kružićima. 
+U originalnom radu navodi se da je \swissprot baza sadržala 143 MF ključne
+reči.  Datoteka \file{keywlist.txt} \cite{keywlist_txt} iz 20.12.2017 sadrži
+195 MF ključnih reči.  Nažalost, nismo pronašli originalnu \file{keywlist.txt}
+datoteku pa  ne znamo egzaktnu razliku, ali jasno je da su neke ključne reči
+izbačene ili zamenjene a neke samo dodate. Datoteka \file{keywlist.txt} opisuje
+ključne reči, a sadrži i pridruživanja (relaciju) odgovarajućim GO
+terminima. Pomenuta relacija pridružuju MF ključne reči ne samo MF terminima već
+i BP i CC terminima. Strogo posmatrano u pitanju je matematička relacija jer
+neke ključne reči mogu da se preslikavaju u dva ili više BP ili MF
+termina\footnote{Od MF ključnih reči samo \textit{DNA invertase} se preslikava
+u dva različita MF termina (\textit{DNA binding} i \textit{recombinase
+activity})}.Ipak, opisana pridruživanja nazivaćemo mapiranja ili direktna
+mapiranja.  Za 20 ključnih reči uopšte ne postoji mapiranje 
+dok mapiranje na MF termine postoji za svega 104 MF ključne reči. Za 54
+ključne reči postoje BP mapiranja a za 11 postoje CC mapiranja.
 
-\begin{figure}[th]
+Nedostajuća direktna MF mapiranja (skoro polovina MF termina) ne samo da
+otežavaju poređenje već predstavljaju metodološki problem za poređenje.
+Originalni rezultati su sortirani prema statističkoj značajnosti (Z-skor za
+$F_j$) i predstavljaju dve tabele od 20 statistički najznačajnijih neuređenih
+odnosno 20 uređenih MF ključnih reči zanemarujući roditeljski odnos između
+njih. Na nivou ključnih reči ovo nije problem, ali ako bi se isti postupak
+primenio na MF termine poredili bi manje od 200 ključnih reči sa potencijalno
+preko 11 000 MF termina. Potrebno je odabrati dovoljno opšte MF termine,
+takve da čine reprezentativan uzorak molekulskih funkcija i da njihovo
+sortiranje ima smisla. Ručni odabir opisanih MF termina prevazilazi obime
+ovoga rada. Jedan pristup bi bio da se izdvoje samo oni MF termini za koje
+postoji direktno mapiranje sa MF ključnih reči.  Nažalost, kao što smo
+ustanovili ova mapiranja postoje za svega 104 od 195 MF ključnih reči.  Treba
+primetiti da čak i da nema nedostajućih mapiranja ovaj pristup vrlo verovatno
+zanemaruje statistički značajne MF termine koji nemaju ekvaivalentne MF ključne
+reči.
+
+Nedostatak MF mapiranja pogotvo je problematičan za neuređene ključne reči.
+Slika \ref{fig:KWtop20dis} prikazuje direktna mapiranja za 20 najznačajnijih
+neuređenih MF ključnih reči preuzetih iz originalnog rada \parencite{Xie2007}.
+Tri ključne reči nemaju direktno mapiranje, dve se mapiraju na ćelijske
+komponente, osam na biološke procese i svega šest na molekulske funkcije dok
+ključna reč \textit{Antigen} više ne postojii. Sa druge strane, od 20 uređenih
+MF ključnih reči samo jednoj fali direktno mapiranje.
+
+
+\begin{figure}[!th]
 \hspace*{-2.2cm} 
 \includegraphics[scale=1]{Figures/plots/kw_dis2go.pdf}
 \decoRule
 \caption {
-  Mapiranje 20 najznačajnijih neuređenih MF ključnih reči \parencite{Xie2007} 
-  na GO termine.
+  Direktno mapiranje 20 najznačajnijih neuređenih MF ključnih reči \parencite{Xie2007}
+  na GO termine.  Statistički značajne ključne reči su ljubičaste dok radi
+  kompletnosti navodimo neke njihove specijalizacije i generalizacije koje su
+  obojene sivo. GO termini su predstavljeni manjim kružićima.
 }
 \label{fig:KWtop20dis}
 \end{figure}
 
-Za neke BP termine moguće je doći do molekulske funkcije praćenjem veza \keyword{je
-deo} ili \keyword{sadrži}. Međutim od 8 bioloških procesa prikazanih na Slici
-\ref{fig:KWtop20dis} ovo je moguće samo za Neuropeptid.
-\keyword{Cypher} upitom:
+
+Rezonujući nad relacijama ontologije gena pokušali smo da pronađemo
+\keyword{indirektna mapiranja} koja preko BP ili CC termina vode ka MF terminima.
+Praćenjem relacija \keyword{part\_of} i \keyword{has\_part} ovo je moguće, ali
+ne za svaki BP ili CC termin. Od 8 ključnih reči sa Slike \ref{fig:KWtop20dis} koje
+imaju direktno mapiranjem isključivo ka BP terminu, jedino za MF ključnu reč
+\textit{Neuropeptide} moguće je doći do MF termina. Za tri pomenuta CC termina
+indirektno mapiranje takođe nije pronađeno.
+
+Traženje MF termina izvršeno je korišćenjem \keyword{Neo4j} grafovkse baze. Za
+sve pomenute BP termine i sve njihove specijalizacije provereno je da li su
+nekom (bilo kojom) relacijom u vezi sa nekim (bilo kojim) MF terminom.
+Razmotrimo mapiranje za MF ključnu reč \textit{Neuropeptide} prikazano Slikom
+\ref{fig:neuropeptide}. Slika je generisana
+\keyword{Cypher}\footnote{\textit{Cypher} je upitni jezik za Neo4j grafovsku
+bazu} upitom koji pronalazi anotirane proteine, pomenuto mapiranje, i sve
+specijalizcije MF termina koje anotiraju bar jedan protein (proteini su
+preuzeti iz CAFA3  skupa).
 \begin{verbatim}
 MATCH p=(:Keyword {name:"Neuropeptide"})--(:GOTerm)<-[*0..]-(:GOTerm)<--(:Protein)
 RETURN p
 \end{verbatim}
-pronašli smo mapiranje na MF \textit{neuropeptide receptor activity}
-predstavljeno Slikom \ref{fig:neuropeptide}.  Nažalost, uočava se da MF termini
-i ključna reč Neuropeptid sadrže svega 5 zajedničkih proteina. Ovo je očekivano
-s obzirom da pronađeni MF termin predstavlja proteine koji se vezuju za
-neuropeptide.
-
-Mi pretpostavljamo da je neuspešnost mapiranja posledica veze \keyword{je deo} koja ne
-podrazumeva kompoziciju (\keyword{sadrži}) već samo agregaciju. Relacija
-agregacije podrazumeva da molekulska funkcija postoji nezavisno od biološkog
-procesa za razliku od relacije kompozicije. Kod pomenutih osam BP termina i njihovih
-specijalizacija ne javlja se veza \keyword{sadrži}.
-Dakle automatsko poređenje moguće je samo za šest od 20 originalnih neuređenih MF 
-ključnih reči. Za uređene ključne reči postoji više direktnih mapiranja ali njih
-ovde nećemo navoditi.
-
-Konačni metod koji koristimo da dopunimo gore pomenuto mapiranje je
-poluautomatski. Ključne reči od intersa ili njihove delove slažemo u 
-regularan izraz oblika:
-\begin{verbatim}
-  # words je lista ključnih reči ili njihovih delova
-  # re.I znači izjednačavanje malih i velikih slova
-  expresion = re.compile( f"({'|'.join(words)})[^ ,.)]*", re.I )
-\end{verbatim}
-Konstruisani regularan izraz iskorišćen je na sledeći način. Prvo se pretražuje
-da li ime GO termina sadrži neku reč iz regularnog izraza. Ako ne, pretraga se
-proširuje na  sinonime GO termina. Ako ni tu nije pronađena, pretraživanje se
-proširuje na definiciju termina. Rezultat su tri vrste relacije opadajuće
-pouzdanosti (ime, sinonim, definicija). Zajedno sa originalnim direktnim
-mapiranjima i pažljivom ručnom analizom moguće je dopuniti mapiranje i izvesti
-poređenje rezultata. Pri analizi rezultata neophodno je uzeti u obzir
-standardne definicije GO termina i sinonima navedenih u Potpoglavlju \ref{MF}.
-
-Pomenuto mapiranje vršimo nad statistički značajnim (ne)uređenim MF
-terminima.  U slučaju da se ključna reč ne pronađe pretraga se može izvesti za
-deo imena ključne reči, međutim ovaj pristup može dovesti do netačnog
-mapiranja. Sasvim je moguće da ključna reč nije pronađena jer odgovarajući MF
-termini nisu statistički značajni što se mora zasebno proveriti. Smatramo da je
-opisan metod uspešan zbog konzervativnosti fraza koje tražimo kao i informacije
-o sinonimima koje GO termini sadrže.
-
-Ključne reči često imaju karakter '-' koju GO termini izbegavaju. Zamena blanko
-oznakom je neophodna za pretraživanje imena, ali ne i za sinonime koji često
-sadrže '-' karakter. 
 
 
-\begin{figure}[th]
+\begin{figure}[!th]
 \centering
 \hspace*{-1.0cm} 
 \includegraphics[scale=0.8]{Figures/plots/Neuropeptide2go.pdf}
 \decoRule
 \caption {
-  Mapiranje ključne reči \keyword{Neuropeptid} na MF termine preko veze ''je deo''.
-  Ovako postignuto mapiranje rezultuje malim brojem zajedničkih proteina.
+  Mapiranje ključne reči \keyword{Neuropeptide} na MF termin
+  \textit{Neuropeptide receptor activity} preko relacije \keyword{part\_of}.
+  Dobijeno mapiranje rezultuje malim brojem zajednički anotiranih proteina.
 }
 \label{fig:neuropeptide}
 \end{figure}
+
+Sa Slike \ref{fig:neuropeptide} jasno se uočava da ključna reč
+\keyword{Neuropeptide} deli svega 5 anotacija sa svim prikazanim MF terminima.
+Smatramo da je zbog male sličnosti u anotacijama pronađeno \keyword{indirektno
+mapiranje} nevalidno, jer se očigledno MF ključna reč \keyword{Neuropeptide} i
+MF termin \keyword{Neuropeptide receptor activity} koriste u različitim
+kontekstima. Zapravo, šablonski naziv pronađenog MF termina (po pravilima iz
+Potpoglavlja \ref{MF}) označava da se termin koristi za anotiranje proteina
+koji se \textit{vezuju za neuropeptid zarad inicijacije neke ćelijske
+funkcije}, a ne samih neuropeptida. Takođe, treba primetiti da je pronađeni MF
+termina povezan na BP termin relacijom keyword{part\_of}.  Ovo može da
+predstavlja još jedan razlog zašto je pronađeno mapiranje nevalidno.  Veza
+\keyword{part\_of} podrazumeva agregaciju a ne kompoziciju. Agregacija
+podrazumeva da  molekulska funkcija postoji nezavisno od biološkog procesa što
+je suprotno od kompozicije koja predstavlja relaciju \keyword{has}. Nažalost,
+nijedan od osam pomenutih BP termina nema relaciju \keyword{has} ka nekom MF
+terminu.
+
+\clearpage
+
+Kao što smo napisali u Potpoglavlju \ref{MF}, molekulske funkcije ne mogu da
+predstavljaju gene ili genske produkte već funkcije koje oni obavljaju. Ključna
+reč \keyword{Neuropeptide} po definiciji predstavlja peptide koje neuronske
+ćelije oslobađaju ili hormone koji se oslobađaju iz drugih tipova ćelije. Jasno
+je da ekvivalentan MF termin ne može da postoji.  Nažalost, postoji veliki broj
+MF ključnih reči koje iz ovog razloga nemogu da imaju ekvivalentan MF termin,
+na primer: \textit{ Neurotoxin, Endorphin, Pyrogen, Milk protein, GAP protein,
+Motor protein, Myosin, ...}. Lista je dugačka i smatramo da predstavlja primarni
+razlog zašto skoro pola direktnih mapiranja na MF termine nepostoji.  Ipak,
+treba predpostaviti da je za neke ključne reči moguće pronaći MF termin koji predstavlja
+zajedničku molekulsku funkciju za skup proteina anotiran početnom MF ključnom reči.
+U cilju pronalaženja takvih MF termina predlažemo jednostavan
+metod zasnovan na sličnosti skupova.
+
+\section{Metod sličnih anotacija}
+
+\keyword{Metod sličnih anotacija} predpostavlja da dve ekvivalentne funkcije (iz dve
+različite nomenkulature) anotiraju sličan skup proteina.  Jedan način da se
+definiše sličnost između dva skupa $A$ i $B$ je preko \keyword{Žakardovog indeksa}
+\en{Jaccard index}, kraće \keyword{ži}  definisanog sledećom formulom:
+$$J(A,B) = \dfrac{|A \cap B|}{|A \cup B|} =  \dfrac{|A \cap B|}{|A|+|B|-|A \cap B|}$$
+$$  J(A,B) \in [0, 1] $$
+\[   
+  J(A,B) = 
+    \begin{cases}
+      1 &, A=B  \\
+      0 &, A\cap B=0
+    \end{cases}
+\]
+Neka skup $A$ predstavlja proteine koje MF ključna reč $kw_A$
+anotira a skup $B$ proteine koje anotira MF termin $t_B$.
+Zbog jednostavnosti, skup B nije dobijen grupisanjem opisanim u potpoglavlju
+\ref{grupisanje} već je ograničen sirovim anotacijama iz \swissprot baze.
+Za $kw_A$ najverovatnije mapiranje predstavlja MF termin $t_B$, takav da je žakardov
+indeks $J(A,B)$ najveći. Ipak, ne treba očekivati da će najveći žakardov indeks
+nužno značiti i najpogodnije mapiranje. Iz tog razloga potrebno je  sagledavati
+nekoliko najboljih predloga za mapiranje, sortiranih opadajuće po veličini
+žakardovog indeksa. Mapiranja dobijena ovim postupkom zvaćemo \keyword{izvedena
+mapiranja}.  Za realizaciju ove metode korišćeni su svi proteini iz \swissprot
+baze, ne samo CAFA3 podskup.
+
+Pouzdanost predloženog metoda testirana je nad 104 MF ključne reči sa poznatim
+direktnim mapiranjem.  Za svaku ključnu reč izdvojili smo maksimum pet
+najverovatnijih izvedenih mapiranja. Izvedna mapiranja sa najvećim žakardovim
+indeksom poklapaju se sa poznatim direktnim mapiranjima za 61 ključnu reč
+($0.59\%$). Ručnom validacijom tj. razmatranjem izvedenih mapiranja nižeg
+žakardovog indeksa moguće je povećati broj korektnih mapiranja na 90
+($0.85\%$).
+
+Opisani metod uz razmatranje maksimum 5 najpogodnijih izvedenih mapiranja
+primenili smo nad 91 MF ključnu reč sa nedostajućim direktnim mapiranjem.
+Izvedena mapiranja sa žakardovim indeksom manjim od 0.1 nisu razmatrana što je
+automatski eliminisalo 25 ključnih reči iz daljeg razmatranja. Nakon ručne
+validacije dobijena su 64 izvedena mapiranja.  Tabela
+\ref{tab:izvedeno_mapiranje} prikazuje izvedena mapiranja sa minimalnim
+žakardovim indeksom 0.2 izuzev poslednja tri reda. Poslednja tri reda i
+ostali redovi sa zadebljanim tekstom \en{bold text} predstavljaju nedostajuća
+mapiranja sa Slike \ref{fig:KWtop20dis}.
+
+
+\begin{table}[htpb]
+  \centering
+  \hspace*{-2.0cm} 
+  \small
+  \begin{tabular}{|p{6cm}|p{0.7cm}|p{0.5cm}|p{0.7cm}|p{8cm}|}
+  \hline
+  \bf \textit{MF keyword}              & \bf n\_kw & \bf ži & \bf n\_go & \bf \textit{MF name} \\
+  \hline
+  \hline
+  Dermonecrotic toxin                & 148   & 0.96  & 142   & phospholipase D activity \\ \hline
+  \keyword{Ribosomal protein}        & 49054 & 0.91  & 48096 & structural constituent of ribosome \\ \hline
+  Complement system impairing  toxin & 160   & 0.81  & 142   & phospholipase D activity \\ \hline
+  Hemagglutinin                      & 397   & 0.75  & 299   & host cell surface receptor binding \\ \hline
+  Mutator protein                    & 255   & 0.75  & 288   & damaged DNA binding \\ \hline
+  Antifreeze protein                 & 10    & 0.7   & 7     & ice binding \\ \hline
+  Light-harvesting polypeptide       & 90    & 0.68  & 61    & bacteriochlorophyll binding \\ \hline
+  Cyclin                             & 197   & 0.61  & 124   & cyclin-dependent protein serine/threonine kinase regulator activity \\ \hline
+  Defensin                           & 55    & 0.55  & 32    & CCR6 chemokine receptor binding \\ \hline
+  \keyword{Ribonucleoprotein}        & 50698 & 0.54  & 28317 & rRNA binding \\ \hline
+  Neurotoxin                         & 2734  & 0.53  & 4145  & toxin activity \\ \hline
+  Photoprotein                       & 40    & 0.48  & 19    & alkanal monooxygenase (FMN-linked) activity \\ \hline
+  \keyword{Endorphin}                & 48    & 0.45  & 32    & opioid peptide activity \\ \hline
+  Mobility protein                   & 7     & 0.43  & 3     & DNA topoisomerase type I activity \\ \hline
+  Protein synthesis inhibitor        & 150   & 0.43  & 67    & rRNA N-glycosylase activity \\ \hline
+  \keyword{Neuropeptide}             & 561   & 0.42  & 267   & neuropeptide hormone activity \\ \hline
+  Signal transduction inhibitor      & 157   & 0.38  & 158   & GTPase activator activity \\ \hline
+  Mitogen                            & 282   & 0.37  & 284   & growth factor activity \\ \hline
+  Repressor                          & 8177  & 0.33  & 7798  & DNA binding \\ \hline
+  Chaperone                          & 11245 & 0.31  & 7412  & ATP binding \\ \hline
+  Myosin                             & 372   & 0.31  & 275   & motor activity \\ \hline
+  Viral nucleoprotein                & 727   & 0.31  & 486   & structural molecule activity \\ \hline
+  Pair-rule protein                  & 24    & 0.29  & 16    & RNA polymerase II sequence-specific DNA binding transcription factor binding \\ \hline
+  Prion                              & 91    & 0.28  & 217   & copper ion binding \\ \hline
+  Milk protein                       & 96    & 0.27  & 83    & transporter activity \\ \hline
+  Motor protein                      & 919   & 0.27  & 251   & microtubule motor activity \\ \hline
+  \keyword{Pyrogen}                  & 43    & 0.27  & 41    & interleukin-1 receptor binding \\ \hline
+  Activator                          & 7081  & 0.26  & 7798  & DNA binding \\ \hline
+  Bence-Jones protein                & 8     & 0.26  & 26    & antigen binding \\ \hline
+  Serine protease homolog            & 57    & 0.26  & 21    & hemoglobin binding \\ \hline
+  Thyroid hormone                    & 28    & 0.25  & 32    & thyroid hormone binding \\ \hline
+  Antiviral protein                  & 40    & 0.23  & 25    & ribonuclease III activity \\ \hline
+  Ligand-gated ion channel           & 460   & 0.23  & 111   & acetylcholine-gated cation-selective channel activity \\ \hline
+  Actin capping                      & 168   & 0.22  & 367   & actin binding \\ \hline
+  Presynaptic neurotoxin             & 307   & 0.22  & 251   & phospholipase A2 activity (consuming 1 \& 2-dipalmitoylphosphatidylcholine) \\ \hline
+  Retinal protein                    & 267   & 0.22  & 64    & G-protein coupled photoreceptor activity \\ \hline
+  Fungicide                          & 157   & 0.21  & 76    & chitin binding \\ \hline
+  Receptor                           & 6753  & 0.21  & 1565  & G-protein coupled receptor activity \\ \hline
+  Neurotransmitter                   & 34    & 0.2   & 32    & opioid peptide activity \\ \hline
+  \hline
+  \keyword{Vasoactive}                            & 243   & 0.17  & 489   & hormone activity \\ \hline
+  \keyword{Chromatin regulator}                   & 1939  & 0.12  & 861   & chromatin binding \\ \hline
+  \keyword{Developmental protein}                 & 6285  & 0.12  & 2464  & sequence-specific DNA binding \\ \hline
+  \hline
+  % %
+  % Antimicrobial                                   & 939   & 0.19  & 192   & lysozyme activity \\ \hline
+  % Suppressor of RNA silencing                     & 230   & 0.19  & 91    & ATP-dependent helicase activity \\ \hline
+  % Blood coagulation cascade inhibiting toxin      & 105   & 0.19  & 268   & phospholipase A2 activity \\ \hline
+  % Cell adhesion impairing toxin                   & 207   & 0.19  & 180   & metalloendopeptidase activity \\ \hline
+  % Taste-modifying protein                         & 7     & 0.18  & 19    & nutrient reservoir activity \\ \hline
+  % Segmentation polarity protein                   & 60    & 0.17  & 28    & morphogen activity \\ \hline
+  % \keyword{Vasoactive}                            & 243   & 0.17  & 489   & hormone activity \\ \hline
+  % Platelet aggregation inhibiting toxin           & 309   & 0.17  & 268   & phospholipase A2 activity \\ \hline
+  % Muscle protein                                  & 667   & 0.16  & 896   & calcium ion binding \\ \hline
+  % Vasoconstrictor                                 & 39    & 0.16  & 11    & neurohypophyseal hormone activity \\ \hline
+  % Myotoxin                                        & 121   & 0.16  & 268   & phospholipase A2 activity \\ \hline
+  % Hemostasis impairing toxin                      & 865   & 0.16  & 4145  & toxin activity \\ \hline
+  % Blood coagulation cascade activating toxin      & 113   & 0.16  & 29    & peptidase activator activity \\ \hline
+  % Integrin                                        & 103   & 0.14  & 60    & cell adhesion molecule binding \\ \hline
+  % Hypotensive agent                               & 165   & 0.13  & 29    & metalloendopeptidase inhibitor activity \\ \hline
+  % Hemorrhagic toxin                               & 65    & 0.13  & 180   & metalloendopeptidase activity \\ \hline
+  % Fibrinogenolytic toxin                          & 100   & 0.13  & 180   & metalloendopeptidase activity \\ \hline
+  % Voltage-gated calcium channel impairing toxin   & 221   & 0.13  & 48    & calcium channel inhibitor activity \\ \hline
+  % \keyword{Chromatin regulator}                   & 1939  & 0.12  & 861   & chromatin binding \\ \hline
+  % \keyword{Developmental protein}                 & 6285  & 0.12  & 2464  & sequence-specific DNA binding \\ \hline
+  % Postsynaptic neurotoxin                         & 554   & 0.12  & 4145  & toxin activity \\ \hline
+  % Viral movement protein                          & 153   & 0.11  & 93    & cysteine-type endopeptidase activity \\ \hline
+  % Voltage-gated potassium channel impairing toxin & 426   & 0.11  & 146   & serine-type endopeptidase inhibitor activity \\ \hline
+  % Bacteriocin                                     & 64    & 0.1   & 406   & receptor binding \\ \hline
+  % Pathogenesis-related protein                    & 41    & 0.1   & 4     & glucan endo-1 \& 3-beta-D-glucosidase activity \\ \hline
+  % \hline
+
+\end{tabular}
+  \caption{Izvedena mapiranja}
+  \label{tab:izvedeno_mapiranje}
+\end{table}
+
+
+Dakle, od ukupno 195 MF ključnih reči za 104 postoje direktna mapiranja ka MF
+terminima (ukupno 105 pridruživanja) što je dopunjeno sa još  64 izvedena
+mapiranja.  Ukupno je dobijeno 169 pridruživanja između 168 MF ključnih reči i
+138 MF termina.
+
+
+
+% \section{Mapiranje pronađeno prostom pretragom naziva}
+%
+% \keyword{Metod proste pretrage naziva} je jednostavna \textit{ad hoc} tehnika
+% koja za ime (ili deo imena) ključne reči $kw_A$ vrši tri pretrage nad skupom
+% odabranih GO termina:
+% \begin{enumerate}
+%   \item Ime se javlja u imenu GO termina (najpouzdanije).  
+%   \item Ime se javlja u nazivu sinonima GO termina (pouzdanost zavisi od opsega sinonima). 
+%   \item Pojavljivanje u definiciji GO termina (nepouzdano).
+% \end{enumerate}
+% Za skup odabranih GO termina odabran je skup svih neuređenih/uređenih MF
+% termina dok su imena ili delovi imena odabrani iz skupa neuređenih/uređenih ključnih
+% reči. Dakle, ova mapiranja su korisna kada želimo da poredimo MF termine sa MF
+% ključnim rečima, ne obratno.
+%
+% Validnost dobijenih mapiranja potrebno je ručno ispitati. Samo zato što se
+% naziv MF ključne reči javlja u delu imena ili nazivu sinonima MF termina ne
+% znači da je validno porediti te dve funkcije.  Na primer, možda je pronađeno
+% \textit{<ime> receptor binding}. Takođe, ako se koristi samo deo imena ključne
+% reči potrebno je ispitati definiciju MF termina. 
+%
+% Implementacija se lako može izvesti građenjem regularnog izraza od liste imena
+% ključnih reči ili njihovih delova. 
+% \begin{verbatim}
+%   expresion = re.compile( f"({'|'.join(keywords_list)})[^ ,.)]*", re.I )
+%   # re.I znači izjednačavanje malih i velikih slova
+% \end{verbatim}
+% Ključne reči često imaju karakter '-' koju GO termini izbegavaju. Zamena blanko
+% oznakom je neophodna za pretraživanje imena, ali ne i za sinonime koji često
+% sadrže '-' karakter. 
+
+
+

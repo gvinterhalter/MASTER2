@@ -163,13 +163,9 @@ on all_conn.kw=missing.kw
 , n_prot as (select kw, go, count(distinct prot) n_prot from conn group by kw, go)
 
 , res as (
-SELECT
-n_prot.kw,
-n_prot.go,
-round(1.0 * n_prot / (n_kwprot + n_goprot - n_prot), 2) AS score,
-n_prot,
-n_kwprot,
-n_goprot
+SELECT n_prot.kw, n_prot.go,
+  round(1.0 * n_prot / (n_kwprot + n_goprot - n_prot), 2) AS score,
+  n_prot, n_kwprot, n_goprot
 FROM
 n_prot
 JOIN n_kwprot ON n_prot.kw = n_kwprot.kw
@@ -206,5 +202,6 @@ ORDER BY kw, score DESC
 
 -- 0.57, 0.58
 select count(*) as n, sum(correct::int), avg(correct::int) from correct
+where rank=1
 --88, 90
 

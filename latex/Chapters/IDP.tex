@@ -169,12 +169,22 @@ IDP i IDPr kao i osobine relevantne za naš rad.
 
 \section{Eksperimentalno ispitivanje neuređenosti}
 
+Postoji veliki broj eksperimentalnih metoda za karakterizaciju strukture i
+osobina proteina.  Svaka od njih ima prednosti, mane i nivo pouzdanosti. Da bi
+se protein potpuno okarakterisao korisno je sagledati rezultate nekoliko
+eksperimentalnih metoda. Isto važi i za karakterizaciju neuređenih regiona
+proteina. \textit{\keyword{DisProt}} \cite{Piovesan2016} baza neuređenih
+proteina verzija 7 na svojoj veb stranici nabraja čak 36 ekspermientalnih
+tehnika.  Eksperimentalne tehnike koje se najčešće koriste za karakterizaciju
+neuređenosti proteina su \cite{dunker2001}: 
+
 \begin{itemize}
-  \item \keyword{Kristalografija X zracima} \en{X-ray crystallography}
+  \item Kristalografija X zracima \en{X-ray crystallography} 
   \item Spektrosokopija Nuklearnom Magnetnom Rezonancom (NMR) \en{NMR spectroscopy}
-  \item \en{Circular dichroism (CD) spectroscopy}
-  \item \en{Protease digestion}
-  \item \en{Stoke’s radius determination}
+  \item Cirkularni dihroizam \en{Circular dichroism (CD) spectroscopy}
+  \item Senzitivnost na proteolizu \en{Sensitivity to proteolysis}
+  % \item \en{Protease digestion}
+  % \item \en{Stoke’s radius determination}
 \end{itemize}
 
 
@@ -211,31 +221,31 @@ Istorijski posmatrano razlikujemo tri epohe razvoja: \parencite{Meng_c2017}
 \end{itemize}
 
 
-Po arhitekturi prediktore delimo u četiri kategorije: \parencite{Meng_c2017}
-\begin{enumerate}
-  \item
-    scorring function based
-    % \en{
-    % These approaches input properties computed directly from the protein
-    % sequence, such as sequence alignment and propensity for intrachain
-    % interactions and binding, as well as the propensity for intrinsic disorder
-    % into a scoring function to predict disordered protein binding regions
-    % }
-
-  \item
-    ML metode 
-
-  \item
-    Meta-prediktori
-
-  \item
-    Predikcije na osnovu strukture\footnote{podrazumeva predviđanje strukturnih
-    elemenata proteina čije odsustvo predviđa neuređenost}.
-\end{enumerate}
-
-
-\subsection{Evaluacija ML modela}
-TODO, samo osnovne formule za preciznost i druge mere...
+% Po arhitekturi prediktore delimo u četiri kategorije: \parencite{Meng_c2017}
+% \begin{enumerate}
+%   \item
+%     scorring function based
+%     % \en{
+%     % These approaches input properties computed directly from the protein
+%     % sequence, such as sequence alignment and propensity for intrachain
+%     % interactions and binding, as well as the propensity for intrinsic disorder
+%     % into a scoring function to predict disordered protein binding regions
+%     % }
+%
+%   \item
+%     ML metode 
+%
+%   \item
+%     Meta-prediktori
+%
+%   \item
+%     Predikcije na osnovu strukture\footnote{podrazumeva predviđanje strukturnih
+%     elemenata proteina čije odsustvo predviđa neuređenost}.
+% \end{enumerate}
+%
+%
+% \subsection{Evaluacija ML modela}
+% TODO, samo osnovne formule za preciznost i druge mere...
 
 
 \subsection{PONDR familija prediktora i VSL2b}
