@@ -3,6 +3,11 @@
 
 \label{Rezultati} % For referencing 
 
+Računska analiza implementirana je u jeziku pajton \en{Python} verzija 3.6.
+Kompletan projekat može se naći na \textit{github} adresi \cite{projekat}. Za
+potrebe projekta napravljene su dve baze podataka: relaciona baza podataka
+(\textit{PostgreSQL} v9.5) i grafovska baza podataka (\textit{Neo4j} v3.1).
+
 Od 186 MF ključnih reči koje anotiraju bar 20 proteina, 97 je statistički
 značajno od čega su 53 predviđeno uređene (p<0.05), a 44 predviđeno neuređene
 (p>0.95).  Od 1781 MF termina sa preko 20 pridruženih proteina (dobijeno
@@ -16,7 +21,7 @@ grupisanjem, Podpoglavnje \ref{grupisanje}), 1315 je statistički značajno od
                      & Org. rez.  & \multicolumn{2}{c|}{ Naši rezultati} \\
                      & Xie2007 kw & MF kw  & MF termini                  \\
   \hline
-  ukupno             & 143        & 186    & 1781                        \\
+  ukupno ($br. prot\ge20$)     & 143        & 186    & 1781                        \\
   p<0.05 (uređene)   & 37         & 53     & 699                         \\
   p>0.95 (neuređene) & 51         & 44     & 616                         \\
   \hline
@@ -118,6 +123,56 @@ vrednosti.
 }
 \label{fig:PLrand}
 \end{figure}
+
+
+
+
+\chapter{Diskusija} % Main chapter title
+
+\label{Diskusija} % For referencing 
+
+\subsection{MF ključne reči}
+
+Novi rezultati za predviđene \keyword{uređene} MF ključne reči globalno se
+poklapaju sa originalnim rezultatima. Razlike koje postoje kao i veći izuzeci
+(\textit{Kinase} i \textit{Aminoacyl-tRNA synthetase} )  mogu biti posledica
+drugačijih podataka ali i modifikovane metode ili čak oba faktora. Pronalaženje
+egzaktnog razloga za ove razlike zahteva dodatno istraživanje.
+
+Predviđene \keyword{neuređene} MF ključne reči imaju znatno više razlika u
+odnosu na originalne rezultate.  Šest originalnih MF ključnih reči nije
+identifikovan u novim rezultatima. Ipak, treba uočiti da \textit{Antigen} u
+novoj verziji nepostoji dok četiri ključne reči imaju mali broj proteinskih
+familija i anotiranih proteina. Kod CAFA3 skupa pomenute četiri funkcije
+anotiraju ispod 10 proteina pa nisu statistički značajne.  Preostala MF ključna
+reč \textit{Cytokine} ima p vrednost 0.49 što je veliko odstupanje od
+originalnih rezultat. Značajnu razliku predstavljaju zeleno obeležene MF
+ključne reči koje se ne javljaju u originalnim rezultatima a nalaze se među 20
+statistički najznačajnijih. Među njima \textit{binding} je preovlađujući motiv
+što se ne poklapa sa originalnim rezultatima. Za razliku od GO termina, ključne
+reči ne sadrže datum dodavanja ili izmene pa ne možemo da proverimo da li su u
+pitanju nove ključne reči koje nisu postojale 2006. godine.
+
+
+
+
+\subsection{$P_Lrandom$ model}
+
+Sličnost rezultat $P_L$ i $P_L random$ modela ogleda se na Slici
+\ref{fig:PLrand}. Veća odstupanja $z_{rand}$-skora kod ključnih reči
+\textit{Ribonucleoprotein, Ribosomal protein, Hormone} i drugih povećavaju
+statističku značajnost. Ovo ponašanje može se objasniti znatno nižom prosečnom
+dužinom skupa anotiranih proteina (manje od 300 AK), dok se na Slici
+\ref{fig:PL2} uočava da je $P_L random$ verovatnoća niža za proteine kraće od
+300 AK.  Sa druge strane, uređen MF ključne reči globalno imaju niži
+$z_{rand}$-skor (veću statističku značajnost) što se takođe može objasniti
+kombinacijom globalno veće prosečne dužine proteina i većom $P_L random$
+verovatnoćom (Slika \ref{fig:PL2}). 
+
+MF ključna reč \textit{Kinase} predstavlja zanimljivo odstupanje jer $P_L
+random$ model predviđa statistički značajnu uređenost iako je prosek neuređenih
+proteina 0.71 i $P_L$ model predviđa neuređenost. Takođe, MF termin $Kinase
+activity$ je statistički značajno neuređena ($P_L$ model).
 
 % Pošto su izvršene dve vrste grupisanja rezultati će biti predstavljeni na
 % sledeći način. Tabelama \ref{fig:kwtop20dis} i \ref{fig:KWtop20ord} prikazano
