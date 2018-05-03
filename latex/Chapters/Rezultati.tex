@@ -3,7 +3,7 @@
 
 \label{Rezultati} % For referencing 
 
-Računska analiza implementirana je u jeziku pajton \en{Python} verzija 3.6.
+Računarska analiza implementirana je u jeziku Pajton \en{Python} verzija 3.6.
 Kompletan projekat može se naći na \textit{github} adresi \cite{projekat}. Za
 potrebe projekta napravljene su dve baze podataka: relaciona baza podataka
 (\textit{PostgreSQL} v9.5) i grafovska baza podataka (\textit{Neo4j} v3.1).
@@ -11,14 +11,14 @@ potrebe projekta napravljene su dve baze podataka: relaciona baza podataka
 Od 186 MF ključnih reči koje anotiraju bar 20 proteina, 97 je statistički
 značajno od čega su 53 predviđeno uređene (p<0.05), a 44 predviđeno neuređene
 (p>0.95).  Od 1781 MF termina sa preko 20 pridruženih proteina (dobijeno
-grupisanjem, Podpoglavnje \ref{grupisanje}), 1315 je statistički značajno od
+grupisanjem, Potpoglavnje \ref{grupisanje}), 1315 je statistički značajno od
 čega su 699 predviđeno uređeni, a 616 predviđeno neuređeni.  Tabela
 \ref{tab:kw_uopsteno} prikazuje razlike u odnosu na originalne rezultate.
 
 \begin{table}[htpb]
 \begin{tabular}{|r|c|c|c|}
   \hline
-                     & Org. rez.  & \multicolumn{2}{c|}{ Naši rezultati} \\
+                     & \small originalni rezultati  & \multicolumn{2}{c|}{ novi rezultati} \\
                      & Xie2007 kw & MF kw  & MF termini                  \\
   \hline
   ukupno ($br. prot\ge20$)     & 143        & 186    & 1781                        \\
@@ -35,22 +35,25 @@ Slika \ref{fig:disorder_cmp} sadrži tri tabele predviđeno neuređenih funkcija
 koje sadrže: rezultate iz originalnog rada \cite{Xie2007} (levo), nove
 rezultate za MF ključne reči (sredina) i rezultate za mapirane MF termine
 (desno). Sve tabele su sortirane po z-skoru opadajuće (statistička značajnost
-predviđene neuređenosti opada).  Leva tabela sadrži samo 20 statistički najznačajnije
-neuređenih MF ključnih reči dok je srednja ograničena na z-skor veći od dva.
-Redovi leve tabele su crveni ako se odgovarajuća ključna reč ne nalazi u
-srednjoj tabeli.  Redovi srednje tabele su zeleni ako se nalaze među prvih 20 a
-ključna reč se ne javlja u levoj tabeli.  Desna tabela MF termina sadrži samo
-one termine koji su rezultat direktnog ili izvedenog mapiranja.  Punim
-strelicama prikazana su direktna mapiranja, a isprekidanim izvedena.  Ako veza
-između redova srednje i desne tabele nedostaje to sugeriše da suprotna
-ekvivalentna funkcija nije statistički značajna, a ako je red srednje tabele
-crven to znači da ni direktno ni indirektno mapiranje nepostoji.  Srednja i
-desna tabela pored kolona z-skor i p vrednosti sadrže i procenat neuređenih
-proteina (\text{avg\_dis}) na koji se ubuduće referišemo kao
-\keyword{neuređenost funkcije}.  
+predviđene neuređenosti opada).  Leva tabela sadrži samo 20 statistički
+najznačajnije neuređenih MF ključnih reči dok je srednja ograničena na z-skor
+veći od dva.  Redovi leve tabele su crveni ako se odgovarajuća ključna reč ne
+nalazi u srednjoj tabeli.  Redovi srednje tabele su zeleni ako se nalaze među
+prvih 20 a ključna reč se ne javlja u levoj tabeli.  Desna tabela MF termina
+sadrži samo one termine koji su rezultat direktnog ili izvedenog mapiranja.
+Punim strelicama prikazana su direktna mapiranja, a isprekidanim izvedena.
+Nedostatak veze između srednje i desne tabele sugeriše da suprotna funkcija
+nije statistički značajna, a crvena boja redova u srednjoj tabeli označava da
+ni direktno ni indirektno mapiranje ne postoji.  Srednja i desna tabela pored
+kolona z-skor i p vrednosti sadrže i procenat neuređenih proteina
+(\text{avg\_dis}) na koji se ubuduće referišemo kao \keyword{neuređenost
+funkcije}. Slike \ref{fig:disorder_cmp_ab}a, \ref{fig:disorder_cmp_ab}b
+pojednostavljuju sagledavanje pojedinačnih razlika među rezultatima, međutim
+zbog ograničenja formata slike neke tabele su skraćene.
 
-Slika \ref{fig:order_cmp} ima ekvivalentan format poređenja kao i Slika
-\ref{fig:disorder_cmp}, ali predstavlja sortirane uređene funkcije.
+Slike \ref{fig:order_cmp} i \ref{fig:order_cmp_ab}  imaju ekvivalentan format
+poređenja kao i Slike \ref{fig:disorder_cmp} i \ref{fig:disorder_cmp_ab}, ali
+predstavljaju sortirane uređene funkcije.
 
 
 
@@ -66,6 +69,21 @@ Slika \ref{fig:order_cmp} ima ekvivalentan format poređenja kao i Slika
 \label{fig:disorder_cmp}
 \end{figure}
 
+\clearpage
+
+\begin{figure}[th]
+\hspace*{-1.0cm} 
+\includegraphics[ scale=0.84]{Figures/plots/disorder_cmp_ab.pdf}
+\decoRule
+\caption {
+  Razdvojeno poređenje predviđenih neuređenih funkcija. Neke tabele su skraćene.
+}
+\label{fig:disorder_cmp_ab}
+\end{figure}
+
+% ------
+
+
 \begin{figure}[th]
 \hspace*{-2.0cm} 
 \includegraphics[angle=90, scale=0.45]{Figures/plots/order_cmp.pdf}
@@ -74,6 +92,16 @@ Slika \ref{fig:order_cmp} ima ekvivalentan format poređenja kao i Slika
   Poređenje predviđenih uređenih funkcija
 }
 \label{fig:order_cmp}
+\end{figure}
+
+\begin{figure}[th]
+\hspace*{-0.5cm} 
+\includegraphics[scale=0.82]{Figures/plots/order_cmp_ab.pdf}
+\decoRule
+\caption {
+  Razdvojeno poređenje predviđenih uređenih funkcija. Neke tabele su skraćene.
+}
+\label{fig:order_cmp_ab}
 \end{figure}
 
 
@@ -86,7 +114,7 @@ analiza grupisanja po MF terminima predstavljena je grafovski, slikama
 \cite{rezultati}.  Isečak rezultata \file{disorder.svg} prikazan
 je Slikom \ref{fig:disorder_example}.  Pozadinska boja funkcija kodira
 \keyword{neuređenost termina}, a kodirana je viridis \cite{viridis} mapiranjem
-boja. Virdis mapiranje nulu predstavlja tamno ljubičastom a jedinicu svetlo
+boja. Viridis mapiranje nulu predstavlja tamno ljubičastom a jedinicu svetlo
 žutom pa su tamniji, plavkasti termini  uređeni dok su svetli, zelenkasti
 neuređeni.  Rezultujuće \file{.svg} slike su namenjene da budu otvorene u
 internet pregledaču.  Držanje kurzora miša iznad funkcija prikazaće dodatne
@@ -131,40 +159,75 @@ vrednosti.
 
 \label{Diskusija} % For referencing 
 
-\subsection{MF ključne reči}
+\section{Međusobno upoređivanje MF ključnih reči}
 
-Novi rezultati za predviđene \keyword{uređene} MF ključne reči globalno se
-poklapaju sa originalnim rezultatima. Razlike koje postoje kao i veći izuzeci
-(\textit{Kinase} i \textit{Aminoacyl-tRNA synthetase} )  mogu biti posledica
-drugačijih podataka ali i modifikovane metode ili čak oba faktora. Pronalaženje
-egzaktnog razloga za ove razlike zahteva dodatno istraživanje.
+Razmotrimo prvo Sliku \ref{fig:order_cmp_ab}a koja pokazuje da se originalni
+rezultati i novi rezultati ne razlikuju bitno za predviđeno uređene MF ključne
+reči. Međutim, razlike koje postoje kao i veći izuzeci (\textit{Kinase} i
+\textit{Aminoacyl-tRNA synthetase} )  mogu biti posledica drugačijih podataka,
+ali i modifikacije metoda originalne analize ili čak kombinacije oba faktora.
+Pronalaženje egzaktnog razloga za ove razlike zahteva dodatno istraživanje koje
+prevazilazi obim ovog rada.
 
-Predviđene \keyword{neuređene} MF ključne reči imaju znatno više razlika u
-odnosu na originalne rezultate.  Šest originalnih MF ključnih reči nije
-identifikovan u novim rezultatima. Ipak, treba uočiti da \textit{Antigen} u
-novoj verziji nepostoji dok četiri ključne reči imaju mali broj proteinskih
-familija i anotiranih proteina. Kod CAFA3 skupa pomenute četiri funkcije
-anotiraju ispod 10 proteina pa nisu statistički značajne.  Preostala MF ključna
-reč \textit{Cytokine} ima p vrednost 0.49 što je veliko odstupanje od
-originalnih rezultat. Značajnu razliku predstavljaju zeleno obeležene MF
-ključne reči koje se ne javljaju u originalnim rezultatima a nalaze se među 20
-statistički najznačajnijih. Među njima \textit{binding} je preovlađujući motiv
-što se ne poklapa sa originalnim rezultatima. Za razliku od GO termina, ključne
-reči ne sadrže datum dodavanja ili izmene pa ne možemo da proverimo da li su u
-pitanju nove ključne reči koje nisu postojale 2006. godine.
+Sa druge strane, predviđeno \keyword{neuređene} MF ključne reči prikazane na
+Slici \ref{fig:disorder_cmp_ab}a imaju znatno više razlika u odnosu na
+originalne rezultate.  Šest originalnih MF ključnih reči nije identifikovan u
+novim rezultatima. Ipak, \textit{Antigen} u novoj verziji ključnih reči ne
+postoji dok su četiri ključne reči izbačene iz analize jer anotiraju ispod 10
+CAFA3 proteina (minimum je 20).  Preostala, crvena MF ključna reč
+\textit{Cytokine} ima p vrednost 0.49 što je veliko odstupanje od originalnih
+rezultat. Značajnu razliku predstavljaju zeleno obeležene MF ključne reči koje
+se ne javljaju u originalnim rezultatima, a nalaze se među 20 statistički
+najznačajnijih novih rezultata. Među njima \textit{binding} je preovlađujući
+motiv što se ne poklapa sa originalnim rezultatima. Za razliku od GO termina,
+ključne reči ne sadrže datum dodavanja ili izmene pa ne možemo da proverimo da
+li su u pitanju nove ključne reči koje nisu postojale 2006. godine.
 
 
+\section{Upoređivanje MF ključnih reči i GO termina}
 
+Rezultati prikazni Slikama \ref{fig:disorder_cmp_ab}b i
+\ref{fig:order_cmp_ab}b sugerišu značajno poklapanje za statistički
+najznačajnije funkcije. Kao što je očekivano, sličnost rezultata $z$-skor i
+neurđenost tj.\textit{avg\_dis} pogotovo su izraženi za funkcije koje anotiraju
+slične skupove proteina. Veća nepoklapanja prisutna su prvenstveno kod ključnih
+reči čije je mapiranje problematično zbog razlika u nomenkulaturi. Na primer
+ključna reč \textit{Bacteriolytic enzyme} nalazi se na 42. mestu dok se njen
+direktno mapirani MF termin \textit{catalytic activity} nalazi na prvom mestu.
 
-\subsection{$P_Lrandom$ model}
+\section{Grafovski prikaz MF termina}
 
-Sličnost rezultat $P_L$ i $P_L random$ modela ogleda se na Slici
-\ref{fig:PLrand}. Veća odstupanja $z_{rand}$-skora kod ključnih reči
-\textit{Ribonucleoprotein, Ribosomal protein, Hormone} i drugih povećavaju
-statističku značajnost. Ovo ponašanje može se objasniti znatno nižom prosečnom
-dužinom skupa anotiranih proteina (manje od 300 AK), dok se na Slici
-\ref{fig:PL2} uočava da je $P_L random$ verovatnoća niža za proteine kraće od
-300 AK.  Sa druge strane, uređen MF ključne reči globalno imaju niži
+Grafovski prikaz na slikama \file{disorder.svg} i \file{order.svg} predstavlja
+odličan medijum za ilustrovanje kompleksnih odnosa između MF termina. Ovaj
+prikaz otkriva strukture koje inače ne bi bile uočene.  Opštije MF funkcije
+visoke statističke značajnosti okarakterisane su kompleksnom grafovskom
+strukturom potomaka. Ipak, ovu strukturu čine isključivo statistički značajni
+termini jer bi suprotno rezultat bio  teško saglediv.
+
+\section{Statistička značajnost, neuređenost i broj proteina}
+
+Prosek neuređenih proteina tj. \textit{avg\_dis} (neuređenost) otkriva da
+funkcija ne mora da bude pretežno neuređena ili uređena da bi rezultat ($F_J$)
+bio statistički značajan.  Na primer, MF termin \textit{hydrolase activity}
+(Slika \ref{fig:order_cmp_ab}a) ima $z$-skor $-27.76$, međutim sadrži $53\%$
+neuređenih proteina. Ipak prosečna dužina anotiranih proteina je 624, a
+verovatnoća da protein te dužine bude klasifikovan kao neuređen je 0.75.
+Takođe, veličina skupa anotiranih proteina (11 097 za \textit{hydrolase
+activity}) povećava statističku značajnost rezultata. Verovatno je da veliki
+broj proteina smanjuje disperziju što vodi ka većim $z$-skor vrednostima.  Ovo
+je posebno izraženo kod MF termina \textit{catalytic activity} na Slici
+\ref{fig:order_cmp_ab}a.  Iz ovih razloga smatramo da je neophodno uzeti sve
+parametre u obzir, a ne samo $z$-skor ili $p$ vrednost.
+
+\section{$P_Lrandom$ model}
+
+Sličnost rezultat $P_L$ i $P_L random$ modela prikazana je na Slici
+\ref{fig:PLrand}. Veća odstupanja \\$z_{rand}$-skora kod ključnih reči
+\textit{Ribonucleoprotein, Ribosomal protein, Hormone} i drugih ogledaju se
+povećanom statističkom značajnošću. Ovo se može objasniti znatno
+nižom prosečnom dužinom skupa anotiranih proteina (manje od 300 AK), dok se na
+Slici \ref{fig:PL2} uočava da je $P_L random$ verovatnoća niža za proteine
+kraće od 300 AK.  Obrnuto, uređene MF ključne reči globalno imaju niži
 $z_{rand}$-skor (veću statističku značajnost) što se takođe može objasniti
 kombinacijom globalno veće prosečne dužine proteina i većom $P_L random$
 verovatnoćom (Slika \ref{fig:PL2}). 
@@ -174,189 +237,30 @@ random$ model predviđa statistički značajnu uređenost iako je prosek neuređ
 proteina 0.71 i $P_L$ model predviđa neuređenost. Takođe, MF termin $Kinase
 activity$ je statistički značajno neuređena ($P_L$ model).
 
-% Pošto su izvršene dve vrste grupisanja rezultati će biti predstavljeni na
-% sledeći način. Tabelama \ref{fig:kwtop20dis} i \ref{fig:KWtop20ord} prikazano
-% je poređenje originalnih rezultata sa našim grupisanjem po \keyword{ključnim
-% rečima}. Navedene tabele sortirane su po Z-skor vrednosti.  Za razliku od
-% originalnih rezultata, naše tabele ne sadrže broj klastera, ali dodatno sadrže 
-% informaciju o procentu neuređenih proteina $F_j$ koju nazivamo
-% \keyword{neuređenost funkcije}. 
-%
-% Grupisanje po ključnim rečima predstavlja se kao podgraf originalne MF
-% ontologije pri čemu su zadržani samo statistički značajni termini.  Isečak
-% grafa neuređenih termina prikazan je na Slici \ref{fig:disorder_example}.
-% Pozadinska boja termina kodira pomenutu neuređenost termina. Korišćeno je
-% viridis \cite{viridis} mapiranje boja koje nulu predstavlja tamno ljubičastom a
-% jedinicu svetlo žutom. Tamni, plavkasti termini su uređeni dok su svetli,
-% zelenkasti neuređeni. Crvene elipse predstavljaju najznačajnijih 20 (ne)uređenih ključnih
-% reči iz originalnog rada i povezani su sa terminima preko četiri tipa veze.
-% Zelena veza predstavlja direktno mapirnaje, crvena preko imena, ljubičasta
-% preko sinonima, a žuta pominjanje u definiciji.  Na adresi \cite{rezultati} u
-% \file{.svg} formatu dostupni su svi rezultati ovoga oblika. 
-% Pomenute slike, ukoliko se otvore u veb pretraživaču, prikazuju dodatne
-% informacije o terminima iznad kojih je pozicionirana strelica miša.  Svaki
-% termin sadrži odgovarajući hiperlink ka \textit{AmiGO}\footnote{\textit{AmiGO}
-% je skup alat za pretraživanje i prikazivanje GO termina } veb stranici.
-%
-% Radi izbegavanja dvosmislenosti u daljem tekstu, imena ključnih reči imaće
-% dodeljen prefiks \textit{KW: } dok će imena MF termina imati prefiks
-% \textit{MF: }.
-%
-% \clearpage
-%
-% \begin{figure}[th]
-% \hspace*{-2.5cm} 
-% \includegraphics[angle=0, scale=0.45]{Figures/plots/KWtop20dis.pdf}
-% \decoRule
-% \caption {
-%   20 statistički najznačajnijih \keyword{neuređenih} ključnih reči iz rada
-%   \parencite{Xie2007} upoređeno sa našom analizom po ključnim rečima nad CAFA3 podacima.
-% }
-% \label{fig:KWtop20dis}
-% \end{figure}
-%
-% \begin{figure}[th]
-% \hspace*{-2.5cm} 
-% \includegraphics[angle=0, scale=0.9]{figures/plots/disorder_example.pdf}
-% \decorule
-% \caption {
-%   isečak grafa neuređenih termina
-% }
-% \label{fig:disorder_example}
-% \end{figure}
+\section{Klasifikacija neuređenog proteina}
 
+Definicija \ref{pdis_def} neuređenosti proteina iz Potpoglavlja
+\ref{naredno} nije uvek idealna.  Na primer, ako je dužina proteina 35 AK, a
+neuređenost je predviđena celom dužinom, onda jasno da nema potrebe eliminisati
+protein iz analize već ga treba svrstati kao neuređeni.  Takođe, ako je protein
+dug 50 AK i sadrži predviđeni neuređeni region od 35 AK, onda treba
+pretpostaviti da neuređenost igra ulogu u funkciji. Ovi granični slučajevi čine
+suviše mali procenat proteina u CAFA3 podksupu pa je opravdano zanemariti ih.
+Međutim, procentualno \swissprot sadrži značajno više kratkih proteina što nas
+navodi da istaknemo ovaj problem.
 
-% \subsection{Poređenje neuređenih funkcija}
-% 1. \kw{Ribonucleoprotein} nalazi se na 7. mestu, ima  Z-skor 13.39 (skoro duplo manje) i neuređenosti 0.6.
-% Direktno mapiranje nije nađeno. Pronađeni \mf{Ribonucleoprotein binding complex}
-% ima Z-skor od svega 3.51, neuređenost 0.68 obuhvatajući svega 406 proteina.
-%
-% 2. \kw{Ribosomal protein} nalazi se na 10. mestu, ima Z-skor 9.34 (duplo manje) i neuređenost 0.53.
-% Direkto mapiranje nije nađeno. Pronađen je sinonim u širem smislu,
-% \mf{structual costituent of ribosome} sa skoro istim karakteristikam Z-skor 9.79 i neuređenost 0.53.
-%
-% 3. \kw{Developmental protein} nalazi se na 2. mestu, ima Z-skor 31.1 i neuređenost 0.87.
-% \keyword{MF Mapiranje nije nađeno!}
-%
-% 4. \kw{Hormone} se nalazi na 14. mestu, ima Z-skor 7.24 (duplo manji) i neuređenost 0.59.
-% Direktno mapiran \mf{Hormone activity} ima Z-skor 8.93 neuređenost 0.61.
-% Dodatni relevantni MF termini uključuju:
-% \begin{itemize}
-%   \item \mf{Hormone receptor binding} Z-skor 8.4, neuređenost 0.84 
-%   \item \mf{Steroid Hormone receptor binding} Z-skor 9.4, neuređenost 0.92 
-%   \item \mf{Nuclear Hormone receptor binding} Z-skor 9.07, neuređenost 0.9 
-%   \item \mf{Thyroid Hormone receptor binding} Z-skor 9.07, neuređenost 0.9 
-%   \item \mf{Nuclear Hormone receptor activity} Z-skor 4.31, neuređenost 1.0 
-% \end{itemize}
-%
-%
-% 5. \kw{Growth factor} nalazi se na 11. mestu, ima Z-skor 8.98 i neuređenost 0.7.
-% Direktno mapiran \mf{Growth factor activity} ima Z-skor 9.2 i neuređenost 0.7.
-% Dodatna mapiranja uključuju:
-% \begin{itemize}
-%   \item \mf{Growth factor receptor binding} ima Z-skor 3.76 i neuređenost 0.66.
-%     Postoji nekoliko specijalizacije ovog termina koje imaju veći Z-skor i neuređenost.
-%   \item \mf{Growth factor binding} ima Z-skor 4.42 i neuređenost 0.79. Postoji
-%     nekoliko specijalizacija visoke neuređenosti pogotovo za
-%     \textit{insulin-like growth factor} vezivanje.
-% \end{itemize}
-%
-%
-% 6. \kw{Cytokine} nije statistički značajan u našoj analizi ključnih reči.
-% \mf{Cytokine receptor binding} ima Z-skor 2.57 (4 puta manje) i neuređenost 0.56
-%
-% 7. \kw{Neuropeptide} nalazi se na 20. mestu, ima Z-skor 6 i neređenost 0.68.
-% Direktno mapiranje nije nađeno.
-% \mf{neuropeptide receptor binding} ima Z-skor 6.71 i neuređenost 0.73 dok,
-% \mf{neuropeptide hormone activity} ima Z-skor 6.06 i neuređenost 0.65.
-%
-%
-% 8. \kw{Activator} nalazi se na 11. mestu, ima Z-skor 28.12 (3 put veći) i neuređenost 0.88.
-% \\ Ekvivalentan MF termin ne postoji.
-% %% Potencijalno povezani MF termini:
-% %% \begin{itemize}
-% %%   \item \mf{enzyme activator activity}
-% %%   \item \mf{MAP kinase kinase activator} 
-% %% \end{itemize}
-%
-%
-% 9. \kw{GAP protein} je izbačen iz analize jer sadrži manje od 20 proteina.
-%
-% 10. \kw{Antigen} je izbačena iz novih verzija ključnih reči.
-% Analizom definicije \mf{MHC class II protein binding} zaključena je relavantnost
-% u kontekstu antigena (iterakcija sa \textit{histocompatibility} kompleksima).
-% Z-skor 2.26, neuređenost 0.85. Ova funkcija sadrži svega 20 proteina.
-%
-% 11. \kw{Repressor} nalazi se na 4. mestu, ima Z-skor 22.63 (skoro 4 puta veća) i neuređenost 0.85.
-% \\ Ekvivalentan MF termin ne postoji.
-%
-%
-% 12. \kw{Chromatin regulator} nalazi se na 6. mestu, ima Z-skor 13.91 (duplo veća) i neuređenost 0.9.
-% \\ Odgovarajući termin \mf{covalent chromatin modification} nema dovoljno pridruženih proteina.
-%
-% 13. \kw{Pyrogen} je izbačen iz analize jer sadrži manje od 20 proteina.
-%
-% 14. \kw{Vasoactive} nalazi se na 26. mestu, ima Z-skor 4.3 (orig. 5.56) i neuređenost 0.76.
-% \\ Odgovarajući \mf{regulation of blood vessel size} nema dovoljno pridruženih proteina.
-%
-% 15. \kw{Amphibian defense peptide} nalazi se na 31. mestu, ima Z-skor 3.34 (orig. 5.44) i neuređenost 0.53.
-% \\ Odgovarajući \mf{defense response} nema dovoljno pridruženih proteina.
-%
-% 16. \kw{GTPase activation} nalazi se na 18. mestu, ima Z-skor 6.28 (orig. 5.44) i neuređenost 0.88.
-% Direktno mapiran \mf{GTPase activation} ima Z-skor 8.06, neuređenost 0.87.
-%
-% 17. \kw{Endorphin} nalazi se na 30. mestu, ima Z-skor 3.49 i neuređenost 1.0.
-% \\ Odgovarajući \mf{neuropeptide signaling pathway} nema dovoljno pridruženih proteina. Sa druge strane vezivanje neuropeptida je pristuno 
-%
-% 18. \kw{Opioid peptide} nalazi se na 33. mestu, ima Z-skor 3.14 i neuređenost 1.0.
-% Direktno mapiran \mf{Opioid peptide binding } Nije statistički značajan.
-%
-% 19. \kw{Protein phosphatase inhibitor} nalazi se na 23. mestu, ima Z-skor 5.07 i neuređenost 0.81.
-% Direktno mapiranje \mf{Protein phosphatase inhibitor activity} ima Z-skor 5.62 i neurđenost 0.83.
-%
-% 20. \kw{Cyclin} nalazi se na 15. mestu, ima Z-skor 7.18 i neuređenost 0.87.
-% Direktno mapirnaje nije nađeno.
-% \mf{Cyclin binding} ima Z-skor 2.042 i neuređenost 0.71.
-%
-%
-% \subsection{ Neuređene ključne reči značajne samo za CAFA3 podatke}
-%
-% 1. \kw{DNA-binding} ima Z-skor 46.9 i neuređenost 0.87.
-% Mapiran {DNA binding} ima Z-skor 46.13 i neurđenost 0.86.
-% Pored ovog postoje mnogi specijalizovani neuređeni termini
-%
-% 5. \kw{RNA-binding} ima Z-skor 16.62 i neuređenost 0.76.
-% Direktno mapiran {RNA binding} ima Z-skor 19.79 i neurđenost 0.73.
-% Pored ovog postoje mnogi specijalizovani neuređeni termini
-%
-% 8. \kw{Serine/threonine-protein kinase} ima Z-skor 11.56 i neuređenost 0.84.
-% Direktno mapiran {proein serine/threonine kinase activity} ima Z-skor 12.88 i neurđenost 0.84.
-%
-% 9. \kw{Chaperone} ima Z-skor 10.02 i neuređenost 0.71.
-% Nema direktno mapiranje ali su pronađeni:
-% \begin{itemize}
-%   \item \mf{chaperone binding} ima Z-skor 8.86 i neuređenost 0.84.
-%   \item \mf{ufolded protein binding} sinonima ima Z-skor 8.86 i neuređenost 0.84 (mapiran preko nekolio šest \textit{related} sinonima).
-% \end{itemize}
-%
-% 12. \kw{Protein kinase inhibitor} ima Z-skor 8.34 i neuređenost 0.96.
-% Direktno mapiran \mf{protein kinase inhibitor activity} ima Z-skor 8.94 i neuređenost 0.82.
-%
-% 13. \kw{Calmodulin-binding} ima Z-skor 7.57 i neuređenost 0.9.
-% Direktno mapiran \mf{calmodulin binding} ima Z-skor 9.22 i neuređenost 0.88.
-%
-% 16. \kw{Signal transduction inhibitor} ima Z-skor 6.76 i neuređenost 0.84.
-% \\ Odgovarajući \mf{negative regulation of signal transduction} nema dovoljno pridruženih proteina.
-%
-% 17. \kw{Guanine-nucleotide releasing factor} ima Z-skor 6.4 i neuređenost 0.96.
-% Direktno mapiran \mf{guanyl-nucleotide exchange factor activity} ima Z-skor 6.22 i neuređenost 0.86.
-%
-% 19. \kw{Growth factor binding} ima Z-skor 6.09 i neuređenost 1.00.
-% \mf{Growth factor binding} ima Z-skor 4.42 i neuređenost 0.79. Postoji
-% nekoliko specijalizacija visoke neuređenosti pogotovo za
-% \textit{insulin-like growth factor} vezivanje.
-%
-% \subsection{Poređenje uređenih funkcija}
-%
-% \subsection{ Neuređene ključne reči značajne samo za CAFA3 podatke}
+\section{Nastavak istraživanja}
+
+Razvoj novih meta prediktora neuređenosti \cite{mengc2017} svakako je razlog za
+nastavak istraživanja. Testiranje novih metoda analize, korišćenje drugih,
+većih skupova podataka i novih meta prediktora rezultiraće sigurno interesantnim
+rezultatima. Prikaz tih rezultat treba da uključi razvoj korisničkog interfejsa
+koji omogućuje interaktivno istraživanje, poređenje i povezanost sa drugim
+resursima. Vizuelna komparacija različitih rezultata u grafovskom obliku samo
+je jedan od problema koje treba rešiti.
+
+Računarsko istraživanje veze između funkcije i tipa neuređenosti je naredni
+pravac koji treba istražiti. Ipak, prediktori koji predviđaju tip neuređenosti
+koliko nam je poznato još ne postoje. Iz tog razloga buduće istraživanje treba
+da bude fokusirano na njihov razvoj.
 

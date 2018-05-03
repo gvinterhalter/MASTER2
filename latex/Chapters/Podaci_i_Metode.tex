@@ -4,11 +4,12 @@
 \label{Podaci i metode} % For referencing 
 
 Cilj rada je ispitivanje veze između molekulske funkcije proteina i njegove
-(ne)uređenosti tj. da li molekulska funkcija zavisi više od uređenosti ili
-neuređenosti. Istraživanje je motivisano radom\parencite{Xie2007}. Navedeni rad je prvi u seriji od 
-tri rada i bavi se prvenstveno biološkim procesima i molekulskim funkcijama.
-U nastavku teksta pod terminima \keyword{originalni} rad, autori, podaci, metode i slično 
-podrazumevaćemo navedeni rad, njegove autore, metode, podatke itd.
+(ne)ure- đenosti tj. da li molekulska funkcija zavisi više od uređenosti ili
+neuređenosti. Istraživanje je motivisano radom\parencite{Xie2007}. Navedeni rad
+je prvi u seriji od tri rada i bavi se prvenstveno biološkim procesima i
+molekulskim funkcijama.  U nastavku teksta pod terminima \keyword{originalni}
+rad, autori, podaci, metode i slično podrazumevaćemo navedeni rad, njegove
+autore, metode, podatke itd.
 
 Najveća razlika u pristupu između originalnog i ovog istraživanja je što su
 originalni rezultati izraženi u terminima \keyword{ključnih reči} dok su ovde
@@ -49,7 +50,7 @@ jednog gena iz jedne vrste organizma. Međutim, za analizu funkcija
 sadrže veliku količinu \keyword{homologih} proteina (prvenstveno ortologa).
 Zbog statističke redundantnosti originalni autori su izvršili klasterovanje \swissprot
 proteina u \keyword{proteinske familije} dobivši 27 217 familija. Posledica
-klasterovanja je da svaki protein dobiva težinu kojom doprinosi daljoj analizi.
+klasterovanja je da svaki protein dobija težinu kojom doprinosi daljoj analizi.
 Težina svakog proteina u preseku klastera sa datom funkcijom je obrnuto
 proporcionalna veličini preseka tako da je zbir težina svih proteina jednaka
 veličini preseka.
@@ -118,9 +119,11 @@ postojanja proteina.
 \end{figure}
 
 
+Važno je naglasiti da je dalja analiza izvršena pod pretpostavkom da CAFA3 skup
+nije statistički redundantan, što znači da klasterovanje u proteinske familije
+nije potrebno.  Isključivanje ove pretpostavke bi dovelo do komplikovanijih
+računarskih metoda za analizu što je van opsega ovog rada.
 
-Dalja analiza  izvršena je pod pretpostavkom da CAFA3 skup nije statistički redundantan.
-Ova pretpostavka uporošćava računske metode analize.
 
 
 % Iako ovaj pristup potencijalno proizvodi skup koji je \keyword{statisički
@@ -148,12 +151,12 @@ CAFA3 Podaci se sastoje od dve datoteke:
     procesa. Jednom proteinu može biti pridruženo više GO termina i obrnuto.
 \end{enumerate}
 
-Naša analiza primarno je orijentisna ka korišćenju GO termina za opis funkcije
-što je razlikuje od originalnog pristupa korišćenja ključnih reči.  Analiza GO
-termina zahteva poznavanje prvenstveno \textit{IS\_A} roditeljske veze između
-termina. Takođe, tokom istraživanja bile su nam potrebne i ostale informacije o
-terminima. Pomenute informacije dobili smo iz datoteke \cite{go_obo} verzije
-01.12.2017.
+Analiza u ovom radu je primarno orijentisna ka korišćenju GO termina za opis
+funkcije što je razlikuje od originalnog pristupa korišćenja ključnih reči.
+Analiza GO termina zahteva poznavanje prvenstveno \textit{is\_a} roditeljske
+veze između termina. Takođe, tokom istraživanja bile su nam potrebne i ostale
+informacije o terminima. Pomenute informacije dobili smo iz datoteke
+\file{go.obo} \cite{go_obo} verzije 01.12.2017.
 
 Odnos tj. mapiranje između ključnih reči i GO termina dostupno je sa dva izvora:
 \begin{itemize}
@@ -166,16 +169,16 @@ Odnos tj. mapiranje između ključnih reči i GO termina dostupno je sa dva izvo
 \end{itemize}
 
 U ovom radu korišćena je isključivo \file{keywlist.txt} datoteka. Iako je
-datoteka \file{uniprot\_kw2go} sadržala veći broj mapiranja, unosila je
+datoteka \\ \file{uniprot\_kw2go} sadržala veći broj mapiranja, unosila je
 nepoželjnu višeznačnost.
 
 Pošto je originalni rad iz 2007. godine, postoje razlike u broju proteina,
-antoacijama ključnih reči, broju ključnih reči ali i sadržaju proteinskih
-sekvenci.  Radi procene uticaja navedenih razlika na rezulat, odlučeno je da se
+anotacijama ključnih reči, broju ključnih reči ali i primarnoj strukturi proteinskih
+sekvenci.  Radi procene uticaja navedenih razlika na rezultat, odlučeno je da se
 analiza prvo ponovi originalnim pristupom, koristeći vokabular ključnih reči.
 Iz tog razloga, CAFA3 podaci nisu mogli da se posmatraju kao crne kutije, već
-je bilo neophodno mapirati ih nazad na \swissprot proteine čije anotacije ka
-ključnim rečima su poznate. Ovaj korak objedinjavanja baza podataka opisan je u
+je bilo neophodno mapirati ih nazad na \swissprot proteine čije su anotacije 
+ključnim rečima poznate. Ovaj korak objedinjavanja baza podataka opisan je u
 Potpoglavlju \ref{objedinjavanje}. Dobijene anotacije ključnim rečima takođe su
 iskorišćene za proveru validnosti mapiranja ključnih reči na GO termine.
 Mapiranja su detaljno opisana u Potpoglavlju \ref{kw2go_mapiranje}
@@ -192,19 +195,19 @@ neuređenost pojedinačnog proteina utiče na
 na njegovo ponašanje, i kako to ponašanje (tip neuređenosti) utiče na datu funkciju.
 % Ova vrsta znanja nije bila dostupna 2007. osim za jako mali skup proteina.
 
-Nažalost, \textbf{ograničenost} današnjih podataka i razvijenih metoda su brojna:
+Nažalost, ograničenja današnjih podataka i razvijenih metoda su brojna:
 \begin{itemize}
   \item
     Baza eksperimentalno utvrđenih neuređenih regiona
     \textit{\keyword{DisProt}} ima svega 803 proteina sa opisanih 2167
-    neuređenih regiona \parencite{Piovesan2016}.  Još gore, kvalitet navedenih
-    informacija je diskutabilna zbog razlika u pouzdanosti među
+    neuređenih regiona \parencite{Piovesan2016}.  Uz to, kvalitet navedenih
+    informacija je diskutabilan zbog razlika u pouzdanosti među
     eksperimentalnim tehnikama koje su korišćene.  Najveću pouzdanost nose
     regioni koji su eksperimentalno okarakterisani sa što većim brojem
-    eksperimentalnih tehnika.
+    laboratorijskih tehnika.
 
   \item
-    Prediktori se terniraju na malom podskupu proteina iz \textit{DisProt}
+    Prediktori se treniraju na malom podskupu proteina iz \textit{DisProt}
     i PDB  baze. Čak i konsenzus nekoliko različitih prediktora ne daje
     dovoljno pouzdane rezultate o lokaciji neuređenog regiona (prof. Nenad
     Mitić, usmena komunikacija 2017.).
@@ -226,7 +229,7 @@ Nažalost, \textbf{ograničenost} današnjih podataka i razvijenih metoda su bro
 
 \end{itemize}
 
-Jednostavna alternativa je da se pretpostavi da veći udeo neuređenih u odnosu
+Jednostavna alternativa idealnom slučaju je da se pretpostavi da veći udeo neuređenih u odnosu
 na uređene proteine podrazumeva da funkcija zavisi više od neuređenosti. 
 % Dakle izjednačavamo uzročnost \en{causation} i \keyword{korelaciju} između funkcije i neuređenosti.
 % Međutim, prvo je potrebno precizirati kada protein smatramo neuređenim.
@@ -298,7 +301,7 @@ predstavlja prostu vrstu konvolucije.
   Zavisnot neuređenosti i dužine CAFA3 proteina \\ minimalne dužine 40 AK
   \\ \footnotesize
   ($P_L$ sa prozorom uprosečavanja podrazumeva $l = 0.1L$, dok
-  krstići predstavljaju diskretne vrednosti L za $l = 0$. Transparentnost krstrića
+  krstići predstavljaju diskretne vrednosti L za $l = 0$. Transparentnost krstića
   ilustruje brojnost proteina dužine $L$. Ako je krstić transparentan
   znači da sadrži manje od 100 proteina.)
 }
@@ -311,8 +314,8 @@ procenjivanju veličine $P_L$.
 % \keyword{Slučajno generisani} \en{random generated} proteini za procenu $P_L$.
 Razmotrićemo dva modela zasnovana na slučajno generisanim proteinima. Prvi,
 naivni model \keyword{uniformne verovatnoće} podrazumeva da se svaka
-aminokiselina javlja sa istom verovatnoćom, odnosno $p=1/20$. U statistici prvi
-model je još poznato kao model jednakih verovatnoća \en{equiprobable model
+aminokiselina javlja sa istom verovatnoćom, odnosno $p=1/20$. U statistici je ovaj
+model još poznat kao model jednakih verovatnoća \en{equiprobable model
 (EPM)}.  Drugi model koji ćemo zvati slučajni ili \textit{random} model RM)  predstavlja
 slučajnu promenljivu čija verovatnoća zavisi od učestalosti aminokiselina iz
 CAFA3 skupa i prikazana je na Slici \ref{fig:AK_ucestalost}.
@@ -372,9 +375,11 @@ izuzetke arginina predstavljena je Slikom \ref{fig:aminoacid}
 \centering
 \includegraphics[scale=0.7]{aminoacid}
 % \decoRule
-\caption{Očekivana i izmerena (kod kičmenjaka) učestalost aminokiselina (Preuzeto sa \cite{AA_freq_link}).  \footnotesize
-  Očekivana učestalost kodona izračunata je kao proizvod učestalosti nukleinskih baza ($A:0.303, C:0.217, G:0.261, U:0.2$) koje ga čine.
-  Očekivana učestalost aminokiseline je zbir očekivanih učestalosti njenih kodona. }
+\caption{Očekivana i izmerena učestalost aminokiselina kod kičmenjaka (Preuzeto sa \cite{AA_freq_link}).  \footnotesize
+  Izmerena učestalost dobijena je analizom 53 kompletno sekvencionirana proteina iz kičmenjaka \cite{King1969}.
+  Očekivana učestalost kodona izračunata je kao proizvod učestalosti nukleinskih baza koje ga čine.
+  Očekivana učestalost aminokiseline je zbir očekivanih učestalosti njenih kodona.
+}
 \label{fig:aminoacid}
 \end{figure}
 
@@ -382,6 +387,7 @@ izuzetke arginina predstavljena je Slikom \ref{fig:aminoacid}
 
 
 \clearpage
+\label{ocenjivanje}
 \subsection{Ocenjivanje zavisnosti funkcije od neuređenosti}
 
 Neka je $S_j$ skup proteina koji imaju pridruženu funkciju $j$. Tada se procenat
@@ -405,13 +411,18 @@ $$ Y_j = \dfrac {\sum_{s_i \in S_j} {X_{|s_j|}}}{|S_j|}$$
 
 Ako $F_j$ izlazi iz intervala poverenja raspodele $Y_j$ onda funkcija $j$
 sadrži značajno mnogo predviđenih (ne)uređenih proteina. Preciznije,
-ako je p-vrednost \en{p-value} $<0.05$ onda je funkcija $j$ povezana sa neuređenim
-proteinima, a ako je \textit{p-value} $>0.95$ onda je funkcija $j$ povezana sa
+ako je p-vrednost \en{p-value} manja od 0.05 onda je funkcija $j$ povezana sa neuređenim
+proteinima, a ako je \textit{p-value} veća od 0.95 onda je funkcija $j$ povezana sa
 uređenim proteinima.  Suprotno, povezanost funkcije $j$ sa (ne)uređenošću nije
 statistički značajna.  
-Kada se kaže da je funkcija, ključna reč ili GO termin (ne)uređen
-podrazumevaće se da je odgvorajauća p-vrednost manja od $0.5$ ili veća
-od $0.95$.
+
+U nastavku teksta, pod neuređenošću funkcije, ključne reči ili GO termina, biće
+podrazumevano da je odgovarajuća p vrednost manja od 0.05. Analogno, pod
+uređenošću funkcije, ključne reči ili GO termina, biće podrazumevano da je
+odgovarajuća p vrednost veća od 0.95.
+% Kada se kaže da je funkcija, ključna reč ili GO termin (ne)uređen
+% podrazumevaće se da je odgvorajauća p-vrednost manja od $0.05$ ili veća
+% od $0.95$.
 
 Zbog matematičkog oblika $X_L$ teško je analitički proceniti $Y_j$ pa se se
 pribegava empirijskom računanju p-vrednosti. Empirijska p-vrednost određena je

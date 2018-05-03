@@ -25,7 +25,8 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
 %oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
-serbian, % ngerman for German
+% serbian, % ngerman for German
+serbian,
 singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
@@ -37,6 +38,7 @@ headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{MastersDoctoralThesis} % The class file specifying the document structure
+
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -51,6 +53,7 @@ headsepline, % Uncomment to get a line under the header
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
+
                                                                                 
 
 % \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
@@ -60,12 +63,14 @@ headsepline, % Uncomment to get a line under the header
   , citestyle=numeric
   , bibstyle=numeric
   , sorting=none
+  , maxbibnames=99
 ]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+
 
 \addbibresource{ref.bib} % The filename of the bibliography
 
 
-\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+% \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -208,10 +213,64 @@ doc. dr Jovana Kovačević \\
 %	ABSTRACT PAGE
 %----------------------------------------------------------------------------------------
 
+% definišemo korisne komande
+\newcommand{\en}[1]{(engl. \textit{#1})}
+\newcommand{\lat}[1]{(latin. \textit{#1})}
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+
+\newcommand{\uniprot}{\textit{UniProt} }
+\newcommand{\uniprotkb}{\textit{UniProtKB} }
+\newcommand{\swissprot}{\textit{Swiss-Prot} }
+\newcommand{\trembl}{\textit{TrEMBL} }
+
+\newcommand{\kw}[1]{\textbf{\textit{KW: #1}}}
+\newcommand{\mf}[1]{\textbf{\textit{MF: #1}}}
+
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+% The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+
+U ovom radu istražena je korelacija između molekulske funkcije i neuređenosti
+odnosno uređenosti proteina. Istraživanje je inspirisano radom
+\textit{Xie et al. (2007)} \cite{Xie2007} u kojem je predložen statistički metod
+za evaluaciju korelacije neuređenosti proteina i njihove funkcije zadate
+prostom nomenkulatorm \swissprot ključnih reči.  Pored ključnih reči, naša
+istraživanja su dopunjena korišćenjem termina molekulske funkcije iz ontologije
+gena.  Zbog malog broja adekvatnih mapiranja između pomenutih nomenkulatura
+istraženo je nekoliko tehnika za pronalaženje nedostajućih veza od kojih
+predlažemo metod sličnih anotacija zasnovan na Žakardovom indeksu. Takođe,
+istražen je novi metod za procenu zavisnosti dužine i neuređenosti proteina
+zasnovan na slučajno generisanim proteinima, $P_Lrandom$.
+
+Preko 66 000 proteina preuzetih iz trening skupa \textit{CAFA3} takmičenja
+objedinjeno je \swissprot bazom podataka iz koje su preuzete funkcijske
+anotacije u obliku ključnih reči i termina ontologije gena.  Prediktor PONDR
+familije, VSL2b korišćen je za klasifikovanje proteina kao putativno uređenog
+ili neuređenog. Od 186 ključnih reči kategorije molekulske funkcije sa minimum
+20 anotiranih proteina, nađeno je da su 53 visoko korelirane sa uređenim
+proteinima, a 44 sa neuređenim. Na nivou termina ontolgoije gena, pod istim
+uslovima, od 1781 molekulske funkcije 699 visoko je korelirano sa uređenim
+proteinima, a 616 sa neuređenim. Na ovom nivou rezultati otkrivaju
+kompleksne roditeljske veze između funkcija koje predstavljamo grafovski.
+Komparacija navedenih nomenkulatura pokazala je konzistentnost u statističkoj
+značajnosti korelacije. Ipak, poređenje sa starim rezultatima (iz navedenog
+rada) pokazalo je određena nepoklapanje za molekulske funkcije korelirane sa
+neuređenim proteinima. Novi rezultati sadrže veći broj funkcija vezivanja koje
+se ne javljaju u starim rezultatima.  Dobijeni rezultati su kompleksni i
+potpuniji pa doprinose fundamentalnom znanju o molekulskim funkcijama. 
+
+
+
+
 \end{abstract}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
@@ -286,23 +345,6 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 
 \pagestyle{thesis} % Return the page headers back to the "thesis" style
 
-% definišemo korisne komande
-\newcommand{\en}[1]{(engl. \textit{#1})}
-\newcommand{\lat}[1]{(latin. \textit{#1})}
-\newcommand{\keyword}[1]{\textbf{#1}}
-\newcommand{\tabhead}[1]{\textbf{#1}}
-\newcommand{\code}[1]{\texttt{#1}}
-\newcommand{\file}[1]{\texttt{\bfseries#1}}
-\newcommand{\option}[1]{\texttt{\itshape#1}}
-
-
-\newcommand{\uniprot}{\textit{UniProt} }
-\newcommand{\uniprotkb}{\textit{UniProtKB} }
-\newcommand{\swissprot}{\textit{Swiss-Prot} }
-\newcommand{\trembl}{\textit{TrEMBL} }
-
-\newcommand{\kw}[1]{\textbf{\textit{KW: #1}}}
-\newcommand{\mf}[1]{\textbf{\textit{MF: #1}}}
 
 
 % Include the chapters of the thesis as separate files from the Chapters folder
@@ -338,6 +380,7 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 %----------------------------------------------------------------------------------------
 
 \renewcommand{\bibname}{Bibliografija}
+
 
 \printbibliography[heading=bibintoc]
 

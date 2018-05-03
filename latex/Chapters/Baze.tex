@@ -91,9 +91,16 @@ imenski prostori \en{namespace}:
     doprinosi.
 \end{itemize}
 
-Inspirisani sličnošću prva tri sekvencirana eukariotska organizma, GO projekat
-nastao je sa ciljem da  objedini biologiju pod jedan skup termina za opis
-genskih proizvoda svih vrsta organizama \parencite{GO2000}.
+Tvorci ontologije gena zasnovali su ovu nomenkulatoru na opažanju da različiti
+organizmi (pogotvo eukarioti) dele veliki broj ortologih gena. Većina uočenih
+konzerviranih funkcija (ortologih gena) ispostavila se neophodna za osnovne
+biološke procese bilo kog živog organizma.  Iz ovog opažanja rodila se ideja o
+definisanju jednog skupa termina koji će opisivati genske proizvode svih vrsta
+organizama, ontologija gena \parencite{GO2000}.
+
+% Inspirisani sličnošću prva tri sekvencirana eukariotska organizma, GO projekat
+% nastao je sa ciljem da  objedini biologiju pod jedan skup termina za opis
+% genskih proizvoda svih vrsta organizama \parencite{GO2000}.
 
 \subsection{GO termin}
 
@@ -146,7 +153,7 @@ su najčešće:
 
 Vremenom se GO ontologija proširuje novim tipovima relacije koje su van okvira ovog rada.
 Svaka relacija ima strogo definisana pravila kompozicije koja omogućavaju
-automatsko rezonovanje. Na primer relacija \keyword{is\_a} ima svojstvo
+automatsko rezonovanje. Na primer, relacija \keyword{is\_a} ima svojstvo
 tranzitivnosti \parencite{is_a} prikazano Slikom \ref{fig:is_a}:
 \lstset{
   basicstyle=\ttfamily, mathescape,
@@ -182,7 +189,7 @@ jezika (protégé, SPARQL, ...).
 \subsection{Molekulska funkcija}
 \label{MF}
 
-Funkcija genskog produkta predstavlja posao koji on obavlja (ili osobinu koju on ima).
+Funkcija genskog produkta predstavlja posao koji on obavlja ili osobinu koju on ima.
 Razmotrimo narednu analogiju \parencite{go_mf}.  U kompaniji radnik (genski produkt) ima titulu
 (ime genskog produkta) i vrši poslove odnosno obavlja funkcije (molekulska
 funkcija) zarad izvršavanja nekog cilja tj. zadatka (biološki proces). Na
@@ -192,7 +199,7 @@ utovarivanje prtljaga itd, ali ne bi bilo korektno reći da je funkcija vozača
 radnji koje vozač obavlja.  Vozač koji prevozi putnika na bicklu neće
 utovarivati prtljag niti stiskati kvačilo.
 
-Najbitnije karakteristike molekulske funkcije su:\parencite{go_mf}
+Najbitnije karakteristike molekulske funkcije su \parencite{go_mf}:
 \begin{itemize}
   \item MF nije specifična za jedan genski produkt već važi za sve organizme. Dakle, ne treba mešati MF sa imenom genskog produktom.
   \item MF nije biološki proces jer se BP sastoji od nekoliko MF.
@@ -202,7 +209,7 @@ Najbitnije karakteristike molekulske funkcije su:\parencite{go_mf}
 \end{itemize}
 
 Postoji nekoliko standardnih definicija i šablon naziva koji se pripisuju genskom
-produktu $x$ (ili nekom enzimu): \parencite{go_mf}
+produktu $x$ (ili nekom enzimu) \parencite{go_mf}:
 \begin{itemize}
   \item \keyword{$x$ binding} - interreaguje selektivno i nekovalentno sa $x$
   \item \keyword{<enzyme> activity} - katalizuje reakciju (reakcija katalizovan od strane enzima)
@@ -244,7 +251,7 @@ informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 \begin{enumerate}
   \item \keyword{\swissprot}  sadrži visoko kvalitetne anotacije
     \keyword{neredundantnih} (termin je definisan u nastavku liste,
-    stavka\ref{red}) proteinskih sekvenci.  Informacije o sekvenci su dobijene
+    stavka \ref{red}) proteinskih sekvenci.  Informacije o sekvenci su dobijene
     iz postojeće literature, a automatski predviđene anotacije su ručno
     proverene i verifikovani od strane biokuratora (stručnjaci koji se brinu da
     podaci koji postanu deo SwissProt-a budu kvalitetni).  \swissprot kao baza
@@ -410,7 +417,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
   \item
     \swissprot takđe vrši predikcije neuređenih regiona koristeći \textit{DISOPRED2}
     i \textit{CLADIST} prediktore. \parencite{Meng_c2017}. Međutim, ove informacije
-    postale su irelevantne pojavom baza neuređenja \\ \textit{MobiDB}\parencite{Piovesan2017} i \textit{D2P2}\parencite{Oates2012}.
+    postale su irelevantne pojavom baza neuređenja \textit{MobiDB}\parencite{Piovesan2017} i \textit{D2P2}\parencite{Oates2012}.
 
   \item Zanimljiva zapažanja iz globalne statistike o \swissprot bazi:
     \begin{itemize}
