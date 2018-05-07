@@ -26,7 +26,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1916"
-     inkscape:window-height="1041"
+     inkscape:window-height="1161"
      id="namedview5340"
      showgrid="false"
      inkscape:zoom="1.7854063"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1607,7 +1607,7 @@
        sodipodi:role="line"
        id="tspan5344-62"
        x="325.19119"
-       y="181.75204">peptidna vez</tspan></text>
+       y="181.75204">peptidna veza</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:12px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#1c2224;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
