@@ -94,6 +94,7 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 
 \thesistitle{Bioinformatička analiza povezanosti funkcije i neuređenosti proteina} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+
 \supervisor{dr Jovana \textsc{Kovačević}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Master informatičar} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
@@ -235,34 +236,37 @@ doc. dr Jovana Kovačević \\
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 % The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
 
-U ovom radu istražena je korelacija između molekulske funkcije i neuređenosti
-odnosno uređenosti proteina. Istraživanje je inspirisano radom
-\textit{Xie et al. (2007)} \cite{Xie2007} u kojem je predložen statistički metod
-za evaluaciju korelacije neuređenosti proteina i njihove funkcije zadate
-prostom nomenkulatorm \swissprot ključnih reči.  Pored ključnih reči, naša
-istraživanja su dopunjena korišćenjem termina molekulske funkcije iz ontologije
-gena.  Zbog malog broja adekvatnih mapiranja između pomenutih nomenkulatura
-istraženo je nekoliko tehnika za pronalaženje nedostajućih veza od kojih
-predlažemo metod sličnih anotacija zasnovan na Žakardovom indeksu. Takođe,
-istražen je novi metod za procenu zavisnosti dužine i neuređenosti proteina
-zasnovan na slučajno generisanim proteinima, $P_Lrandom$.
 
-Preko 66 000 proteina preuzetih iz trening skupa \textit{CAFA3} takmičenja
-objedinjeno je \swissprot bazom podataka iz koje su preuzete funkcijske
-anotacije u obliku ključnih reči i termina ontologije gena.  Prediktor PONDR
-familije, VSL2b korišćen je za klasifikovanje proteina kao putativno uređenog
-ili neuređenog. Od 186 ključnih reči kategorije molekulske funkcije sa minimum
-20 anotiranih proteina, nađeno je da su 53 visoko korelirane sa uređenim
-proteinima, a 44 sa neuređenim. Na nivou termina ontolgoije gena, pod istim
-uslovima, od 1781 molekulske funkcije 699 visoko je korelirano sa uređenim
-proteinima, a 616 sa neuređenim. Na ovom nivou rezultati otkrivaju
-kompleksne roditeljske veze između funkcija koje predstavljamo grafovski.
-Komparacija navedenih nomenkulatura pokazala je konzistentnost u statističkoj
-značajnosti korelacije. Ipak, poređenje sa starim rezultatima (iz navedenog
-rada) pokazalo je određena nepoklapanje za molekulske funkcije korelirane sa
-neuređenim proteinima. Novi rezultati sadrže veći broj funkcija vezivanja koje
-se ne javljaju u starim rezultatima.  Dobijeni rezultati su kompleksni i
-potpuniji pa doprinose fundamentalnom znanju o molekulskim funkcijama. 
+
+Korelacija između molekulske funkcije proteina i inherentne neuređenosti
+predstavlja bitan aspekt izučavanja odnosa između: funkcije, sekvence i
+strukture. Ovo istraživanje je inspirisano statističkom metodom za ocenu
+korelacije predloženom od strane \textit{Xie et al.} \cite{Xie2007} gde autori
+izučavaju odnos između strukture i funkcije proteina iz \swissprot baze, a
+funkcije su opisane \swissprot ključnim rečima.  U ovom istraživanju, korišćen
+je drugi skup proteina (trening skup sa CAFA3 takmičenja), a funkcije su
+opisane terminima molekulske funkcije iz ontologije gena (GO).  Rezultati su
+upoređeni sa originalnim radom tako što je analiza prvo ponovljena sa
+\swissprot ključnim rečima, a zatim sa GO terminima.  Prediktor PONDR VSL2b
+korišćen je za karakterizaciju preko 66000 CAFA3 proteina kao putativno
+uređenih ili neuređenih, dok su funkcijske anotacije (ključne reči i GO
+termini) preuzete iz \swissprot baze.  Od 186 ključnih reči kategorije
+molekulske funkcije sa minimum 20 anotiranih proteina, nađeno je da su 53
+korelirane sa uređenim proteinima, a 44 sa neuređenim. Pod istim uslovima, od
+od 1781 GO termina molekulske funkcije  699 je korelirano sa uređenim
+proteinima, a 616 sa neuređenim. Rezultati GO termina predstavljeni su kao
+interaktivni grafovi koji prikazuju kompleksnu hijerarhijsku strukturu
+ontologije gena.  Komparacija dve funkcijske nomenklature, GO i ključne reči,
+pokazala je konzistentne rezultate za adekvatna mapiranja. Međutim,
+komparacija originalnih i novih rezultata otkrila je da funkcije koje opisuju
+molekulsko vezivanje preovlađuju među novim rezultatima (neuređenih funkcija)
+dok se u starim rezultatima ne javljaju.  Zbog malog broja poznatih veza u
+mapiranju između ključnih reči i GO termina, predlažemo novu metodu za
+izvođenje najverovatnijih nedostajućih veza tako što se verovatnoća ocenjuje
+sličnošću (Žakardov indeks) između skupova proteina anotiranih različitim
+funkcijama.  Takođe, pokazano je da se korelacija između dužine proteina i
+putativne neuređenosti može aproksimirati slučajno generisanim proteinskim
+sekvencama.
 
 
 
