@@ -9,7 +9,7 @@
 Povezivanje CAFA3 proteina sa \swissprot unosima je jedini način da se dođe do
 anotacija ključnim rečima. Takođe, dobijamo najnovije anotacije GO termina ali
 i dodatne informacije, na primer taksonomsko poreklo proteina koje pomaže
-razumevanju skupa podataka.
+u razumevanju skupa podataka.
 
 Iz CAFA3 trening skupa izdvojeni su svi validni proteini ( dužine barem 9 i
 azbuke od 20 standardnih aminokiselina). U ovom koraku ne izbacujemo proteine
@@ -83,8 +83,8 @@ Ako je GO termin $A$ potomak GO termina $B$ tj. važi $A$ \textit{is\_a} $B$ i
 $A$ (i time pripadaju skupu $S_A$) treba da budu sadržani i u skupu $S_B$.
 Primetili smo da anotacije ključnih reči već podrazumevaju predloženo grupisanje.
 Na primer, ključna reč \textit{Ribosomalprotein} anotira 1420 proteina, a
-njen predak (uopštenje) \textit{Ribonucleoprotein} takodje anotira pomenutih 1420 proteina.
-Anotacije GO terminima ne podrazumevaju ovako grupisanje već anotacije što
+njen predak (uopštenje) \textit{Ribonucleoprotein} takođe anotira pomenutih 1420 proteina.
+Anotacije GO terminima ne podrazumevaju ovako grupisanje već anotacije koje
 preciznije odgovaraju funkciji proteina. 
  
 Za implementaciju predloženog grupisanje koristili smo algoritam topološkog
@@ -170,8 +170,8 @@ reči sa potencijalno preko 11 000 MF termina. Potrebno je odabrati dovoljno
 opšte MF termine, takve da čine reprezentativan uzorak molekulskih funkcija i
 da njihovo sortiranje po Z-skoru (kao u originalnom radu) ima smisla.  Biće
 predložena dva pristupa za automatsko biranje opisanih MF termina dok je ručni
-odabir izvan obima ovoga rada.  Oba pristupa imaju sličnu ideju, izdvojiti samo
-one MF termine koji su pridruženi MF ključnim rečima. Međutim, kako polovina MF
+odabir izvan obima ovoga rada.  Oba pristupa imaju sličnu ideju koja podrazumeva izdvajanje samo 
+onih MF termina koji su pridruženi MF ključnim rečima. Međutim, kako polovina MF
 mapiranja nedostaje (Tabela \ref{tab:direktna_map}), neophodno je dopuniti
 nedostajuća mapiranja zarad smislenosti poređenja.  Automatski metodi koje ćemo
 predložiti razlikuju se u načinu pronalaženja ovih nedostajućih mapiranja.
@@ -187,14 +187,15 @@ reči.
 
 Rezonujući nad relacijama ontologije gena, moguće je doći do
 \keyword{indirektnih mapiranja} koja preko BP ili CC termina vode ka MF
-terminima. Relacije \keyword{part\_of} i \keyword{has\_part} povezuju BP ili CC
-sa MF terminima, ipak ove veze ne postoje uvek.  Traženje indirektnih mapiranja
-izvršeno je korišćenjem \keyword{Neo4j} grafovkse baze. Za sve
-ljubičaste BP termine sa Slike \ref{fig:KWtop20dis} i sve njihove
+terminima. Neki MF termini su relacijama \keyword{part\_of} i
+\keyword{has\_part} povezani sa BP ili CC terminima, mada postoje MF termini
+koji nikako nisu povezani sa terminima ostalih  ontologija. Traženje
+indirektnih mapiranja izvršeno je korišćenjem \keyword{Neo4j} grafovkse baze.
+Za sve ljubičaste BP termine sa Slike \ref{fig:KWtop20dis} i sve njihove
 specijalizacije provereno je da li su nekom (bilo kojom) relacijom u vezi sa
 nekim (bilo kojim) MF terminom. Pronađena je samo jedno indirektno mapiranje,
-zajedničko za MF ključne reči \textit{Neuropeptide} i \textit{Endorphin}. Za tri
-pomenuta CC termina indirektna mapiranja nisu pronađena. 
+zajedničko za MF ključne reči \textit{Neuropeptide} i \textit{Endorphin}. Za
+tri pomenuta CC termina indirektna mapiranja nisu pronađena. 
 
 
 Razmotrimo pronađeno mapiranje za MF ključnu reč \textit{Neuropeptide} i
@@ -284,7 +285,7 @@ sirove anotacije iz \swissprot baze.  Za $kw_A$ najverovatnije
 mapiranje predstavlja MF termin $t_B$, takav da je Žakardov indeks $J(A,B)$
 najveći. Ipak, ne treba očekivati da će najveći Žakardov indeks nužno značiti i
 najpogodnije mapiranje. Iz tog razloga potrebno je  sagledavati nekoliko
-najboljih predloga za mapiranje, sortiranih opadajuće po veličini žakardovog
+najboljih predloga za mapiranje, sortiranih opadajuće po veličini Žakardovog
 indeksa. Mapiranja dobijena ovim postupkom zvaćemo \keyword{izvedena
 mapiranja}.
 
@@ -389,7 +390,7 @@ mapiranja sa Slike \ref{fig:KWtop20dis}.
   % \hline
 
 \end{tabular}
-  \caption{Izvedena mapiranja\\ \small 
+  \caption{Izvedena mapiranja \small 
   (\textit{n\_kw} i \textit{n\_go} obeležavaju arnost skupa proteina koje anotira MF ključna reč i skupa proteina koje anotira MF termin) }
   \label{tab:izvedeno_mapiranje}
 \end{table}
