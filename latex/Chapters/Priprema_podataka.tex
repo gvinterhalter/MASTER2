@@ -11,10 +11,10 @@ anotacija ključnim rečima. Takođe, dobijamo najnovije anotacije GO termina al
 i dodatne informacije, na primer taksonomsko poreklo proteina koje pomaže
 u razumevanju skupa podataka.
 
-Iz CAFA3 trening skupa izdvojeni su svi validni proteini ( dužine barem 9 i
+Iz CAFA3 trening skupa izdvojeni su svi validni proteini (dužine barem 9 i
 azbuke od 20 standardnih aminokiselina). U ovom koraku ne izbacujemo proteine
-kraće od 40 AK.  Informacije o \swissprot bazi podataka dobijene su iz verzije
-2017\_12, iz datoteke \file{uniprot\_sprot-only2017\_12.tar.gz} \cite{sprot}.
+kraće od 40 AK.  Sadržaj \swissprot baze 
+dobijen je iz datoteke \file{uniprot\_sprot-only2017\_12.tar.gz} \cite{sprot}.
 Navedena verzija sadrži 556 196 proteina.  Od 66 599 validnih CAFA3 proteina 66
 530 ima nepromenjen \keyword{primarni identifikator}, ali 69 slogova u
 \swissprot bazi sadrže nedostajuće CAFA3 identifikatore kao sekundarne. Kao što
@@ -33,7 +33,7 @@ mehanizma:
   \centering
   \includegraphics[scale=2]{plots/unifikacija_slogova2.eps}
   \decoRule
-  \caption{Unifikacija starih(elipse) na nove slogove u \swissprot bazi podataka}
+  \caption{Unifikacija starih (elipse) na nove slogove u \swissprot bazi}
   \label{fig:unifikacija_slogova}
   \end{figure}
 
@@ -87,7 +87,7 @@ njen predak (uopštenje) \textit{Ribonucleoprotein} takođe anotira pomenutih 14
 Anotacije GO terminima ne podrazumevaju ovako grupisanje već anotacije koje
 preciznije odgovaraju funkciji proteina. 
  
-Za implementaciju predloženog grupisanje koristili smo algoritam topološkog
+Za implementaciju predloženog grupisanja koristili smo algoritam topološkog
 sortiranja. Ovako formirani skupovi koji sadrže manje od 20 proteina nisu bili
 od značaja za dalju analize zbog čega su odbačeni.
 Ovom metodom dobijeno je 1781\footnote{Bez ovog grupisanja imali bi samo 1146
@@ -139,7 +139,7 @@ redom 104, 54 i 11. Dakle, veliki broj mapiranja ka MF terminima nedostaje.
 \end{table}
 
 Nedostajuća direktna MF mapiranja pogotovo dolaze do izražaja za neuređene
-klju- čne reči.  Slika \ref{fig:KWtop20dis} prikazuje direktna mapiranja za 20
+ključne reči.  Slika \ref{fig:KWtop20dis} prikazuje direktna mapiranja za 20
 najznačajnijih neuređenih MF ključnih reči preuzetih iz originalnog rada
 \parencite{Xie2007}.  Tri ključne reči nemaju direktno mapiranje, dve se
 mapiraju na ćelijske komponente, osam na biološke procese i svega šest na
@@ -235,7 +235,7 @@ kontekstima. Zapravo, šablonski naziv pronađenog MF termina (po pravilima iz
 Potpoglavlja \ref{MF}) označava da se termin koristi za anotiranje proteina
 koji se \textit{vezuju za neuropeptid zarad inicijacije neke ćelijske
 funkcije}, a ne samih neuropeptida. Takođe, treba primetiti da je pronađeni MF
-termina povezan na BP termin relacijom \keyword{part\_of}.  Ovo može da
+termin povezan na BP termin relacijom \keyword{part\_of}.  Ovo može da
 predstavlja još jedan razlog zašto je pronađeno mapiranje nevalidno.  Veza
 \keyword{part\_of} podrazumeva agregaciju a ne kompoziciju. Agregacija
 podrazumeva da  molekulska funkcija postoji nezavisno od biološkog procesa što
@@ -280,7 +280,7 @@ $$  J(A,B) \in [0, 1] $$
 Za realizaciju ove metode korišćeni su svi proteini iz \swissprot baze, ne samo
 CAFA3 podskup.  Neka skup $A$ predstavlja proteine koje MF ključna reč $kw_A$
 anotira a skup $B$ proteine koje anotira MF termin $t_B$.  Zbog jednostavnosti,
-skup B nije dobijen grupisanjem opisanim u Potpoglavlju \ref{grupisanje}, dakle ne sadrži proteine specifične za potomake termina $t_B$ već samo
+skup B nije dobijen grupisanjem opisanim u Potpoglavlju \ref{grupisanje}, dakle ne sadrži proteine specifične za potomke termina $t_B$ već samo
 sirove anotacije iz \swissprot baze.  Za $kw_A$ najverovatnije
 mapiranje predstavlja MF termin $t_B$, takav da je Žakardov indeks $J(A,B)$
 najveći. Ipak, ne treba očekivati da će najveći Žakardov indeks nužno značiti i
@@ -294,7 +294,7 @@ direktnim mapiranjem.  Za svaku ključnu reč izdvojili smo maksimum pet
 najverovatnijih izvedenih mapiranja. Izvedna mapiranja sa najvećim Žakardovim
 indeksom poklapaju se sa poznatim direktnim mapiranjima za 61 ključnu reč
 ($0.59\%$). Ručnom validacijom tj. razmatranjem izvedenih mapiranja nižeg
-žakardovog indeksa moguće je povećati broj korektnih mapiranja na 90
+Žakardovog indeksa moguće je povećati broj korektnih mapiranja na 90
 ($0.85\%$).
 
 Opisani metod uz razmatranje maksimum 5 najpogodnijih izvedenih mapiranja
