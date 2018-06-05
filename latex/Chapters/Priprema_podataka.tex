@@ -67,7 +67,7 @@ sumirane su  Tabelom \ref{tab:godiff}
   \label{tab:godiff}
 \end{table}
 
-Dodatno, \swissprot sadrži 194 proteina čije se sekvence razlikuje u
+Dodatno, \swissprot sadrži 194 proteina čije se sekvence razlikuju u
 odnosu na CAFA3 verziju proteina. Odlučili smo da zadržimo originalne CAFA3
 sekvence.
 
@@ -76,15 +76,17 @@ sekvence.
 
 Kao što je bilo reči u Sekciji \ref{ocenjivanje} sa $S_A$ označavamo skup
 proteina koji obavljaju funkciju $A$, odnosno funkcija $A$ anotira proteine
-grupisane skupom $S_A$.
-Ako je GO termin $A$ potomak GO termina $B$ tj. važi $A$ \textit{is\_a} $B$ i
-želimo da diskutujemo o funkciji $B$, onda i svi proteini koji imaju funkciju
-$A$ (i time pripadaju skupu $S_A$) treba da budu sadržani i u skupu $S_B$.
-Primetili smo da anotacije ključnih reči već podrazumevaju predloženo grupisanje.
-Na primer, ključna reč \textit{Ribosomalprotein} anotira 1420 proteina, a
-njen predak (uopštenje) \textit{Ribonucleoprotein} takođe anotira pomenutih 1420 proteina.
-Anotacije GO terminima ne podrazumevaju ovako grupisanje već anotacije koje
-preciznije odgovaraju funkciji proteina. 
+grupisane skupom $S_A$.  Ako je GO termin $A$ potomak GO termina $B$ tj. važi
+$A$ \textit{is\_a} $B$ i želimo da diskutujemo o funkciji $B$, onda i svi
+proteini koji imaju funkciju $A$ (i time pripadaju skupu $S_A$) treba da budu
+sadržani i u skupu $S_B$.  Primetili smo da anotacije ključnih reči već
+podrazumevaju predloženo grupisanje.  Na primer, ključna reč
+\textit{Ribosomalprotein} anotira 1420 proteina, a njen predak (uopštenje)
+\textit{Ribonucleoprotein} takođe anotira pomenutih 1420 proteina, plus
+dodatnih 478.  Anotacije GO terminima ne podrazumevaju ovakvo grupisanje u
+eksplicitnom smislu.  preciznije, zbog granularnosti ontologije bilo bi suviše
+redundantno ponavljati antoacije za svakog pretka termina.  Primer se može
+videti na Slici \ref{fig:neuropeptide} iz Potpoglavlja \ref{kw2go_mapiranje}.
  
 Za implementaciju predloženog grupisanja koristili smo algoritam topološkog
 sortiranja. Ovako formirani skupovi koji sadrže manje od 20 proteina nisu bili
@@ -100,14 +102,14 @@ AK.
 \section{Mapiranje između GO termina i \swissprot ključnih reči}
 \label{kw2go_mapiranje}
 
-Kako je ovo istraživanje ograničeno na molekulske funkcije, u daljem tekstu biće
-razmatrana mapiranja isključivo između ključnih reči kategorije MF koje zovemo
-\keyword{MF ključne reči} i GO termina imenskog prostora MF koje zovemo
+Kako je ovo istraživanje ograničeno na molekulske funkcije, u daljem tekstu
+biće razmatrana mapiranja isključivo između ključnih reči kategorije MF koje
+zovemo \keyword{MF ključne reči} i GO termina iz prostora imena MF koje zovemo
 \keyword{MF termini}. Pokazaćemo da ovo nije trivijalan zadatak i da u opštem
-slučaju zbog razlika u nomenklaturi mapiranje ne postoji ili nije ekvivalentno
-originalnoj funkciji.
+slučaju zbog razlika u nomenklaturi mapiranje ne postoji ili da pronađene
+funkcije nisu uvek ekvivalentne.
 
-U originalnom radu navodi se da je \swissprot baza sadržala 143 MF ključne
+U referentnom radu navodi se da je \swissprot baza sadržala 143 MF ključne
 reči.  Datoteka \file{keywlist.txt} \cite{keywlist_txt} iz 20.12.2017 sadrži
 195 MF ključnih reči.  Nažalost, nismo pronašli originalnu \file{keywlist.txt}
 datoteku pa  ne znamo egzaktnu razliku, ali jasno je da su neke ključne reči
@@ -137,37 +139,40 @@ redom 104, 54 i 11. Dakle, veliki broj mapiranja ka MF terminima nedostaje.
   \label{tab:direktna_map}
 \end{table}
 
-Nedostajuća direktna MF mapiranja pogotovo dolaze do izražaja za neuređene
-ključne reči.  Slika \ref{fig:KWtop20dis} prikazuje direktna mapiranja za 20
-najznačajnijih neuređenih MF ključnih reči preuzetih iz originalnog rada
+Nedostajuća direktna MF mapiranja pogotovo dolaze do izražaja kod neuređenih MF
+ključnih reči (Definicija \ref{neuredjena_funkcija}) .Slika
+\ref{fig:KWtop20dis} prikazuje direktna mapiranja za 20 statistički
+najznačajnijih neuređenih MF ključnih (Definicija \ref{stat_naj}) reči preuzetih iz referentnog rada
 \parencite{Xie2007}.  Tri ključne reči nemaju direktno mapiranje, dve se
 mapiraju na ćelijske komponente, osam na biološke procese i svega šest na
 molekulske funkcije dok ključna reč \textit{Antigen} više ne postojii. Sa druge
-strane, od 20 uređenih MF ključnih reči samo jednoj fali direktno mapiranje.
+strane, od 20 statistički najznačajnijih uređenih MF ključnih reči iz
+referentnog rada samo jednoj fali direktno mapiranje.
 
 \begin{figure}[!th]
 \hspace*{-2.2cm} 
 \includegraphics[scale=1]{Figures/plots/kw_dis2go.pdf}
 \decoRule
 \caption {
-  Direktno mapiranje 20 najznačajnijih neuređenih MF ključnih reči \parencite{Xie2007}
-  na GO termine.  Statistički značajne ključne reči su ljubičaste dok radi
-  kompletnosti navodimo neke njihove specijalizacije i generalizacije koje su
-  obojene sivo. GO termini su predstavljeni manjim kružićima.
+  Direktno mapiranje 20 statistički najznačajnijih neuređenih MF ključnih reči
+  \parencite{Xie2007} na GO termine.  Statistički najznačajne ključne reči su
+  ljubičaste dok radi kompletnosti navodimo neke njihove specijalizacije i
+  generalizacije koje su obojene sivo. GO termini su predstavljeni manjim
+  kružićima.
 }
 \label{fig:KWtop20dis}
 \end{figure}
 
 Nedostajuća MF mapiranja (skoro polovina MF ključnih reči) ne samo da otežavaju
 poređenje pojedinačnih ključnih reči već predstavljaju metodološki problem za
-poređenje nomenklatura.  Originalni rezultati su sortirani prema statističkoj
+poređenje nomenklatura.  Referentni rezultati su sortirani prema statističkoj
 značajnosti (Z-skor za $F_j$) i predstavljaju dve tabele od 20 statistički
 najznačajnijih neuređenih odnosno 20 uređenih MF ključnih reči zanemarujući
 roditeljski odnos između njih. Na nivou ključnih reči ovo nije problem, ali ako
 bi se isti postupak primenio na MF termine poredili bi manje od 200 ključnih
 reči sa potencijalno preko 11 000 MF termina. Potrebno je odabrati dovoljno
 opšte MF termine, takve da čine reprezentativan uzorak molekulskih funkcija i
-da njihovo sortiranje po Z-skoru (kao u originalnom radu) ima smisla.  Biće
+da njihovo sortiranje po Z-skoru (kao u referentnom radu) ima smisla.  Biće
 predložena dva pristupa za automatsko biranje opisanih MF termina dok je ručni
 odabir izvan obima ovoga rada.  Oba pristupa imaju sličnu ideju koja podrazumeva izdvajanje samo 
 onih MF termina koji su pridruženi MF ključnim rečima. Međutim, kako polovina MF
@@ -192,7 +197,7 @@ koji nikako nisu povezani sa terminima ostalih  ontologija. Traženje
 indirektnih mapiranja izvršeno je korišćenjem \keyword{Neo4j} grafovkse baze.
 Za sve ljubičaste BP termine sa Slike \ref{fig:KWtop20dis} i sve njihove
 specijalizacije provereno je da li su nekom (bilo kojom) relacijom u vezi sa
-nekim (bilo kojim) MF terminom. Pronađena je samo jedno indirektno mapiranje,
+nekim (bilo kojim) MF terminom. Pronađeno je samo jedno indirektno mapiranje,
 zajedničko za MF ključne reči \textit{Neuropeptide} i \textit{Endorphin}. Za
 tri pomenuta CC termina indirektna mapiranja nisu pronađena. 
 
@@ -261,7 +266,7 @@ koji predstavlja zajedničku molekulsku funkciju za skup proteina anotiran
 polaznom MF ključnom reči.  U cilju pronalaženja takvih MF termina predlažemo
 jednostavan metod zasnovan na sličnosti skupova.
 
-\section{Metod sličnih anotacija}
+\subsection{Metod sličnih anotacija}
 
 \keyword{Metod sličnih anotacija} pretpostavlja da dve ekvivalentne funkcije (iz dve
 različite nomenklature) anotiraju sličan skup proteina.  Jedan način da se
@@ -292,9 +297,9 @@ Pouzdanost predloženog metoda testirana je nad 104 MF ključne reči sa poznati
 direktnim mapiranjem.  Za svaku ključnu reč izdvojili smo maksimum pet
 najverovatnijih izvedenih mapiranja. Izvedna mapiranja sa najvećim Žakardovim
 indeksom poklapaju se sa poznatim direktnim mapiranjima za 61 ključnu reč
-($0.59\%$). Ručnom validacijom tj. razmatranjem izvedenih mapiranja nižeg
+($0.59$). Ručnom validacijom tj. razmatranjem izvedenih mapiranja nižeg
 Žakardovog indeksa moguće je povećati broj korektnih mapiranja na 90
-($0.85\%$).
+($0.85$).
 
 Opisani metod uz razmatranje maksimum 5 najpogodnijih izvedenih mapiranja
 primenili smo nad 91 MF ključnu reč sa nedostajućim direktnim mapiranjem.

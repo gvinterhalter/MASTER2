@@ -13,12 +13,12 @@ značajno od čega su 53 predviđeno uređene (p<0.05), a 44 predviđeno neuređ
 (p>0.95).  Od 1781 MF termina sa preko 20 pridruženih proteina (dobijeno
 grupisanjem, Potpoglavnje \ref{grupisanje}), 1315 je statistički značajno od
 čega su 699 predviđeno uređeni, a 616 predviđeno neuređeni.  Tabela
-\ref{tab:kw_uopsteno} prikazuje razlike u odnosu na originalne rezultate.
+\ref{tab:kw_uopsteno} prikazuje razlike u odnosu na referentne rezultate.
 
 \begin{table}[htpb]
 \begin{tabular}{|r|c|c|c|}
   \hline
-                     & \small originalni rezultati  & \multicolumn{2}{c|}{ novi rezultati} \\
+                     & \small referentni rezultati  & \multicolumn{2}{c|}{ novi rezultati} \\
                      & Xie2007 kw & MF kw  & MF termini                  \\
   \hline
   ukupno ($br. prot\ge20$)     & 143        & 186    & 1781                        \\
@@ -32,7 +32,7 @@ grupisanjem, Potpoglavnje \ref{grupisanje}), 1315 je statistički značajno od
 \end{table}
 
 Slika \ref{fig:disorder_cmp} sadrži tri tabele predviđeno neuređenih funkcija
-koje sadrže: rezultate iz originalnog rada \cite{Xie2007} (levo), nove
+koje sadrže: rezultate iz referentnog rada (levo), nove
 rezultate za MF ključne reči (sredina) i rezultate za mapirane MF termine
 (desno). Sve tabele su sortirane po z-skoru opadajuće (statistička značajnost
 predviđene neuređenosti opada).  Leva tabela sadrži samo 20 statistički
@@ -53,7 +53,7 @@ zbog ograničenja formata slike neke tabele su skraćene.
 
 Slike \ref{fig:order_cmp} i \ref{fig:order_cmp_ab}  imaju ekvivalentan format
 poređenja kao i Slike \ref{fig:disorder_cmp} i \ref{fig:disorder_cmp_ab}, ali
-predstavljaju sortirane uređene funkcije.
+predstavljaju uređene funkcije.
 
 
 
@@ -161,25 +161,25 @@ vrednosti.
 
 \section{Međusobno upoređivanje MF ključnih reči}
 
-Razmotrimo prvo Sliku \ref{fig:order_cmp_ab}a koja pokazuje da se originalni
+Razmotrimo prvo Sliku \ref{fig:order_cmp_ab}a koja pokazuje da se referentni
 rezultati i novi rezultati ne razlikuju bitno za predviđeno uređene MF ključne
 reči. Međutim, razlike koje postoje kao i veći izuzeci (\textit{Kinase} i
 \textit{Aminoacyl-tRNA synthetase})  mogu biti posledica drugačijih podataka,
-ali i modifikacije metoda originalne analize ili čak kombinacije oba faktora.
-Pronalaženje egzaktnog uzorka ovih razlika zahteva dodatno istraživanje koje
+ali i modifikacije metoda referentne analize ili čak kombinacije oba faktora.
+Pronalaženje egzaktnog uzroka ovih razlika zahteva dodatno istraživanje koje
 prevazilazi obim ovog rada.
 
 Sa druge strane, predviđeno \keyword{neuređene} MF ključne reči prikazane na
 Slici \ref{fig:disorder_cmp_ab}a imaju znatno više razlika u odnosu na
-originalne rezultate.  Šest originalnih MF ključnih reči nije identifikovano u
+referentne rezultate.  Šest referentnih MF ključnih reči nije identifikovano u
 novim rezultatima. Ipak, \textit{Antigen} u novoj verziji ključnih reči ne
 postoji dok su četiri ključne reči izbačene iz analize jer anotiraju ispod 10
 CAFA3 proteina (minimum je 20).  Preostala, crvena MF ključna reč
-\textit{Cytokine} ima p vrednost 0.49 što je veliko odstupanje od originalnih
+\textit{Cytokine} ima p vrednost 0.49 što je veliko odstupanje od referentnih
 rezultata. Značajnu razliku predstavljaju zeleno obeležene MF ključne reči koje
-se ne javljaju u originalnim rezultatima, a nalaze se među 20 statistički
+se ne javljaju u referentnim rezultatima, a nalaze se među 20 statistički
 najznačajnijih novih rezultata. Među njima je preovlađujući motiv \textit{binding}, 
-što se ne poklapa sa originalnim rezultatima. Za razliku od GO termina,
+što se ne poklapa sa referentnim rezultatima. Za razliku od GO termina,
 ključne reči ne sadrže datum dodavanja ili izmene pa ne možemo da proverimo da
 li su u pitanju nove ključne reči koje nisu postojale 2006. godine.
 
@@ -249,7 +249,7 @@ suviše mali procenat proteina u CAFA3 podksupu pa je opravdano zanemariti ih.
 Međutim, procentualno \swissprot sadrži značajno više kratkih proteina što nas
 navodi da istaknemo ovaj problem.
 
-\section{Nastavak istraživanja}
+\section{Zaključak}
 
 Razvoj novih metaprediktora neuređenosti \cite{Meng_c2017} svakako je razlog za
 nastavak istraživanja. Testiranje novih metoda analize, korišćenje drugih,
