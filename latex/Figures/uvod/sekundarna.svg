@@ -61,13 +61,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="1023.0204"
-     inkscape:cy="265.61321"
+     inkscape:cx="450.5204"
+     inkscape:cy="173.47035"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1916"
-     inkscape:window-height="1041"
+     inkscape:window-height="1161"
      inkscape:window-x="0"
      inkscape:window-y="37"
      inkscape:window-maximized="0"
@@ -83,7 +83,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -147,7 +147,7 @@
          id="tspan13191-6"
          x="-446.23975"
          y="437.59137"
-         style="font-size:20px">antiparalelna β ploča </tspan></text>
+         style="font-size:20px">antiparalelna β traka </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -159,7 +159,7 @@
          id="tspan13191"
          x="-668.57141"
          y="437.36221"
-         style="font-size:20px">paralelna β ploča </tspan></text>
+         style="font-size:20px">paralelna β traka </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6a3588;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

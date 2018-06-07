@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="191.1716mm"
-   height="171.4868mm"
-   viewBox="0 0 677.37969 607.63041"
+   width="189.17159mm"
+   height="169.48679mm"
+   viewBox="0 0 670.29302 600.54374"
    id="svg77861"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -529,21 +529,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="78.185021"
-     inkscape:cy="218.47479"
+     inkscape:zoom="0.70000001"
+     inkscape:cx="367.83177"
+     inkscape:cy="175.64219"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1596"
      inkscape:window-height="861"
      inkscape:window-x="0"
-     inkscape:window-y="37"
+     inkscape:window-y="1237"
      inkscape:window-maximized="0"
-     fit-margin-top="1"
-     fit-margin-right="1"
-     fit-margin-bottom="1"
-     fit-margin-left="1" />
+     fit-margin-top="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     fit-margin-left="0" />
   <metadata
      id="metadata77866">
     <rdf:RDF>
@@ -552,7 +552,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -560,7 +560,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-21.109316,-220.0538)">
+     transform="translate(-24.652654,-223.5971)">
     <path
        style="opacity:0.19899998;fill:#1268ea;fill-opacity:1;fill-rule:nonzero;stroke:#0041b2;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 221.07547,653.22938 101.1632,0.12256 c 15.10985,0.0183 26.76904,15.14018 26.76904,30.80968 l 0,78.79184 c 0,15.6695 -12.16426,28.2843 -27.27412,28.2843 l -104.5508,0 c -15.10986,0 -27.27411,-12.6148 -27.27411,-28.2843 l 0,-78.79184 c 0,-15.6695 16.05693,-30.95054 31.16679,-30.93224 z"
@@ -3308,7 +3308,8 @@
          sodipodi:role="line"
          x="33.254536"
          y="663.21887"
-         id="tspan93991">Mapiranje ne postoji</tspan></text>
+         id="tspan93991"
+         style="font-size:12.50000149px">Preslikavanje ne postoji</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3323,7 +3324,7 @@
          sodipodi:role="line"
          x="46.42857"
          y="296.91577"
-         id="tspan93452">mapiranja</tspan></text>
+         id="tspan93452">preslikavanja</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3380,7 +3381,7 @@
        id="path93995"
        cx="69.520309"
        cy="618.05109"
-       r="26.428572" />
+       r="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:35.32971954px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

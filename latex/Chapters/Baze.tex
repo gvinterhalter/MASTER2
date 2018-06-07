@@ -8,14 +8,13 @@ poznate kao \keyword{tehnologije velike propusnosti} \en{high throughput
 technology }. Primera radi, tehnologije \keyword{sekvenciranja nove generacije}
 \en{Next-Generation Sequencing} ili skraćeno \keyword{NGS} neprekidno napreduju
 spuštajući cenu čitanja genoma i eksponencijalno povećavajući količinu dostupnih
-sekvenci. Da bi se razumeo uticaj NGS tehnologije navodimo sledeći primer.
-Od sveže sekvencionisanih nepoznatih genoma predviđaju se
-potencijalni geni, a od gena potencijalne proteinske sekvence.  Dobijene
-proteinske sekvence mogu se dalje klasterovati u familije, automatski
-anotirati, predviđati im se struktura, osobine itd.  Zatim, moguće je uraditi
-analize za oktrivanje novih bioloških znanja. Povezanost između funkcije i
-neuređenosti proteina je jedan primer biološkog znanja. 
-Ovaj primer ilustruje dve bitne stvari:
+očitanih sekvenci. Da bi se razumeo uticaj NGS tehnologije navodimo sledeći
+primer.  Od sveže sekvencionisanih nepoznatih genoma predviđaju se potencijalni
+geni, a od gena potencijalne proteinske sekvence.  Dobijene proteinske sekvence
+mogu se dalje klasterovati u familije, automatski anotirati, predviđati im se
+struktura, osobine itd.  Zatim, moguće je uraditi analize za oktrivanje novih
+bioloških znanja. Povezanost između funkcije i neuređenosti proteina je jedan
+primer biološkog znanja.  Ovaj primer ilustruje dve bitne stvari:
 \begin{enumerate}
   \item Eksponencijalni rast podataka uvodi bioinformatiku u oblast \textit{Big Data},
     posebno njene discipline poznate pod nazivom omike (na primer, genomike, proteomika itd.)
@@ -38,13 +37,14 @@ drugim bazama podataka (tzv. dbxref \en{database cross reference}) pokušavajuć
 da međusobno povežu sve dostupne informacije. Konkrentno \uniprotkb (feb. 2018)
 održava reference ka čak 164 različite baze
 podataka\footnote{\url{www.uniprot.org/docs/dbxref}}.  Dakle, bioinformatika
-kao disciplina podrazumeva da će analize biti obavljene kombinacijom informacija
-nekoliko različitih baza.  Zbog raznovrsnosti i svrhe prikupljenih informacija
-postoji veliki broj kategorija\footnote{Baze podataka ne pripadaju ekskluzivno
-samo jednoj kategoriji}(vrsta) baza. Na adresi \cite{dbSummary2015} autori Čen, Huang i Vu
-kategorizovali su i prikazali novije, javno dostupne i visoko kvalitetne
-proteinski orijentisane baze podataka (prikazana lista nije iscrpna) \parencite{Chen2017}.
-Za temu ovog rada od značaja su naredne tri kategorije:
+kao disciplina podrazumeva da će analize biti obavljene kombinacijom informacija koje
+potiču iz nekoliko različitih baza.  Zbog raznovrsnosti i svrhe prikupljenih
+informacija postoji veliki broj kategorija\footnote{Baze podataka ne pripadaju
+ekskluzivno samo jednoj kategoriji.} (vrsta) baza. Na adresi \cite{dbSummary2015}
+autori Čen, Huang i Vu kategorizovali su i prikazali novije, javno dostupne i
+visoko kvalitetne proteinski orijentisane baze podataka (prikazana lista nije
+iscrpna) \parencite{Chen2017}.  Za temu ovog rada od značaja su naredne tri
+kategorije:
 
 \begin{itemize}
   \item Baze sekvenci.\\ 
@@ -70,11 +70,11 @@ produkta (protein, nekodirajuća RNK ili makromolekulski kompleks)
 GO baza sačinjena je iz dve komponente:
 \begin{enumerate}
   \item \keyword{Ontologije gena} - definiše skup termina, takozvanih
-    \keyword{GO termina} \en{GO terms} i njihove međusobne relacije.
+    \keyword{GO-termina} \en{GO-terms} i njihove međusobne relacije.
   \item \keyword{GO anotacije} - pridruživanje termina ontologije genskim produktima.
 \end{enumerate}
 
-GO termini predstavljaju biološke
+GO-termini predstavljaju biološke
 termine (koncepte) koji opisuju funkciju. Ontologija gena sagledava funkciju
 genskog produkta iz tri aspekta koji se u terminologiji ontologije nazivaju
 prostori imena \en{namespace}:
@@ -82,7 +82,7 @@ prostori imena \en{namespace}:
   \item \keyword{Molekulska funkcija (MF)} je biohemijska aktivnost (uključujući
     specifično vezivanje za ligande\footnote{
       U ovom kontekstu ligand je protein koji se vezuje za receptor u cilju
-      izvršavanja biološke funkcije. Termin podrazumeva vezivanje \en{binding}
+      izvršavanja biološke funkcije. Termin podrazumeva vezivanje \en{binding}.
     } ili strukture) genskog produkta.
   \item \keyword{Ćelijske komponente  (CC)} se odnosi na mesto u ćeliji gde je
     genski produkt aktivan.
@@ -101,18 +101,18 @@ organizama, ontologija gena \parencite{GO2000}.
 % nastao je sa ciljem da  objedini biologiju pod jedan skup termina za opis
 % genskih proizvoda svih vrsta organizama \parencite{GO2000}.
 
-\subsection{GO termin}
+\subsection{GO-termin}
 
-Skup GO termina se stalno menja. GO termin može biti zastareo i tada se
+Skup GO-termina se stalno menja. GO-termin može biti zastareo i tada se
 relacijom \keyword{replaced\_by} pokazuje na noviji termin. Relacija
 \keyword{consider} ukazuju na postojanje mogućih ekvivalentnih termina. Pored
 glavnog skupa termina postoje i podskupovi\footnote{Uglavnom ovi podskupovi
-predstavljaju model organizme} termina tzv. \textit{GO slim}. U donjem desnom
+predstavljaju model organizme.} termina tzv. \textit{GO slim}. U donjem desnom
 delu Slike \ref{fig:kinase} prikazani su \textit{GO slim} podskupovi.
 
-GO termini takođe sadrže informacije kao sto su definicija, komentar, autor, datum
+GO-termini takođe sadrže informacije kao sto su definicija, komentar, autor, datum
 nastanka, sinonimi itd. Pored ovih informacija takođe postoje reference ka
-drugim veb stranama i bazama podataka često vezanih uz definiciju.  Uz GO termin
+drugim veb stranama i bazama podataka često vezanih uz definiciju.  Uz GO-termin
 obično se navode sinonimi koji odgovaraju imenu termina, ali se razlikuju po
 opsegu:
 \begin{itemize}
@@ -161,9 +161,9 @@ tranzitivnosti \parencite{is_a} prikazano Slikom \ref{fig:is_a}:
 
 \begin{figure}[h!]
   \centering
-\begin{lstlisting}
-         A is_a    B  $\wedge$   B is_A C  $\implies$    A is_a    C           
-         A part_of B  $\wedge$   B is_A C  $\implies$    A part_of C
+\begin{lstlisting}[basicstyle=\normalfont]
+         A is_a    B  $\wedge$   B is_a C  $\implies$    A is_a    C           
+         A part_of B  $\wedge$   B is_a C  $\implies$    A part_of C
 \end{lstlisting}
 \caption{Tranzitivnost relacije \keyword{is\_a} i relacije \keyword{part\_of}}
   \label{fig:is_a}
@@ -179,7 +179,7 @@ jezika (protégé, SPARQL, ...).
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=1.0\linewidth]{relations.png}
+  \includegraphics[scale=0.545]{relations.png}
   \caption{Pravila rezonovanja (isprekidane relacije su rezultat). \\ Elementi slike su preuzeti sa \parencite{go_veb}.}
   \label{fig:relations}
 \end{figure}
@@ -195,8 +195,8 @@ funkcija) zarad izvršavanja nekog cilja tj. zadatka (biološki proces). Na
 primer, funkcije vozača bile bi: upravljanje volanom, stiskanje kvačila,
 utovarivanje prtljaga itd, ali ne bi bilo korektno reći da je funkcija vozača
 "vozačka funkcija", jer se zavisno od firme ili prevoznog sredstva menja skup
-radnji koje vozač obavlja.  Vozač koji prevozi putnika na bicklu neće
-utovarivati prtljag niti stiskati kvačilo.
+radnji koje vozač obavlja. Na primer, vozač hidrauličnog bagera neće
+utovarivati prtljag ali će zato upravljati kašikom ili rotirati kabinu.
 
 Najbitnije karakteristike molekulske funkcije su \parencite{go_mf}:
 \begin{itemize}
@@ -204,7 +204,7 @@ Najbitnije karakteristike molekulske funkcije su \parencite{go_mf}:
   \item MF nije biološki proces jer se BP sastoji od nekoliko MF.
   \item Granularnost staje na nivou molekula. MF ne opisuje reakcije na nivou
     atoma. Ako se reakcija može izvršavati na nekoliko načina, onda za svaki od njih
-    postojaće poseban MF termin.
+    postoji poseban MF-termin.
 \end{itemize}
 
 Postoji nekoliko standardnih definicija i šablon naziva koji se pripisuju genskom
@@ -216,10 +216,10 @@ produktu $x$ (ili nekom enzimu) \parencite{go_mf}:
   \item \keyword{$x$ transporter activity} - omogućava direktno pomeranje $x$ u ćeliju, iz ćelije, unutar ćelije ili između ćelija
 \end{itemize}
 
-Osim korenskog MF čvora i \keyword{$x$ binding} termina svi ostali MF termini sadrže sufiks \textit{activity}.
-Ovo je uvedeno iz filozofskih razloga jer za razliku od entiteta, MF termini predstavljaju događaje, procese ili aktivnosti \parencite{go_mf}.
+Osim korenskog čvora MF i \keyword{$x$ binding} termina svi ostali MF-termini sadrže sufiks \textit{activity}.
+Ovo je uvedeno iz filozofskih razloga jer za razliku od entiteta, MF-termini predstavljaju događaje, procese ili aktivnosti \parencite{go_mf}.
 
-MF termini takođe imaju prepoznatljiv standardni sinonim za \keyword{$x$ binding} \parencite{go_mf}:
+MF-termini takođe imaju prepoznatljiv standardni sinonim za \keyword{$x$ binding} \parencite{go_mf}:
 \begin{itemize}
   \item \keyword{$x$ receptor ligand}
   \item \keyword{$x$ <name> binding}
@@ -236,7 +236,7 @@ Proteinskih Informacija (PIR).
 
 
 \uniprot obuhvata nekoliko baza i podbaza sa striktno definisanim tokom
-informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
+informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je baza
 \keyword{\uniprotkb} \en{UniProt Knowledge Base} sačinjena od 2 podbaze.
 
 \begin{figure}[h!]
@@ -253,7 +253,7 @@ informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
     stavka \ref{red}) proteinskih sekvenci.  Informacije o sekvenci su dobijene
     iz postojeće literature, a automatski predviđene anotacije su ručno
     proverene i verifikovane od strane biokuratora (stručnjaci koji se brinu da
-    podaci koji postanu deo \swissprot baze budu kvalitetni).  \swissprot kao baza
+    podaci koji postanu deo baze \swissprot budu kvalitetni).  Kao baza, \swissprot 
     postoji preko 30 godina.
 
   \item \trembl \en{Translated EMBL} je nadskup \swissprot sekvenci 
@@ -272,16 +272,16 @@ informacija Slika \ref{fig:uniprot_overview}. Od prikazanih najbitnija je
 
 
 
-Distribucije \swissprot baze dostupne su u nekoliko tekstualnih formata: ravna
+Distribucije baze \swissprot dostupne su u nekoliko tekstualnih formata: ravna
 datoteka \en{flat file}, XML, RDF/XML.  Ravni tekstualni format zbog
 standardizacije prati EMBL-Bank ravni format \parencite{svisprot2003}.
 Unos u bazu se zove \keyword{slog} \en{record} i sadrži sve informacije vezane
 za jedan protein.  Jedan slog predstavljen u formatu ravne datoteke ilustrovan
 je uprošćenim prikazom  na Slici \ref{fig:slog}.  Ključne osobine slogova i
-\swissprot baze podataka su:
+baze \swissprot su:
 
 \lstset{ 
-  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  basicstyle=\fontsize{8}{10}\selectfont\ttfamily,        % the size of the fonts that are used for the code
   captionpos=b,                    % sets the caption-position to bottom
   commentstyle=\color{mygreen},    % comment style
   deletekeywords={...},            % if you want to delete keywords from the given language
@@ -298,7 +298,6 @@ je uprošćenim prikazom  na Slici \ref{fig:slog}.  Ključne osobine slogova i
 }
 
 \begin{figure}[h!]
-  \centering
 
 \begin{lstlisting}
 ID   ACSA_DROME              Reviewed;         670 AA.  | ime sloga, info
@@ -308,7 +307,7 @@ DT   01-MAY-2000, sequence version 1.                   | ulazak u TrEMBL
 DT   25-OCT-2017, entry version 116.                    | poslednje 
                                                           osvezavanje sloga
 \end{lstlisting}
-\begin{lstlisting}[firstnumber=7,   basicstyle=\footnotesize\ttfamily\color{gray}]
+\begin{lstlisting}[firstnumber=7,   basicstyle=\fontsize{8}{10}\selectfont\ttfamily\color{gray}]
 DE   RecName: Full=Acetyl-coenzyme A synthetase;        |
 DE            EC=6.2.1.1;                               |
 DE   AltName: Full=Acetyl-CoA synthetase;               |
@@ -339,8 +338,8 @@ DR   EMBL; AE014296; AAF51695.2; -; Genomic_DNA.        | drugim bazama
 ...                                                     | (dbxref)
 DR   ExpressionAtlas; Q9VP61; differential.             |
 DR   Genevisible; Q9VP61; DM.                           |
-DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.| GO termin <----
-DR   GO; GO:0003987; F:acetate-CoA ligase activity; I...| GO termin <----
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.| GO-termin <----
+DR   GO; GO:0003987; F:acetate-CoA ligase activity; I...| GO-termin <----
 ...                                                     |
 \end{lstlisting}
 \begin{lstlisting}[firstnumber=38]
@@ -380,7 +379,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     \end{itemize}
     U oba slučaja stari (primarni) AC se zadržava kao sekundarni AC u novom slogu.
 
-  \item Za razliku od \trembl, GO mapiranje za \swissprot sekvence određuju se ručno \parencite{www_uniprot}.
+  \item Za razliku od \trembl, GO preslikavanje za \swissprot sekvence određuju se ručno \parencite{www_uniprot}.
 
   \item \keyword{Ključne reči} \en{keywords} označene sa \keyword{KW} opisuju
     hijerarhisku strukturu kontrolisanog vokabulara namenjenog opisivanju
@@ -396,7 +395,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     različite osobine kanonske sekvence uključujući i razlike u odnosu na
     izoforme\footnote{Izoforme su alternativni oblici sekvence nastali usled:
     alternativnog splajsovanja, upotrebe više promotera, alternativnih start
-  kodona ili alternativnih okvira čitanja } sekvence.  U našoj analizi
+  kodona ili alternativnih okvira čitanja.} sekvence.  U našoj analizi
   korišćena je isključivo kanonska sekvenca. Detaljan opis pravila za biranje
   kanonske sekvence može se naći na \cite{www_uniprot}.
 
@@ -406,10 +405,11 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     kodirani jednim genom, jedne vrste su predstavljeni jednim slogom. Sve
     izoforme su grupisane pod jedan slog i jednu kanonsku sekvencu \parencite{nonRedundant}.
 
-  \item Dokaz o postojanju proteina \keyword{PE} \en{Protein existance} označava
-    tip dokaza da protein postoji (Slika \ref{fig:PE}). Moguće vrednosti
-    sortirane opadajuće po pouzdanosti su: potvrđeno na nivou proteina,
-    potvrđeno na nivou RNK, zaključeno iz homologije, predviđen i nesiguran. 
+  \item Nivo pouzdanosti postojanja proteina \keyword{PE} \en{Protein existance}
+    označava tip dokaza o postojanju proteina (Slika \ref{fig:PE}). Moguće
+    vrednosti sortirane opadajuće po pouzdanosti su: potvrđeno na nivou
+    proteina, potvrđeno na nivou RNK, zaključeno iz homologije, predviđen i
+    nesiguran. 
 
   \clearpage
 
@@ -419,7 +419,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
     i \textit{CLADIST} prediktore. \parencite{Meng_c2017}. Međutim, ove informacije
     postale su irelevantne pojavom baza neuređenja \textit{MobiDB}\parencite{Piovesan2017} i \textit{D2P2}\parencite{Oates2012}.
 
-  \item Zanimljiva zapažanja iz globalne statistike o \swissprot bazi:
+  \item Zanimljiva zapažanja iz globalne statistike o bazi \swissprot:
     \begin{itemize}
       \item Većina proteina ima dužinu između 100 i 500 AK.
       \item Postojanje za oko $70\%$ proteina predviđeno (zaključeno) je iz
@@ -434,7 +434,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
 
 \begin{figure}[h!]
   \centering
-  \hspace*{-1cm} 
+  \hspace*{-0.2cm} 
   \includegraphics[]{plots/PE.pdf}
   \caption{Histogram nivoa pouzdanosti postojanja \swissprot proteina}
   \label{fig:PE}

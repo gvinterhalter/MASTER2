@@ -293,15 +293,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="266.24713"
-     inkscape:cy="581.80987"
+     inkscape:cx="486.96546"
+     inkscape:cy="664.64238"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1596"
      inkscape:window-height="861"
      inkscape:window-x="0"
-     inkscape:window-y="37"
+     inkscape:window-y="1237"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -23366,7 +23366,7 @@
          x="614.97095"
          y="416.24969"
          style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#ff0101;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="tspan25704-1">GO termin </tspan><tspan
+         id="tspan25704-1">GO-termin </tspan><tspan
          sodipodi:role="line"
          x="612.1853"
          y="438.12469"
@@ -23382,7 +23382,7 @@
        transform="matrix(0.91855567,0,0,1.2215953,229.63084,362.72256)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#36a26d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#36a26d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="609.28357"
        y="531.00751"
        id="text25700-0-1"
@@ -23390,12 +23390,12 @@
          sodipodi:role="line"
          x="612.06921"
          y="531.00751"
-         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#36a26d;fill-opacity:1;stroke:none;stroke-opacity:1;"
-         id="tspan25704-1-0">GO termin </tspan><tspan
+         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#36a26d;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="tspan25704-1-0">GO-termin </tspan><tspan
          sodipodi:role="line"
          x="609.28357"
          y="552.88251"
-         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#36a26d;fill-opacity:1;stroke:none;stroke-opacity:1;"
+         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#36a26d;fill-opacity:1;stroke:none;stroke-opacity:1"
          id="tspan29143-8">(molekulska funkcija)</tspan></text>
     <path
        style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend-5)"

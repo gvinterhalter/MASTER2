@@ -18,6 +18,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -86,7 +87,7 @@ headsepline, % Uncomment to get a line under the header
 	bindingoffset=.5cm, % Binding offset
 	top=1.5cm, % Top margin
 	bottom=1.5cm, % Bottom margin
-	%showframe, % Uncomment to show how the type block is set on the page
+  % showframe, % Uncomment to show how the type block is set on the page
 }
 
 %----------------------------------------------------------------------------------------
@@ -249,21 +250,20 @@ funkcije su opisane \swissprot ključnim rečima.  U ovom istraživanju, koriš�
 je drugi skup proteina (trening skup sa CAFA3 takmičenja), a funkcije su
 opisane terminima molekulske funkcije iz ontologije gena (GO).  Rezultati su
 upoređeni sa referentnim radom tako što je analiza prvo ponovljena sa
-\swissprot ključnim rečima, a zatim sa GO terminima.  Prediktor PONDR VSL2b
+\swissprot ključnim rečima, a zatim sa GO-terminima.  Prediktor PONDR VSL2b
 korišćen je za karakterizaciju preko 66000 CAFA3 proteina kao putativno
-uređenih ili neuređenih, dok su funkcijske anotacije (ključne reči i GO
-termini) preuzete iz \swissprot baze.  Od 186 ključnih reči kategorije
+uređenih ili neuređenih, dok su funkcijske anotacije (ključne reči i GO-termini) preuzete iz \swissprot baze.  Od 186 ključnih reči kategorije
 molekulske funkcije sa minimum 20 anotiranih proteina, utvrđeno je da su 53
 korelirane sa uređenim proteinima, a 44 sa neuređenim. Pod istim uslovima, od
-od 1781 GO termina molekulske funkcije  699 je korelirano sa uređenim
-proteinima, a 616 sa neuređenim. Rezultati GO termina predstavljeni su kao
+od 1781 GO-termina molekulske funkcije  699 je korelirano sa uređenim
+proteinima, a 616 sa neuređenim. Rezultati GO-termina predstavljeni su kao
 interaktivni grafovi koji prikazuju kompleksnu hijerarhijsku strukturu
 ontologije gena.  Komparacija dve funkcijske nomenklature, GO i ključne reči,
-pokazala je konzistentne rezultate za adekvatna mapiranja. Međutim,
+pokazala je konzistentne rezultate za adekvatna preslikavanja. Međutim,
 komparacija referentnih i novih rezultata otkrila je da funkcije koje opisuju
 molekulsko vezivanje preovlađuju među novim rezultatima (neuređenih funkcija)
 dok se u starim rezultatima ne javljaju.  Zbog malog broja poznatih veza u
-mapiranju između ključnih reči i GO termina, predložena je nova metoda za
+preslikavanju između ključnih reči i GO-termina, predložena je nova metoda za
 izvođenje najverovatnijih nedostajućih veza tako što se verovatnoća ocenjuje
 sličnošću (Žakardov indeks) između skupova proteina anotiranih različitim
 funkcijama.  Takođe, pokazano je da se korelacija između dužine proteina i
@@ -387,7 +387,7 @@ sekvencama.
 \renewcommand{\bibname}{Bibliografija}
 
 
-\printbibliography[heading=bibintoc]
+% \printbibliography[heading=bibintoc]
 
 %----------------------------------------------------------------------------------------
 

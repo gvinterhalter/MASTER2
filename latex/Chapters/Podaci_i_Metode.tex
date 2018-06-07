@@ -13,8 +13,8 @@ autore, metode, podatke itd.
 
 Najveća razlika u pristupu između referentnog i ovog istraživanja je što su
 referentni rezultati izraženi u terminima \keyword{ključnih reči} dok su ovde
-rezultati izraženi u \keyword{GO terminima}. Oba pristupa proizvode listu
-funkcija, ali GO termini zbog granularnosti se prirodnije predstavljaju
+rezultati izraženi u \keyword{GO-terminima}. Oba pristupa proizvode listu
+funkcija, ali GO-termini zbog granularnosti se prirodnije predstavljaju
 grafovski i sadrže mnogo više funkcija. Jedan od rezultata ovog istraživanja
 predstavlja poređenje ova dva pristupa.
 
@@ -41,8 +41,8 @@ pridružene proteinima izražene su \keyword{kontrolisanim vokabularom}
 statističke značajnosti posmatrane su one ključne reči kojima je bilo anotirano
 barem 20 proteina, tj. 710 ključnih reči.
 
-Kao što je pomenuto u Poglavlju \ref{svis-prot}, kanonske sekvence (proteini) u \swissprot
-bazi podataka nisu redundantne u smislu da jedan unos u bazi podataka predstavlja produkt
+Kao što je pomenuto u Poglavlju \ref{svis-prot}, kanonske sekvence (proteini) iz baze \swissprot
+nisu redundantne u smislu da jedan unos u bazi podataka predstavlja produkt
 jednog gena iz jedne vrste organizma. Međutim, za analizu funkcija
 \swissprot \keyword{jeste statistički redundantna} \parencite{Xie2007} jer
 sadrže veliku količinu \keyword{homologih} proteina (prvenstveno ortologa).
@@ -73,18 +73,18 @@ veličini preseka.
 Ugledom na \keyword{CASP} takmičenja, \keyword{CAFA} \en{Critical Assessment of
 Functional Annotation} takmičenje pokrenuto je zarad objektivnog ocenjivanja
 prediktora funkcije proteina i usmeravanja budućeg razvoja ove oblasti
-\parencite{CAFA}.  U ovom radu korišćen je trening skup proteina preuzet sa
+\parencite{CAFA}.  U ovom radu je korišćen trening skup proteina preuzet sa
 \keyword{CAFA3} takmičenja, održanog 2017. Trening skupovi su podaci na osnovu
 kojih prediktor uči, pa shodno tome ovaj skup treba da predstavlja dobar uzorak
 proteina odnosno njihovih funkcija.
 
-CAFA3 trening skup (u nastavku samo CAFA3 skup ili CAFA3 podaci) je podskup \swissprot baze (iz 2016.) koji
+CAFA3 trening skup (u nastavku samo CAFA3 skup ili CAFA3 podaci) je podskup baze \swissprot (iz 2016.) koji
 uključuje proteine iz model organizama: \textit{Human, Mouse, Rat, S.
 cerevisiae, S. pombe, E. coli, A. thaliana, Dictyostelium discoideum,
 Zebrafish, Bacillus cereus} sa izuzetokm sekvenci \textit{Drosophila} i \textit{Candida}
 koje su preuzete iz svojih genomskih baza podataka, respektivno.
 Slika \ref{fig:sp_vs_cafa3} pruža detaljan taksonomski uvid o poreklu CAFA3 proteina.
-Na primer, \swissprot baza sadrži oko 20 000 ljudskih (\textit{Homo})
+Na primer, baza \swissprot sadrži oko 20 000 ljudskih (\textit{Homo})
 proteinskih sekvenci dok CAFA3 podskup sadrži malo manje od 15 000.  Vrste
 koje doprinose sa manje od 100 proteina nisu prikazane radi kompaktnosti.
 
@@ -98,7 +98,7 @@ koje doprinose sa manje od 100 proteina nisu prikazane radi kompaktnosti.
 \label{fig:sp_vs_cafa3}
 \end{figure}
 
-Za razliku od proteina u \swissprot bazi čije je postojanje pretežno utvrđeno
+Za razliku od proteina u bazi \swissprot čije je postojanje pretežno utvrđeno
 iz homologije, $74\%$ proteina iz CAFA3 podskupa identifikovani su na 
 nivou proteina što je najveći stupanj sigurnosti da proteini zaista postoji. Na
 Slici \ref{fig:cafa3_pe} ilustrovana je razlika u odnosu na pouzdanost
@@ -108,10 +108,10 @@ postojanja proteina.
 
 \begin{figure}[th]
 \centering
-\hspace*{-2.5cm} 
+\hspace*{-.1cm} 
 \includegraphics[]{plots/cafa3_pe}
 % \decoRule
-\caption{Razlika izmedju pouzdanosti postojanja proteina iz \\ \swissprot baze i njenog CAFA3 podskupa. }
+\caption{Razlika izmedju pouzdanosti postojanja proteina iz \\ baze \swissprot i njenog CAFA3 podskupa. }
 \label{fig:cafa3_pe}
 \end{figure}
 
@@ -129,44 +129,44 @@ računarskih metoda za analizu što je van opsega ovog rada.
 % ovaj konkretan skup. Iz tog razloga u daljoj analizi predstavljamo uprošćenu
 % verziju formule koja ne uračunva težinu pojedinačnog proteina.
 
-\swissprot proteini su kodirani jednim karakterom koristeći \keyword{IUPAC}
-kodove.  U podacima javljaju se sekvence sa  21. i 22. aminokiselinom ('U' i 'O')
+\swissprot proteini su kodirani koristeći \keyword{IUPAC}
+kodove.  U podacima se javljaju sekvence sa  21. i 22. aminokiselinom ('U' i 'O')
 kao i  višeznačne oznake: 'B', 'J', 'X' i 'Z'.  Ovakve sekvence nisu podržane od
-strane VSL2b prediktora i za nas predstavljaju nevalidne proteinske sekvence. Pod
-\keyword{validnom proteinskom sekvencom} smatraćemo sekvencu koja je validan
-ulaz za VSL2b, tj. čini je azbuka od 20 standardnih aminokiselina i
+strane prediktora VSL2b i za nas predstavljaju neispravnu proteinske sekvence. Pod
+\keyword{validnom proteinskom sekvencom} smatraćemo sekvencu koja predstavlja
+ispravan ulaz za VSL2b, tj. čini je azbuka od 20 standardnih aminokiselina i
 ima minimalnu dužinu 9 AK.
 
-CAFA3 Podaci se sastoje od dve datoteke:
+CAFA3 podaci se sastoje od dve datoteke:
 \begin{enumerate}
   \item \file{uniprot\_sprot\_exp.fasta}  sadrži 66 841 protein od kojih 66 599
-    za našu analizu predstavljaju validnu proteinsku sekvencu. Od preostalih
+    predstavljaju validnu proteinsku sekvencu za našu analizu. Od opisivanih
     proteina 66 063 ima dužinu veću ili jednaku od 40 aminokiselina.
   \item \file{uniprot\_sprot\_exp.txt} proteinima pridružuje funkcije u obliku 
-    \keyword{GO termina}. Zastupljeni su termini iz sva tri prostora imena:
+    \keyword{GO-termina}. Zastupljeni su termini iz sva tri prostora imena:
     16 117 ćelijskih komponenti, 5 966 molekulskih funkcija i 16 117 bioloških
-    procesa. Jednom proteinu može biti pridruženo više GO termina i obrnuto.
+    procesa. Jednom proteinu može biti pridruženo više GO-termina i obrnuto.
 \end{enumerate}
 
-Analiza u ovom radu je primarno orijentisna ka korišćenju GO termina za opis
+Analiza u ovom radu je primarno orijentisna ka korišćenju GO-termina za opisivanje
 funkcije što je razlikuje od referentnog pristupa korišćenja ključnih reči.
-Analiza GO termina zahteva poznavanje prvenstveno \textit{is\_a} roditeljske
-veze između termina. Takođe, tokom istraživanja bile su nam potrebne i ostale
-informacije o terminima. Pomenute informacije dobili smo iz datoteke
+Analiza GO-termina zahteva poznavanje prvenstveno  roditeljske veze
+\textit{is\_a} između termina. Takođe, tokom istraživanja bile su nam potrebne
+i ostale informacije o terminima. Pomenute informacije dobili smo iz datoteke
 \file{go.obo} \cite{go_obo} verzije 01.12.2017.
 
-Odnos tj. mapiranje između ključnih reči i GO termina dostupno je sa dva izvora:
+Odnos tj. preslikavanje između ključnih reči i GO-termina dostupno je sa dva izvora:
 \begin{itemize}
   \item \file{keywlist.txt}\cite{keywlist_txt} verzija 20.12.2017 sadrži
     informacije o 1188 ključnih reči od kojih 195 pripada kategoriji
-    \keyword{Molekulskih funkcija}. Više o mapiranju biće
+    \keyword{molekulskih funkcija}. Više o preslikavanju biće
     izloženo u Potpoglavlju \ref{kw2go_mapiranje}.
-  \item \file{uniprotkb\_kw2go}\cite{uniprotkb_kw2go} sadrži samo mapiranja a
+  \item \file{uniprotkb\_kw2go}\cite{uniprotkb_kw2go} sadrži samo preslikavanja a
     generiše ih \keyword{GOA projekat} \parencite{Barrell2009}. 
 \end{itemize}
 
-U ovom radu korišćena je isključivo \file{keywlist.txt} datoteka. Iako je
-datoteka \\ \file{uniprot\_kw2go} sadržala veći broj mapiranja, unosila je
+U ovom radu je korišćena isključivo datoteka \file{keywlist.txt}. Iako je
+datoteka \\ \file{uniprot\_kw2go} sadržala veći broj preslikavanja, unosila je
 nepoželjnu višeznačnost.
 
 Pošto je referentni rad iz 2007. godine, postoje razlike u broju proteina,
@@ -174,11 +174,11 @@ anotacijama ključnih reči, broju ključnih reči ali i primarnoj strukturi pro
 sekvenci.  Radi procene uticaja navedenih razlika na rezultat, odlučeno je da se
 analiza prvo ponovi referentnim pristupom, koristeći vokabular ključnih reči.
 Iz tog razloga, CAFA3 podaci nisu mogli da se posmatraju kao crne kutije, već
-je bilo neophodno mapirati ih nazad na \swissprot proteine čije su anotacije 
+je bilo neophodno preslikati ih nazad na \swissprot proteine čije su anotacije 
 ključnim rečima poznate. Ovaj korak objedinjavanja baza podataka opisan je u
 Potpoglavlju \ref{objedinjavanje}. Dobijene anotacije ključnim rečima takođe su
-iskorišćene za proveru validnosti mapiranja ključnih reči na GO termine.
-Mapiranja su detaljno opisana u Potpoglavlju \ref{kw2go_mapiranje}
+iskorišćene za proveru validnosti preslikavanja ključnih reči na GO-termine.
+Preslikavanja su detaljno opisana u Potpoglavlju \ref{kw2go_mapiranje}
 
 
 
@@ -188,7 +188,7 @@ Mapiranja su detaljno opisana u Potpoglavlju \ref{kw2go_mapiranje}
 U \keyword{idealnom slučaju}, pretpostavimo da za proizvoljno odabranu molekulsku
 funkciju znamo sve strukturno različite proteine koji je obavljaju.  Da bismo
 razumeli odnos između neuređenosti i odabrane funkcije moramo da znamo kako
-neuređenost pojedinačnog proteina utiče na na njegovo ponašanje, i kako to
+neuređenost pojedinačnog proteina utiče na njegovo ponašanje, i kako to
 ponašanje (tip neuređenosti) utiče na datu funkciju.
 % Ova vrsta znanja nije bila dostupna 2007. osim za jako mali skup proteina.
 
@@ -200,7 +200,7 @@ Nažalost, ograničenja današnjih podataka i razvijenih metoda su brojna:
     neuređenih regiona \parencite{Piovesan2016}.  Uz to, kvalitet navedenih
     informacija je diskutabilan zbog razlika u pouzdanosti među
     eksperimentalnim tehnikama koje su korišćene.  Najveću pouzdanost nose
-    regioni koji su eksperimentalno okarakterisani sa što većim brojem
+    regioni koji su eksperimentalno okarakterisani većim brojem
     laboratorijskih tehnika.
 
   \item
@@ -226,7 +226,7 @@ Nažalost, ograničenja današnjih podataka i razvijenih metoda su brojna:
 \end{itemize}
 
 Jednostavna alternativa idealnom slučaju je da se pretpostavi da veći udeo neuređenih u odnosu
-na uređene proteine podrazumeva da funkcija zavisi više od neuređenosti. 
+na uređene proteine podrazumeva da funkcija zavisi više od neuređenih regiona nego uređenih domena. 
 % Dakle izjednačavamo uzročnost \en{causation} i \keyword{korelaciju} između funkcije i neuređenosti.
 % Međutim, prvo je potrebno precizirati kada protein smatramo neuređenim.
 % Definicija mora da ima biološkog smisla, da bude prilagođena
@@ -240,14 +240,15 @@ Referentni autori koristili su \keyword{PONDR VL3E} prediktor koji
 postiže tačnost od $~87\%$ pri unakrsnoj validaciji nad uravnoteženim test
 skupom.  Zbog ekonomičnosti i dostupnosti u ovom radu korišćen je noviji
 prediktor druge generacije \keyword{PONDR VSL2b}.
-Relevantne karakteristike VSL2b prediktora detaljno su opisane u \ref{VSL2b}.
+Relevantne karakteristike prediktor VSL2b detaljno su opisane u \ref{VSL2b}.
 Za potrebe analize referentni autori  uvode sledeću definiciju:
 
 \begin{definicija}
 \label{pdis_def}
-Protein je \keyword{putativno neuređen} (najverovatnije neuređen, u daljem tekstu neuređen) engl. putatively disordered
-ako sadrži bar jedan region veći ili jednak od 40 uzastopnih aminokiselina
-takvih da im je predviđenu neuređenost iznad 0.5. 
+Protein je \keyword{putativno neuređen} (najverovatnije neuređen, u daljem
+tekstu \keyword{neuređen}) \en{putatively disordered} ako sadrži bar jedan region veći
+ili jednak od 40 uzastopnih aminokiselina takvih da im je predviđena
+neuređenost iznad 0.5. 
 \end{definicija}
 
 Onda definišemo operator $d$ takav da za svaku proteinsku sekvencu $s_i$ važi:
@@ -255,26 +256,26 @@ Onda definišemo operator $d$ takav da za svaku proteinsku sekvencu $s_i$ važi:
 \[   
   d(s_i) = 
     \begin{cases}
-      1 & \text{ako je} \quad s_i \quad \keyword{neuređena}\\
+    1 & \text{ako je  $s_i$ \keyword{neuređena} (Definicija \ref{pdis_def}) }\\
       0 & \text{suprotno}
     \end{cases}
 \]
 
-Uslov ''$\ge40$'' u referentnom radu delom je posledica ograničenja VL3
+Uslov ''$\ge40$'' iz referentnog rada delom je posledica ograničenja VL3
 prediktora koji je treniran nad skupom sekvenci sa dugim neuređenim regionima
-\footnote{L označava duge regione, $\ge$ 30 AK}.
+\footnote{L označava duge regione, $\ge$ 30 AK.}.
 % Mi nismo u obavezi da sledimo ovo pravilo, ali ga sledimo radi upoređivanja rezultata.
 
 \subsection{Zavisnost dužine proteina i predikcije dugačkog neuređenog regiona}
 
 Verovatnoća da po gornjoj definiciji protein bude klasifikovan kao neuređen
-raste sa porastom njegove dužine. Ovo ponašanje  utiče na statističku
-značajnost rezultata.  Referentni autori predlažu narednu formulu za procenu
-pomenute verovatnoće.
+raste sa porastom njegove dužine. Ovo utiče na statističku značajnost
+rezultata.  Referentni autori predlažu narednu formulu za procenu pomenute
+verovatnoće.
 
 Neka je $S_L$ skup proteina sa dužinama iz intervala $[L-l, L+l]$\footnote{Na
 primer, skup $S_{100}$ sadrži proteine iz intervala $[90, 110]$, a $S_{500}$ iz
-intervala $[450, 550]$} gde je $l = 0.1 \cdot L$. Dobijamo sledeće formule:
+intervala $[450, 550]$.} gde je $l = 0.1 \cdot L$. Dobijamo sledeće formule:
 
 $$ S_L = \{s_i : \quad | L -  | s_i | | \le l \quad \}, \quad   |s_i| \text{ je dužina sekvence}  $$
 $$ P_L = \dfrac{ \sum_{s_i \in S_L} d(s_i)} {| S_L |}, \quad   |S_L| \text{ je kardinalnost skupa}$$
@@ -293,7 +294,7 @@ predstavlja prostu vrstu konvolucije.
 \includegraphics[]{plots/PL_F}
 % \decoRule
 \caption {
-  Zavisnot neuređenosti i dužine CAFA3 proteina minimalne dužine 40 AK
+  Zavisnost neuređenosti i dužine CAFA3 proteina minimalne dužine 40 AK
   \footnotesize
   ($P_L$ sa prozorom uprosečavanja podrazumeva $l = 0.1L$, dok
   krstići predstavljaju diskretne vrednosti L za $l = 0$. Transparentnost krstića
@@ -414,17 +415,17 @@ statistički značajna.
 
 \begin{definicija}
   \label{neuredjena_funkcija}
-  Funkcija (GO termin ili ključna reč) je neuređena ako je povezana ($p<0.05$) sa
+  Funkcija (GO-termin ili ključna reč) je neuređena ako je povezana ($p<0.05$) sa
   neuređenim proteinima, a uređena ako je povezana ($p>0.95$) sa uređenim proteinima.
 \end{definicija}
 
 % ----
-% U nastavku teksta, pod neuređenošću funkcije, ključne reči ili GO termina, biće
+% U nastavku teksta, pod neuređenošću funkcije, ključne reči ili GO-termina, biće
 % podrazumevano da je odgovarajuća p vrednost manja od 0.05. Analogno, pod
-% uređenošću funkcije, ključne reči ili GO termina, biće podrazumevano da je
+% uređenošću funkcije, ključne reči ili GO-termina, biće podrazumevano da je
 % odgovarajuća p vrednost veća od 0.95.
 % -----
-% Kada se kaže da je funkcija, ključna reč ili GO termin (ne)uređen
+% Kada se kaže da je funkcija, ključna reč ili GO-termin (ne)uređen
 % podrazumevaće se da je odgvorajauća p-vrednost manja od $0.05$ ili veća
 % od $0.95$.
 
@@ -433,7 +434,7 @@ pribegava empirijskom računanju p-vrednosti. Empirijska p-vrednost određena je
 tako što je za 1000 realizacija $Y_j$ izračunato očekivanje da je realizacija
 $Y_j$ veća od $F_j$.
 Preciznije, vektor\footnote{zamenili smo skup $S_j$ za vektor $S_j$. Ovo je
-implementacioni detalj} $S_j$ sadrži $k$ proteina $S_j=\{s_1, s_2, ...
+implementacioni detalj.} $S_j$ sadrži $k$ proteina $S_j=\{s_1, s_2, ...
 ,s_{k}\}$.  Protein $s_i$ ima dužinu $L_i$ za koju je izračunata verovatnoća
 $P_{L_i}$.  Tada generatorom Bernulijevih slučajnih brojeva, za svaki protein
 $p_i$ na osnovu $P_{L_i}$ generišemo realizaciju $X_L$. Rezultat je vektor od
@@ -454,7 +455,7 @@ po statističkoj značajnosti.
 \begin{definicija}
   \label{stat_naj}
   \keyword{Statistički najznačajnije} uređene/neuređene funkcije
-  (GO termini ili ključne reči) su one koje imaju najmanji/najviši Z-skor.
+  (GO-termini ili ključne reči) su one koje imaju najmanji/najviši Z-skor.
 \end{definicija}
 % Dodatno, p-vrednost može da se aproksimira kao $1/2(1-erf(Z_j/2))$
 % \footnote{$erf()$ je gausova funkcija greške,
