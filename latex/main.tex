@@ -40,7 +40,7 @@ headsepline, % Uncomment to get a line under the header
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 
-
+ 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
@@ -219,6 +219,7 @@ doc. dr Jovana Kovačević \\
 \newcommand{\en}[1]{(engl. \textit{#1})}
 \newcommand{\lat}[1]{(latin. \textit{#1})}
 \newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\ikeyword}[1]{\textit{\textbf{#1}}}
 \newcommand{\tabhead}[1]{\textbf{#1}}
 \newcommand{\code}[1]{\texttt{#1}}
 \newcommand{\file}[1]{\texttt{\bfseries#1}}
@@ -258,13 +259,13 @@ funkcija (MF).
 
 Prediktor PONDR VSL2b korišćen je za karakterizaciju preko 66000 CAFA3-proteina
 kao putativno uređenih ili neuređenih, dok su funkcijske anotacije (ključne
-reči i GO-termini) preuzete iz \swissprot baze.  Od 186 MF-ključnih reči koje
+reči i GO-termini) preuzete iz \swissprot baze.  Od 186 ključnih reči MF koje
 anotiraju minimum 20 proteina, utvrđeno je da su 53 korelirane sa uređenim, a
 44 sa neuređenim proteinima. Pod istim uslovima, od 1781 MF-termin 699 je
 korelirano sa uređenim, a 616 sa neuređenim proteinima. Dodatno, rezultati
 MF-termina predstavljeni su kao interaktivni graf koji prikazuje kompleksnu
 hijerarhijsku strukturu ontologije gena.
-Dobijeni rezultati nad MF-ključnim rečima upoređeni su sa rezultatima iz
+Dobijeni rezultati nad ključnim rečima MF upoređeni su sa rezultatima iz
 referentnog rada i upoređeni su sa rezultatima nad MF-terminima.  Komparacija
 dve funkcijske nomenklature, GO i ključne reči, pokazala je konzistentne
 rezultate za adekvatna preslikavanja. Međutim, komparacija referentnih i novih
@@ -396,6 +397,7 @@ aproksimirati i slučajno generisanim proteinskim sekvencama.
 
 
 \printbibliography[heading=bibintoc]
+
 
 %----------------------------------------------------------------------------------------
 

@@ -3,30 +3,28 @@
 
 \label{Priprema_podataka} % For referencing 
 
-\section{Objedinjavanje CAFA3 i novijih \swissprot proteina}
+\section{Objedinjavanje CAFA3-skupa i baze \swissprot}
 \label{objedinjavanje}
 
-Povezivanje CAFA3 proteina sa \swissprot unosima je jedini način da se dođe do
-anotacija ključnim rečima. Takođe, dobijamo najnovije anotacije GO-termina ali
-i dodatne informacije, na primer taksonomsko poreklo proteina koje pomaže
-u razumevanju skupa podataka.
+Povezivanje proteina iz CAFA3-skupa sa slogovima iz baze \swissprot je jedini
+način da se dođe do anotacija ključnim rečima. Takođe, ovim procesom dobili smo
+najnovije anotacije GO-termina ali i dodatne informacije, na primer taksonomsko
+poreklo proteina koje pomaže u razumevanju skupa podataka.
 
-Iz CAFA3 trening skupa izdvojeni su svi validni proteini (dužine barem 9 i
-azbuke od 20 standardnih aminokiselina). U ovom koraku ne izbacujemo proteine
-kraće od 40 AK.  Sadržaj baze \swissprot preuzet je iz datoteke \file{uniprot\_sprot-only2017\_12} \cite{sprot}.
-Navedena verzija sadrži 556 196 proteina.  Od 66 599 validnih CAFA3 proteina 66
-530 ima nepromenjen \keyword{primarni identifikator}, ali 69 slogova iz
-baze \swissprot sadrže nedostajuće CAFA3 identifikatore kao sekundarne. Kao što
-je navedeno u Potpoglavlju \ref{svis-prot} ovo je posledica dva moguća
-mehanizma:
+Iz CAFA3-skupa izdvojeni su svi validni proteini (dužine barem 9 i azbuke od 20
+standardnih aminokiselina). U ovom koraku ne izbacujemo proteine kraće od 40
+AK.  Sadržaj baze \swissprot preuzet je iz datoteke
+\file{uniprot\_sprot-only2017\_12} \cite{sprot} koja sadrži 556 196 proteina.
+Od 66 599 validnih proteina iz CAFA3-skupa 66 530 ima nepromenjen primarni
+identifikacioni broj (AC), dok 69 slogova iz baze \swissprot sadrže nedostajuće
+primarne AC kao sekundarne. Kao što je navedeno u Potpoglavlju \ref{svis-prot}
+ovo je posledica dva moguća mehanizma:
 
 \begin{enumerate}
-  \item Unifikacija nekoliko CAFA3 proteina pod novi slog.
-    Rezultat unifikacije prikazan je na Slici \ref{fig:unifikacija_slogova}. Analizom
-    ovih promena uspešno su rekonstruisana svega četiri nova \swissprot sloga
-    koja odgovaraju nedostajućim CAFA3 proteinima. Kako je četiri
-    suviše mali broj, zbog jednostavnosti ih nismo ubrajali u dalju analizu
-    te koristimo samo 66 530 slogova čiji primarni identifikatori su nepromenjeni.
+  \item Specijalizacija jednog proteina iz CAFA3-skupa u više različitih
+    slogova.  Zbog moguće statističke redundantnosti ovi slogovi su zanemareni.
+
+  \item Unifikacija nekoliko proteina iz CAFA3-skupa pod novi slog.
 
   \begin{figure}[th]
   \centering
@@ -35,38 +33,43 @@ mehanizma:
   \label{fig:unifikacija_slogova}
   \end{figure}
 
-  \item Specijalizacija jednog CAFA3 proteina u više različitih slogova.  Zbog moguće
-    statističke redundantnosti ovi slogovi su zanemareni.
 \end{enumerate}
 
+Rezultat unifikacije prikazan je na Slici \ref{fig:unifikacija_slogova}.
+Međutim, analizom ovih promena uspešno su rekonstruisana svega četiri nova sloga
+koja odgovaraju nedostajućim proteinima. Kako je četiri suviše malo, zbog
+jednostavnosti ih nismo ubrajali u dalju analizu te koristimo samo 66 530
+slogova čiji su primarni identifikatori nepromenjeni.
 
-Validini CAFA3 proteini anotirani su sa  5 957 različitih GO-termina molekulske
-funkcije (MF) od kojih je 50 zastarelo i izbačeno iz \file{go.obo} datoteke.  Za
-bazu \swissprot nismo bili u mogućnosti da proverimo samo za MF, ali ukupno je
-izbačeno 319 GO-termina.  CAFA3 sadrži 67 MF koje se ne javljaju u \swissprot
-anotacijama dok \swissprot sadrži 888 MF koje se ne javljaju u CAFA3
-anotacijama.  Pošto je korišćena verzija baze \swissprot novijeg datuma od
-CAFA3 podskupa, CAFA3 verzija anotacija je zanemarena u korist novijih
-\swissprot anotacija. Ove informacije sumirane su  Tabelom \ref{tab:godiff}
+
+Validini proteini iz CAFA3-skupa anotirani su sa  5 957 različitih GO-termina
+molekulske funkcije (MF) od kojih je 50 zastarelo i izbačeno iz \file{go.obo}
+datoteke.  Za bazu \swissprot nismo bili u mogućnosti da proverimo samo MF,
+ali ukupno je izbačeno 319 GO-termina.  CAFA3-skup sadrži 67 MF koje se ne
+javljaju u anotacijama iz baze \swissprot dok baza \swissprot sadrži 888 MF
+koje se ne javljaju u anotacijama CAFA3-skupa.  Pošto je korišćena verzija baze
+\swissprot novijeg datuma, anotacija iz CAFA3-skupa su zanemarene u korist
+novijih anotacija iz baze \swissprot. Ove razlike sumirane su  Tabelom
+\ref{tab:godiff}
 
 \begin{table}[htpb]
 \begin{tabular}{|r|c|c|}
   \hline
-                  & CAFA3 & \swissprot       \\
+                  & CAFA3 & \swissprot \\
   \hline
   MF-termini      & 5 957 &    7 471    \\
   nedostaje u go.obo   & 60 MF & 319 MF, CC i BP \\
-  MF, samo u   & 67    & 888             \\
+  MF, samo u:   & 67    & 888             \\
   \hline
 \end{tabular}
   \centering
-  \caption{Razlike u GO-terminima između CAFA3 i \swissprot}
+  \caption{Razlike u GO-terminima između CAFA3-skupa i baze \swissprot}
   \label{tab:godiff}
 \end{table}
 
-Dodatno, \swissprot sadrži 194 proteina čije se sekvence razlikuju u
-odnosu na CAFA3 verziju proteina. Odlučili smo da zadržimo originalne CAFA3
-sekvence.
+Dodatno, baza \swissprot sadrži 194 proteina čije se sekvence razlikuju u
+odnosu na proteine iz CAFA3-skupa. Odlučili smo da zadržimo originalne proteine
+iz CAFA3-skupa.
 
 \section{Grupisanje proteina po GO-terminima}
 \label{grupisanje}
@@ -75,83 +78,87 @@ Kao što je bilo reči u Sekciji \ref{ocenjivanje} sa $S_A$ označavamo skup
 proteina koji obavljaju funkciju $A$, odnosno funkcija $A$ anotira proteine
 grupisane skupom $S_A$.  Ako je GO-termin $A$ potomak GO-termina $B$ tj. važi
 $A$ \textit{is\_a} $B$ i želimo da diskutujemo o funkciji $B$, onda i svi
-proteini koji imaju funkciju $A$ (i time pripadaju skupu $S_A$) treba da budu
+proteini anotirani funkcijom $A$ (i time pripadaju skupu $S_A$) treba da budu
 sadržani i u skupu $S_B$.  Primetili smo da anotacije ključnih reči već
-podrazumevaju predloženo grupisanje.  Na primer, ključna reč
+podrazumevaju opisano grupisanje.  Na primer, ključna reč
 \textit{Ribosomalprotein} anotira 1420 proteina, a njen predak (uopštenje)
 \textit{Ribonucleoprotein} takođe anotira pomenutih 1420 proteina, plus
-dodatnih 478.  Anotacije GO-terminima ne podrazumevaju ovakvo grupisanje u
-eksplicitnom smislu.  Preciznije, zbog granularnosti ontologije bilo bi suviše
-redundantno ponavljati antoacije za svakog pretka termina.  Primer se može
-videti na Slici \ref{fig:neuropeptide} iz Potpoglavlja \ref{kw2go_mapiranje}.
+dodatnih 478 proteina.  Anotacije GO-terminima ne podrazumevaju ovakvo
+grupisanje u eksplicitnom smislu.  Preciznije, zbog granularnosti ontologije
+bilo bi suviše redundantno ponavljati antoacije za svakog pretka GO-termina.
+Primer se može videti na Slici \ref{fig:neuropeptide} iz Potpoglavlja
+\ref{kw2go_mapiranje}.
  
 Za implementaciju predloženog grupisanja koristili smo algoritam topološkog
 sortiranja. Ovako formirani skupovi koji sadrže manje od 20 proteina nisu bili
 od značaja za dalju analize zbog čega su odbačeni.
 Ovom metodom dobijen je 1781\footnote{Bez ovog grupisanja imali bismo samo 1146
-MF-termina  koji zadovoljavaju limit od najmanje 20 proteina.} MF-termin (od ukupno
+MF-termina  koji zadovoljavaju uslov od najmanje 20 proteina.} MF-termin (od ukupno
 11 135 validnih MF-termina) sa po najmanje 20 pridruženih proteina uključujući i
-koreni\footnote{Koreni termin ili koreni čvor ontologije tj.  termin molekulska
-funkcija.} termin. U ovom koraku uračunati su samo proteini minimalne dužine 40
-AK.
+koreni\footnote{Koreni termin ili koreni čvor ontologije tj.  termin
+\textit{molecular function}.} termin. U ovom koraku uračunati su samo proteini
+minimalne dužine 40 AK.
 
 % \section{Ontologije gena i ključne reči}
-\section{Preslikavanje između GO-termina i \swissprot ključnih reči}
+\section{Preslikavanje između GO-termina i ključnih reči}
 \label{kw2go_mapiranje}
 
 Kako je ovo istraživanje ograničeno na molekulske funkcije, u daljem tekstu
 biće razmatrana preslikavanja isključivo između ključnih reči kategorije MF koje
-zovemo \keyword{MF-ključne reči} i GO-termina iz prostora imena MF koje zovemo
+zovemo \keyword{ključne reči MF} i GO-termina iz imenskog prostora MF koje zovemo
 \keyword{MF-termini}. Pokazaćemo da ovo nije trivijalan zadatak i da u opštem
 slučaju zbog razlika u nomenklaturi preslikavanje ne postoji ili da pronađene
 funkcije nisu uvek ekvivalentne.
 
-U referentnom radu navodi se da je baza \swissprot sadržala 143 MF-ključne
-reči.  Datoteka \file{keywlist.txt} \cite{keywlist_txt} iz 20.12.2017 sadrži
-195 MF-ključnih reči.  Nažalost, nismo pronašli originalnu \file{keywlist.txt}
-datoteku pa  ne znamo egzaktnu razliku, ali jasno je da su neke ključne reči
+U referentnom radu navodi se da je baza \swissprot sadržala 143 ključne reči MF
+dok  datoteka \file{keywlist.txt} \cite{keywlist_txt} iz 20.12.2017 sadrži 195.
+Nažalost, nismo pronašli  \file{keywlist.txt} datoteku iz 2006. godine pa ne
+znamo egzaktnu razliku, ali jasno je da su neke ključne reči
 izbačene ili zamenjene a neke samo dodate. Datoteka \file{keywlist.txt} opisuje
 ključne reči, a sadrži i pridruživanja (relaciju) odgovarajućim GO-terminima.
-Pomenuta relacija pridružuje MF-ključne reči ne samo MF-terminima već i BP i CC
-terminima. Strogo posmatrano pridruživanja ne čine funkciju (preslikavanje), jer se
-neke ključne reči preslikavaju u nekoliko GO-termina čak i ako ograničimo sliku
-preslikavanja na samo MF\footnote{Samo \textit{DNA invertase} se preslikava u
-dva različita MF-termina (\textit{DNA binding} i \textit{recombinase
-activity}).} ili samo BP termine.  Ipak, opisana
-pridruživanja nazivaćemo preslikavanja ili direktna preslikavanja. Direktna preslikavanja
-za MF-ključne reči opisana su Tabelom \ref{tab:direktna_map}.  Za 20 ključnih reči
-uopšte ne postoji preslikavanje dok je broj preslikavanja ka MF, BP i CC terminima,
-redom 104, 54 i 11. Dakle, veliki broj preslikavanja ka MF-terminima nedostaje.
+Pomenuta relacija pridružuje ključne reči MF ne samo MF-terminima već i
+GO-terminima imenskih prostora BP i CC . Strogo posmatrano pridruživanja ne
+čine funkciju (preslikavanje), jer se neke ključne reči MF pridružuju većem
+broju GO-termina čak i ako ograničimo sliku preslikavanja na samo
+MF\footnote{Samo \textit{DNA invertase} se preslikava u dva različita
+MF-termina (\textit{DNA binding} i \textit{recombinase activity}).} ili samo
+BP-termine.  Ipak, opisana pridruživanja nazivaćemo preslikavanja ili direktna
+preslikavanja. Direktna preslikavanja za ključne reči MF sumirana su Tabelom
+\ref{tab:direktna_map}.  Za 20 ključnih reči MF uopšte ne postoji preslikavanje
+dok je broj preslikavanja ka MF, BP i CC imenskim prostorima, redom 104, 54 i
+11. Dakle, veliki broj preslikavanja ka MF-terminima nedostaje.
 
 \begin{table}[htpb]
 \begin{tabular}{|r|c|c|c|c|c|}
   \hline
-                   & ukupno & nema map. &  MF map. & BP map. & CC map.      \\
+                   & ukupno & nema pres. & pres. MF & pres. BP & pres. CC.      \\
   \hline
-   MF-ključne reči & 195    &  20       &  104     & 54      & 11           \\
+   ključne reči MF & 195    &  20       &  104     & 54      & 11           \\
   \hline
 \end{tabular}
   \centering
-  \caption{Direktna preslikavanja za MF-ključne reči}
+  \caption{Direktna preslikavanja za ključne reči MF}
   \label{tab:direktna_map}
 \end{table}
 
-Nedostajuća direktna MF preslikavanja pogotovo dolaze do izražaja kod neuređenih MF-ključnih reči (Definicija \ref{neuredjena_funkcija}) .Slika
+Nedostajuća preslikavanja ka MF-terminima pogotovo dolaze do izražaja kod
+neuređenih ključnih reči MF (Definicija \ref{neuredjena_funkcija}) .Slika
 \ref{fig:KWtop20dis} prikazuje direktna preslikavanja za 20 statistički
-najznačajnijih neuređenih MF-ključnih (Definicija \ref{stat_naj}) reči preuzetih iz referentnog rada
-\parencite{Xie2007}.  Tri ključne reči nemaju direktno preslikavanje, dve se
-preslikavaju na ćelijske komponente, osam na biološke procese i svega šest na
-molekulske funkcije dok ključna reč \textit{Antigen} više ne postojii. Sa druge
-strane, od 20 statistički najznačajnijih uređenih MF-ključnih reči iz
-referentnog rada samo jednoj fali direktno preslikavanje.
+najznačajnijih (Definicija \ref{stat_naj}) neuređenih ključnih  reči MF
+preuzetih iz referentnog rada \parencite{Xie2007}.  Tri ključne reči MF nemaju
+direktno preslikavanje, dve se preslikavaju na ćelijske komponente, osam na
+biološke procese i svega šest na molekulske funkcije dok ključna reč MF
+\textit{Antigen} više ne postojii. Sa druge strane, od 20 statistički
+najznačajnijih uređenih ključnih reči MF iz referentnog rada samo jednoj fali
+direktno preslikavanje.
 
 \begin{figure}[!th]
 \centering
 \hspace*{-1.5cm} 
 \includegraphics[scale=0.9]{Figures/plots/kw_dis2go.pdf}
 \caption {
-  Direktno preslikavanje 20 statistički najznačajnijih neuređenih MF-ključnih reči
-  \parencite{Xie2007} na GO-termine.  Statistički najznačajne ključne reči su
+  Direktno preslikavanje 20 statistički najznačajnijih neuređenih ključnih reči MF
+  \parencite{Xie2007} na GO-termine.  Statistički najznačajne ključne reči MF su
   ljubičaste dok radi kompletnosti navodimo neke njihove specijalizacije i
   generalizacije koje su obojene sivo. GO-termini su predstavljeni manjim
   kružićima.
@@ -159,24 +166,26 @@ referentnog rada samo jednoj fali direktno preslikavanje.
 \label{fig:KWtop20dis}
 \end{figure}
 
-Nedostajuća MF preslikavanja (skoro polovina MF-ključnih reči) ne samo da otežavaju
-poređenje pojedinačnih ključnih reči već predstavljaju metodološki problem za
-poređenje nomenklatura.  Referentni rezultati su uređeni prema statističkoj
-značajnosti (Z-skor za $F_j$) i predstavljaju dve tabele od 20 statistički
-najznačajnijih neuređenih odnosno 20 uređenih MF-ključnih reči zanemarujući
-roditeljski odnos između njih. Na nivou ključnih reči ovo nije problem, ali ako
-bi se isti postupak primenio na MF-termine poredili bi manje od 200 ključnih
-reči sa potencijalno preko 11 000 MF-termina. Potrebno je odabrati dovoljno
-opšte MF-termine, takve da čine reprezentativan uzorak molekulskih funkcija i
-da njihovo sortiranje po Z-skoru (kao u referentnom radu) ima smisla.  Biće
-predložena dva pristupa za automatsko biranje opisanih MF-termina dok je ručni
-odabir izvan obima ovoga rada.  Oba pristupa imaju sličnu ideju koja podrazumeva izdvajanje samo 
-onih MF-termina koji su pridruženi MF-ključnim rečima. Međutim, kako polovina MF preslikavanja nedostaje (Tabela \ref{tab:direktna_map}), neophodno je dopuniti
-nedostajuća preslikavanja zarad smislenosti poređenja.  Automatski metodi koje ćemo
+Nedostajuća preslikavanja ka MF-terminima (skoro polovina ključnih reči MF) ne
+samo da otežavaju poređenje pojedinačnih ključnih reči već predstavljaju
+metodološki problem za poređenje nomenklatura.  Referentni rezultati su uređeni
+prema statističkoj značajnosti (Z-skor za $F_j$) i predstavljaju dve tabele od
+20 statistički najznačajnijih neuređenih odnosno 20 uređenih ključnih reči MF
+(zanemarujući roditeljski odnos između njih). Na nivou ključnih reči ovo nije
+problem, ali ako bi se isti postupak primenio na MF-termine poredili bi manje
+od 200 ključnih reči MF sa potencijalno preko 11 000 MF-termina. Potrebno je
+odabrati dovoljno opšte MF-termine, takve da čine reprezentativan uzorak
+molekulskih funkcija i da njihovo sortiranje po Z-skoru (kao u referentnom
+radu) ima smisla.  Biće predložena dva pristupa za automatsko biranje opisanih
+MF-termina dok je ručni odabir izvan obima ovoga rada.  Oba pristupa imaju
+sličnu ideju koja podrazumeva izdvajanje samo onih MF-termina koji su
+pridruženi ključnim rečima MF.  Međutim, kako polovina preslikavanja nedostaju
+(Tabela \ref{tab:direktna_map}), neophodno je dopuniti nedostajuća
+preslikavanja zarad smislenosti poređenja.  Automatski metodi koje ćemo
 predložiti razlikuju se u načinu pronalaženja ovih nedostajućih preslikavanja.
 Treba primetiti da, čak i da nema nedostajućih preslikavanja, ovaj pristup
-zanemaruje statistički značajne MF-termine koji nemaju ekvivalentne MF-ključne
-reči. 
+zanemaruje statistički značajne MF-termine koji nemaju ekvivalentne ključne
+reči MF. 
 
 
 
@@ -185,24 +194,26 @@ reči.
 \subsection{Metod indirektnih preslikavanja}
 
 Rezonujući nad relacijama ontologije gena, moguće je doći do
-\keyword{indirektnih preslikavanja} koja preko BP ili CC termina vode ka MF-terminima. Neki MF-termini su relacijama \keyword{part\_of} i
+\keyword{indirektnih preslikavanja} koja preko BP ili CC termina vode ka
+MF-terminima. Neki MF-termini su relacijama \keyword{part\_of} i
 \keyword{has\_part} povezani sa BP ili CC terminima, mada postoje MF-termini
 koji nikako nisu povezani sa terminima ostalih  ontologija. Traženje
-indirektnih preslikavanja izvršeno je korišćenjem \keyword{Neo4j} grafovkse baze.
-Za sve ljubičaste BP termine sa Slike \ref{fig:KWtop20dis} i sve njihove
+indirektnih preslikavanja izvršeno je korišćenjem \keyword{Neo4j} grafovkse
+baze.  Za sve ljubičaste BP-termine sa Slike \ref{fig:KWtop20dis} i sve njihove
 specijalizacije provereno je da li su nekom (bilo kojom) relacijom u vezi sa
-nekim (bilo kojim) MF-terminom. Pronađeno je samo jedno indirektno preslikavanje,
-zajedničko za MF-ključne reči \textit{Neuropeptide} i \textit{Endorphin}. Za
-tri pomenuta CC termina indirektna preslikavanja nisu pronađena. 
+nekim (bilo kojim) MF-terminom. Pronađeno je samo jedno indirektno
+preslikavanje, zajedničko za ključne reči MF \textit{Neuropeptide} i
+\textit{Endorphin}. Za tri pomenuta CC termina indirektna preslikavanja nisu
+pronađena. 
 
 
-Razmotrimo pronađeno preslikavanje za MF-ključnu reč \textit{Neuropeptide} i
-proteine koji su anotirani razmatranim funkcijama. Slika \ref{fig:neuropeptide}
+Razmotrimo pronađeno preslikavanje za ključnu reč MF \textit{Neuropeptide} i
+proteine koji su anotirani razmatranim MF-terminima. Slika \ref{fig:neuropeptide}
 generisana je \keyword{Cypher}\footnote{\textit{Cypher} je upitni jezik za
 Neo4j grafovsku bazu.} upitom koji koji pored GO-termina takođe vraća anotirane
-proteine. Preciznije, upit prvo pronalazi direktno preslikavanja (BP termin)  a
+proteine. Preciznije, upit prvo pronalazi direktno preslikavanja (BP-termin)  a
 zatim sve potomke (indirektne MF-termine) i na kraju anotirane proteine.
-Proteini su preuzeti iz CAFA3 skupa. 
+Proteini su preuzeti iz CAFA3-skupa. 
 
 { \fontsize{9}{9} 
 \begin{verbatim}
@@ -216,27 +227,27 @@ RETURN p
 % \hspace*{-1.0cm} 
 \includegraphics[scale=0.677]{Figures/plots/Neuropeptide2go.pdf}
 \caption {
-  Preslikavanje ključne reči \keyword{Neuropeptide} na MF-termin
+  Preslikavanje ključne reči MF \keyword{Neuropeptide} na MF-termin
   \textit{Neuropeptide receptor activity} preko relacije \keyword{part\_of}.
   Dobijeno preslikavanje rezultuje malim brojem zajednički anotiranih proteina.
 }
 \label{fig:neuropeptide}
 \end{figure}
 
-Sa Slike \ref{fig:neuropeptide} jasno se uočava da ključna reč
-\textit{Neuropeptide} deli svega 5 anotacija sa svim prikazanim MF-terminima.
+Sa Slike \ref{fig:neuropeptide} jasno se uočava da ključna reč MF
+\textit{Neuropeptide} deli svega 5 anotacija sa svim pronađenim MF-terminima.
 Smatramo da je zbog male sličnosti u anotacijama pronađeno indirektno
-preslikavanje nevalidno, jer se očigledno MF-ključna reč \textit{Neuropeptide} i
+preslikavanje nevalidno, jer se očigledno ključna reč MF \textit{Neuropeptide} i
 MF-termin \textit{Neuropeptide receptor activity} koriste u različitim
 kontekstima. Zapravo, šablonski naziv pronađenog MF-termina (po pravilima iz
 Potpoglavlja \ref{MF}) označava da se termin koristi za anotiranje proteina
 koji se \textit{vezuju za neuropeptid zarad inicijacije neke ćelijske
-funkcije}, a ne samih neuropeptida. Takođe, treba primetiti da je pronađeni MF-termin povezan na BP termin relacijom \keyword{part\_of}.  Ovo može da
+funkcije}, a ne samih neuropeptida. Takođe, treba primetiti da je pronađeni MF-termin povezan na BP-termin relacijom \keyword{part\_of}.  Ovo može da
 predstavlja još jedan razlog zašto je pronađeno preslikavanje nevalidno.  Veza
 \keyword{part\_of} podrazumeva agregaciju a ne kompoziciju. Agregacija
 podrazumeva da  molekulska funkcija postoji nezavisno od biološkog procesa što
 je suprotno od kompozicije koja predstavlja relaciju \keyword{has}. Nažalost,
-nijedan od osam pomenutih BP termina nema relaciju \keyword{has} ka nekom MF-terminu.
+nijedan od osam pomenutih BP-termina nema relaciju \keyword{has} ka nekom MF-terminu.
 
 \clearpage
 
@@ -245,17 +256,17 @@ predstavljaju gene ili genske produkte već funkcije koje oni obavljaju. Ključn
 reč \keyword{Neuropeptide} po definiciji predstavlja peptide koje neuronske
 ćelije oslobađaju ili hormone koji se oslobađaju iz drugih tipova ćelije. Jasno
 je da ekvivalentan MF-termin ne može da postoji.  Nažalost, postoji veliki broj
-MF-ključnih reči koje iz ovog razloga ne mogu da imaju ekvivalentan MF-termin,
+ključnih reči MF koje iz ovog razloga ne mogu da imaju ekvivalentan MF-termin,
 na primer: \textit{ Neurotoxin, Endorphin, Pyrogen, Milk protein, GAP protein,
-Motor protein, Myosin, ...}. Veliki broj ovakvih ključnih reči objašnjava 
+Motor protein, Myosin, ...}. Veliki broj ovakvih ključnih reči MF objašnjava 
 zašto skoro pola direktnih preslikavanja na MF-termine ne postoji.  Zbog svih
 navedenih problema, zaključili smo da indirektna preslikavanja nisu adekvatna za
 primene u ovom radu.
 
 Ipak, treba pretpostaviti da je za neke ključne reči moguće pronaći MF-termin
 koji predstavlja zajedničku molekulsku funkciju za skup proteina anotiran
-polaznom MF-ključnom reči.  U cilju pronalaženja takvih MF-termina predlažemo
-jednostavan metod zasnovan na sličnosti skupova.
+polaznom ključnom reči MF.  U cilju pronalaženja takvih MF-termina u nastavku
+predlažemo jednostavan metod zasnovan na sličnosti skupova.
 
 \subsection{Metod sličnih anotacija}
 
@@ -272,35 +283,40 @@ $$  J(A,B) \in [0, 1] $$
       0,&A\cap B=0
     \end{cases}
 \]
-Za realizaciju ove metode korišćeni su svi proteini iz baze \swissprot, ne samo
-CAFA3 podskup.  Neka skup $A$ predstavlja proteine koje MF-ključna reč $kw_A$
-anotira a skup $B$ proteine koje anotira MF-termin $t_B$.  Zbog jednostavnosti,
-skup B nije dobijen grupisanjem opisanim u Potpoglavlju \ref{grupisanje}, dakle ne sadrži proteine specifične za potomke termina $t_B$ već samo
-sirove anotacije iz baze \swissprot.  Za $kw_A$ najverovatnije
+Za realizaciju ove metode korišćeni su svi proteini iz baze \swissprot, ne samo iz
+CAFA3-podskup.  Neka skup $A$ predstavlja proteine koje anotira ključna reč MF $kw_A$
+a skup $B$ proteine koje anotira MF-termin $t_B$.  Zbog jednostavnosti računske
+metode, skup B nije dobijen grupisanjem opisanim u Potpoglavlju
+\ref{grupisanje}, dakle ne sadrži proteine specifične za potomke termina $t_B$
+već samo sirove anotacije iz baze \swissprot.  Za $kw_A$ najverovatnije
 preslikavanje predstavlja MF-termin $t_B$, takav da je Žakardov indeks $J(A,B)$
-najveći. Ipak, ne treba očekivati da će najveći Žakardov indeks nužno značiti i
-najpogodnije preslikavanje. Iz tog razloga potrebno je  sagledavati nekoliko
-najboljih predloga za preslikavanje, sortiranih opadajuće po veličini Žakardovog
-indeksa. Preslikavanja dobijena ovim postupkom zvaćemo \keyword{izvedena
-preslikavanja}.
+najveći.  Ipak, ne treba očekivati da će najveći Žakardov indeks nužno značiti
+i najpogodnije preslikavanje. Iz tog razloga potrebno je  sagledavati nekoliko
+najboljih predloga za preslikavanje, sortiranih opadajuće po veličini
+Žakardovog indeksa. Preslikavanja dobijena ovim postupkom zvaćemo
+\keyword{izvedena preslikavanja}.
 
-Pouzdanost predloženog metoda testirana je nad 104 MF-ključne reči sa poznatim
-direktnim preslikavanje.  Za svaku ključnu reč izdvojili smo maksimum pet
+Pouzdanost predloženog metoda testirana je nad 104 ključne reči MF sa poznatim
+direktnim preslikavanjem.  Za svaku ključnu reč izdvojili smo maksimum pet
 najverovatnijih izvedenih preslikavanja. Izvedna preslikavanja sa najvećim Žakardovim
 indeksom poklapaju se sa poznatim direktnim preslikavanja za 61 ključnu reč
-($0.59$). Ručnom validacijom tj. razmatranjem izvedenih preslikavanja nižeg
-Žakardovog indeksa moguće je povećati broj korektnih preslikavanja na 90
-($0.85$).
+($59\%$). Razmatranjem izvedenih preslikavanja nižeg Žakardovog indeksa moguće
+je povećati broj korektnih preslikavanja na 90 ($85\%$).
 
 Opisani metod uz razmatranje maksimum 5 najpogodnijih izvedenih preslikavanja
-primenili smo nad 91 MF-ključnu reč sa nedostajućim direktnim preslikavanje.
-Izvedena preslikavanja sa Žakardovim indeksom manjim od 0.1 nisu razmatrana što je
-automatski eliminisalo 25 ključnih reči iz daljeg razmatranja. Nakon ručne
-validacije dobijena su 64 izvedena preslikavanja.  Tabela
-\ref{tab:izvedeno_mapiranje} prikazuje izvedena preslikavanja sa minimalnim
-Žakardovim indeksom 0.2 izuzev poslednja tri reda. Poslednja tri reda i
-ostali redovi sa zadebljanim tekstom \en{bold text} predstavljaju nedostajuća
-preslikavanja sa Slike \ref{fig:KWtop20dis}.
+primenili smo nad 91 ključnu reč MF sa nedostajućim direktnim preslikavanjem.
+Izvedena preslikavanja sa Žakardovim indeksom manjim od 0.1 nisu razmatrana što
+je automatski eliminisalo 25 ključnih reči MF iz daljeg razmatranja. Nakon
+ručnog pregledanja dobijena su 64 izvedena preslikavanja. Zbog domena problema,
+ne možemo da tvrdimo da su pronađena preslikavanja korektna. Pogotovo su
+problematična preslikavanja sa niskim Žakardovim indeksom (ispod 0.3). Ipak,
+treba uzeti u obzir da niži Žakardov indeks može biti posledica izostanaka
+grupisanja (Potpoglavlje \ref{grupisanje}) proteina po MF-terminima.
+
+Tabela \ref{tab:izvedeno_mapiranje} prikazuje izvedena preslikavanja sa
+minimalnim Žakardovim indeksom 0.2 izuzev poslednja tri reda. Poslednja tri
+reda i ostali redovi sa zadebljanim tekstom \en{bold text} predstavljaju
+nedostajuća direktna preslikavanja sa Slike \ref{fig:KWtop20dis}.
 
 
 \begin{table}[htpb]
@@ -309,7 +325,7 @@ preslikavanja sa Slike \ref{fig:KWtop20dis}.
   \footnotesize
   \begin{tabular}{|p{4.7cm}|c|c|c|p{5cm}|}
   \hline
-  \bf \textit{MF-ključna reč} & \bf n\_kw & \bf Ji & \bf n\_go & \bf \textit{MF-termin} \\
+  \bf \textit{ključna reč MF} & \bf n\_kw & \bf Ji & \bf n\_go & \bf \textit{MF-termin} \\
   \hline
   \hline
   Dermonecrotic toxin                & 148   & 0.96  & 142   & phospholipase D activity \\ \hline
@@ -386,14 +402,15 @@ preslikavanja sa Slike \ref{fig:KWtop20dis}.
 
 \end{tabular}
   \caption{Izvedena preslikavanja \small 
-  (\textit{n\_kw} i \textit{n\_go} obeležavaju arnost skupa proteina koje anotira MF-ključna reč i skupa proteina koje anotira MF-termin) }
+  (\textit{n\_kw} i \textit{n\_go} obeležavaju arnost skupa proteina koje anotira ključna reč MF i skupa proteina koje anotira MF-termin) }
   \label{tab:izvedeno_mapiranje}
 \end{table}
 
 
-Dakle, od ukupno 195 MF-ključnih reči za 104 postoje direktna preslikavanja ka MF-terminima (ukupno 105 pridruživanja) što je dopunjeno sa još  64 izvedena
-preslikavanja.  Ukupno je dobijeno 169 pridruživanja između 168 MF-ključnih reči i
-138 MF-termina.
+Dakle, od ukupno 195 ključnih reči MF za 104 postoje direktna preslikavanja ka
+MF-terminima (ukupno 105 pridruživanja) što je dopunjeno sa još  64 izvedena
+preslikavanja.  Ukupno je dobijeno 169 pridruživanja između 168 ključnih reči
+MF i 138 MF-termina.
 
 
 
@@ -408,10 +425,10 @@ preslikavanja.  Ukupno je dobijeno 169 pridruživanja između 168 MF-ključnih r
 %   \item Pojavljivanje u definiciji GO-termina (nepouzdano).
 % \end{enumerate}
 % Za skup odabranih GO-termina odabran je skup svih neuređenih/uređenih MF-termina dok su imena ili delovi imena odabrani iz skupa neuređenih/uređenih ključnih
-% reči. Dakle, ova mapiranja su korisna kada želimo da poredimo MF-termine sa MF-ključnim rečima, ne obratno.
+% reči. Dakle, ova mapiranja su korisna kada želimo da poredimo MF-termine sa ključnim rečima MF, ne obratno.
 %
 % Validnost dobijenih mapiranja potrebno je ručno ispitati. Samo zato što se
-% naziv MF-ključne reči javlja u delu imena ili nazivu sinonima MF-termina ne
+% naziv ključne reči MF javlja u delu imena ili nazivu sinonima MF-termina ne
 % znači da je validno porediti te dve funkcije.  Na primer, možda je pronađeno
 % \textit{<ime> receptor binding}. Takođe, ako se koristi samo deo imena ključne
 % reči potrebno je ispitati definiciju MF-termina. 

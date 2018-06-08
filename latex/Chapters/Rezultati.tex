@@ -8,18 +8,18 @@ Kompletan projekat može se naći na \textit{github} adresi \cite{projekat}. Za
 potrebe projekta napravljene su dve baze podataka: relaciona baza podataka
 (\textit{PostgreSQL} v9.5) i grafovska baza podataka (\textit{Neo4j} v3.1).
 
-Od 186 MF-ključnih reči koje anotiraju bar 20 proteina, 97 je statistički
-značajno od čega su 53 predviđeno uređene (p<0.05), a 44 predviđeno neuređene
-(p>0.95).  Od 1781 MF-termina sa preko 20 pridruženih proteina (dobijeno
-grupisanjem, Potpoglavnje \ref{grupisanje}), 1315 je statistički značajno od
-čega su 699 predviđeno uređeni, a 616 predviđeno neuređeni.  Tabela
+Od 186 ključnih reči MF koje anotiraju bar 20 proteina, 97 je statistički
+značajno od čega su 53 uređene (p<0.05), a 44 neuređene (p>0.95) (po Definiciji
+\ref{neuredjena_funkcija}).  Od 1781 MF-termina sa preko 20 pridruženih
+proteina (dobijeno grupisanjem, Potpoglavnje \ref{grupisanje}), 1315 je
+statistički značajno od čega su 699 uređeni, a 616 neuređeni.  Tabela
 \ref{tab:kw_uopsteno} prikazuje razlike u odnosu na referentne rezultate.
 
 \begin{table}[htpb]
 \begin{tabular}{|r|c|c|c|}
   \hline
                      & \small referentni rezultati  & \multicolumn{2}{c|}{ novi rezultati} \\
-                     & Xie2007 kw & MF-k.r.  & MF-termini                  \\
+                     & Xie2007 kw & k.r. MF  & MF-termini                  \\
   \hline
   ukupno ($br. prot\ge20$)     & 143        & 186    & 1781                        \\
   p<0.05 (uređene)   & 37         & 53     & 699                         \\
@@ -31,29 +31,28 @@ grupisanjem, Potpoglavnje \ref{grupisanje}), 1315 je statistički značajno od
   \label{tab:kw_uopsteno}
 \end{table}
 
-Slika \ref{fig:disorder_cmp} sadrži tri tabele predviđeno neuređenih funkcija
-koje sadrže: rezultate iz referentnog rada (levo), nove
-rezultate za MF-ključne reči (sredina) i rezultate za preslikane MF-termine
-(desno). Sve tabele su uređene po Z-skoru opadajuće (statistička značajnost
-predviđene neuređenosti opada).  Leva tabela sadrži samo 20 statistički
-najznačajnije neuređenih MF-ključnih reči dok je srednja ograničena na Z-skor
-veći od dva.  Redovi leve tabele su crveni ako se odgovarajuća ključna reč ne
-nalazi u srednjoj tabeli.  Redovi srednje tabele su zeleni ako se nalaze među
-prvih 20 a ključna reč se ne javlja u levoj tabeli.  Desna tabela MF-termina
-sadrži samo one termine koji su rezultat direktnog ili izvedenog preslikavanja.
-Punim strelicama prikazana su direktna preslikavanja, a isprekidanim izvedena.
+Slika \ref{fig:disorder_cmp} sadrži tri tabele neuređenih funkcija koje sadrže:
+rezultate iz referentnog rada (levo), nove rezultate za ključne reči MF
+(sredina) i rezultate za preslikane MF-termine (desno). Sve tabele su uređene
+po Z-skoru opadajuće (statistička značajnost neuređenosti opada).  Leva tabela
+sadrži samo 20 statistički najznačajnijih (Definicija \ref{stat_naj})
+neuređenih ključnih reči MF dok je srednja tabela ograničena na Z-skor veći od
+dva.  Redovi leve tabele su crveni ako se odgovarajuća ključna reč ne nalazi u
+srednjoj tabeli.  Redovi srednje tabele su zeleni ako se nalaze među prvih 20 a
+ključna reč se ne javlja u levoj tabeli.  Desna tabela MF-termina sadrži samo
+one termine koji su rezultat direktnog ili izvedenog preslikavanja.  Punim
+strelicama prikazana su direktna preslikavanja, a isprekidanim izvedena.
 Nedostatak veze između srednje i desne tabele sugeriše da suprotna funkcija
 nije statistički značajna, a crvena boja redova u srednjoj tabeli označava da
-ni direktno ni indirektno preslikavanje ne postoji.  Srednja i desna tabela pored
-kolona Z-skor i p vrednosti sadrže i procenat neuređenih proteina
-(\text{avg\_dis}) na koji se ubuduće referišemo kao \keyword{neuređenost
-funkcije}. Slike \ref{fig:disorder_cmp_ab}a, \ref{fig:disorder_cmp_ab}b
-pojednostavljuju sagledavanje pojedinačnih razlika među rezultatima, međutim
-zbog ograničenja formata slike neke tabele su skraćene.
-
-Slike \ref{fig:order_cmp} i \ref{fig:order_cmp_ab}  imaju ekvivalentan format
-poređenja kao i Slike \ref{fig:disorder_cmp} i \ref{fig:disorder_cmp_ab}, ali
-predstavljaju uređene funkcije.
+ni direktno ni indirektno preslikavanje ne postoji.  Srednja i desna tabela
+pored kolona Z-skor i p vrednosti sadrže i neuredjenost (u oznaci \text{avg\_dis})
+(učestalost neuređenih proteina, Definicija \ref{neuredjenost}).  Slike
+\ref{fig:disorder_cmp_ab}a, \ref{fig:disorder_cmp_ab}b pojednostavljuju
+sagledavanje pojedinačnih razlika među rezultatima, međutim zbog ograničenja
+formata slike neke tabele su skraćene.  Slike \ref{fig:order_cmp} i
+\ref{fig:order_cmp_ab}  imaju ekvivalentan format poređenja kao i Slike
+\ref{fig:disorder_cmp} i \ref{fig:disorder_cmp_ab}, ali predstavljaju uređene
+funkcije.
 
 
 
@@ -64,7 +63,7 @@ predstavljaju uređene funkcije.
   \centering
 \includegraphics[angle=90, scale=0.43]{Figures/plots/disorder_cmp.pdf}
 \caption {
-  Poređenje predviđenih neuređenih funkcija
+  Poređenje neuređenih funkcija
 }
 \label{fig:disorder_cmp}
 \end{figure}
@@ -76,7 +75,7 @@ predstavljaju uređene funkcije.
   \centering
 \includegraphics[ scale=0.73]{Figures/plots/disorder_cmp_ab.pdf}
 \caption {
-  Razdvojeno poređenje predviđenih neuređenih funkcija. Neke tabele su skraćene.
+  Razdvojeno poređenje neuređenih funkcija. Neke tabele su skraćene.
 }
 \label{fig:disorder_cmp_ab}
 \end{figure}
@@ -88,7 +87,7 @@ predstavljaju uređene funkcije.
   \centering
 \includegraphics[angle=90, scale=0.40]{Figures/plots/order_cmp.pdf}
 \caption {
-  Poređenje predviđenih uređenih funkcija
+  Poređenje uređenih funkcija
 }
 \label{fig:order_cmp}
 \end{figure}
@@ -97,7 +96,7 @@ predstavljaju uređene funkcije.
 \centering
 \includegraphics[scale=0.74]{Figures/plots/order_cmp_ab.pdf}
 \caption {
-  Razdvojeno poređenje predviđenih uređenih funkcija. Neke tabele su skraćene.
+  Razdvojeno poređenje uređenih funkcija. Neke tabele su skraćene.
 }
 \label{fig:order_cmp_ab}
 \end{figure}
@@ -110,8 +109,8 @@ prikazuju samo mali podskup svih statistički značajnih MF-termina.  Kompletna
 analiza grupisanja po MF-terminima predstavljena je grafovski, slikama
 \file{disorder.svg} i \file{order.svg} koje se nalaze na veb adresi
 \cite{rezultati}.  Isečak rezultata \file{disorder.svg} prikazan
-je Slikom \ref{fig:disorder_example}.  Pozadinska boja funkcija kodira
-\keyword{neuređenost termina}, a kodirana je viridis \cite{viridis} preslikavanje
+je Slikom \ref{fig:disorder_example}.  Pozadinska boja funkcija kodira njihovu
+\keyword{neuređenost} (\textit{avg\_dis}), a kodirana je viridis \cite{viridis} preslikavanjem
 boja. Viridis preslikavanje nulu predstavlja tamno ljubičastom a jedinicu svetlo
 žutom pa su tamniji, plavkasti termini  uređeni dok su svetli, zelenkasti
 neuređeni.  Rezultujuće \file{.svg} slike su namenjene da budu otvorene u
@@ -161,10 +160,10 @@ barem 20 proteina.
 
 
 Predloženi $P_L random$ (slučajni) model testirali smo na nivou ključnih reči
-izračunavši Z$_{rand}$ i  $p_{rand}$ vrednosti za sve MF-ključne reči koje
+izračunavši Z$_{rand}$ i  $p_{rand}$ vrednosti za sve ključne reči MF koje
 anotiraju bar 20 proteina. Rezultat poređenja između $P_L$
 modela (Z-skor) i $P_L random$ modela (Z$_{rand}$-skor) prikazan je na Slici
-\ref{fig:PLrand}. Prikazane su samo one MF-ključne reči koje su statistički
+\ref{fig:PLrand}. Prikazane su samo one ključne reči MF koje su statistički
 značajne u odnosu na $p$ ili $p_{rand}$ vrednosti dok su crveno obeležene one
 ključne reči koje su statistički značajne po jednoj ali ne i drugoj p
 vrednosti.
@@ -175,7 +174,7 @@ vrednosti.
 \centering
 \includegraphics[angle=0, scale=0.9]{Figures/plots/PL_and_PL_rand.pdf}
 \caption {
-  Poređenje $PL$ i $PL_{random}$ modela nad statistički značajnim predviđenim (ne)uređenim MF-ključnim rečima
+  Poređenje $PL$ i $PL_{random}$ modela nad statistički značajnim (ne)uređenim ključnim rečima MF
 }
 \label{fig:PLrand}
 \end{figure}
@@ -187,46 +186,46 @@ vrednosti.
 
 \label{Diskusija} % For referencing 
 
-\section{Međusobno upoređivanje MF-ključnih reči}
+\section{Međusobno upoređivanje ključnih reči MF}
 
 Razmotrimo prvo Sliku \ref{fig:order_cmp_ab}a koja pokazuje da se referentni
-rezultati i novi rezultati ne razlikuju bitno za predviđeno uređene MF-ključne
-reči. Međutim, razlike koje postoje kao i veći izuzeci (\textit{Kinase} i
+rezultati i novi rezultati ne razlikuju bitno za uređene ključne
+reči MF. Međutim, razlike koje postoje kao i veći izuzeci (\textit{Kinase} i
 \textit{Aminoacyl-tRNA synthetase})  mogu biti posledica drugačijih podataka,
 ali i modifikacije metoda referentne analize ili čak kombinacije oba faktora.
 Pronalaženje egzaktnog uzroka ovih razlika zahteva dodatno istraživanje koje
 prevazilazi obim ovog rada.
 
-Sa druge strane, predviđeno \keyword{neuređene} MF-ključne reči prikazane na
+Sa druge strane, \keyword{neuređene} ključne reči MF prikazane na
 Slici \ref{fig:disorder_cmp_ab}a imaju znatno više razlika u odnosu na
-referentne rezultate.  Šest referentnih MF-ključnih reči nije identifikovano u
+referentne rezultate.  Šest referentnih ključnih reči MF nije identifikovano u
 novim rezultatima. Ipak, \textit{Antigen} u novoj verziji ključnih reči ne
-postoji dok su četiri ključne reči izbačene iz analize jer anotiraju ispod 10
-CAFA3 proteina (minimum je 20).  Preostala, crvena MF-ključna reč
+postoji dok su četiri ključne reči MF izbačene iz analize jer anotiraju ispod 10
+proteina (minimum je 20).  Preostala, crvena ključna reč MF
 \textit{Cytokine} ima p vrednost 0.49 što je veliko odstupanje od referentnih
-rezultata. Značajnu razliku predstavljaju zeleno obeležene MF-ključne reči koje
+rezultata. Značajnu razliku predstavljaju zeleno obeležene ključne reči MF koje
 se ne javljaju u referentnim rezultatima, a nalaze se među 20 statistički
 najznačajnijih novih rezultata. Među njima je preovlađujući motiv \textit{binding}, 
 što se ne poklapa sa referentnim rezultatima. Za razliku od GO-termina,
 ključne reči ne sadrže datum dodavanja ili izmene pa ne možemo da proverimo da
-li su u pitanju nove ključne reči koje nisu postojale 2006. godine.
+li su u pitanju nove ključne reči MF koje nisu postojale 2006. godine.
 
 Razlike u prosečnoj dužini proteina (\textit{avg\_len}) (Slika
 \ref{fig:disorder_cmp_ab}a) mogu se objasniti različitim skupovima podataka.
-CAFA3 proteini su pretežno eukariotskog porekla što ih u proseku čini dužim od
-proteina iz referentnog rada. Takođe, postoji značajna razlika u broju
-anotiranih proteina (n) između razmatranih ključnih reči.
+Proteini iz CAFA3-skupa su pretežno eukariotskog porekla što ih u proseku čini
+dužim od proteina iz referentnog rada. Takođe, postoji značajna razlika u broju
+anotiranih proteina (n) između razmatranih ključnih reči MF.
 
 
-\section{Upoređivanje MF-ključnih reči i GO-termina}
+\section{Upoređivanje ključnih reči MF i MF-termina}
 
 Rezultati prikazni Slikama \ref{fig:disorder_cmp_ab}b i
 \ref{fig:order_cmp_ab}b sugerišu značajno poklapanje za statistički
 najznačajnije funkcije. Kao što je očekivano, sličnost rezultata Z-skor i
 neuređenost (\textit{avg\_dis}) pogotovo su izraženi za funkcije koje anotiraju
 slične skupove proteina. Veća nepoklapanja prisutna su prvenstveno kod ključnih
-reči čije je preslikavanje problematično zbog razlika u nomenklaturi. Na primer,
-ključna reč \textit{Bacteriolytic enzyme} nalazi se na 42. mestu dok se njen
+reči čije MF je preslikavanje problematično zbog razlika u nomenklaturi. Na primer,
+ključna reč MF \textit{Bacteriolytic enzyme} nalazi se na 42. mestu dok se njen
 direktno preslikani MF-termin \textit{catalytic activity} nalazi na prvom mestu.
 
 \section{Grafovski prikaz MF-termina}
@@ -235,7 +234,7 @@ Grafovski prikaz na slikama \file{disorder.svg} i \file{order.svg} pruža
 detaljan uvid u kompleksne hijerarhijske odnose između MF-termina. Ovaj prikaz otkriva
 strukture koje inače ne bi bile uočene.  Opštiji MF-termini visoke statističke
 značajnosti okarakterisane su kompleksnom grafovskom strukturom potomaka. Ipak,
-treba naglasiti da ovu strukturu čine isključivo statistički značajni termini
+treba naglasiti da ovu strukturu čine isključivo statistički značajni MF-termini
 jer bi suprotno rezultat bio  teško saglediv.
 
 \section{Odnos statističke značajnosti p sa neuređenošću (\textit{avg\_dis}) i prosečnom dužinom proteina (\textit{avg\_len}) }
@@ -250,9 +249,10 @@ korelacijom između dužine proteina i neuređenosti. Odnosno, za očekivati je 
 Slika \ref{fig:avg_len_vs_p} pokazuje da prosečna dužina proteina 
 i statistička značajnost nisu korelirani. 
 
+
 \section{Statistička značajnost, neuređenost i broj proteina}
 
-Prosek neuređenih proteina tj. neuređenost  (\textit{avg\_dis}) otkriva da
+Učestalost neuređenih proteina tj. neuređenost  (\textit{avg\_dis}) otkriva da
 funkcija ne mora da bude pretežno neuređena ili uređena da bi rezultat ($F_J$)
 bio statistički značajan. na tačkastom dijagramu sa
 Slike \ref{fig:avg_dis_vs_p} može se primetiti postojanje uređenih
@@ -276,27 +276,27 @@ Sličnost rezultata $P_L$ i $P_L random$ modela prikazana je na Slici
 povećanom statističkom značajnošću. Ovo se može objasniti znatno
 nižom prosečnom dužinom skupa anotiranih proteina (manje od 300 AK), dok se na
 Slici \ref{fig:PL2} uočava da je $P_L random$ verovatnoća niža za proteine
-kraće od 300 AK.  Obrnuto, uređene MF-ključne reči globalno imaju niži
+kraće od 300 AK.  Obrnuto, uređene ključne reči MF globalno imaju niži
 Z$_{rand}$-skor (veću statističku značajnost) što se takođe može objasniti
 kombinacijom globalno veće prosečne dužine proteina i većom $P_L random$
 verovatnoćom (Slika \ref{fig:PL2}). 
 
-MF-ključna reč \textit{Kinase} predstavlja zanimljivo odstupanje jer $P_L
-random$ model predviđa statistički značajnu uređenost iako je prosek neuređenih
-proteina 0.71 i $P_L$ model predviđa neuređenost. Takođe, MF-termin $Kinase
+ključna reč MF \textit{Kinase} predstavlja zanimljivo odstupanje jer $P_L
+random$ model predviđa statistički značajnu uređenost iako je njena neuređenost 
+0.71 i $P_L$ model predviđa neuređenost. Takođe, MF-termin $Kinase
 activity$ je statistički značajno neuređena ($P_L$ model).
 
 \section{Klasifikacija neuređenog proteina}
 
-Definicija \ref{pdis_def} (neuređenost proteina) iz Potpoglavlja
-\ref{naredno} nije uvek idealna.  Na primer, ako je dužina proteina 35 AK, a
-neuređenost je predviđena celom dužinom, onda je jasno da nema potrebe eliminisati
-protein iz analize već ga treba svrstati kao neuređeni.  Takođe, ako je protein
-dug 50 AK i sadrži predviđeni neuređeni region od 35 AK, onda treba
-pretpostaviti da neuređenost igra ulogu u funkciji. Ovi granični slučajevi čine
-suviše mali procenat proteina u CAFA3 podksupu pa je opravdano zanemariti ih.
-Međutim, procentualno \swissprot sadrži značajno više kratkih proteina što nas
-navodi da istaknemo ovaj problem.
+Definicija \ref{pdis_def} (neuređenost proteina) iz Potpoglavlja \ref{naredno}
+nije uvek idealna.  Na primer, ako je dužina proteina 35 AK, a neuređenost je
+predviđena celom dužinom, onda je jasno da nema potrebe eliminisati protein iz
+analize već ga treba svrstati kao neuređeni.  Takođe, ako je protein dug 50 AK
+i sadrži neuređeni region od 35 AK, onda treba pretpostaviti da neuređenost
+igra ulogu u funkciji. Ovi granični slučajevi čine suviše mali procenat
+proteina u CAFA3-skupu pa je opravdano zanemariti ih.  Međutim, procentualno
+baza \swissprot sadrži značajno više kratkih proteina što nas navodi da
+istaknemo ovaj problem.
 
 \section{Zaključak}
 
