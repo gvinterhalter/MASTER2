@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {serbian}
+\beamer@sectionintoc {1}{Podaci}{2}{0}{1}
+\beamer@sectionintoc {2}{Jupiter Notes}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Uvod}{4}{0}{2}

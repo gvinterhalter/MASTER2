@@ -76,7 +76,7 @@ Baza podataka GO sačinjena je iz dve komponente:
 GO-termini predstavljaju biološke
 termine (koncepte) koji opisuju funkciju. Ontologija gena sagledava funkciju
 genskog produkta iz tri aspekta koji se u terminologiji ontologije nazivaju
-imenski prostori \en{namespace}:
+prostori imena \en{namespace}:
 \begin{itemize}
   \item \keyword{Molekulska funkcija (MF)} - biohemijska aktivnost (uključujući
     specifično vezivanje za ligande\footnote{
@@ -125,7 +125,7 @@ sinonimi koji odgovaraju imenu termina, ali se razlikuju po opsegu:
 Suštinu ontologije čine relacije između termina i pravila dedukcije koja se nad
 njima mogu primenjivati. Osnovnu strukturu ontologije čini usmereni aciklički
 graf \en{Directed Acyclic Graph, DAG} obrazovan roditeljskom vezom (relacijom) \keyword{is\_a}. Prateći
-ovu relaciju, termini jednog imenskog prostora, na primer MF, neće nikad preći u
+ovu relaciju, termini jednog prostora imena, na primer MF, neće nikad preći u
 druga dva CC i BP. Zato razlikujemo tri ontologije sa korenim čvorovima:  MF, CC i BP
 \parencite{go_struktura}. Primer strukture (acikličkog usmerenog grafa) sa dva
 korena čvora (BP i MF) prikazan je na Slici \ref{fig:kinase}.  Pored relacije
@@ -151,8 +151,10 @@ korena čvora (BP i MF) prikazan je na Slici \ref{fig:kinase}.  Pored relacije
 Vremenom se GO ontologija proširuje novim tipovima relacija koje su van okvira
 ovog rada.  Svaka relacija ima strogo definisana pravila kompozicije koja
 omogućavaju automatsko rezonovanje. Na primer, relacija \keyword{is\_a}
-ima svojstvo tranzitivnosti \parencite{is_a} prikazano
-Slikom \ref{fig:is_a}:
+ima svojstvo tranzitivnosti \parencite{is_a} prikazano Slikom \ref{fig:is_a}, a
+siže pravila rezonovanja (nad relacijama) prikazan je na Slici
+\ref{fig:relations}.
+
 \lstset{
   basicstyle=\ttfamily, mathescape,
   numbers=none
@@ -169,7 +171,6 @@ Slikom \ref{fig:is_a}:
 \end{figure}
 
 
-Siže pravila rezonovanja prikazan je na Slici \ref{fig:relations}.
 Jedan od najčešće korišćenih formata je  ravni \file{.obo} format, a pored njega
 su u upotrebi \file{RDF/XML} i \file{OWL} formati.  Poslednja dva formata
 namenjena su automatskom rezonovanju unutar specijalizovanih softvera i upitnih
@@ -190,7 +191,7 @@ Funkcija genskog produkta predstavlja posao koji on obavlja ili osobinu koju on 
 Razmotrimo narednu analogiju \parencite{go_mf}.  U kompaniji radnik (genski produkt) ima titulu
 (ime genskog produkta) i vrši poslove odnosno obavlja funkcije (molekulska
 funkcija) zarad izvršavanja nekog cilja tj. zadatka (biološki proces). Na
-primer, funkcije vozača bile bi: upravljanje volanom, stiskanje kvačila,
+primer, funkcije vozača bile bi upravljanje volanom, stiskanje kvačila,
 utovarivanje prtljaga itd, ali ne bi bilo korektno reći da je funkcija vozača
 "vozačka funkcija", jer se zavisno od firme ili prevoznog sredstva menja skup
 radnji koje vozač obavlja. Na primer, vozač hidrauličnog bagera neće
@@ -421,7 +422,7 @@ SQ   SEQUENCE   670 AA;  75960 MW;  CE24364755CDBFFC CRC64;
   \item Zanimljiva zapažanja iz globalne statistike o bazi \swissprot \cite{uniprot}:
     \begin{itemize}
       \item Većina proteina ima dužinu između 100 i 500 AK.
-      \item Dokaz postojanje za oko $70\%$ proteina dobijen je iz homologije (Slika \ref{fig:PE}).
+      \item Dokaz postojanja za oko $70\%$ proteina dobijen je iz homologije (Slika \ref{fig:PE}).
       \item Zastupljeno je preko 1000 različitih organizama, ipak
         $90\%$ proteina pripada malom broju organizama.
     \end{itemize}

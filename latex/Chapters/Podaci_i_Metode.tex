@@ -14,9 +14,10 @@ autore, metode, podatke itd.
 Najveća razlika u pristupu između referentnog i ovog istraživanja je što su
 referentni rezultati izraženi u terminima \keyword{ključnih reči} dok su u ovom
 istraživanju rezultati izraženi u \keyword{GO-terminima}. Oba pristupa
-proizvode listu funkcija, ali GO-termini se zbog granularnosti prirodnije
-predstavljaju grafovski jer sadrže za red veličine više funkcija. Jedan od
-rezultata ovog istraživanja predstavlja poređenje ova dva pristupa.
+proizvode listu funkcija koreliranih sa uređenim, odnosno neuređenim
+proteinima, ali GO-termini se zbog granularnosti prirodnije predstavljaju
+grafovski jer sadrže za red veličine više funkcija. Jedan od rezultata ovog
+istraživanja predstavlja poređenje ova dva pristupa.
 
 
 \section {Podaci}
@@ -130,21 +131,21 @@ računarskih metoda za analizu što je van opsega ovog rada.
 % ovaj konkretan skup. Iz tog razloga u daljoj analizi predstavljamo uprošćenu
 % verziju formule koja ne uračunva težinu pojedinačnog proteina.
 
-Sekvence u bazi \swissprot su kodirani koristeći \ikeyword{IUPAC}
-kodove.  U podacima se javljaju sekvence sa  21. i 22. aminokiselinom ('U' i 'O')
-kao i  višeznačne oznake: 'B', 'J', 'X' i 'Z'.  Ovakve sekvence nisu podržane od
-strane prediktora VSL2b i za nas predstavljaju neispravnu proteinske sekvence. Pod
-\keyword{validnom proteinskom sekvencom} smatraćemo sekvencu koja predstavlja
-ispravan ulaz za VSL2b, tj. čini je azbuka od 20 standardnih aminokiselina i
-ima minimalnu dužinu 9 AK.
+Sekvence u bazi \swissprot su kodirani koristeći \ikeyword{IUPAC} kodove.  U
+podacima se javljaju sekvence sa  21. i 22. aminokiselinom ('U' i 'O') kao i
+višeznačne oznake: 'B', 'J', 'X' i 'Z'.  Ovakve sekvence nisu podržane od
+strane prediktora VSL2b i stoga ih tretiramo kao neispravne proteinske
+sekvence. Pod \keyword{validnom proteinskom sekvencom} smatraćemo sekvencu koja
+predstavlja ispravan ulaz za VSL2b, tj. čini je azbuka od 20 standardnih
+aminokiselina i ima minimalnu dužinu 9 AK.
 
 CAFA3-podaci se sastoje od dve datoteke:
 \begin{enumerate}
   \item \file{uniprot\_sprot\_exp.fasta}  sadrži 66 841 protein od kojih 66 599
-    za našu analizu predstavljaju validnu proteinsku sekvencu. Od opisivanih
-    proteina 66 063 ima dužinu veću ili jednaku od 40 aminokiselina.
+    predstavljaju validnu proteinsku sekvencu za našu analizu. Od tih
+    proteina, 66 063 ima dužinu veću ili jednaku od 40 aminokiselina.
   \item \file{uniprot\_sprot\_exp.txt} proteinima pridružuje funkcije u obliku 
-    \keyword{GO-termina}. Zastupljeni su termini iz sva tri imenska prostora:
+    \keyword{GO-termina}. Zastupljeni su termini iz sva tri prostora imena:
     16 117 ćelijskih komponenti, 5 966 molekulskih funkcija i 16 117 bioloških
     procesa. Jednom proteinu može biti pridruženo više GO-termina i obrnuto.
 \end{enumerate}
@@ -335,7 +336,7 @@ aminokiselina iz CAFA3-skupa.
   \\ \footnotesize
   (Učestalost prikazuje slučajni model, dok boja AK obeležava afinitet prema
   uređenosti ili neuređenosti. Aminokiseline su poređane u rastućem poretku
-  od najlakše do najteže. 
+  od najlakše do najteže.) 
 }
 \label{fig:AK_ucestalost}
 \end{figure}

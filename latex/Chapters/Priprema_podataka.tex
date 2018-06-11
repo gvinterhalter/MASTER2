@@ -85,7 +85,7 @@ podrazumevaju opisano grupisanje.  Na primer, ključna reč
 \textit{Ribonucleoprotein} takođe anotira pomenutih 1420 proteina, plus
 dodatnih 478 proteina.  Anotacije GO-terminima ne podrazumevaju ovakvo
 grupisanje u eksplicitnom smislu.  Preciznije, zbog granularnosti ontologije
-bilo bi suviše redundantno ponavljati antoacije za svakog pretka GO-termina.
+bilo bi suviše redundantno ponavljati anotacije za svakog pretka GO-termina.
 Primer se može videti na Slici \ref{fig:neuropeptide} iz Potpoglavlja
 \ref{kw2go_mapiranje}.
  
@@ -105,7 +105,7 @@ minimalne dužine 40 AK.
 
 Kako je ovo istraživanje ograničeno na molekulske funkcije, u daljem tekstu
 biće razmatrana preslikavanja isključivo između ključnih reči kategorije MF koje
-zovemo \keyword{ključne reči MF} i GO-termina iz imenskog prostora MF koje zovemo
+zovemo \keyword{ključne reči MF} i GO-termina iz prostora imena MF koje zovemo
 \keyword{MF-termini}. Pokazaćemo da ovo nije trivijalan zadatak i da u opštem
 slučaju zbog razlika u nomenklaturi preslikavanje ne postoji ili da pronađene
 funkcije nisu uvek ekvivalentne.
@@ -117,7 +117,7 @@ znamo egzaktnu razliku, ali jasno je da su neke ključne reči
 izbačene ili zamenjene a neke samo dodate. Datoteka \file{keywlist.txt} opisuje
 ključne reči, a sadrži i pridruživanja (relaciju) odgovarajućim GO-terminima.
 Pomenuta relacija pridružuje ključne reči MF ne samo MF-terminima već i
-GO-terminima imenskih prostora BP i CC . Strogo posmatrano pridruživanja ne
+GO-terminima prostora imena BP i CC . Strogo posmatrano pridruživanja ne
 čine funkciju (preslikavanje), jer se neke ključne reči MF pridružuju većem
 broju GO-termina čak i ako ograničimo sliku preslikavanja na samo
 MF\footnote{Samo \textit{DNA invertase} se preslikava u dva različita
@@ -125,7 +125,7 @@ MF-termina (\textit{DNA binding} i \textit{recombinase activity}).} ili samo
 BP-termine.  Ipak, opisana pridruživanja nazivaćemo preslikavanja ili direktna
 preslikavanja. Direktna preslikavanja za ključne reči MF sumirana su Tabelom
 \ref{tab:direktna_map}.  Za 20 ključnih reči MF uopšte ne postoji preslikavanje
-dok je broj preslikavanja ka MF, BP i CC imenskim prostorima, redom 104, 54 i
+dok je broj preslikavanja ka MF, BP i CC prostorima imena, redom 104, 54 i
 11. Dakle, veliki broj preslikavanja ka MF-terminima nedostaje.
 
 \begin{table}[htpb]

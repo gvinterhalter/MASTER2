@@ -19,12 +19,10 @@ zovemo \keyword{polimer} \textit{(poli- =mnogo, -mer= deo)}.
 Skup monomera možemo da smatramo azbukom koja gradi jezik polimera.  Mali broj
 različitih monomera je dovoljan za strukturnu kompleksnost bilo koje ćelije.
 Tri najznačajnija tipa bioloških polimera i njihovi monomeri prikazani su u
-Tabeli
-\ref{tab:polimeri}.
+Tabeli \ref{tab:polimeri}.
 
 \begin{table}[htpb]
   \centering
-  \label{tab:polimeri}
   \begin{tabular}{|l|l|}
     \hline
     \keyword{Polimer}            & \keyword{Monomer} \\
@@ -35,6 +33,7 @@ Tabeli
     \hline
   \end{tabular}
   \caption{Najznačajniji biološki polimeri}
+  \label{tab:polimeri}
 \end{table}
 
 
@@ -62,7 +61,7 @@ Pomenuti kod prikazan centralnim delom Slike \ref{fig:kod} zove se
 \keyword{genetički kod} i opisuje preslikavanje uzastopnih trojki baza nukleinske
 kiseline tzv. \keyword{kodona} u aminokiseline ili stop kodona. Na primer,
 trojka baza: guanin-adenin-uracil (GAU) ili guanin-adenin-citozin (GAC) prevode
-su u aspariginsku kiselinu.
+su u asparaginsku kiselinu.
 
 \begin{figure}[]
 \centering
@@ -172,7 +171,8 @@ karboksilne grupe).
 
 Prema fizičkim i hemijskim osobinama bočnog niza, aminokiseline se mogu
 klasifikovati na nekoliko načina prikazanih Slikama \ref{fig:kod} i
-\ref{fig:AK_vene} od čega izdvajamo sledeću klasifikaciju (jer najviše odgovara domenu istraživanja):
+\ref{fig:AK_vene} od čega izdvajamo sledeću klasifikaciju najadekvatniju u
+odnosu na domen istraživanja:
 \begin{itemize}
   \item Nepolarne AK -
     zbog manjka asimetrije u naelektrisanju R grupe ovi molekuli nisu
@@ -228,6 +228,18 @@ Proteinska struktura (oblik) opisuje se kroz četiri nivoa rastuće složenosti.
 odnosno redosledom aminokiselina. Primarna struktura predstavlja \keyword{sekvencu
 proteina} i kompaktno je zapisujemo azbukom od minimum 20 karaktera.
 
+\keyword{Tercijarna struktura} predstavlja prostorni oblik koji protein zauzima
+usled interakcija bočnih nizova aminokiselina. Ovaj korak poznat je kao
+\keyword{savijanje} \en{folding}.  Pod poznavanjem tercijarne strukture 
+podrazumeva se opisivanje prostornih koordinata svih atoma polipeptida. Primer dijagrama
+tercijarne strukture dat je Slikom \ref{fig:sekundarna}b.
+Najveći uticaj na formiranje sekundarne strukture ima polarnost aminokiselina.
+Tercijarna struktura proteina obično je podeljena u jedan ili više
+\keyword{domena} koji predstavljaju rigidne savijene regione pp lanca.  Domeni
+su obično sačinjeni od nekoliko elemenata sekundarne strukture koja logički
+sledi nakon primarne, međutim tercijarna struktura je suštinska a sekundarna
+šematska na osnovu nje.
+
 \keyword{Sekundarna struktura} najčešće nastaje formiranjem vodoničnih veza
 između atoma kiseonika i azota istog lanca peptida stvarajući na taj način
 dva različita oblika koja su prikazana na Slici \ref{fig:sekundarna}:
@@ -263,7 +275,7 @@ vrednosti $\psi$ i $\phi$ uglova. Ove kombinacije ilustrovane su skicom
 Ramačandranovog dijagrama (Slika \ref{fig:uglovi}b) koji se dobija kao
 tačaksti dijagram \en{scatter plot} svih $\psi$ i $\phi$ vrednosti jednog polipeptida.
 
-Pored gore navedenih, elementima sekundarne strukture takođe se smatraju:
+Pored gore navedenih, elementima sekundarne strukture takođe se smatraju
 disulfidni most\footnote{
   Disulfidni most se formira izvan ćelije, nakon što je protein  već savijen, i
   služi stabilizaciji 3D strukture.
@@ -272,17 +284,22 @@ cinkovi prsti i ukosnica.  Postoje i drugi oblici spirala i traka, ali ih
 nećemo navoditi.
 
 
+\begin{figure}[th]
+\centering
+\includegraphics[scale=0.6]{uvod/uglovi.pdf}
+\caption {
+  \footnotesize
+  a) Prikazuje, $\psi$, $\phi$ i $\omega$ uglove. Ugao $\omega$ je fiksan
+  zbog specifičnosti peptidne veze omogućavajući rotiacije samo oko
+  $\psi$ i $\phi$ uglova.
+  b) Skica Ramačandranovog dijagrama, prikazuje najčešću raspodelu vrednosti uglova
+  i sekundarne strukture koje oni obrazuju.
+  (Dijagrami su preuzeti iz \cite{Bioinformatics2007})
+}
+\label{fig:uglovi}
+\end{figure}
 
 
-\keyword{Tercijarna struktura} predstavlja prostorni oblik koji protein zauzima
-usled interakcija bočnih nizova aminokiselina. Ovaj korak poznat je kao
-\keyword{savijanje} \en{folding}.  Pod poznavanjem tercijarne strukture 
-podrazumeva se opisivanje prostornih koordinata svih atoma polipeptida. Primer dijagrama
-tercijarne strukture dat je Slikom \ref{fig:sekundarna}b.
-Najveći uticaj na formiranje sekundarne strukture ima polarnost aminokiselina.
-Tercijarna struktura proteina obično je podeljena u jedan ili više
-\keyword{domena} koji predstavljaju rigidne savijene regione pp lanca.  Domeni
-su obično sačinjeni od nekoliko elemenata sekundarne strukture.
 
 \keyword{ Kvaternerna struktura } opisuje proteinske komplekse (oligomerne proteine) sastavljene
 iz nekoliko savijenih polipeptida. Na primer, hemoglobin je proteinski kompleks.
@@ -300,20 +317,6 @@ temperature) dovodi do promene tercijarne strukture ili potpunog gubitka
 strukture (denaturacija).
 
 
-\begin{figure}[th]
-\centering
-\includegraphics[scale=0.6]{uvod/uglovi.pdf}
-\caption {
-  \footnotesize
-  a) Prikazuje, $\psi$, $\phi$ i $\omega$ uglove. Ugao $\omega$ je fiksan
-  zbog specifičnosti peptidne veze omogućavajući rotiacije samo oko
-  $\psi$ i $\phi$ uglova.
-  b) Skica Ramačandranovog dijagrama, prikazuje najčešću raspodelu vrednosti uglova
-  i sekundarne strukture koje oni obrazuju.
-  (Dijagrami su preuzeti iz \cite{Bioinformatics2007})
-}
-\label{fig:uglovi}
-\end{figure}
 
 
 % Roles:
