@@ -8,7 +8,7 @@ Kompletan projekat može se naći na \textit{github} adresi \cite{projekat}. Za
 potrebe projekta napravljene su dve baze podataka: relaciona baza podataka
 (\textit{PostgreSQL} v9.5) i grafovska baza podataka (\textit{Neo4j} v3.1).
 
-Od 186 ključnih reči MF koje anotiraju bar 20 proteina, 97 je statistički
+Od 186 ključnih MF-reči  koje anotiraju bar 20 proteina, 97 je statistički
 značajno od čega su 53 uređene (p<0.05), a 44 neuređene (p>0.95) (po Definiciji
 \ref{neuredjena_funkcija}).  Od 1781 MF-termina sa preko 20 pridruženih
 proteina (dobijeno grupisanjem, Potpoglavnje \ref{grupisanje}), 1315 je
@@ -32,14 +32,14 @@ statistički značajno od čega su 699 uređeni, a 616 neuređeni.  Tabela
 \end{table}
 
 Slika \ref{fig:disorder_cmp} sadrži tri tabele neuređenih funkcija koje sadrže:
-rezultate iz referentnog rada (levo), nove rezultate za ključne reči MF
+rezultate iz referentnog rada (levo), nove rezultate za ključne MF-reči 
 (sredina) i rezultate za preslikane MF-termine (desno). Sve tabele su uređene
 po Z-skoru opadajuće (statistička značajnost neuređenosti opada).  Leva tabela
 sadrži samo 20 statistički najznačajnijih (Definicija \ref{stat_naj})
-neuređenih ključnih reči MF dok je srednja tabela ograničena na Z-skor veći od
-dva.  Redovi leve tabele su crveni ako se odgovarajuća ključna reč ne nalazi u
+neuređenih ključnih MF-reči  dok je srednja tabela ograničena na Z-skor veći od
+dva.  Redovi leve tabele su crveni ako se odgovarajuća ključna MF-reč ne nalazi u
 srednjoj tabeli.  Redovi srednje tabele su zeleni ako se nalaze među prvih 20 a
-ključna reč se ne javlja u levoj tabeli.  Desna tabela MF-termina sadrži samo
+ključna MF-reč se ne javlja u levoj tabeli.  Desna tabela MF-termina sadrži samo
 one termine koji su rezultat direktnog ili izvedenog preslikavanja.  Punim
 strelicama prikazana su direktna preslikavanja, a isprekidanim izvedena.
 Nedostatak veze između srednje i desne tabele sugeriše da suprotna funkcija
@@ -160,12 +160,12 @@ barem 20 proteina.
 
 
 Predloženi $P_L random$ (slučajni) model testirali smo na nivou ključnih reči
-izračunavši Z$_{rand}$ i  $p_{rand}$ vrednosti za sve ključne reči MF koje
+izračunavši Z$_{rand}$ i  $p_{rand}$ vrednosti za sve ključne MF-reči  koje
 anotiraju bar 20 proteina. Rezultat poređenja između $P_L$
 modela (Z-skor) i $P_L random$ modela (Z$_{rand}$-skor) prikazan je na Slici
-\ref{fig:PLrand}. Prikazane su samo one ključne reči MF koje su statistički
+\ref{fig:PLrand}. Prikazane su samo one ključne MF-reči  koje su statistički
 značajne u odnosu na $p$ ili $p_{rand}$ vrednosti dok su crveno obeležene one
-ključne reči koje su statistički značajne po jednoj ali ne i drugoj p
+ključne MF-reči koje su statistički značajne po jednoj ali ne i drugoj p
 vrednosti.
 
 
@@ -174,7 +174,7 @@ vrednosti.
 \centering
 \includegraphics[angle=0, scale=0.9]{Figures/plots/PL_and_PL_rand.pdf}
 \caption {
-  Poređenje $PL$ i $PL_{random}$ modela nad statistički značajnim (ne)uređenim ključnim rečima MF
+  Poređenje $PL$ i $PL_{random}$ modela nad statistički značajnim (ne)uređenim ključnim MF-rečima 
 }
 \label{fig:PLrand}
 \end{figure}
@@ -186,46 +186,46 @@ vrednosti.
 
 \label{Diskusija} % For referencing 
 
-\section{Međusobno upoređivanje ključnih reči MF}
+\section{Međusobno upoređivanje ključnih MF-reči }
 
 Razmotrimo prvo Sliku \ref{fig:order_cmp_ab}a koja pokazuje da se referentni
 rezultati i novi rezultati ne razlikuju bitno za uređene ključne
-reči MF. Međutim, razlike koje postoje kao i veći izuzeci (\textit{Kinase} i
+MF-reči . Međutim, razlike koje postoje kao i veći izuzeci (\textit{Kinase} i
 \textit{Aminoacyl-tRNA synthetase})  mogu biti posledica drugačijih podataka,
 ali i modifikacije metoda referentne analize ili čak kombinacije oba faktora.
 Pronalaženje egzaktnog uzroka ovih razlika zahteva dodatno istraživanje koje
 prevazilazi obim ovog rada.
 
-Sa druge strane, \keyword{neuređene} ključne reči MF prikazane na
+Sa druge strane, \keyword{neuređene} ključne MF-reči  prikazane na
 Slici \ref{fig:disorder_cmp_ab}a imaju znatno više razlika u odnosu na
-referentne rezultate.  Šest referentnih ključnih reči MF nije identifikovano u
+referentne rezultate.  Šest referentnih ključnih MF-reči  nije identifikovano u
 novim rezultatima. Ipak, \textit{Antigen} u novoj verziji ključnih reči ne
-postoji dok su četiri ključne reči MF izbačene iz analize jer anotiraju ispod 10
-proteina (minimum je 20).  Preostala, crvena ključna reč MF
+postoji dok su četiri ključne MF-reči  izbačene iz analize jer anotiraju ispod 10
+proteina (minimum je 20).  Preostala, crvena ključna MF-reč 
 \textit{Cytokine} ima p vrednost 0.49 što je veliko odstupanje od referentnih
-rezultata. Značajnu razliku predstavljaju zeleno obeležene ključne reči MF koje
+rezultata. Značajnu razliku predstavljaju zeleno obeležene ključne MF-reči  koje
 se ne javljaju u referentnim rezultatima, a nalaze se među 20 statistički
 najznačajnijih novih rezultata. Među njima je preovlađujući motiv \textit{binding}, 
 što se ne poklapa sa referentnim rezultatima. Za razliku od GO-termina,
 ključne reči ne sadrže datum dodavanja ili izmene pa ne možemo da proverimo da
-li su u pitanju nove ključne reči MF koje nisu postojale 2006. godine.
+li su u pitanju nove ključne MF-reči  koje nisu postojale 2006. godine.
 
 Razlike u prosečnoj dužini proteina (\textit{avg\_len}) (Slika
 \ref{fig:disorder_cmp_ab}a) mogu se objasniti različitim skupovima podataka.
 Proteini iz CAFA3-skupa su pretežno eukariotskog porekla što ih u proseku čini
 dužim od proteina iz referentnog rada. Takođe, postoji značajna razlika u broju
-anotiranih proteina (n) između razmatranih ključnih reči MF.
+anotiranih proteina (n) između razmatranih ključnih MF-reči .
 
 
-\section{Upoređivanje ključnih reči MF i MF-termina}
+\section{Upoređivanje ključnih MF-reči  i MF-termina}
 
 Rezultati prikazni Slikama \ref{fig:disorder_cmp_ab}b i
 \ref{fig:order_cmp_ab}b sugerišu značajno poklapanje za statistički
 najznačajnije funkcije. Kao što je očekivano, sličnost rezultata Z-skor i
 neuređenost (\textit{avg\_dis}) pogotovo su izraženi za funkcije koje anotiraju
 slične skupove proteina. Veća nepoklapanja prisutna su prvenstveno kod ključnih
-reči čije MF je preslikavanje problematično zbog razlika u nomenklaturi. Na primer,
-ključna reč MF \textit{Bacteriolytic enzyme} nalazi se na 42. mestu dok se njen
+MF-reči čije je preslikavanje problematično zbog razlika u nomenklaturi. Na primer,
+ključna MF-reč  \textit{Bacteriolytic enzyme} nalazi se na 42. mestu dok se njen
 direktno preslikani MF-termin \textit{catalytic activity} nalazi na prvom mestu.
 
 \section{Grafovski prikaz MF-termina}
@@ -276,12 +276,12 @@ Sličnost rezultata $P_L$ i $P_L random$ modela prikazana je na Slici
 povećanom statističkom značajnošću. Ovo se može objasniti znatno
 nižom prosečnom dužinom skupa anotiranih proteina (manje od 300 AK), dok se na
 Slici \ref{fig:PL2} uočava da je $P_L random$ verovatnoća niža za proteine
-kraće od 300 AK.  Obrnuto, uređene ključne reči MF globalno imaju niži
+kraće od 300 AK.  Obrnuto, uređene ključne MF-reči  globalno imaju niži
 Z$_{rand}$-skor (veću statističku značajnost) što se takođe može objasniti
 kombinacijom globalno veće prosečne dužine proteina i većom $P_L random$
 verovatnoćom (Slika \ref{fig:PL2}). 
 
-ključna reč MF \textit{Kinase} predstavlja zanimljivo odstupanje jer $P_L
+ključna MF-reč  \textit{Kinase} predstavlja zanimljivo odstupanje jer $P_L
 random$ model predviđa statistički značajnu uređenost iako je njena neuređenost 
 0.71 i $P_L$ model predviđa neuređenost. Takođe, MF-termin $Kinase
 activity$ je statistički značajno neuređena ($P_L$ model).
