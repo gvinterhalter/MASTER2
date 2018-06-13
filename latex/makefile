@@ -1,9 +1,9 @@
 
-# prez_compile: ref.bib
-# 	latexmk -pdf -jobname=prezentacija/out/prez prezentacija.tex
+prez_compile: ref.bib
+	latexmk -pdf -jobname=prezentacija/out/prez prezentacija.tex
 
-compile:  ref.bib
-	latexmk -pdf -jobname=out/master main.tex 
+# compile:  ref.bib
+# 	latexmk -pdf -jobname=out/master main.tex 
 
 ref.bib: ./bib/*
 	cat ./bib/* > ref.bib

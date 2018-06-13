@@ -1,6 +1,7 @@
 
 #latex
 latex/out/
+latex/prezentacija/out/
 
 # autogenerisani ref se dobija od bib/* a sci.bib od ref.bib
 latex/*ref.bib*
