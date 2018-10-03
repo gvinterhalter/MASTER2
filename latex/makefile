@@ -1,6 +1,6 @@
 
 prez_compile: ref.bib
-	latexmk -pdf -jobname=prezentacija/out/prez prezentacija.tex
+	latexmk -pdf -jobname=prezentacija/out_en/prez prezentacija_en.tex
 
 # compile:  ref.bib
 # 	latexmk -pdf -jobname=out/master main.tex 

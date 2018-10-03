@@ -12,6 +12,7 @@ latex/*sci.bib*
 .idea/
 .ipynb_checkpoints/
 data/IN/
+data/IN_removed/
 pappers/
 data/predictions/
 data/tmp/

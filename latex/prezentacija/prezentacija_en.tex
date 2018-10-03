@@ -1,10 +1,9 @@
 \documentclass{beamer}
 
 \usetheme{CambridgeUS}
-\usepackage{animate}
 
 \usepackage[utf8x,utf8]{inputenc} % make weird characters work
-\usepackage[serbian]{babel}
+\usepackage[english]{babel}
 
 \usepackage{graphicx}
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
@@ -37,16 +36,17 @@
 \newcommand{\kw}[1]{\textbf{\textit{KW: #1}}}
 \newcommand{\mf}[1]{\textbf{\textit{MF: #1}}}
 
-\newtheorem{definicija}{Definicija}
+\newtheorem{definicija}{Definition}
 
 % -------------------------------------------------
 
 % \title{Bioinformatička analiza povezanosti funkcije i neuređenosti proteina}
-\title[Povezanost funkcije i neuređenosti proteina]{Bioinformatička analiza povezanosti funkcije i neuređenosti proteina}
+\title[Protein function and IDP \& IDPr]{ Bioinformatics analysis
+of correlation between protein function and intrinsic disorder}
 % \subtitle{Master Rad}
 
 \author{Goran Vinterhalter}
-\institute[Matematički fakultet]{ Matematički fakultet, Beogradski univerzitet }
+\institute[Faculty of Mathematics]{University of Belgrade Faculty of Mathematics}
 \date{\today}
 
 % This is only inserted into the PDF information catalog. Can be left
@@ -56,8 +56,8 @@
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
 
-% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
-% \logo{\pgfuseimage{university-logo}}
+\pgfdeclareimage[height=0.5cm]{university-logo}{logo.png}
+\logo{\pgfuseimage{university-logo}}
 
 
 % Delete this, if you do not want the table of contents to pop up at
@@ -109,139 +109,11 @@
 %   % You might wish to add the option [pausesections]
 % \end{frame}
 
-\section{Uvod}
-\subsection{Proteini i neuređenost}
-
-\begin{frame}{Proteini i neuređenost}
-  % \begin{figure}
-  %   \hspace*{-0.2cm}
-  %   \includegraphics[scale=0.35]{uvod/sekundarna.pdf}
-  % \end{figure}
-
-  \pause
-  \begin{figure}
-    \centering
-    \vspace{-0.5cm}
-    \includegraphics[scale=0.35]{sumo/sumo1-0.png}
-  \end{figure}
-
-  \pause
-  Inherentno neuređeni protein \en{Intrinsically disordered protein, IDP}
-  \begin{itemize}
-    \item Funkcionalan protein
-    \item Izostanak fiksne trodimenzionalne strukture, celovito ili delimično 
-    \item Jedan ili više neuređenih regiona (IDPr)
-  \end{itemize}
-\end{frame}
-
-% \subsection{Inherentno neuređeni proteini}
-% \begin{frame} {Šta su to neuređeni proteini?}
-  % \begin{columns}
-  %   \column{0.5\textwidth}
-  %   Dunker (2001):
-  %   \begin{enumerate} \small
-  %     \item Uređen protein 
-  %     \item Topljiva globula\\ \en{molten globule} 
-  %     \item Pre-topljiva globula \\\en{pre-molten globule} 
-  %     \item Nasumično klupko \\\en{random coil} 
-  %   \end{enumerate}
-  %
-  %   \column{0.5\textwidth}
-  %   Uverski (2016):
-  %   \begin{itemize} \small
-  %     \item foldon \en{foldon} - nezavisno organizujuća jedinica proteina
-  %     \item indukativni foldon \\\en{inducible foldon} 
-  %     \item ne-foldon \en{non-foldon} 
-  %     \item polu-foldon \en{semi-foldon} 
-  %     \item anti-foldon \en{unfoldons} 
-  %   \end{itemize}
-  % \end{columns}
-% \end{frame}
-
-
-% \begin{frame}
-%   \animategraphics[autoplay,loop,width=\linewidth]{1}{sumo/sumo1-}{ }{}
-% \end{frame}]
-
-
-\subsection{Funkcija proteina}
-
-\begin{frame}{Ontologija gena}
-
-  \begin{columns}
-  \hspace*{0.25cm}
-    \column{0.4\textwidth}
-
-    Prostori imena:
-    \begin{itemize}
-      \footnotesize
-      \item Molekulska funkcija (MF)
-      \item Ćelijske komponente  (CC)
-      \item Biološki procesi (BP)
-    \end{itemize}
-
-
-    % Molekulske funkcije:
-    % \begin{itemize}
-    %   \item \textit{$x$ binding} 
-    %   \item \textit{$<$enzyme$>$ activity} 
-    %   \item \textit{$x$ receptor activity} 
-    %   \item \textit{$x$ transporter activity} 
-    % \end{itemize}
-
-
-    \column{0.8\textwidth}
-    \begin{figure}[h!]
-      \vspace*{-0.7cm}
-      \hspace*{-3.0cm} 
-      \includegraphics[width=0.8\linewidth]{img/kinase.png}
-    \end{figure}
-
-  \end{columns}
-  
-\end{frame}
-
-
-% \begin{frame}{Baza podataka \swissprot}
-%
-%   \begin{columns}
-%     \column{0.5\textwidth}
-%
-%     \begin{itemize}
-%       \small
-%       \item Podskup baze \uniprot
-%       \item Visoko kvalitetne sekvence, ručno proverene anotacije 
-%       \item minimalno redundantni unosi
-%       \item Kontrolisani vokabular, \keyword{ključne reči} \en{keywords}
-%       \item Identifikacioni broj \keyword{AC} \\ \en{accession number}
-%         \begin{itemize}
-%           \item primarni
-%           \item sekundarni
-%         \end{itemize}
-%       \item dokaz o postojanju proteina
-%       \item prosečna dužina prot. je između 100 i 500AK
-%     \end{itemize}
-%
-%
-%
-%
-%     \column{0.5\textwidth}
-% \begin{figure}[h!]
-%   \centering
-%   \includegraphics[width=1\linewidth]{uniprot_overview.png}
-%   \caption{Šematski prikaz povezanosti \uniprot}
-% \end{figure}
-%
-%   \end{columns}
-%   
-% \end{frame}
-
-\section{Podaci i metode}
-
+\section{Inspiration}
 \begin{frame}
-  \frametitle{Referentni rad}
+  \frametitle{Inspiration}
 
-  \begin{block} {Referentni rad: Xie. et. al 2006}
+  \begin{block} {Reference work: Xie. et. al 2006}
     \textit{Functional anthology of intrinsic disorder. 1.\\
   \footnotesize Biological processes and functions of proteins with long disordered regions}
   % \\ \textit{\footnotesize Xie $H^1$, Vucetic S, Iakoucheva LM, Oldfield CJ, Dunker AK, Uversky VN, Obradovic Z.}
@@ -249,31 +121,34 @@
 
   \pause
   \begin{itemize}
-    \item \swissprot v48 iz 2005. (oko 200 000 sekvenci)
+    \item \swissprot v48 from 2005. ( about 200 000 seq.)
       \pause
-    \item ključne Svisprot-reči (ključne reči) (710 kw, )
+    \item UniprotKB Keywords
       \pause
   %   \item \swissprot sadrži statistički redundantne sekvence
   %   \item Klasterovanje u proteinske familije (27 217 familija)
 
-    \item PONDR VSL3 prediktor
+    \item PONDR VSL3 disorder predictor
   \end{itemize}
 
 \end{frame}
 
-\subsection{Podaci}
+
+\section{Method and data}
+
+
+\subsection{Data}
 \begin{frame}
-  \frametitle{Korišćeni podaci}
+  \frametitle{Used data}
 
   \begin{itemize}
-    \item \textit{CAFA3}-skup podataka (trening skup sa \textit{CAFA3 takmičenja})
+    \item \textit{CAFA3} dataset (training set from CAFA3 challenge (2016))
       \pause
-    \item \textit{CAFA3}-skup je podskup baze \swissprot
+    \item GO terms
       \pause
-    \item GO-termini za anotaciju funkcija (MF-termini)
+    \item \textit{CAFA3} dataset is a subset of \swissprot
       \pause
-    \item pretpostavljamo da sekvence iz \textit{CAFA3}-skupa nisu statistički
-          redundantne
+    \item We assume the \textit{CAFA3} dataset is not statictially redundant
   \end{itemize}
 
   % \begin{figure}
@@ -288,42 +163,56 @@
 
 
 
-\subsection{Zavisnost neuređenosti od dužine proteina}
+\subsection{Dependency between protein length and predicted disorder }
 
-\begin{frame}{Predikcija neuređenosti proteina}
-  Koristimo PONDR VSL2b prediktor
-      \pause
+\begin{frame}{Predicting disorder}
+
+  PONDR VSL2b disorder predictor
+  \pause
+
   \begin{definicija}
     \label{pdis_def}
-    Protein je \keyword{putativno neuređen} \en{putatively disordered}
-    (najverovatnije neuređen, u daljem tekstu \keyword{neuređen}) ako sadrži bar
-    jedan region veći ili jednak od 40 uzastopnih aminokiselina takvih da im je
-    predviđena neuređenost iznad 0.5. 
+    Protein is labled as \keyword{putatively disorderd} if it contains a
+    predicted IDPr at least 40 AA long, otherwise putatively orderd.
   \end{definicija}
 
 \end{frame}
 
 
-\begin{frame}{$P_L$: zavisnost dužine proteina i predikcije neuređenosti}
-  Neka je $S_L$ skup proteina sa dužinama iz intervala $[L-l, L+l]$ gde je
-  $l = 0.1 \cdot L$.  Na primer, skup $S_{100}$ sadrži proteine iz intervala
-  $[90, 110]$, a $S_{500}$ iz intervala $[450, 550]$.
-      \pause
+\begin{frame}{}
+  \begin{itemize}
+    \item 
 
-  $$ S_L = \{s_i :  | L -  | s_i | | \le l  \}, \quad   |s_i| \text{ je dužina
-  sekvence}  $$
+
+  % Let $S_L$ be a set of proteins with lenghts from interval $[L-l, L+l]$  where
+  % $l = 0.1 \cdot L$.
+  % For example, set $S_{100}$ contains proteins with lengths from interval $[90,
+  % 110]$ while set $S_{500}$ from interval $[450, 550]$. 
+
+  $$ S_L = \{s_i :  | L -  | s_i | | \le l  \},
+  \quad l=0.1 \cdot L  \quad 
+   \text{ and $|s_i|$ is sequence length}  $$
+
+        \includegraphics[scale=1]{S_L}
 
   \pause
 
+\item
+
+  The probability a protein of length $L$ is labeld putatively disorderd by
+  chance is aproximated as:
+
   $$ P_L = \dfrac{ \sum_{s_i \in S_L} d(s_i)} {| S_L |}, \quad   |S_L| \text{
-  je kardinalnost skupa}$$
+  is set cardinality}$$
   \[   
     d(s_i) = 
     \begin{cases}
-    1 & \text{ako je  $s_i$ \keyword{neuređena}}\\
-    0 & \text{suprotno}
+    1 & \text{if  $s_i$ is \keyword{putatively disorderd}}\\
+    0 & \text{otherwise}
     \end{cases}
   \]
+
+  \end{itemize}
 \end{frame}
 
 
@@ -340,15 +229,15 @@
 
 \begin{frame}{}
   \begin{itemize}
-    \item slučajni model \en{random model}, $P_L random$  
-    \item model uniformne verovatnoće  \en{uniform model}, $P_L uniform$
+    \item random model ( $P_L random$  )
+    \item uniform model ( $P_L uniform$ )
   \end{itemize}
 
   \begin{figure}[th]
     \centering
     \includegraphics[scale=0.7]{plots/AK_ucestalost}
     \vspace{-0.2cm}
-    \caption{ \footnotesize Učestalost aminokiselina u CAFA3-podacima }
+    \caption{ \footnotesize Amino acide frequency in CAFA3 dataset }
   \end{figure}
 \end{frame}
 
@@ -356,25 +245,27 @@
   \begin{figure}[th]
     \centering
     \includegraphics[scale=0.8]{plots/PL_F_cmp}
-    \caption{Upoređivanje $P_L$, $P_L random$ i $P_L uniform$ modela nad
-    CAFA3-podacima}
+    \caption{Comparing $P_L$, $P_L random$ and $P_L uniform$ on CAFA3 dataset}
   \end{figure}
 \end{frame}
 
 
-\subsection{Zavisnosti funkcije od neuređenosti}
-\begin{frame}{Ocenjivanje zavisnosti funkcije od neuređenosti}
+\subsection{Functions dependency on (dis)order}
+\begin{frame}{Correlation between function and (dis)order}
 
   \begin{itemize}
     \item 
-      Neka je $S_j$ skup proteina koji imaju pridruženu funkciju $j$. Tada se
-      učestalost neuređenih proteina u oznaci $F_j$ može izračunati kao:
+      Let $S_j$ be a set of proteins anotated by function $j$.
+
+      Then by \keyword{disorder level} of function $j$ we assume the frequency
+      ($F_j$) of putatively disorderd proteins inside set $S_j$.
+
       $$F_j = \dfrac{\sum_{s_i \in S_j} d(s_i)} {|S_j|} $$
 
       \pause
 
     \item
-      Nultu hipotezu $Y_j$ za $F_j$  def. preko Bernulijeve slučajne prom. $X_L$
+      % Nultu hipotezu $Y_j$ za $F_j$  def. preko Bernulijeve slučajne prom. $X_L$
       $$
       Y_j = \dfrac {\sum_{s_i \in S_j} {X_{|s_j|}}}{|S_j|}
       \quad \quad \quad
@@ -384,9 +275,10 @@
       \pause
 
       \begin{itemize}
-        \item $p<0.05$: funkcija je povezana (korelirana) sa uređenim proteinima
-        \item $p>0.95$: funkcija je povezana (korelirana) sa neuređenim proteinima
-        \item suprotno: povezanost (koreliranost) funkcije $j$ nije statistički značajno  
+        \item $p>0.95$: function is \keyword{disorder dependent}
+          (correlated with ...)
+        \item $p<0.05$: function is \keyword{order dependent}
+        \item otherwise: nothing can be said about correlation
       \end{itemize}
 
 
@@ -394,7 +286,7 @@
 
 \end{frame}
 
-\begin{frame}{Definicije}
+\begin{frame}{Definitions}
   \pause
   \begin{definicija}
     \keyword{Neuređenost} funkcije (GO-termina ili ključne reči) je mera učestalosti
@@ -402,10 +294,12 @@
   \end{definicija}
       \pause
   \begin{definicija}
-    Funkcija (GO-termin ili ključna reč) je:
+    Function (GO term or keyword) is:
     \begin{itemize}
-      \item \keyword{neuređena} ako je povezana ($p<0.05$) sa neuređenim proteinima
-      \item \keyword{uređena} ako je povezana ($p>0.95$) sa uređenim proteinima
+      \item \keyword{disorder dependent} if it's  correlated ($p<0.05$) with p.
+        dissorderd p.
+      \item \keyword{order dependent} if it's  correlated ($p>0.95$) with p.
+        orderd p.
     \end{itemize}
   \end{definicija}
       \pause
