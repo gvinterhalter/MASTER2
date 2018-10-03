@@ -292,16 +292,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="486.96546"
-     inkscape:cy="664.64238"
+     inkscape:zoom="1.4"
+     inkscape:cx="375.73034"
+     inkscape:cy="204.56092"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1596"
      inkscape:window-height="861"
      inkscape:window-x="0"
-     inkscape:window-y="1237"
+     inkscape:window-y="37"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -23303,30 +23303,32 @@
        sodipodi:open="true"
        d="m 130.06014,386.93042 a 71.373909,9.8200569 0 0 1 -70.494889,9.81931 71.373909,9.8200569 0 0 1 -72.231275,-9.57745 71.373909,9.8200569 0 0 1 68.715739,-10.05521 71.373909,9.8200569 0 0 1 73.923835,9.32977" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445);opacity:0.95"
+       style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445)"
        id="rect28023"
        width="215.16249"
        height="53.538082"
        x="301.02542"
        y="115.95079"
-       transform="matrix(1.0986083,0,0,1.1661557,-58.863409,-35.402271)" />
+       transform="matrix(1.3305302,0,0,1.0214601,-152.11301,-17.781795)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:1;"
-       x="389.44659"
-       y="130.02115"
+       style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="386.9212"
+       y="136.08206"
        id="text25700"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan25702"
-         x="389.44659"
-         y="130.02115"
-         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1;">ključna reč iz kategorije</tspan><tspan
+         x="386.9212"
+         y="136.08206"
+         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1">Molecular function <tspan
+   style="font-size:20px"
+   id="tspan41435">keyword</tspan></tspan><tspan
          sodipodi:role="line"
-         x="389.44659"
-         y="151.89615"
-         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1;"
-         id="tspan25704"> &quot;molekulske funkcije&quot;</tspan></text>
+         x="386.9212"
+         y="161.08206"
+         style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#bd36f3;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="tspan25704" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffc602;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -23338,7 +23340,7 @@
          id="tspan28451"
          x="65.271233"
          y="117.8993"
-         style="font-size:22.5px;fill:#ffc602;fill-opacity:1">protein</tspan></text>
+         style="font-size:22.5px;fill:#ffc602;fill-opacity:1">Protein</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
        d="M 96.585961,124.97038 78.403216,178.50847"
@@ -23366,12 +23368,12 @@
          x="614.97095"
          y="416.24969"
          style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#ff0101;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="tspan25704-1">GO-termin </tspan><tspan
+         id="tspan25704-1">GO term </tspan><tspan
          sodipodi:role="line"
          x="612.1853"
          y="438.12469"
          style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#ff0101;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="tspan29143">(biološki proces)</tspan></text>
+         id="tspan29143">(biological process)</tspan></text>
     <rect
        style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0)"
        id="rect28023-8-1"
@@ -23391,12 +23393,12 @@
          x="612.06921"
          y="531.00751"
          style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#36a26d;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="tspan25704-1-0">GO-termin </tspan><tspan
+         id="tspan25704-1-0">GO term </tspan><tspan
          sodipodi:role="line"
          x="609.28357"
          y="552.88251"
          style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#36a26d;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="tspan29143-8">(molekulska funkcija)</tspan></text>
+         id="tspan29143-8">(molecular function)</tspan></text>
     <path
        style="opacity:1;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend-5)"
        d="m 510.79768,540.09334 -85.32561,-0.74763"
@@ -23425,7 +23427,7 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#68bdf6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#68bdf6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="624.02173"
        y="483.89886"
        id="text47115"
@@ -23434,7 +23436,7 @@
          x="624.02173"
          y="483.89886"
          id="tspan47119"
-         style="font-size:22.5px">je deo</tspan></text>
+         style="font-size:22.5px">part of</tspan></text>
     <rect
        style="opacity:0.95;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28445-3-0-4)"
        id="rect28023-8-1-3"
@@ -23442,7 +23444,7 @@
        height="53.538082"
        x="301.02542"
        y="115.95079"
-       transform="matrix(0.76099829,0,0,0.4870376,-211.44896,278.77595)" />
+       transform="matrix(0.88880634,0,0,0.51213184,-251.04527,274.94196)" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#c858f5;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -23454,7 +23456,7 @@
          x="99.279121"
          y="356.3671"
          style="font-size:17.5px;text-align:center;text-anchor:middle;fill:#c858f5;fill-opacity:1;stroke:none;stroke-opacity:1"
-         id="tspan29143-8-8">zajednički proteini</tspan></text>
+         id="tspan29143-8-8">Common annotations</tspan></text>
     <ellipse
        style="fill:none;fill-opacity:1;stroke:#d041f0;stroke-width:2.0999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path25728"
@@ -23500,12 +23502,12 @@
          id="tspan112022"
          x="691.70782"
          y="39.136597"
-         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">molekulska </tspan><tspan
+         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">molecular </tspan><tspan
          sodipodi:role="line"
          x="689.71808"
          y="50.386597"
          id="tspan112024"
-         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">funkcija</tspan></text>
+         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">function</tspan></text>
     <rect
        style="opacity:1;fill:#ff756e;fill-opacity:1;fill-rule:nonzero;stroke:#e06760;stroke-width:1.48801875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect111956-6"
@@ -23536,12 +23538,12 @@
          x="691.10608"
          y="76.803162"
          id="tspan112024-0"
-         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">biološki</tspan><tspan
+         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">biological</tspan><tspan
          sodipodi:role="line"
          x="691.10608"
          y="88.053162"
          style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle"
-         id="tspan112095">procesi</tspan></text>
+         id="tspan112095">process</tspan></text>
     <rect
        style="opacity:1;fill:#68bdf6;fill-opacity:1;fill-rule:nonzero;stroke:#5ca8db;stroke-width:1.48801875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect111956-1"
@@ -23574,11 +23576,11 @@
          x="690.7489"
          y="115.37457"
          id="tspan112024-3"
-         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">ćelijske</tspan><tspan
+         style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle">cellular</tspan><tspan
          sodipodi:role="line"
          x="690.7489"
          y="126.62457"
          style="font-size:12.5px;line-height:89.99999762%;text-align:center;text-anchor:middle"
-         id="tspan112099">komponente</tspan></text>
+         id="tspan112099">component</tspan></text>
   </g>
 </svg>

@@ -1,5 +1,4 @@
-\documentclass{beamer}
-
+\documentclass{beamer} 
 \usetheme{CambridgeUS}
 
 \usepackage[utf8x,utf8]{inputenc} % make weird characters work
@@ -14,6 +13,11 @@
 
 
 \usepackage{verbatim}
+
+\setbeamertemplate{footline}[frame number]{}
+\setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{footline}{ }
+
 
 % -------------------------------------------------
 
@@ -45,9 +49,18 @@
 of correlation between protein function and intrinsic disorder}
 % \subtitle{Master Rad}
 
-\author{Goran Vinterhalter}
-\institute[Faculty of Mathematics]{University of Belgrade Faculty of Mathematics}
-\date{\today}
+\author{
+  Goran Vinterhalter$^*1$
+  \\ Jovana J Kovačević$^1$
+  \\ Gordana Pavlović Lažetić$^1$
+}
+\institute[Faculty of Mathematics]{
+  University of Belgrade, Faculty of Mathematics$^1$
+}
+\date{June 22, 2018}
+
+\titlegraphic{\includegraphics[scale=0.4]{belbi}}
+
 
 % This is only inserted into the PDF information catalog. Can be left
 % out. 
@@ -104,18 +117,18 @@ of correlation between protein function and intrinsic disorder}
 \tableofcontents[]
 \end{frame}
 
-% \begin{frame}{Outlin
-%   \tableofcontents
-%   % You might wish to add the option [pausesections]
-% \end{frame}
-
 \section{Inspiration}
 \begin{frame}
   \frametitle{Inspiration}
 
   \begin{block} {Reference work: Xie. et. al 2006}
     \textit{Functional anthology of intrinsic disorder. 1.\\
-  \footnotesize Biological processes and functions of proteins with long disordered regions}
+  \small Biological processes and functions of proteins with long disordered regions}
+  \textit{
+    \footnotesize
+\\Hongbo Xie, Slobodan Vucetic, Lilia M. Iakoucheva, Christopher J. Oldfield,
+A. Keith Dunker, Vladimir N. Uversky, and Zoran Obradovic
+  }
   % \\ \textit{\footnotesize Xie $H^1$, Vucetic S, Iakoucheva LM, Oldfield CJ, Dunker AK, Uversky VN, Obradovic Z.}
   \end{block}
 
@@ -125,8 +138,8 @@ of correlation between protein function and intrinsic disorder}
       \pause
     \item UniprotKB Keywords
       \pause
-  %   \item \swissprot sadrži statistički redundantne sekvence
-  %   \item Klasterovanje u proteinske familije (27 217 familija)
+  %   \item \swissprot contains statistically redundant sequences
+  %   \item Classtering into protein families  (27 217 families)
 
     \item PONDR VSL3 disorder predictor
   \end{itemize}
@@ -148,16 +161,19 @@ of correlation between protein function and intrinsic disorder}
       \pause
     \item \textit{CAFA3} dataset is a subset of \swissprot
       \pause
-    \item We assume the \textit{CAFA3} dataset is not statictially redundant
+      \begin{figure}
+        \centering 
+        \hspace*{-0.5cm} 
+        \includegraphics[scale=0.8]{plots/cafa3_pe}
+        \vspace*{-0.5cm} 
+        \caption{Protein existance}
+      \end{figure}
+
+      \pause
+    \item We assume the \textit{CAFA3} dataset is not statistically redundant
   \end{itemize}
 
-  % \begin{figure}
-  %   \centering 
-  %   \hspace*{-0.5cm} 
-  %   \includegraphics[scale=0.8]{plots/cafa3_pe}
-  %   \vspace*{-0.5cm} 
-  %   \caption{Pouzdanost postojanja proteina iz CAFA3-podskupa }
-  % \end{figure}
+
 \end{frame}
 
 
@@ -172,47 +188,49 @@ of correlation between protein function and intrinsic disorder}
 
   \begin{definicija}
     \label{pdis_def}
-    Protein is labled as \keyword{putatively disorderd} if it contains a
-    predicted IDPr at least 40 AA long, otherwise putatively orderd.
+    Protein is labeled as \keyword{putatively disordered} if it contains a
+    predicted IDPr at least 40 AA long, otherwise putatively ordered.
   \end{definicija}
+
+
+  \pause
+  {\huge
+  But! \\}
+  Likelihood of labeling a protein putatively disordered increses by it's length.
 
 \end{frame}
 
 
 \begin{frame}{}
+
+
+
   \begin{itemize}
-    \item 
-
-
-  % Let $S_L$ be a set of proteins with lenghts from interval $[L-l, L+l]$  where
-  % $l = 0.1 \cdot L$.
-  % For example, set $S_{100}$ contains proteins with lengths from interval $[90,
-  % 110]$ while set $S_{500}$ from interval $[450, 550]$. 
-
-  $$ S_L = \{s_i :  | L -  | s_i | | \le l  \},
-  \quad l=0.1 \cdot L  \quad 
-   \text{ and $|s_i|$ is sequence length}  $$
-
+    \item
+      $S_L$, set of proteins with lengths from interval
+      $[L-k, L+k], k=L/10$
+      \begin{figure}
+        \centering
         \includegraphics[scale=1]{S_L}
+        \caption{ $ S_L = \{s_i :  | L -  | s_i | | \le k  \} $ }
+      \end{figure}
 
-  \pause
+      \pause
 
-\item
+    \item
 
-  The probability a protein of length $L$ is labeld putatively disorderd by
-  chance is aproximated as:
+      The probability a protein of length $L$ is labeled putatively disordered:
 
-  $$ P_L = \dfrac{ \sum_{s_i \in S_L} d(s_i)} {| S_L |}, \quad   |S_L| \text{
-  is set cardinality}$$
-  \[   
-    d(s_i) = 
-    \begin{cases}
-    1 & \text{if  $s_i$ is \keyword{putatively disorderd}}\\
-    0 & \text{otherwise}
-    \end{cases}
-  \]
+      $$ P_L = \dfrac{ \sum_{s_i \in S_L} d(s_i)} {| S_L |} $$
+      \[   
+        d(s_i) = 
+        \begin{cases}
+        1 & \text{if  $s_i$ is \keyword{putatively disordered}}\\
+        0 & \text{otherwise}
+      \end{cases}
+    \]
 
-  \end{itemize}
+\end{itemize}
 \end{frame}
 
 
@@ -221,23 +239,25 @@ of correlation between protein function and intrinsic disorder}
     \centering
     \includegraphics[scale=0.8]{plots/PL_F}
     \caption {
-      \footnotesize Zavisnost neuređenosti i dužine proteina iz CAFA3-skupa
-      minimalne dužine 40 AK
+      \footnotesize Dependency between protein length and fraction of putative
+      disorder
     }
   \end{figure}
 \end{frame}
 
-\begin{frame}{}
-  \begin{itemize}
-    \item random model ( $P_L random$  )
-    \item uniform model ( $P_L uniform$ )
-  \end{itemize}
+\begin{frame}{Generating protein sequences}
+  \begin{columns}
+    \column{0.5\textwidth}
+  \begin{itemize} \item random model ( $P_L random$  ) \end{itemize}
+    \column{0.5\textwidth}
+    \begin{itemize} \item uniform model ( $P_L uniform$ ) \end{itemize}
+  \end{columns}
 
   \begin{figure}[th]
     \centering
     \includegraphics[scale=0.7]{plots/AK_ucestalost}
     \vspace{-0.2cm}
-    \caption{ \footnotesize Amino acide frequency in CAFA3 dataset }
+    \caption{ \footnotesize Amino acid fractions in CAFA3 dataset }
   \end{figure}
 \end{frame}
 
@@ -255,30 +275,30 @@ of correlation between protein function and intrinsic disorder}
 
   \begin{itemize}
     \item 
-      Let $S_j$ be a set of proteins anotated by function $j$.
+      Let $S_j$ be a set of proteins annotated by function $j$.
 
-      Then by \keyword{disorder level} of function $j$ we assume the frequency
-      ($F_j$) of putatively disorderd proteins inside set $S_j$.
+      By \keyword{disorder level} (of function $j$) we assume the fractions
+      ($F_j$) of putatively disordered proteins inside set $S_j$.
 
       $$F_j = \dfrac{\sum_{s_i \in S_j} d(s_i)} {|S_j|} $$
 
       \pause
 
-    \item
+    \item Null model
       % Nultu hipotezu $Y_j$ za $F_j$  def. preko Bernulijeve slučajne prom. $X_L$
       $$
       Y_j = \dfrac {\sum_{s_i \in S_j} {X_{|s_j|}}}{|S_j|}
       \quad \quad \quad
-    X_L : \begin{pmatrix} 0 & 1\\ P_L & 1-P_L \end{pmatrix}
+    X_L : \begin{pmatrix} 0 & 1\\ 1-P_L & P_L \end{pmatrix}
       $$
 
       \pause
 
       \begin{itemize}
-        \item $p>0.95$: function is \keyword{disorder dependent}
+        \item $p>0.95$: function is \keyword{disorder related}
           (correlated with ...)
-        \item $p<0.05$: function is \keyword{order dependent}
-        \item otherwise: nothing can be said about correlation
+        \item $p<0.05$: function is \keyword{order related}
+        \item otherwise: nothing can be said about correlation (insufficient stat. sig.)
       \end{itemize}
 
 
@@ -286,52 +306,39 @@ of correlation between protein function and intrinsic disorder}
 
 \end{frame}
 
-\begin{frame}{Definitions}
-  \pause
-  \begin{definicija}
-    \keyword{Neuređenost} funkcije (GO-termina ili ključne reči) je mera učestalosti
-    neuređenih proteina ($F_j$).
-  \end{definicija}
-      \pause
-  \begin{definicija}
-    Function (GO term or keyword) is:
-    \begin{itemize}
-      \item \keyword{disorder dependent} if it's  correlated ($p<0.05$) with p.
-        dissorderd p.
-      \item \keyword{order dependent} if it's  correlated ($p>0.95$) with p.
-        orderd p.
-    \end{itemize}
-  \end{definicija}
-      \pause
-  \begin{definicija}
-    \keyword{Statistički najznačajnije} uređene/neuređene funkcije
-    (GO-termini ili ključne reči) su one koje imaju najmanji/najviši Z-skor.
-  \end{definicija}
-\end{frame}
+% \begin{frame}{Definitions}
+%   \begin{definicija}
+%     \keyword{Statistički najznačajnije} uređene/neuređene funkcije
+%     (GO-termini ili ključne reči) su one koje imaju najmanji/najviši Z-skor.
+%   \end{definicija}
+% \end{frame}
 
 
-\section{Priprema podataka}
-\subsection{Različiti skupovi proteina i načini anotacije funkcije}
+\section{Data preprocessing}
+\subsection{Combining dataset and annotations}
 \begin{frame}
 
-  \pause
   \begin{enumerate}
-    \item Objedinjavanje baze \swissprot i njenog CAFA3-podskupa
+    \item Merging \swissprot and it's CAFA3 subset
       \pause
       \begin{itemize}
-        \item Dobijeno je 66 530 validnih proteina (od ukupno 66 599)
-        \item Anotacije (term \& kw) su preuzete iz baze \swissprot
-        \item Sekvence su zadržane originalne iz CAFA3-skupa
+        \item 66 530 valid proteins (out of 66 599 total)
+        \item Annotations (term \& kw) we get from \swissprot
+        \item Sequences we keep from CAFA3 dataset
       \end{itemize}
       \pause
-    \item Grupisanje proteina po GO-terminima
+    \item Annotation grouping for MF terms
+  \begin{columns}
+    \column{0.25\textwidth}
+    \includegraphics[scale=0.7]{grupisanje}
+    \column{0.7\textwidth}
+    \pause
+    1781 MF terms that annotate min. 20 proteins.
+    Without this step we wold only get 1146 MF terms.
+  \end{columns}
       \pause
-      \begin{itemize}
-        \item Dobijeno je 1781 MF-termin koji anotira min. 20 proteina.
-              Bez grupisanja bilo bi samo 1146 MF-termina.
-      \end{itemize}
-      \pause
-    \item Preslikavanje između ključnih MF-reči i MF-termina
+    \item
+      Mapping MF keywords to MF terms ???
       \pause
 
 
@@ -340,16 +347,18 @@ of correlation between protein function and intrinsic disorder}
   \begin{table}
     \begin{tabular}{|r|c|c|c|c|c|}
       \hline
-      & ukupno & nema pres. & pres. MF & pres. BP & pres. CC.      \\
+      & total & no map. & MF map. & BP map. & CC. map.     \\
       \hline
-      ključ. MF-reči  & 195    &  20       &  104     & 54      & 11           \\
+      MF keywords  & 195    &  20       &  104     & 54      & 11           \\
       \hline
     \end{tabular}
   \end{table}
   
 \end{frame}
 
-\subsection{Preslikavanje između ključnih MF-reči i MF-termina}
+
+\subsection{Mapping MF keywords to MF terms}
+
 
 % \begin{frame}
 %   \begin{figure}[!th]
@@ -359,37 +368,35 @@ of correlation between protein function and intrinsic disorder}
 %   \end{figure}
 % \end{frame}
 %
-% \begin{frame}
-%   \begin{figure}[!th]
-%     \centering
-%     \vspace*{-0.49cm} 
-%     \includegraphics[scale=0.45]{Figures/plots/Neuropeptide2go.pdf}
-%   \end{figure}
-% \end{frame}
+\begin{frame}
+  \begin{figure}[!th]
+    \centering
+    \vspace*{-0.49cm} 
+    \includegraphics[scale=0.45]{Figures/plots/Neuropeptide2go.pdf}
+  \end{figure}
+\end{frame}
 
 
-\begin{frame}{Metod sličnih anotacija}
+\begin{frame}{Approximated mapping (Annotation similarity)}
+
+  \begin{columns}
+    \column{0.7\textwidth}
+    \keyword{Jaccard index (Ji}),
+      $J(A,B) = \dfrac{|A \cap B|}{|A \cup B|} \in [0, 1] \quad $
+    \column{0.3\textwidth}
+      \includegraphics[scale=1]{Ji}
+  \end{columns}
+
+  \pause
+
   \begin{itemize}
+    \item Consider the whole \swissprot (but really CAFA3 dataset is enough)
       \pause
-    \item Žakardov indeks \en{Jaccard index}, kraće \keyword{Ji}  
-$$J(A,B) = \dfrac{|A \cap B|}{|A \cup B|} =  \dfrac{|A \cap B|}{|A|+|B|-|A \cap B|}$$
-$$  J(A,B) \in [0, 1] $$
-% \[   
-%   J(A,B) = 
-%     \begin{cases}
-%       1,&A=B  \\
-%       0,&A\cap B=\emptyset
-%     \end{cases}
-% \]
-
+    \item No MF annotations grouping (smaller Ji, or wrong) 
       \pause
-  \item U obzir su uzeti svi proteini iz baze \swissprot
+  \item expecting between 60 and 85\% "correct" mapping
       \pause
-  \item Nije vršeno grupisanje po MF-terminima
-      \pause
-  \item Tačna predviđanja između 60 i 85 posto
-      \pause
-  \item Preslikavanja su dopunjena sa 64 izvedena preslikavanja ($Ji>0.1$).
+  \item We produce 64 mappings with $Ji>0.1$
 
   \end{itemize}
 \end{frame}
@@ -401,7 +408,7 @@ $$  J(A,B) \in [0, 1] $$
   \scriptsize
   \begin{tabular}{|p{4.2cm}|c|c|c|p{4.3cm}|}
     \hline
-    \bf \textit{ključna MF-reč } & \bf n\_kw & \bf Ji & \bf n\_go & \bf \textit{MF-termin} \\
+    \bf \textit{MF keywords } & \bf \# kw & \bf Ji & \bf \# go & \bf \textit{MF terms} \\
     \hline
     \hline
     Dermonecrotic toxin                & 148   & 0.96  & 142   & phospholipase D activity \\ \hline
@@ -434,46 +441,38 @@ $$  J(A,B) \in [0, 1] $$
 
 
 
-\section{Rezultati}
+\section{Results}
 
 
-\begin{frame}{Rezultati}
+\begin{frame}{Results}
 
   \begin{table}[htpb]
     \centering
     \begin{tabular}{|r|c|c|c|}
       \hline
-      & \small referentni rezultati   & \multicolumn{2}{c|}{ novi rezultati} \\
-      & Xie2007 kw & k.r. MF  & MF-termini  \\
+      & \small reference & \multicolumn{2}{c|}{results} \\
+      & Xie2007 kw &  MF kw  & MF terms  \\
       \hline
-      ukupno ($br. prot\ge20$)   & 143  & 186    & 1781          \\
-      $p<0.05$ (uređene)         & 37   & 53     & 699           \\
-      $p>0.95$ (neuređene)       & 51   & 44     & 616           \\
-      suprotno (nepoznato)       & 55   & 89     & 576           \\
+      total ($\# prot\ge20$)         & 143  & 186    & 1781          \\
+      $p<0.05$ (order rel.)          & 37   & 53     & 699           \\
+      $p>0.95$ (disorder rel.)       & 51   & 44     & 616           \\
+       insufficient stat. sig.         & 55   & 89     & 576           \\
       \hline
     \end{tabular}
-  \caption{Uopšteno poređenje rezultata}
+  \caption{}
   \end{table}
 
   \pause
 
-  Dve vrste rezultata:
+  Two types of results:
   \begin{itemize}
-    \item Tabelarno poređenje sa ključnim rečima
-    \item Grafovsko predstavljanje
+    \item Tabular comparison with keywords
+    \item GO subgraph
   \end{itemize}
 
 \end{frame}
 
-\subsection{Tabelarno poređenje uređenih funkcija}
-
-% \begin{frame} 
-%   \begin{figure}[th]
-%     \hspace*{-0.4cm} 
-%     \centering
-%     \includegraphics[ scale=0.66]{Figures/plots/order_cmp_a.pdf}
-%   \end{figure}
-% \end{frame}
+\subsection{Tabular comparison}
 
 
 \begin{frame}
@@ -484,7 +483,6 @@ $$  J(A,B) \in [0, 1] $$
   \end{figure}
 \end{frame}
 
-\subsection{Tabelarno poređenje neuređenih funkcija}
 \begin{frame}
   \begin{figure}[th]
     \vspace*{-0.8cm}
@@ -494,21 +492,7 @@ $$  J(A,B) \in [0, 1] $$
 \end{frame}
 
 
-% \begin{frame}
-%   \begin{figure}[th]
-%     \centering
-%     \includegraphics[ scale=0.60]{Figures/plots/disorder_cmp_a.pdf}
-%   \end{figure}
-% \end{frame}
-
-% \begin{frame}
-%   \begin{figure}[th]
-%     \vspace{-0.1cm}
-%     \includegraphics[ scale=0.55]{Figures/plots/disorder_cmp_b.pdf}
-%   \end{figure}
-% \end{frame}
-
-\subsection{Grafovsko predstavljanje}
+\subsection{GO subgraph}
 
 \begin{frame}
   \begin{figure}
@@ -518,24 +502,14 @@ $$  J(A,B) \in [0, 1] $$
 \end{frame}
 
 
-% \subsection{Odnos prosečne dužine i p}
-%
-% \begin{frame}
-%   \begin{figure}
-%     \centering
-%     \includegraphics[scale=0.86]{Figures/plots/avg_len2p.pdf}
-%   \end{figure}
-% \end{frame}
-
-
-\subsection{Odnos neuređenosti i p}
+\subsection{Level of disorder and p-value}
 \begin{frame}
   \begin{figure}
     \centering
     \vspace{-0.5cm}
     \includegraphics[scale=0.55]{Figures/plots/avg_dis2p.pdf}
     \caption {
-      Odnos između neuređenosti (\textit{avg\_dis}) i p vrednosti MF-termina.
+      Level of disorder (\textit{avg\_dis}) and p-value (1781 MF terms)
     }
   \end{figure}
 \end{frame}
@@ -543,7 +517,7 @@ $$  J(A,B) \in [0, 1] $$
 
 \begin{frame}
   \begin{center}
-    \Huge Hvala :)
+    \Huge Thank you
   \end{center}
 \end{frame}
 

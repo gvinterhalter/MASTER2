@@ -1,13 +1,12 @@
 \BOOKMARK [2][]{Outline0.1}{Inspiration}{}% 1
 \BOOKMARK [2][]{Outline0.2}{Method and data}{}% 2
 \BOOKMARK [3][]{Outline0.2.1.9}{Data}{Outline0.2}% 3
-\BOOKMARK [3][]{Outline0.2.2.13}{Dependency between protein length and predicted disorder }{Outline0.2}% 4
-\BOOKMARK [3][]{Outline0.2.3.20}{Functions dependency on \(dis\)order}{Outline0.2}% 5
-\BOOKMARK [2][]{Outline0.3}{Priprema podataka}{}% 6
-\BOOKMARK [3][]{Outline0.3.1.28}{Razliciti skupovi proteina i nacini anotacije funkcije}{Outline0.3}% 7
-\BOOKMARK [3][]{Outline0.3.2.35}{Preslikavanje izmeu kljucnih MF-reci i MF-termina}{Outline0.3}% 8
-\BOOKMARK [2][]{Outline0.4}{Rezultati}{}% 9
-\BOOKMARK [3][]{Outline0.4.1.45}{Tabelarno poreenje ureenih funkcija}{Outline0.4}% 10
-\BOOKMARK [3][]{Outline0.4.2.46}{Tabelarno poreenje neureenih funkcija}{Outline0.4}% 11
-\BOOKMARK [3][]{Outline0.4.3.47}{Grafovsko predstavljanje}{Outline0.4}% 12
-\BOOKMARK [3][]{Outline0.4.4.48}{Odnos neureenosti i p}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.2.2.14}{Dependency between protein length and predicted disorder }{Outline0.2}% 4
+\BOOKMARK [3][]{Outline0.2.3.22}{Functions dependency on \(dis\)order}{Outline0.2}% 5
+\BOOKMARK [2][]{Outline0.3}{Data preprocessing}{}% 6
+\BOOKMARK [3][]{Outline0.3.1.26}{Combining dataset and annotations}{Outline0.3}% 7
+\BOOKMARK [3][]{Outline0.3.2.32}{Mapping MF keywords to MF terms}{Outline0.3}% 8
+\BOOKMARK [2][]{Outline0.4}{Results}{}% 9
+\BOOKMARK [3][]{Outline0.4.1.42}{Tabular comparison}{Outline0.4}% 10
+\BOOKMARK [3][]{Outline0.4.2.44}{GO subgraph}{Outline0.4}% 11
+\BOOKMARK [3][]{Outline0.4.3.45}{Level of disorder and p-value}{Outline0.4}% 12

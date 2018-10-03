@@ -3,13 +3,12 @@
 \beamer@sectionintoc {1}{Inspiration}{3}{0}{1}
 \beamer@sectionintoc {2}{Method and data}{8}{0}{2}
 \beamer@subsectionintoc {2}{1}{Data}{9}{0}{2}
-\beamer@subsectionintoc {2}{2}{Dependency between protein length and predicted disorder }{13}{0}{2}
-\beamer@subsectionintoc {2}{3}{Functions dependency on (dis)order}{20}{0}{2}
-\beamer@sectionintoc {3}{Priprema podataka}{27}{0}{3}
-\beamer@subsectionintoc {3}{1}{Razli\IeC {\v c}iti skupovi proteina i na\IeC {\v c}ini anotacije funkcije}{28}{0}{3}
-\beamer@subsectionintoc {3}{2}{Preslikavanje izme\IeC {\dj }u klju\IeC {\v c}nih MF-re\IeC {\v c}i i MF-termina}{35}{0}{3}
-\beamer@sectionintoc {4}{Rezultati}{42}{0}{4}
-\beamer@subsectionintoc {4}{1}{Tabelarno pore\IeC {\dj }enje ure\IeC {\dj }enih funkcija}{45}{0}{4}
-\beamer@subsectionintoc {4}{2}{Tabelarno pore\IeC {\dj }enje neure\IeC {\dj }enih funkcija}{46}{0}{4}
-\beamer@subsectionintoc {4}{3}{Grafovsko predstavljanje}{47}{0}{4}
-\beamer@subsectionintoc {4}{4}{Odnos neure\IeC {\dj }enosti i p}{48}{0}{4}
+\beamer@subsectionintoc {2}{2}{Dependency between protein length and predicted disorder }{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Functions dependency on (dis)order}{22}{0}{2}
+\beamer@sectionintoc {3}{Data preprocessing}{25}{0}{3}
+\beamer@subsectionintoc {3}{1}{Combining dataset and annotations}{26}{0}{3}
+\beamer@subsectionintoc {3}{2}{Mapping MF keywords to MF terms}{32}{0}{3}
+\beamer@sectionintoc {4}{Results}{39}{0}{4}
+\beamer@subsectionintoc {4}{1}{Tabular comparison}{42}{0}{4}
+\beamer@subsectionintoc {4}{2}{GO subgraph}{44}{0}{4}
+\beamer@subsectionintoc {4}{3}{Level of disorder and p-value}{45}{0}{4}
