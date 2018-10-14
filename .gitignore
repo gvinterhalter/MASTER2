@@ -11,10 +11,10 @@ latex/*sci.bib*
 #ignore dirs
 .idea/
 .ipynb_checkpoints/
-data/IN/
-data/IN_removed/
-pappers/
-data/predictions/
+data/IN
+data/IN_removed
+ref
+data/predictions
 data/tmp/
 db/neo4j/*.csv
 db/neo4j/import.report
@@ -129,3 +129,5 @@ ENV/
 
 plots/unifikacija_slogova2-eps-converted-to\.pdf
 
+
+*.odt#
